@@ -1,18 +1,18 @@
 class EfmLangserver < Formula
   desc "General purpose Language Server"
   homepage "https://github.com/mattn/efm-langserver"
-  url "https://github.com/mattn/efm-langserver/archive/v0.0.39.tar.gz"
-  sha256 "2f333e0ba1451ca731b47b27713c961c8223bf081c5f4addff386a55fccd9fb0"
+  url "https://github.com/mattn/efm-langserver/archive/v0.0.40.tar.gz"
+  sha256 "a0122141a8e8cad7fd6f69db4bf239dc33a70bff00104d781555933efa9557fa"
   license "MIT"
   head "https://github.com/mattn/efm-langserver.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "c469fb5ccd1aa3f09096e355f058ce3d2e16f71d3e62099e0985e46f0a8334df"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c469fb5ccd1aa3f09096e355f058ce3d2e16f71d3e62099e0985e46f0a8334df"
-    sha256 cellar: :any_skip_relocation, monterey:       "b8920dbbe4ab6bfc638b7aa61026fb343833b4a70c39ebd51ef327e5f9c3f445"
-    sha256 cellar: :any_skip_relocation, big_sur:        "b8920dbbe4ab6bfc638b7aa61026fb343833b4a70c39ebd51ef327e5f9c3f445"
-    sha256 cellar: :any_skip_relocation, catalina:       "b8920dbbe4ab6bfc638b7aa61026fb343833b4a70c39ebd51ef327e5f9c3f445"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "42adf8973e9119aa5e02cc183e3615abe171b7f1bf47d320e13d5107f357c7aa"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "dfccc2d0447da550b2ef7cddc6cd896eca75960b4e15713439565c3ae71da9d3"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "dfccc2d0447da550b2ef7cddc6cd896eca75960b4e15713439565c3ae71da9d3"
+    sha256 cellar: :any_skip_relocation, monterey:       "40d4b8ccb48cceff6b2cd6bab59776258131b68aaed1718163ecf3190913b37b"
+    sha256 cellar: :any_skip_relocation, big_sur:        "40d4b8ccb48cceff6b2cd6bab59776258131b68aaed1718163ecf3190913b37b"
+    sha256 cellar: :any_skip_relocation, catalina:       "40d4b8ccb48cceff6b2cd6bab59776258131b68aaed1718163ecf3190913b37b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f35dde14b04e3777107eb72e2ea7e93d3854b9cba06c2281e440a5d1e30c377f"
   end
 
   depends_on "go" => :build
