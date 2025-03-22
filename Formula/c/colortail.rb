@@ -11,6 +11,7 @@ class Colortail < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura: "0e6f802573fbe0d69c824e53529faf6e89703247cc1a99e0889c8ac04bb731b5"
     sha256 cellar: :any_skip_relocation, sonoma:        "6c5d498dedf3d26bf0636d10e5a82bdda798dbb480f89ab07a19fdc75159053a"
     sha256 cellar: :any_skip_relocation, ventura:       "2b9245f09d0796f87a0e4d615631bd7a678135dc25d5243128b8c47104bae3aa"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "78b490e972fd2d3c0b3f1a1975bdd221f61e990caf05acd383bf5a79ef675a48"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "e7f6aa1cfcfd61cef470944acee240c93f2442639355dea39fe06e414d168cab"
   end
 

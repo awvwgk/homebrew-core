@@ -14,6 +14,7 @@ class Snakemake < Formula
     sha256 cellar: :any,                 arm64_ventura: "a2e4472a11a6d852a8c2a584863af6bc14a3836069fe798120a72e3046ccfbec"
     sha256 cellar: :any,                 sonoma:        "c993e9b858c72742114f280b791bd664df83b9259db28330b9255c7cafff4fea"
     sha256 cellar: :any,                 ventura:       "e24858a6b284c33f505805982c5f3bcbcca9c0e46faefe870f43e553896ae6a1"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "c14ed019f4e11c5ebd705b2aacc003c732475e0ff8d5b08eccf7db771468a4fe"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "3409d0b597a3093fa7d25800eb5575fb19416fd1165a2f654ef766b2843154ba"
   end
 

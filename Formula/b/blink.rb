@@ -13,6 +13,7 @@ class Blink < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura: "cd18d0ceff9589f1ad6ea1dc5183c5c61f0234705d7789f6b26df8a47d830d94"
     sha256 cellar: :any_skip_relocation, sonoma:        "bcca9fdf32d372f26ef410994a397e00d2c0ad337b32bfc397dffb5d8e9c831d"
     sha256 cellar: :any_skip_relocation, ventura:       "c6bf3d3adff77c984c9966cee9df01f2962fa1781d591dbe0de0a81666762812"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "ceddcd34e8f3929aacd7c139f86ca385e3a758417989d865b34a61437fbfc2ab"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "ae5240313e012eedfe56836839f4becd32fa8e3d22b690d1728aae141bb40025"
   end
 
