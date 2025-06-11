@@ -1228,6 +1228,7 @@ gauge
 gawk
 gaze
 gcalcli
+gcc@13
 gcem
 gci
 gcli
@@ -3647,6 +3648,7 @@ tcpreplay
 tcpsplit
 tcsh
 tdb
+tea
 tealdeer
 tectonic
 teensy_loader_cli
@@ -4144,6 +4146,7 @@ zabbix
 zabbix-cli
 zbctl
 zchunk
+zebra
 zeek
 zellij
 zenith
