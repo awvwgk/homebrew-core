@@ -137,8 +137,7 @@
     "exclude_packages": ["certifi"]
   },
   "btcli": {
-    "exclude_packages": ["certifi", "cffi", "cryptography", "numpy", "pycparser", "six"],
-    "extra_packages": ["setuptools"]
+    "exclude_packages": ["certifi", "numpy"]
   },
   "buku": {
     "package_name": "buku[server]",

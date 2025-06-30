@@ -3528,6 +3528,7 @@ spoofdpi
 spot
 spotbugs
 spotify_player
+spotifyd
 spr
 sprocket
 spytrap-adb
