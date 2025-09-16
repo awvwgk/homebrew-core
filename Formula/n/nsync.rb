@@ -22,7 +22,13 @@ class Nsync < Formula
   patch :DATA
 
   def install
-    system "cmake", "-S", ".", "-B", "_build", "-DBUILD_SHARED_LIBS=ON", "-DNSYNC_ENABLE_TESTS=OFF", *std_cmake_args
+    args = %w[
+      -DBUILD_SHARED_LIBS=ON
+      -DNSYNC_ENABLE_TESTS=OFF
+    ]
+    # Workaround for CMake 4 compatibility
+    args << "-DCMAKE_POLICY_VERSION_MINIMUM=3.5"
+    system "cmake", "-S", ".", "-B", "_build", *args, *std_cmake_args
     system "cmake", "--build", "_build"
     system "cmake", "--install", "_build"
   end

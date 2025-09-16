@@ -18,7 +18,8 @@ class Kdoctor < Formula
     sha256 cellar: :any_skip_relocation, monterey:       "e2ad6b016b9f6ca3904aa6a08c2b98f873836f7b55dfe22706b6657e2a480002"
   end
 
-  depends_on "gradle" => :build
+  # Issue ref: https://youtrack.jetbrains.com/issue/KT-81085/kdoctor-build-with-gradle-v9
+  depends_on "gradle@8" => :build
   depends_on "openjdk" => :build
   depends_on xcode: ["12.5", :build]
   depends_on :macos

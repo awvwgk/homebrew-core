@@ -19,7 +19,8 @@ class Gravitino < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "9432a842a266f9eb8e8277aa74863319499de21726ab1a57b8ed7457d7613c03"
   end
 
-  depends_on "gradle" => :build
+  # Issue ref: https://github.com/apache/gravitino/issues/8571
+  depends_on "gradle@8" => :build
   depends_on "node" => :build
   depends_on "openjdk@17"
 

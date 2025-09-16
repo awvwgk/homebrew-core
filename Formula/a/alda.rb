@@ -15,7 +15,8 @@ class Alda < Formula
   end
 
   depends_on "go" => :build
-  depends_on "gradle" => :build
+  # Issue ref: https://github.com/alda-lang/alda/issues/510
+  depends_on "gradle@8" => :build
   depends_on "openjdk"
 
   def install

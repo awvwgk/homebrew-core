@@ -7,6 +7,7 @@ class Nixfmt < Formula
   head "https://github.com/NixOS/nixfmt.git", branch: "master"
 
   bottle do
+    sha256 cellar: :any,                 arm64_tahoe:   "0fba4a894b95176d38a067dd25c96c27c24d59aa966406fb2a8f22f791e0323d"
     sha256 cellar: :any,                 arm64_sequoia: "a567dd22a8efbdc8b1f4f630cf2136fa483178d50a05b9ee514f87e2c56cafa4"
     sha256 cellar: :any,                 arm64_sonoma:  "2b3d63bdd233c9bbcd48af30dd461e3a295d6e537690f27fa048730aa5550dcb"
     sha256 cellar: :any,                 arm64_ventura: "0c59ac82a04449e01a61ea4e7023beb51d7ad05c5b5e24148efdc2c4141efda4"

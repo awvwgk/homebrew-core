@@ -68,7 +68,7 @@ class Nco < Formula
 
   test do
     resource "homebrew-example_nc" do
-      url "https://www.unidata.ucar.edu/software/netcdf/examples/WMI_Lear.nc"
+      url "https://archive.unidata.ucar.edu/software/netcdf/examples/WMI_Lear.nc"
       sha256 "e37527146376716ef335d01d68efc8d0142bdebf8d9d7f4e8cbe6f880807bdef"
     end
 

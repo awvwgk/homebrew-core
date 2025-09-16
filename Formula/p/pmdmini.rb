@@ -37,7 +37,7 @@ class Pmdmini < Formula
     # Add -fPIC on Linux
     # Upstreamed here: https://github.com/mistydemeo/pmdmini/pull/3
     inreplace "mak/general.mak", "CFLAGS = -O2", "CFLAGS = -fPIC -O2 -fpermissive"
-    system "make", "CC=#{ENV.cc}", "CXX=#{ENV.cxx}", "LD=#{ENV.cxx}"
+    system "make", "CC=#{ENV.cc}", "CXX=#{ENV.cxx} -std=c++03", "LD=#{ENV.cxx}"
 
     # Makefile doesn't build a dylib
     flags = if OS.mac?

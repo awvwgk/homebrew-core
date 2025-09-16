@@ -14,7 +14,8 @@ class Vineflower < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "5ffc032d554d132c2387490e51c8e11a084d5a31d6d97956c69286b999966355"
   end
 
-  depends_on "gradle" => :build
+  # Issue ref: https://github.com/Vineflower/vineflower/issues/495
+  depends_on "gradle@8" => :build
   depends_on "openjdk"
 
   def install

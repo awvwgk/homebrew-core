@@ -17,6 +17,7 @@ class Wv2 < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
+    sha256 cellar: :any,                 arm64_tahoe:    "ab51a5126a4df61b38dd41445e5d456b7878326d9c4f9fec306abf45f3989730"
     sha256 cellar: :any,                 arm64_sequoia:  "0b9e9d8d06ee14ba09ec9f467e24aba00ecc63966bb877fc88a3868a2fb2041c"
     sha256 cellar: :any,                 arm64_sonoma:   "ab4eca06cc176e58df0a6d57de60929427e68ce2d8dc1fc9f71b2a15a88c59d3"
     sha256 cellar: :any,                 arm64_ventura:  "590dea1f89ca9fe964215ad6b338aa92ca782157d77bb867a568c380cf9259f0"

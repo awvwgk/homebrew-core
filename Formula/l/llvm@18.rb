@@ -14,6 +14,7 @@ class LlvmAT18 < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
+    sha256 cellar: :any,                 arm64_tahoe:   "80b130424c17ca6e73e41288327ee94315c36ea4257d250e873cd26f61d13d15"
     sha256 cellar: :any,                 arm64_sequoia: "c7bb3e7186411468c2b7af59fb5abd5108805078280f8144f8cf53b9c0b93cbf"
     sha256 cellar: :any,                 arm64_sonoma:  "c9daaee40a1b1c85a35af2a64c3577257740554df1d8bbf629103a9994b288b4"
     sha256 cellar: :any,                 arm64_ventura: "b4cb7eba8d8acc3602e08c10a79ac8b584bfa7cde3f7dad3e8ecd618245de840"

@@ -4,7 +4,7 @@ class Fibjs < Formula
   url "https://github.com/fibjs/fibjs/releases/download/v0.37.0/fullsrc.zip"
   sha256 "51908a22a5ddbdb2c772c2cf08ba61cee96d89a4da0f678014423b86690478fd"
   license "GPL-3.0-only"
-  head "https://github.com/fibjs/fibjs.git", branch: "master"
+  head "https://github.com/fibjs/fibjs.git", branch: "dev"
 
   no_autobump! because: :requires_manual_review
 
@@ -37,6 +37,14 @@ class Fibjs < Formula
   end
 
   def install
+    # Fix to avoid fdopen() redefinition for vendored `zlib`
+    # Issue ref: https://github.com/fibjs/fibjs/issues/793
+    if OS.mac? && DevelopmentTools.clang_build_version >= 1700
+      inreplace "vender/zlib/src/zutil.h",
+                "#        define fdopen(fd,mode) NULL /* No fdopen() */",
+                ""
+    end
+
     # help find X11 headers: fatal error: 'X11/Xlib.h' file not found
     ENV.append "CXXFLAGS", "-I#{HOMEBREW_PREFIX}/include" if OS.linux?
 

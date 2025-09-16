@@ -20,7 +20,8 @@ class Micronaut < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "891bd5e6187d49985683404e41dd85edbaf3db639d9a4ff0b82de3f93829ca60"
   end
 
-  depends_on "gradle" => :build
+  # Issue ref: https://github.com/micronaut-projects/micronaut-starter/issues/2848
+  depends_on "gradle@8" => :build
   depends_on "openjdk@21"
 
   def install
