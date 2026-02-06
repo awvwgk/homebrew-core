@@ -4,6 +4,7 @@ class Chrony < Formula
   url "https://chrony-project.org/releases/chrony-4.8.tar.gz"
   sha256 "33ea8eb2a4daeaa506e8fcafd5d6d89027ed6f2f0609645c6f149b560d301706"
   license "GPL-2.0-only"
+  revision 1
 
   livecheck do
     url "https://chrony-project.org/download.html"
@@ -26,6 +27,12 @@ class Chrony < Formula
   depends_on "nettle"
 
   uses_from_macos "libedit"
+
+  # Backport support for nettle 4.0
+  patch do
+    url "https://gitlab.com/chrony/chrony/-/commit/fee12ec914cce805cc704a4c2804d75b4933ad2f.diff"
+    sha256 "fe464ab1e5839472c78d6b60f110c1f9315c44e7caa595b90bbfe42e7e79ae84"
+  end
 
   def install
     system "./configure", "--localstatedir=#{var}", *std_configure_args
