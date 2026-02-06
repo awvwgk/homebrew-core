@@ -4,6 +4,7 @@ class XorgServer < Formula
   url "https://www.x.org/releases/individual/xserver/xorg-server-21.1.22.tar.xz"
   sha256 "1a242c8917c49ba29ccc1f6021613d8a2b9805dd0d271a66ae9d09f4b0bb06b3"
   license all_of: ["MIT", "APSL-2.0"]
+  revision 1
   compatibility_version 1
 
   bottle do
