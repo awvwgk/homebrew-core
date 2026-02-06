@@ -4,6 +4,7 @@ class TigerVnc < Formula
   url "https://github.com/TigerVNC/tigervnc/archive/refs/tags/v1.16.2.tar.gz"
   sha256 "b107c0c8b8a962594281690366c24186e95c2ea4a169acbc0076aa62ed01f467"
   license "GPL-2.0-or-later"
+  revision 1
 
   livecheck do
     url :stable
@@ -46,6 +47,13 @@ class TigerVnc < Formula
     depends_on "libxtst"
     depends_on "linux-pam"
     depends_on "zlib-ng-compat"
+  end
+
+  # Apply Arch Linux patch to support Nettle 4. Remove in release with
+  # https://github.com/TigerVNC/tigervnc/commit/be6e25fca026ce715d5be1d7ba40ef49bebbde51
+  patch do
+    url "https://gitlab.archlinux.org/archlinux/packaging/packages/tigervnc/-/raw/3acb330ccb03832085c20b0f1bedec665c9a886f/nettle-4.patch"
+    sha256 "5d290368a537a0d354773a06c096c1c1b36fd2de4d03860a5d82456f0b527a9b"
   end
 
   def install
