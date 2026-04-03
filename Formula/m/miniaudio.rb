@@ -21,6 +21,8 @@ class Miniaudio < Formula
       -DMINIAUDIO_BUILD_EXAMPLES=OFF
       -DMINIAUDIO_BUILD_TESTS=OFF
       -DMINIAUDIO_INSTALL=ON
+      -DBUILD_SHARED_LIBS=ON
+      -DMINIAUDIO_NO_EXTRA_NODES=ON
     ]
     system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
     system "cmake", "--build", "build"
@@ -38,15 +40,7 @@ class Miniaudio < Formula
       }
     C
 
-    args = %W[
-      test.c
-      -I#{include}
-      -L#{lib}
-      -lminiaudio
-      -lm
-    ]
-    args += %w[-o test]
-    system ENV.cc, *args
+    system ENV.cc, "test.c", "-o", "test", "-I#{include}", "-L#{lib}", "-lminiaudio", "-lm"
     system "./test"
   end
 end
