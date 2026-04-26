@@ -4,6 +4,7 @@ class SignalCli < Formula
   url "https://github.com/AsamK/signal-cli/archive/refs/tags/v0.14.3.tar.gz"
   sha256 "feb98997af67eddba4a7284334aabae381ca26aede85d9e5703098b76f8779ef"
   license "GPL-3.0-or-later"
+  revision 1
 
   livecheck do
     url :stable
@@ -19,15 +20,22 @@ class SignalCli < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "6e85f3f47bf5861ebaae27e48fd0d9ef6701f0beb8f4b4d7fc15e6c9de014067"
   end
 
+  depends_on "asciidoc" => :build
   depends_on "cmake" => :build # For `boring-sys` crate in `libsignal-client`
+  depends_on "docbook-xsl" => :build
+  depends_on "graalvm" => :build
   depends_on "gradle" => :build
   depends_on "protobuf" => :build
   depends_on "rust" => :build
 
-  depends_on "openjdk"
-
+  uses_from_macos "libxslt" => :build
   uses_from_macos "llvm" => :build # For `libclang`, used by `boring-sys` crate
+  uses_from_macos "python" => :build
   uses_from_macos "zip" => :build
+
+  on_linux do
+    depends_on "zlib-ng-compat"
+  end
 
   resource "libsignal-client" do
     url "https://github.com/signalapp/libsignal/archive/refs/tags/v0.92.1.tar.gz"
@@ -40,8 +48,14 @@ class SignalCli < Formula
   end
 
   def install
-    java_version = "25"
-    ENV["JAVA_HOME"] = Language::Java.java_home(java_version)
+    ENV["JAVA_HOME"] = if OS.mac?
+      Formula["graalvm"].opt_libexec/"graalvm.jdk/Contents/Home"
+    else
+      Formula["graalvm"].opt_libexec
+    end
+
+    native_image_env = ENV.keys.grep(/^HOMEBREW_/).map { |key| "-E#{key}" }
+    ENV.prepend "NATIVE_IMAGE_OPTIONS", native_image_env.join(" ")
 
     # https://github.com/AsamK/signal-cli/wiki/Provide-native-lib-for-libsignal
     resource("libsignal-client").stage do |r|
@@ -52,23 +66,28 @@ class SignalCli < Formula
     end
 
     libsignal_client_jar = buildpath.glob("libsignal-client-*.jar").first
-    system "gradle", "--no-daemon", "-Plibsignal_client_path=#{libsignal_client_jar}", "installDist"
-    libexec.install (buildpath/"build/install/signal-cli").children
-    (libexec/"bin/signal-cli.bat").unlink
-    (bin/"signal-cli").write_env_script libexec/"bin/signal-cli", Language::Java.overridable_java_home_env(java_version)
+    system "gradle", "--no-daemon", "-Plibsignal_client_path=#{libsignal_client_jar}", "nativeCompile"
+    bin.install (buildpath/"build/native/nativeCompile/signal-cli")
+
+    cd "man" do
+      ENV["XML_CATALOG_FILES"] = etc/"xml/catalog"
+      system "make", "install"
+      man1.install Dir["man1/*"]
+      man5.install Dir["man5/*"]
+    end
   end
 
   test do
     output = shell_output("#{bin}/signal-cli --version")
     assert_match "signal-cli #{version}", output
 
-    begin
-      io = IO.popen("#{bin}/signal-cli link", err: [:child, :out])
-      sleep 24
-    ensure
-      Process.kill("SIGINT", io.pid)
-      Process.wait(io.pid)
+    ENV["XDG_DATA_HOME"] = testpath
+    ENV["XDG_RUNTIME_DIR"] = testpath
+    link_output = +""
+    IO.popen("#{bin}/signal-cli -v link", err: [:child, :out]) do |io|
+      link_output << io.readpartial(1024) until link_output.include?("sgnl://linkdevice?uuid=")
+      Process.kill("KILL", io.pid)
     end
-    assert_match "sgnl://linkdevice?uuid=", io.read
+    assert_match "sgnl://linkdevice?uuid=", link_output
   end
 end
