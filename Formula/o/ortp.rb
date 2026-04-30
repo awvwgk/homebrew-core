@@ -18,7 +18,7 @@ class Ortp < Formula
 
   depends_on "cmake" => :build
   depends_on "pkgconf" => :build
-  depends_on "openssl@3"
+  depends_on "openssl@4"
 
   resource "bctoolbox" do
     url "https://gitlab.linphone.org/BC/public/bctoolbox/-/archive/5.4.110/bctoolbox-5.4.110.tar.bz2"
