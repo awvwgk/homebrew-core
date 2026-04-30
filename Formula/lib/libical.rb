@@ -1,10 +1,10 @@
 class Libical < Formula
   desc "Implementation of iCalendar protocols and data formats"
   homepage "https://libical.github.io/libical/"
-  url "https://github.com/libical/libical/releases/download/v3.0.20/libical-3.0.20.tar.gz"
-  sha256 "e73de92f5a6ce84c1b00306446b290a2b08cdf0a80988eca0a2c9d5c3510b4c2"
+  url "https://github.com/libical/libical/releases/download/v4.0.0/libical-4.0.0.tar.gz"
+  sha256 "caa74119c5a83d19e7466f20344ea6ffe4b779198ee33f46d5fab9d574dac207"
   license any_of: ["LGPL-2.1-or-later", "MPL-2.0"]
-  revision 3
+  compatibility_version 1
 
   livecheck do
     url :stable
@@ -22,6 +22,7 @@ class Libical < Formula
   end
 
   depends_on "cmake" => :build
+  depends_on "gobject-introspection" => :build
   depends_on "pkgconf" => :build
   depends_on "glib"
   depends_on "icu4c@78"
@@ -35,9 +36,9 @@ class Libical < Formula
   def install
     args = %W[
       -DCMAKE_DISABLE_FIND_PACKAGE_BerkeleyDB=ON
-      -DENABLE_GTK_DOC=OFF
-      -DSHARED_ONLY=ON
       -DCMAKE_INSTALL_RPATH=#{rpath}
+      -DLIBICAL_GLIB_BUILD_DOCS=OFF
+      -DLIBICAL_JAVA_BINDINGS=OFF
     ]
 
     system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
