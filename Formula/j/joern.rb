@@ -1,8 +1,8 @@
 class Joern < Formula
   desc "Open-source code analysis platform based on code property graphs"
   homepage "https://joern.io/"
-  url "https://github.com/joernio/joern/archive/refs/tags/v4.0.520.tar.gz"
-  sha256 "001ab5795c55c4dfe9d11e17b61a9a3d66e0277b52671008de4cfe2b159696a4"
+  url "https://github.com/joernio/joern/archive/refs/tags/v4.0.530.tar.gz"
+  sha256 "8709cf520a22c233793604c6b47706072767a8743821e772094d52bc4538e458"
   license "Apache-2.0"
 
   livecheck do
@@ -41,7 +41,7 @@ class Joern < Formula
     # Remove incompatible pre-built binaries
     os = OS.mac? ? "macos" : OS.kernel_name.downcase
     astgen_suffix = Hardware::CPU.intel? ? [os] : ["#{os}-#{Hardware::CPU.arch}", "#{os}-arm"]
-    libexec.glob("frontends/{csharp,go,js}src2cpg/bin/astgen/{dotnet,go,}astgen-*").each do |f|
+    libexec.glob("frontends/{csharpsrc,gosrc,jssrc,rust}2cpg/bin/astgen/{dotnet,go,rust_}ast*").each do |f|
       f.unlink unless f.basename.to_s.end_with?(*astgen_suffix)
     end
 
