@@ -1,8 +1,8 @@
 class Sdl3 < Formula
   desc "Low-level access to audio, keyboard, mouse, joystick, and graphics"
   homepage "https://libsdl.org/"
-  url "https://github.com/libsdl-org/SDL/releases/download/release-3.4.4/SDL3-3.4.4.tar.gz"
-  sha256 "ee712dbe6a89bb140bbfc2ce72358fb5ee5cc2240abeabd54855012db30b3864"
+  url "https://github.com/libsdl-org/SDL/releases/download/release-3.4.6/SDL3-3.4.6.tar.gz"
+  sha256 "96bdd3f0c442105c87c287d213858b2df8207c87d54991dd589078c3746cb386"
   license "Zlib"
   compatibility_version 1
   head "https://github.com/libsdl-org/SDL.git", branch: "main"
