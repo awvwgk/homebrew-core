@@ -1,8 +1,8 @@
 class NagaCli < Formula
   desc "Shader translation command-line tool"
   homepage "https://wgpu.rs/"
-  url "https://static.crates.io/crates/naga-cli/naga-cli-29.0.0.crate"
-  sha256 "fa062330cab34f42161e422209e6f0f15780bb3ecb82c3772c27c649294c0e12"
+  url "https://static.crates.io/crates/naga-cli/naga-cli-29.0.2.crate"
+  sha256 "846ecbbeacd264eafe5af172fd76338cf8cd724f03594181dce008c8fdc583a6"
   license any_of: ["Apache-2.0", "MIT"]
   head "https://github.com/gfx-rs/wgpu.git", branch: "trunk"
 
