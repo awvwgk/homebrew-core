@@ -7,12 +7,12 @@ class Gittuf < Formula
   head "https://github.com/gittuf/gittuf.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "b0cbca8a270e3e763b60c2fdf7b08d2c9d8ecfd967d4814265cb390c3760b522"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "b0cbca8a270e3e763b60c2fdf7b08d2c9d8ecfd967d4814265cb390c3760b522"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "b0cbca8a270e3e763b60c2fdf7b08d2c9d8ecfd967d4814265cb390c3760b522"
-    sha256 cellar: :any_skip_relocation, sonoma:        "ff7cab3e7c45a9750e6203f2f777c26e3b7b29bebd39670dbedc80d3fe29b5f6"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "b72685135a684f60f2b26fca40f0ff15420cb2aca892d0ccfc8bb11640274481"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "2c0d7606659829363965dea99cc65fe5be2422268950f4b0455ac932f4cf0c79"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "58643a531272425fae61dd138492c2f5a5da611cfa1f1675854e6665bd358aab"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "58643a531272425fae61dd138492c2f5a5da611cfa1f1675854e6665bd358aab"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "58643a531272425fae61dd138492c2f5a5da611cfa1f1675854e6665bd358aab"
+    sha256 cellar: :any_skip_relocation, sonoma:        "4c962440aba4f18695dc4cf2ccf9698924e936d6162e245ce769a01347910126"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "a06d79f36e7f4e1a391e3e7394ff253f436499fb0b59e97a19ba9aa9c9c049b7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "fc36cc56b91322a0a6a7e3f8984e67ddeb933bfd2a5477de914f6789da942868"
   end
 
   depends_on "go" => :build
