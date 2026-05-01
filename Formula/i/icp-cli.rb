@@ -1,8 +1,8 @@
 class IcpCli < Formula
   desc "Development tool for building and deploying canisters on ICP"
   homepage "https://dfinity.github.io/icp-cli/"
-  url "https://github.com/dfinity/icp-cli/archive/refs/tags/v0.2.5.tar.gz"
-  sha256 "902298268006737ab64d7bd223b628d78ad17630c02a520ee64aa7562cf446dd"
+  url "https://github.com/dfinity/icp-cli/archive/refs/tags/v0.2.6.tar.gz"
+  sha256 "2fc9bd290ed6ffe94f401d16e5c244e6cd77bf3c710ff74f55d3e60db6b8c41f"
   license "Apache-2.0"
 
   bottle do
@@ -27,6 +27,10 @@ class IcpCli < Formula
   def install
     ENV["ICP_CLI_BUILD_DIST"] = "homebrew-core"
     ENV["OPENSSL_DIR"] = Formula["openssl@3"].opt_prefix
+
+    # Skip wasm32-wasip2 test fixture build in icp-sync-plugin (only used in tests)
+    # https://github.com/dfinity/icp-cli/issues/543
+    inreplace "crates/icp-sync-plugin/build.rs", "build_test_fixture();", ""
 
     system "cargo", "install", *std_cargo_args(path: "crates/icp-cli")
   end
