@@ -4,6 +4,7 @@ class Bluez < Formula
   url "https://mirrors.edge.kernel.org/pub/linux/bluetooth/bluez-5.86.tar.xz"
   sha256 "99f144540c6070591e4c53bcb977eb42664c62b7b36cb35a29cf72ded339621d"
   license "GPL-2.0-or-later"
+  revision 1
 
   livecheck do
     url "https://mirrors.edge.kernel.org/pub/linux/bluetooth/"
@@ -32,6 +33,9 @@ class Bluez < Formula
   depends_on "systemd" # for libudev
 
   def install
+    # libical 4 split vCard helpers into libicalvcal; obexd needs it linked.
+    ENV.append "LIBS", "-licalvcal"
+
     system "autoreconf", "--force", "--install", "--verbose" if build.head?
     system "./configure", "--disable-testing", "--disable-manpages", "--enable-library", *std_configure_args
     system "make"
