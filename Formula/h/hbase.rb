@@ -18,7 +18,7 @@ class Hbase < Formula
 
   depends_on "ant" => :build
   depends_on "lzo"
-  depends_on "openjdk@11"
+  depends_on "openjdk@17"
 
   on_linux do
     on_arm do
@@ -45,14 +45,14 @@ class Hbase < Formula
   end
 
   def install
-    java_home = Language::Java.java_home("11")
+    java_home = Language::Java.java_home("17")
     rm(Dir["bin/*.cmd", "conf/*.cmd"])
     libexec.install %w[bin conf lib hbase-webapps]
 
     # Some binaries have really generic names (like `test`) and most seem to be
     # too special-purpose to be permanently available via PATH.
     %w[hbase start-hbase.sh stop-hbase.sh].each do |script|
-      (bin/script).write_env_script libexec/"bin"/script, Language::Java.overridable_java_home_env("11")
+      (bin/script).write_env_script libexec/"bin"/script, Language::Java.overridable_java_home_env("17")
     end
 
     resource("hadoop-lzo").stage do
@@ -74,7 +74,7 @@ class Hbase < Formula
       # Workaround for Xcode 14.3.
       ENV.append_to_cflags "-m64" if Hardware::CPU.intel?
       ENV.append_to_cflags "-Wno-implicit-function-declaration"
-      ENV["CPPFLAGS"] = "-I#{Formula["openjdk@11"].include}"
+      ENV["CPPFLAGS"] = "-I#{Formula["openjdk@17"].include}"
 
       system "ant", "compile-native", "tar"
       (libexec/"lib").install Dir["build/hadoop-lzo-*/hadoop-lzo-*.jar"]
@@ -86,7 +86,7 @@ class Hbase < Formula
       # https://issues.apache.org/jira/browse/HADOOP-8568
       # https://issues.apache.org/jira/browse/HADOOP-3619
       s.gsub!(/^# export HBASE_OPTS$/,
-              "export HBASE_OPTS=\"-Djava.net.preferIPv4Stack=true -XX:+UseConcMarkSweepGC\"")
+              "export HBASE_OPTS=\"-Djava.net.preferIPv4Stack=true\"")
       s.gsub!(/^# export JAVA_HOME=.*/,
               "export JAVA_HOME=\"${JAVA_HOME:-#{java_home}}\"")
 
@@ -148,7 +148,6 @@ class Hbase < Formula
                           HBASE_LOGFILE:           "hbase-root-master.log",
                           HBASE_MASTER_OPTS:       " -XX:PermSize=128m -XX:MaxPermSize=128m",
                           HBASE_NICENESS:          "0",
-                          HBASE_OPTS:              "-XX:+UseConcMarkSweepGC",
                           HBASE_PID_DIR:           var/"run/hbase",
                           HBASE_REGIONSERVER_OPTS: " -XX:PermSize=128m -XX:MaxPermSize=128m",
                           HBASE_ROOT_LOGGER:       "INFO,RFA",
