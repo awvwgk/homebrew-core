@@ -3,8 +3,8 @@ class Beancount < Formula
 
   desc "Double-entry accounting tool that works on plain text files"
   homepage "https://beancount.github.io/"
-  url "https://files.pythonhosted.org/packages/57/e3/951015ad2e72917611e1a45c5fe9a33b4e2e202923d91455a9727aff441b/beancount-3.2.0.tar.gz"
-  sha256 "9f374bdcbae63328d8a0cf6d539490f81caa647f2d1cc92c9fa6117a9eb092ca"
+  url "https://files.pythonhosted.org/packages/f8/9d/aa97bb5d354cc853faca60d0b0bf0728af11300cd6276769314885b4b9a8/beancount-3.2.2.tar.gz"
+  sha256 "7f9a3919152232c262c826998fb2620046b47249624c665d79fa4b0a72f78bfc"
   license "GPL-2.0-only"
   head "https://github.com/beancount/beancount.git", branch: "master"
 
@@ -33,8 +33,8 @@ class Beancount < Formula
   pypi_packages exclude_packages: "certifi"
 
   resource "click" do
-    url "https://files.pythonhosted.org/packages/60/6c/8ca2efa64cf75a977a0d7fac081354553ebe483345c734fb6b6515d96bbc/click-8.2.1.tar.gz"
-    sha256 "27c491cc05d968d271d5a1db13e3b5a184636d9d930f148c50b038f0d0646202"
+    url "https://files.pythonhosted.org/packages/bb/63/f9e1ea081ce35720d8b92acde70daaedace594dc93b693c869e0d5910718/click-8.3.3.tar.gz"
+    sha256 "398329ad4837b2ff7cbe1dd166a4c0f8900c3ca3a218de04466f38f6497f18a2"
   end
 
   resource "python-dateutil" do
@@ -43,8 +43,8 @@ class Beancount < Formula
   end
 
   resource "regex" do
-    url "https://files.pythonhosted.org/packages/b2/5a/4c63457fbcaf19d138d72b2e9b39405954f98c0349b31c601bfcb151582c/regex-2025.9.1.tar.gz"
-    sha256 "88ac07b38d20b54d79e704e38aa3bd2c0f8027432164226bdee201a1c0c9c9ff"
+    url "https://files.pythonhosted.org/packages/cb/0e/3a246dbf05666918bd3664d9d787f84a9108f6f43cc953a077e4a7dfdb7e/regex-2026.4.4.tar.gz"
+    sha256 "e08270659717f6973523ce3afbafa53515c4dc5dcad637dc215b6fd50f689423"
   end
 
   resource "six" do
@@ -53,6 +53,9 @@ class Beancount < Formula
   end
 
   def install
+    # Skip the PyPI flex/bison wrappers; we already provide system equivalents.
+    inreplace "pyproject.toml", /^\s*'(flex|bison)-bin.*\n/, ""
+
     virtualenv_install_with_resources
 
     bin.glob("bean-*") do |executable|
