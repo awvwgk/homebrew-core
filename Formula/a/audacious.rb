@@ -60,7 +60,6 @@ class Audacious < Formula
   depends_on "libogg"
   depends_on "libopenmpt"
   depends_on "libsamplerate"
-  depends_on "libsidplayfp"
   depends_on "libsndfile"
   depends_on "libsoxr"
   depends_on "libvorbis"
@@ -88,6 +87,12 @@ class Audacious < Formula
     depends_on "pipewire"
     depends_on "pulseaudio"
     depends_on "zlib-ng-compat"
+  end
+
+  # Remove `libsidplayfp`, which is actually Windows only dependency, remove in next release
+  patch do
+    url "https://github.com/audacious-media-player/audacious/commit/61fae600af7e71c5dc03c74f45dee6edc4889611.patch?full_index=1"
+    sha256 "b5e6fa094fa5db30b1154e30a6372d89006803f4f4069b0f219d8d086007a05d"
   end
 
   def install
