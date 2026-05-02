@@ -1,8 +1,8 @@
 class Typedb < Formula
   desc "Strongly-typed database with a rich and logical type system"
   homepage "https://typedb.com/"
-  url "https://github.com/typedb/typedb/archive/refs/tags/3.10.3.tar.gz"
-  sha256 "ec396edb1bf75318e4c891b7fc7946506ebc280be350586416a1097b3416103f"
+  url "https://github.com/typedb/typedb/archive/refs/tags/3.10.4.tar.gz"
+  sha256 "80ced1d1cd0a68422c768c63650dd7676e9fff6fa7a1034414f5bcb8832d3192"
   license "MPL-2.0"
 
   bottle do
