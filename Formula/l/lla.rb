@@ -1,8 +1,8 @@
 class Lla < Formula
   desc "High-performance, extensible alternative to ls"
   homepage "https://github.com/chaqchase/lla"
-  url "https://github.com/chaqchase/lla/archive/refs/tags/v0.5.4.tar.gz"
-  sha256 "332239095c6aa631570d0695ecb955997ffb6077a3c71be11031e47e97d59687"
+  url "https://github.com/chaqchase/lla/archive/refs/tags/v0.5.5.tar.gz"
+  sha256 "c8cafb2eb4145b9655335a6574f296a122b3410c1e36debc6450fee3f4ec0b63"
   license "MIT"
 
   bottle do
