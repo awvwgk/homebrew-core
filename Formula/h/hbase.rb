@@ -8,12 +8,13 @@ class Hbase < Formula
   license all_of: ["Apache-2.0", "GPL-3.0-or-later"]
 
   bottle do
-    sha256 arm64_tahoe:   "add59c179ca1a52eda188727acbad545289cb0b7279d5667f205a745432bd395"
-    sha256 arm64_sequoia: "81c98b4253fcf7864192aec69b4b9bd50e44aba8654d9264dd86dc3147042e18"
-    sha256 arm64_sonoma:  "94e793b80b2a29c52db274322cb20d8c764ebf0fd624e42632a4b84504a5195c"
-    sha256 sonoma:        "246ede87a8ca8b624da273d08de57400a72b989c84c92d0b44553cb1bd61c5ef"
-    sha256 arm64_linux:   "c0e4e633a550eceac6fd8f0aa86a79789519208b57cf7f87eee2e79b30da8077"
-    sha256 x86_64_linux:  "ca2ccf74243eb40d117b1ec7209c0089b1f9824b3f2dde1a5f0347ac926aba9c"
+    rebuild 1
+    sha256 arm64_tahoe:   "fd00080ca7610f1c4e7eac9acc1760fc964e899f9a17f06e4a2c7bf4b74c4e39"
+    sha256 arm64_sequoia: "0b0a4d575975c6147604f0747c53f041409d81f921577105632c593c91046e33"
+    sha256 arm64_sonoma:  "4b5c7e54871fec8a2dbbe83b4b8d863fc3368afb0ba7718f15739e04225a4c9d"
+    sha256 sonoma:        "fcb9cbf33b216436444dd2d5e3596aa5be87e69002b6e51818493b71eb039bb3"
+    sha256 arm64_linux:   "1032d4382795b7637eb832decbfbbbd6e92a67378b333ee26a573d081d9012e5"
+    sha256 x86_64_linux:  "3e9c3334d63451522677cc6973729d92254d4ef6983dca41eba2e71f4ed97433"
   end
 
   depends_on "ant" => :build
