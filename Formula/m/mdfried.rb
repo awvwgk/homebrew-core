@@ -6,6 +6,11 @@ class Mdfried < Formula
   license "GPL-3.0-or-later"
   head "https://github.com/benjajaja/mdfried.git", branch: "master"
 
+  livecheck do
+    url :stable
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
+  end
+
   bottle do
     sha256 cellar: :any,                 arm64_tahoe:   "7601a98ea5595347f5bab4d15637dfe53d42fc534d250da8310b7e6a36da27ba"
     sha256 cellar: :any,                 arm64_sequoia: "3637f29b3da8892d1a8841b561be52f8217165762092e3300dec9fefabf22e29"
