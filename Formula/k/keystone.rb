@@ -26,7 +26,6 @@ class Keystone < Formula
   def install
     args = %W[
       -DPYTHON_EXECUTABLE=#{python}
-      -DBUILD_SHARED_LIBS=ON
       -DCMAKE_INSTALL_RPATH=#{rpath}
     ]
 
@@ -35,9 +34,15 @@ class Keystone < Formula
               "cmake_policy(SET CMP0051 OLD)", ""
     args << "-DCMAKE_POLICY_VERSION_MINIMUM=3.5"
 
-    system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
+    # Build shared library
+    system "cmake", "-S", ".", "-B", "build", "-DBUILD_SHARED_LIBS=ON", *args, *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
+
+    # Build static library
+    system "cmake", "-S", ".", "-B", "static", "-DBUILD_SHARED_LIBS=OFF", *args, *std_cmake_args
+    system "cmake", "--build", "static"
+    lib.install "static/llvm/lib/libkeystone.a"
   end
 
   test do
