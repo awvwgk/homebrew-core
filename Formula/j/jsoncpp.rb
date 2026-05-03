@@ -30,14 +30,12 @@ class Jsoncpp < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "b67edf4eb071c0a0976e373c5a67015158f6f35bcf69f6692723aac69e9ef221"
-    sha256 cellar: :any,                 arm64_sequoia: "09ac35efeac2249064d84ab26a79ac116aa9b25b91baedaf065ce7a66d9d20ef"
-    sha256 cellar: :any,                 arm64_sonoma:  "a6436e046cdede285aee56208380f24d37ef592671901d7cea131f00998a5000"
-    sha256 cellar: :any,                 arm64_ventura: "15a94fe13490a723ab78a54a39129e7cc39ad3e3d5e9ea67e17d6b3c3a67e021"
-    sha256 cellar: :any,                 sonoma:        "8917f4a14ef0bd4f4d59f8d1a4689c653dd69180fe6ae7c3915bcd904db1d056"
-    sha256 cellar: :any,                 ventura:       "22fff7a8f16806ace94150ddf11d88ccc58a86326404cd018ad3b87852df7bf3"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "9447d9e39e2d2af144df7436aad79a6f7c3bb9cf75bb21e2409dfcae273fa4e2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "460d3286f4bdf820e9426b66e3773551420c1a1dd1b3bf62d7f20bf2e7e955c1"
+    sha256 cellar: :any,                 arm64_tahoe:   "5beaf350688283483e3f7c82726a8d11ec6cc88b389051916b09e21850a2b498"
+    sha256 cellar: :any,                 arm64_sequoia: "a71f80781827c5677bafdfeb474711cf3b5b48a3250adf99bbbbd49d07dd15c7"
+    sha256 cellar: :any,                 arm64_sonoma:  "362ddd256b7f2bd664bed9375c3697a7ffe11a19bc120f1c496fec56316b1534"
+    sha256 cellar: :any,                 sonoma:        "5f5d30dac714b5dfd17f4de27349692cd949f0144ccb3780860015b87a275b98"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "9b8d1661e7e6a7b5c6307c97ae08aea55e19bcb0587afe220e5c38a70f64a3f1"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "7df8d9a070ee27066fb2287e2a48218ffe143ccc5bf607a701143a57dae242d3"
   end
 
   # NOTE: Do not change this to use CMake, because the CMake build is deprecated.
