@@ -6,12 +6,12 @@ class TrzszSsh < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "f5ed283aba0b804c2cb5c97e23b6129e0dbba74a5d531d81914679349e142265"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "f5ed283aba0b804c2cb5c97e23b6129e0dbba74a5d531d81914679349e142265"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "f5ed283aba0b804c2cb5c97e23b6129e0dbba74a5d531d81914679349e142265"
-    sha256 cellar: :any_skip_relocation, sonoma:        "40a483218088b4650b3daccd27900b30c8e5476bd4ff48dc817f9fb9e39c6773"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "4c7ff339a7ea7d6883cbf8beb71b879b4e5d0121e7ebae8f1d2c5a4b7c5de5d8"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "aa6aa165501893dcd974e973f0e8c702dbd8d7e1ec665ff7277fa5eeb39d7317"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "7d78c3aeb716de54f2eddb73c3299ff4fae02a079f87250a96ef683b8d9f0778"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "7d78c3aeb716de54f2eddb73c3299ff4fae02a079f87250a96ef683b8d9f0778"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "7d78c3aeb716de54f2eddb73c3299ff4fae02a079f87250a96ef683b8d9f0778"
+    sha256 cellar: :any_skip_relocation, sonoma:        "19c333aaec33670a97e7a1773f9e783c617e46207f7413ebdb8604f7c8b38541"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "df41555cba2702c68478592972f6b589ebb6d1b599cef82d7f13145baf268e12"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a7f91c7455f1af3c84e9b7206c8e49fe97014854ec83b2c2ed44d5b90169559f"
   end
 
   depends_on "go" => :build
