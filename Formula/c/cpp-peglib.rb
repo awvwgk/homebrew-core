@@ -1,8 +1,8 @@
 class CppPeglib < Formula
   desc "Header-only PEG (Parsing Expression Grammars) library for C++"
   homepage "https://github.com/yhirose/cpp-peglib"
-  url "https://github.com/yhirose/cpp-peglib/archive/refs/tags/v1.10.2.tar.gz"
-  sha256 "a20d79c32b91ed08f845b91a138c5958b3eb819d2127afcc64714ec1a6ad451b"
+  url "https://github.com/yhirose/cpp-peglib/archive/refs/tags/v1.10.3.tar.gz"
+  sha256 "af654d345788715754cee3757433837620aed38a2efc30a3e94ee709bf407ba0"
   license "MIT"
 
   bottle do
