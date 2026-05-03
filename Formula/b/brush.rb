@@ -1,8 +1,8 @@
 class Brush < Formula
   desc "Bourne RUsty SHell (command interpreter)"
   homepage "https://github.com/reubeno/brush"
-  url "https://github.com/reubeno/brush/archive/refs/tags/brush-shell-v0.3.0.tar.gz"
-  sha256 "a0dac5cf7e9d8bced9bf28ed400955750ed6b7320d1154522a14f4a74e75a056"
+  url "https://github.com/reubeno/brush/archive/refs/tags/brush-shell-v0.4.0.tar.gz"
+  sha256 "0cce607454972c18bc4a30d2f44a2c91fccf02c458475fda7720370a3dc8a4f0"
   license "MIT"
   head "https://github.com/reubeno/brush.git", branch: "main"
 
