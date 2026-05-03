@@ -4,17 +4,25 @@ class Nethack < Formula
   desc "Single-player roguelike video game"
   homepage "https://www.nethack.org/"
   license "NGPL"
-  head "https://github.com/NetHack/NetHack.git", branch: "NetHack-3.7"
+  head "https://github.com/NetHack/NetHack.git", branch: "NetHack-5.0"
 
   stable do
-    url "https://www.nethack.org/download/3.6.7/nethack-367-src.tgz"
-    version "3.6.7"
-    sha256 "98cf67df6debf9668a61745aa84c09bcab362e5d33f5b944ec5155d44d2aacb2"
+    url "https://nethack.org/download/5.0.0/nethack-500-src.tgz"
+    version "5.0.0"
+    sha256 "2959b7886aac76185b90aea0c9f80d14343f604de0ae96b3dd2a760f7ab3bde9"
 
-    # add macos patch, upstream PR ref, https://github.com/NetHack/NetHack/pull/988
+    # Fixes --showpaths command when used noninteractively,
+    # required by Homebrew's tests
+    # https://github.com/NetHack/NetHack/issues/1512
     patch do
-      url "https://github.com/NetHack/NetHack/commit/79cf1e902483c070b209b55059159da5f2120b97.patch?full_index=1"
-      sha256 "5daf984512d9c512818e0376cf2b57a5cd9eefaa626ea286bfd70d899995b5de"
+      url "https://github.com/NetHack/NetHack/commit/60d59f4d5574c00cbb391cd58da3ed959de1ba2b.patch?full_index=1"
+      sha256 "3ac9c71f360404c30845b67b8e96d06504c3039abe1ae43b76c856b20ee11f98"
+    end
+
+    # Second half of the above fix
+    patch do
+      url "https://github.com/NetHack/NetHack/commit/b7735632bfdac6a502f8f2954fbe6d5bbac53e2b.patch?full_index=1"
+      sha256 "ea9a05446b9d840030c799d610bec394337040c2d63f8d3694f38221776e6d02"
     end
   end
 
@@ -42,8 +50,7 @@ class Nethack < Formula
     sha256 x86_64_linux:   "e8904c482b7915880b90dd409d7a66d74b46524d07071f3eb720aa870cf78a83"
   end
 
-  uses_from_macos "bison" => :build
-  uses_from_macos "flex" => :build
+  depends_on "groff" => :build
   uses_from_macos "ncurses"
 
   def install
@@ -55,9 +62,9 @@ class Nethack < Formula
 
     cd "sys/unix" do
       hintfile = if OS.mac?
-        build.head? ? "macOS.370" : "macosx10.14"
+        "macOS.500"
       else
-        build.head? ? "macosx.sh" : "macosx10.10"
+        "linux.500"
       end
 
       # Enable wizard mode for all users
@@ -70,15 +77,15 @@ class Nethack < Formula
         s.change_make_var! "CHOWN", "true"
         s.change_make_var! "CHGRP", "true"
         if build.stable?
-          s.gsub! "#WANT_WIN_CURSES=1",
-                  "WANT_WIN_CURSES=1\nCFLAGS+=-DVAR_PLAYGROUND='\"#{HOMEBREW_PREFIX}/share/nethack\"'"
+          s.gsub! "#NHCFLAGS+=-DLIVELOG",
+                  "#NHCFLAGS+=-DLIVELOG\nCFLAGS+=-DVAR_PLAYGROUND='\"#{HOMEBREW_PREFIX}/share/nethack\"'"
         end
       end
 
       system "sh", "setup.sh", "hints/#{hintfile}"
     end
 
-    system "make", "fetch-lua" if build.head?
+    system "make", "fetch-lua"
     system "make", "install"
     bin.install_symlink libexec/"nethack"
     man6.install "doc/nethack.6"
