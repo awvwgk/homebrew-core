@@ -1,8 +1,8 @@
 class TechnitiumDns < Formula
   desc "Self host a DNS server for privacy & security"
   homepage "https://technitium.com/dns/"
-  url "https://github.com/TechnitiumSoftware/DnsServer/archive/refs/tags/v15.0.1.tar.gz"
-  sha256 "7ef5b2725e6565016db0171c70abeb5acd9609c681a1f8cce4c80c062b6ff39f"
+  url "https://github.com/TechnitiumSoftware/DnsServer/archive/refs/tags/v15.1.0.tar.gz"
+  sha256 "1d1f2d01519da0fed3b2b28ca982b22f3978d035ce2edeb1a2d8c197d656b78c"
   license "GPL-3.0-or-later"
 
   bottle do
