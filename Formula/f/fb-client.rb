@@ -14,13 +14,12 @@ class FbClient < Formula
   end
 
   bottle do
-    rebuild 3
-    sha256 cellar: :any,                 arm64_tahoe:   "d8e28f243d35b05f844423d91864d16f6a762c9f504f275b844dd6b9a30e7cae"
-    sha256 cellar: :any,                 arm64_sequoia: "847de16c9a66787cd02c39cb7d3fe9d2b525d35c14c994b65897340c72c9ef9c"
-    sha256 cellar: :any,                 arm64_sonoma:  "979dc4765686977ab283f64a2cc5d9a2e11b29aa77429a1e10cff91d26d3710b"
-    sha256 cellar: :any,                 sonoma:        "8b4e5071281484647dc85aacd08e852e801300efc81a10020244a33682913c1b"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "25a09e67f190d6b0fb898ff38b44fdae32c068f1710b240d1e2591cdd4c8c9d7"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "710a8cfa181a40cf624baf02e392d55a72420764bff738d2e400ad099dc9dbca"
+    sha256 cellar: :any,                 arm64_tahoe:   "94836e631e1cebba28bc3327d3cb63a2725af425a34949ea5b3d643b3e88a18b"
+    sha256 cellar: :any,                 arm64_sequoia: "87c40285614876d05e7b8f4274ac5bb5b171d1cdcea2931eefc6d32ccd4f490d"
+    sha256 cellar: :any,                 arm64_sonoma:  "059881236183d0a075ac3059e01eeb9be2546e82bcb8d6daa0e295ffb0d4971c"
+    sha256 cellar: :any,                 sonoma:        "6af4054c808c8f5c3ec176d38dfe8fcedab2516ff410f9bf7d747afbf0520521"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "fa64e34d0861774bb7570f22b37fc37ca517d484f9c4d38307bd76d474b0ed44"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "7dacaf9c2b823ba207783b95c773e5820ca391393b93cdf0c05f1cb7e993d86c"
   end
 
   depends_on "curl"
