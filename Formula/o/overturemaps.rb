@@ -9,12 +9,12 @@ class Overturemaps < Formula
   head "https://github.com/OvertureMaps/overturemaps-py.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "b09c0c3f778ddc1f1edb7807c468a34daca7a3fad5bf6c1df515d5f66a84a9f5"
-    sha256 cellar: :any,                 arm64_sequoia: "ca9900ed8f7927c17336835e918d37bdeb705041005f9d4aa6e4df4be31f2af8"
-    sha256 cellar: :any,                 arm64_sonoma:  "14ebea657bfe9277a4011ccc393867e591fa2ccddb47d23979028567c615a7d7"
-    sha256 cellar: :any,                 sonoma:        "d34e4f47684edce1d825aa5c41d726a3d5ff4a08919e808f06ea8066c218adc2"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "9abcca7ca0a93af4dcc2f6b5d1b2653a1ee51766acac1418d4666b5310866105"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "88d43f314fa7ad36141784e0a201fc922420223834f26c052aba98bc7c67f7f0"
+    sha256 cellar: :any,                 arm64_tahoe:   "57cbfca0b12b56145860b6f4020795114cf2b3e0e8aac21e2dbec2b19eabcee3"
+    sha256 cellar: :any,                 arm64_sequoia: "d8b5b0a550dcf69afa47623a107b5debeb0ecd88cfdcec24965b5bbfb90d154e"
+    sha256 cellar: :any,                 arm64_sonoma:  "6ea77479bfdd3ea554154f594c99b3c713810d6417a71fd7c25883199b3f353a"
+    sha256 cellar: :any,                 sonoma:        "3441070bbf564d8725fbd319e68c7bcd6b641d60de7cd6efbcc5aa160d7c6675"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "b98ba67163be82a39634d5ca51d9d1810071382d2b3b36050f3993e6bb9ac53c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "c833ceb433e85de4162744b6da00b2f6cc69e9ae11a13c6e7cc2275f4994da02"
   end
 
   depends_on "cmake" => :build  # for pyarrow
