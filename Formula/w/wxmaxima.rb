@@ -1,10 +1,9 @@
 class Wxmaxima < Formula
   desc "Cross platform GUI for Maxima"
   homepage "https://wxmaxima-developers.github.io/wxmaxima/"
-  url "https://github.com/wxMaxima-developers/wxmaxima/archive/refs/tags/Version-26.01.0.tar.gz"
-  sha256 "1716c4f27636f909673f63ed0c7c30621683e35eb7bf05a5d5010fa67f0397f6"
+  url "https://github.com/wxMaxima-developers/wxmaxima/archive/refs/tags/Version-26.05.0.tar.gz"
+  sha256 "1380c58d27e1b2e0eaee543936ca188658a829fc397cb9e064e8803209e3475f"
   license "GPL-2.0-or-later"
-  revision 1
   head "https://github.com/wxMaxima-developers/wxmaxima.git", branch: "main"
 
   livecheck do
@@ -49,6 +48,9 @@ class Wxmaxima < Formula
   def install
     # Disable CMake fixup_bundle to prevent copying dylibs
     inreplace "src/CMakeLists.txt", "fixup_bundle(", "# \\0"
+
+    # We don't build wxWidgets with wxWebRequest; guard the upstream caller.
+    inreplace "src/wxMaxima.cpp", "#if wxCHECK_VERSION(3, 1, 5)", "\\0 && wxUSE_WEBREQUEST"
 
     # https://github.com/wxMaxima-developers/wxmaxima/blob/main/Compiling.md#wxwidgets-isnt-found
     args = OS.mac? ? [] : ["-DWXM_DISABLE_WEBVIEW=ON"]
