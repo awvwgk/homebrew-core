@@ -1,8 +1,8 @@
 class Dropbear < Formula
   desc "Small SSH server/client for POSIX-based system"
   homepage "https://matt.ucc.asn.au/dropbear/dropbear.html"
-  url "https://matt.ucc.asn.au/dropbear/releases/dropbear-2025.89.tar.bz2"
-  sha256 "0d1f7ca711cfc336dc8a85e672cab9cfd8223a02fe2da0a4a7aeb58c9e113634"
+  url "https://matt.ucc.asn.au/dropbear/releases/dropbear-2026.90.tar.bz2"
+  sha256 "16be820347723271b0fea6049ffeed6d6680d7429c65406d8af37776393a0250"
   license "MIT"
 
   livecheck do
@@ -42,8 +42,10 @@ class Dropbear < Formula
     # by changing `src/default_options.h` manually (see `CHANGES`)
     if OS.mac?
       inreplace "src/default_options.h" do |s|
-        s.gsub! "#define DROPBEAR_SVR_DROP_PRIVS DROPBEAR_SVR_MULTIUSER", ""
-        s.gsub! "#define DROPBEAR_SVR_LOCALSTREAMFWD 1", ""
+        s.gsub! "#define DROPBEAR_SVR_DROP_PRIVS DROPBEAR_SVR_MULTIUSER",
+                "#define DROPBEAR_SVR_DROP_PRIVS 0"
+        s.gsub! "#define DROPBEAR_SVR_LOCALSTREAMFWD 1",
+                "#define DROPBEAR_SVR_LOCALSTREAMFWD 0"
       end
     end
 
