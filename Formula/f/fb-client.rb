@@ -4,10 +4,9 @@ class FbClient < Formula
 
   desc "Shell-script client for https://paste.xinu.at"
   homepage "https://paste.xinu.at"
-  url "https://paste.xinu.at/data/client/fb-2.3.0.tar.gz"
-  sha256 "1164eca06eeacb4210d462c4baf1c4004272a6197d873d61166e7793539d1983"
+  url "https://paste.xinu.at/data/client/fb-2.4.0.tar.gz"
+  sha256 "a3dd5580c7ba459c18f2d2ac39614422fd9c0dccb4545dbd683c77104062af39"
   license "GPL-3.0-only"
-  revision 2
 
   livecheck do
     url :homepage
@@ -34,8 +33,8 @@ class FbClient < Formula
                 extra_packages: ["pycurl", "pyxdg"]
 
   resource "pycurl" do
-    url "https://files.pythonhosted.org/packages/e3/3d/01255f1cde24401f54bb3727d0e5d3396b67fc04964f287d5d473155f176/pycurl-7.45.7.tar.gz"
-    sha256 "9d43013002eab2fd6d0dcc671cd1e9149e2fc1c56d5e796fad94d076d6cb69ef"
+    url "https://files.pythonhosted.org/packages/95/23/cc07b16591af8ca373494d29aafc8df13e547077579e6779bb865a3f5a7f/pycurl-7.46.0.tar.gz"
+    sha256 "422ed7005b98768fe60fe6b6cb8bb6a4e1fc18b5433402e8fbdaba91811c4604"
   end
 
   resource "pyxdg" do
