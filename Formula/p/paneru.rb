@@ -4,6 +4,7 @@ class Paneru < Formula
   url "https://github.com/karinushka/paneru/archive/refs/tags/v0.4.0.tar.gz"
   sha256 "f0dab14876c3e6d37fd99a7e5ba2d9982a00bc165973d1a02f1209f633a2286a"
   license "MIT"
+  head "https://github.com/karinushka/paneru.git", branch: "main"
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_tahoe:   "5abc62f6b6045f7818df9480f7d61a1e284dbe76c6aa42699ab20a3d71f77c80"
