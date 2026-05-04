@@ -1,10 +1,9 @@
 class Cgit < Formula
   desc "Hyperfast web frontend for Git repositories written in C"
   homepage "https://git.zx2c4.com/cgit/"
-  url "https://git.zx2c4.com/cgit/snapshot/cgit-1.2.3.tar.xz"
-  sha256 "5a5f12d2f66bd3629c8bc103ec8ec2301b292e97155d30a9a61884ea414a6da4"
+  url "https://git.zx2c4.com/cgit/snapshot/cgit-1.3.1.tar.xz"
+  sha256 "c40fd71e120783d5e57d822208f3e17333cde2cd4baf3e7c8c75630b68afe12a"
   license "GPL-2.0-only"
-  revision 1
 
   livecheck do
     url "https://git.zx2c4.com/cgit/refs/tags"
@@ -33,15 +32,15 @@ class Cgit < Formula
   # git version is mandated by cgit: see GIT_VER variable in Makefile
   # https://git.zx2c4.com/cgit/tree/Makefile?h=v1.2#n17
   resource "git" do
-    url "https://mirrors.edge.kernel.org/pub/software/scm/git/git-2.25.1.tar.gz"
-    sha256 "4999ae0ee6cc7dfb280d7051e39a82a5630b00c1d8cd54890f07b4b7193d25aa"
+    url "https://mirrors.edge.kernel.org/pub/software/scm/git/git-2.54.0.tar.gz"
+    sha256 "45e8107643a44e3ce46f5665beb35af3932fb0d70017687905ab5d4e3aafa8eb"
   end
 
   # cgit 1.2.2+ needs memrchr, for which macOS provides no implementation
   # https://lists.zx2c4.com/pipermail/cgit/2020-August/004510.html
   patch do
-    url "https://raw.githubusercontent.com/Homebrew/homebrew-core/1cf441a0/Patches/cgit/memrchr-impl.patch"
-    sha256 "3ab5044db3001b411b58309d70f00b0dee54df991ebc66da9406711ed4007f0f"
+    url "https://raw.githubusercontent.com/Homebrew/homebrew-core/aa5fc862/Patches/cgit/memrchr-impl.patch"
+    sha256 "eceb5be34261046e4588b15650da406af2385e2ba5e84e469c968433749c3ebf"
   end
 
   def install
