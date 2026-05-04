@@ -5,6 +5,11 @@ class Paml < Formula
   sha256 "173e8754ad78000371099a96910f2c72b03a7b7b13c717405dc23385ae2f2c0f"
   license "GPL-3.0-only"
 
+  livecheck do
+    url :stable
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
+  end
+
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_tahoe:   "434830dea471f09bec75f37f545e7b01916f53c3d7f875d080d5def4448d4616"
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "443dd055dd35ad3a962978b706c18d021c85ebf76da01bde7c2fe5e52727b1df"
