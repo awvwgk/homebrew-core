@@ -16,6 +16,9 @@ class ColladaDom < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "d1e7a11c3863a2ed8f2b6a266299ddba1f536ae1dd3b7d97c75c2fd2de5a8084"
   end
 
+  deprecate! date: "2026-05-04", because: :unmaintained
+  disable! date: "2027-05-04", because: :unmaintained
+
   depends_on "cmake" => :build
   depends_on "pkgconf" => :build
   depends_on "boost"
@@ -31,6 +34,9 @@ class ColladaDom < Formula
   def install
     # Remove bundled libraries to avoid fallback
     rm_r(buildpath/"dom/external-libs")
+
+    # Minizip header is in a `minizip` subdirectory, but upstream didn't account for that.
+    inreplace "CMakeLists.txt", "set(MINIZIP_INCLUDE_DIR ${minizip_INCLUDE_DIRS}", "\\0/minizip"
 
     system "cmake", "-S", ".", "-B", "build",
                     "-DCMAKE_CXX_STANDARD=11",
