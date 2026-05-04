@@ -4,6 +4,7 @@ class Precice < Formula
   url "https://github.com/precice/precice/archive/refs/tags/v3.4.1.tar.gz"
   sha256 "ef4713c938a1b2000d0b071175e1b45f9ec55c7aec4bbe7b65c3992edcc74ac7"
   license "LGPL-3.0-or-later"
+  revision 1
   head "https://github.com/precice/precice.git", branch: "develop"
 
   bottle do
@@ -18,7 +19,9 @@ class Precice < Formula
   depends_on "cmake" => :build
 
   depends_on "boost"
-  depends_on "eigen"
+  depends_on "eigen" => :no_linkage
+  depends_on "ginkgo"
+  depends_on "kokkos"
   depends_on "numpy"
   depends_on "open-mpi"
   depends_on "petsc"
@@ -26,8 +29,17 @@ class Precice < Formula
 
   uses_from_macos "libxml2"
 
+  on_macos do
+    depends_on "libomp"
+  end
+
   def install
-    system "cmake", "-S", ".", "-B", "build", "-DCMAKE_INSTALL_RPATH=#{rpath}", *std_cmake_args
+    args = %W[
+      -DPRECICE_FEATURE_GINKGO_MAPPING=ON
+      -DCMAKE_INSTALL_RPATH=#{rpath}
+    ]
+
+    system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
   end
