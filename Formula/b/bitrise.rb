@@ -27,14 +27,16 @@ class Bitrise < Formula
   def install
     ldflags = %W[
       -s -w
-      -X github.com/bitrise-io/bitrise/version.VERSION=#{version}
-      -X github.com/bitrise-io/bitrise/version.Commit=#{tap.user}
+      -X github.com/bitrise-io/bitrise/v#{version.major}/version.VERSION=#{version}
+      -X github.com/bitrise-io/bitrise/v#{version.major}/version.Commit=#{tap.user}
     ]
 
     system "go", "build", *std_go_args(ldflags:)
   end
 
   test do
+    assert_match version.to_s, shell_output("#{bin}/bitrise --version")
+
     (testpath/"bitrise.yml").write <<~YAML
       format_version: 1.3.1
       default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
