@@ -17,12 +17,12 @@ class AzureCli < Formula
   no_autobump! because: :bumped_by_upstream
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "d8a9601b61ca52700563b96f187c2bdeb009074165576b60a73e59404a214b2e"
-    sha256 cellar: :any,                 arm64_sequoia: "05861de7f9500293a266d436f06182a490a3f3bc77b3c1f6a3991b65f0aaeebc"
-    sha256 cellar: :any,                 arm64_sonoma:  "346d2f429df50194fd3199bdba4a3730316da22499870c4897b86850a4334dd2"
-    sha256 cellar: :any,                 sonoma:        "37b88371f46024b63144498658d9b8fe0ba2dc2dcecae29214022f06de475f60"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "9452f1475966ae554b335ef852c784b219b923c9848e7790e841da70509feb6d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "141a2b2c9f09da1d456cfb652920b75aed7acc3093c86da7440852e4ebde5ea1"
+    sha256 cellar: :any,                 arm64_tahoe:   "1e58528b9835bef3c30c1392215ce944c516b3571e3c2944e5779310e0ffae56"
+    sha256 cellar: :any,                 arm64_sequoia: "eb34edb7f9f91232738a7dd002cbc31a5004d9c9c2865c5f478a23876a9224ba"
+    sha256 cellar: :any,                 arm64_sonoma:  "a7dd56b3e29abd39d80a4c51679806e71f2d1ec86bfa28d2979962992414b2e1"
+    sha256 cellar: :any,                 sonoma:        "f2235d158610cfedcad5d91f9a219a9a23d22b8bf3f9677ad0f06cd3dc1ed3de"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "9c23ecf700c05d93124f1c95d78c9a08880676d847afd522f3bbfca06e171261"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "d5d279b7fa0d857f90a962c8e5e4cab022f5bee4b4d2fcd4e1c6635d9cf322f8"
   end
 
   # `pkgconf`, `rust`, and `openssl@3` are for bcrypt and cryptography.
