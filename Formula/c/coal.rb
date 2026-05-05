@@ -1,10 +1,10 @@
 class Coal < Formula
   desc "Extension of the Flexible Collision Library"
   homepage "https://github.com/coal-library/coal"
-  url "https://github.com/coal-library/coal/releases/download/v3.0.2/coal-3.0.2.tar.gz"
-  sha256 "899eb343ee7d86ae6312401bc969d1d2cb8103a5a67af5e1f06061a9c5fb0743"
+  url "https://github.com/coal-library/coal/releases/download/v3.0.3/coal-3.0.3.tar.gz"
+  sha256 "d1afcc0c22477a61e93e070a01cc8ed1d256a96ec65d308844d24b9caf771d36"
   license "BSD-2-Clause"
-  revision 2
+  compatibility_version 1
   head "https://github.com/coal-library/coal.git", branch: "devel"
 
   livecheck do
@@ -31,10 +31,6 @@ class Coal < Formula
   depends_on "eigenpy"
   depends_on "octomap"
   depends_on "python@3.14"
-
-  # Workaround for Boost 1.89.0 until upstream fix.
-  # Issue ref: https://github.com/coal-library/coal/issues/743
-  patch :DATA
 
   def python3
     "python3.14"
@@ -68,18 +64,3 @@ class Coal < Formula
     end
   end
 end
-
-__END__
-diff --git a/CMakeLists.txt b/CMakeLists.txt
-index ec28225..cdbcddc 100644
---- a/CMakeLists.txt
-+++ b/CMakeLists.txt
-@@ -167,7 +167,7 @@ if(COAL_ENABLE_LOGGING)
-   ADD_PROJECT_DEPENDENCY(Boost REQUIRED log)
- endif()
- if(BUILD_PYTHON_INTERFACE)
--  find_package(Boost REQUIRED COMPONENTS system)
-+  find_package(Boost REQUIRED)
- endif(BUILD_PYTHON_INTERFACE)
- 
- if(Boost_VERSION_STRING VERSION_LESS 1.81)
