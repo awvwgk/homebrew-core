@@ -2,8 +2,8 @@ class Ollama < Formula
   desc "Create, run, and share large language models (LLMs)"
   homepage "https://ollama.com/"
   url "https://github.com/ollama/ollama.git",
-      tag:      "v0.23.0",
-      revision: "9ba5a04914f83da5e8efa25c6676c6dd32bc25ac"
+      tag:      "v0.23.1",
+      revision: "15e6076d7928f7e13e56cbf59a150e0f9f222da9"
   license "MIT"
   head "https://github.com/ollama/ollama.git", branch: "main"
 
@@ -32,13 +32,6 @@ class Ollama < Formula
       depends_on "mlx-c" => :no_linkage
 
       if build.stable?
-
-        # Support for mlx 0.31.2, pr ref https://github.com/ollama/ollama/pull/15793
-        patch do
-          url "https://github.com/ollama/ollama/commit/bdd7fdd171be290099d368aacb747f9a1241299a.patch?full_index=1"
-          sha256 "88de38e8e190f1f465288094778844146d4883aa86adaebf68efc27c46ef0127"
-        end
-
         # Fixes x/imagegen/mlx wrapper generation with system-installed mlx-c headers.
         # upstream pr ref, https://github.com/ollama/ollama/pull/14201
         patch do
