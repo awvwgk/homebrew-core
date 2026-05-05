@@ -1,8 +1,8 @@
 class Hcledit < Formula
   desc "Command-line editor for HCL"
   homepage "https://github.com/minamijoyo/hcledit"
-  url "https://github.com/minamijoyo/hcledit/archive/refs/tags/v0.2.17.tar.gz"
-  sha256 "007e8ba0c8be6272793fc4714cb60b93cb4cdfdc48ab5ad5a6566e44f99d200e"
+  url "https://github.com/minamijoyo/hcledit/archive/refs/tags/v0.2.18.tar.gz"
+  sha256 "40be8406251263e90006853bcd336dc27b09fae93c56840dc3a44c3fd72f968c"
   license "MIT"
   head "https://github.com/minamijoyo/hcledit.git", branch: "master"
 
