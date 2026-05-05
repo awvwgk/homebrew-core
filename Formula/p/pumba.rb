@@ -12,12 +12,12 @@ class Pumba < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "510d771c45681aff9c0fcbf545e5575580399217284620faa1d8d96d0a6a300f"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "510d771c45681aff9c0fcbf545e5575580399217284620faa1d8d96d0a6a300f"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "510d771c45681aff9c0fcbf545e5575580399217284620faa1d8d96d0a6a300f"
-    sha256 cellar: :any_skip_relocation, sonoma:        "94f814ea1ae868f8418333dd9fb7250003f1916fa9ed41fc20e55ae12ef00b68"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "b2881bae911a11cd920d9235eb16e06c99471479f6917daba96e7b389726defd"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "f0b7cfd230e29fc54b5a0d63938fe5ecf96de118b321e0d152828b107a9fd125"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "562be2ebdaf6315497a755bc7cc30c12d5dc35dcce96aa93a7973ae834d0fb32"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "562be2ebdaf6315497a755bc7cc30c12d5dc35dcce96aa93a7973ae834d0fb32"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "562be2ebdaf6315497a755bc7cc30c12d5dc35dcce96aa93a7973ae834d0fb32"
+    sha256 cellar: :any_skip_relocation, sonoma:        "38366cc604649dc120268f74f3650b1b3dd26324e070e013fa5edd2daca40dfc"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "dd6eb504a3e2a059f75c96fc1475cc8e7cea3651646aa6ce106e097c33c511e9"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "0ae8a3e706530f47f0ef95ae4f28182dfc7886655c9c1111690199418fc5f321"
   end
 
   depends_on "go" => :build
