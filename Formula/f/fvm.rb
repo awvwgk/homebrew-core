@@ -1,8 +1,8 @@
 class Fvm < Formula
   desc "Manage Flutter SDK versions per project"
   homepage "https://fvm.app"
-  url "https://github.com/leoafarias/fvm/archive/refs/tags/4.0.5.tar.gz"
-  sha256 "2434d6fd2072548ac0e59c3c6c90554db46e6cdfd97ba79ffbcd270a8eb24b44"
+  url "https://github.com/leoafarias/fvm/archive/refs/tags/4.1.0.tar.gz"
+  sha256 "44f24d6bef61f78fef509415bc8974fcd60c5ffe937f9a4d9b17fe26c55670a2"
   license "MIT"
 
   bottle do
