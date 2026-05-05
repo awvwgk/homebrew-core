@@ -7,10 +7,11 @@ class Sandvault < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "d51c2e856a4a33732ca5d11c0f57abf39ed6fd68b8db5f6d798a3aaf9f417eb6"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "d51c2e856a4a33732ca5d11c0f57abf39ed6fd68b8db5f6d798a3aaf9f417eb6"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "d51c2e856a4a33732ca5d11c0f57abf39ed6fd68b8db5f6d798a3aaf9f417eb6"
-    sha256 cellar: :any_skip_relocation, sonoma:        "14c00bd0d218d96d9eeab2ee082c5b27b401ff64e1656264f291504a984dc4bb"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "c0ac955dd6598fed72fa27024df8b460e7c1c46caf161f7da48541beba663527"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "c0ac955dd6598fed72fa27024df8b460e7c1c46caf161f7da48541beba663527"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "c0ac955dd6598fed72fa27024df8b460e7c1c46caf161f7da48541beba663527"
+    sha256 cellar: :any_skip_relocation, sonoma:        "365cdaf9b0f3296c230f114a9b3847b56dab6bd97c55053f3e151de8c3a7fbc9"
   end
 
   depends_on :macos
