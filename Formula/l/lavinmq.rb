@@ -6,6 +6,15 @@ class Lavinmq < Formula
   license "Apache-2.0"
   head "https://github.com/cloudamqp/lavinmq.git", branch: "main"
 
+  bottle do
+    sha256 cellar: :any,                 arm64_tahoe:   "6c1f82a97d86c1059d1977e80b4489bae9e08f8dbd974be89bd73e4bde95b276"
+    sha256 cellar: :any,                 arm64_sequoia: "1f70f2bdfc38f3c9aad940b9afc3c8863805b513d11c51630b6082925bae865d"
+    sha256 cellar: :any,                 arm64_sonoma:  "b94ca9941b1a89ebc4b8ba6615dda7a45c1f29b6e1e5d54e8e399928c43fe876"
+    sha256 cellar: :any,                 sonoma:        "078b1eca126ff1e627b370f4bca322f060d26379655c40281e8f3cee0872235b"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "aa631a3000645439ab06f4dfd2478be9269877ec1f5395bd53065bb1c2946cde"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "ffe859dec88fe0ef3ee9798af0b446634e13e6f26fdbf7577e59defeafb8d3f1"
+  end
+
   depends_on "crystal" => :build
   depends_on "help2man" => :build
   depends_on "bdw-gc"
