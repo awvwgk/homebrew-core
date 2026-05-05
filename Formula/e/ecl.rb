@@ -1,8 +1,8 @@
 class Ecl < Formula
   desc "Embeddable Common Lisp"
   homepage "https://ecl.common-lisp.dev"
-  url "https://ecl.common-lisp.dev/static/files/release/ecl-24.5.10.tgz"
-  sha256 "e4ea65bb1861e0e495386bfa8bc673bd014e96d3cf9d91e9038f91435cbe622b"
+  url "https://ecl.common-lisp.dev/static/files/release/ecl-26.5.5.tgz"
+  sha256 "a01a5bcda8c5b73e59dda3494fd13e5fec5db6aa1dad782c3cc3bb57f1633435"
   license "LGPL-2.1-or-later"
   head "https://gitlab.com/embeddable-common-lisp/ecl.git", branch: "develop"
 
@@ -27,7 +27,10 @@ class Ecl < Formula
   depends_on "texinfo" => :build # Apple's is too old
   depends_on "bdw-gc"
   depends_on "gmp"
+  depends_on macos: :sequoia
   uses_from_macos "libffi"
+
+  # does not build on macOS 14
 
   def install
     ENV.deparallelize
@@ -37,13 +40,13 @@ class Ecl < Formula
     else
       Formula["libffi"].opt_prefix
     end
-    system "./configure", "--prefix=#{prefix}",
-                          "--enable-threads=yes",
+    system "./configure", "--enable-threads=yes",
                           "--enable-boehm=system",
                           "--enable-gmp=system",
                           "--with-gmp-prefix=#{Formula["gmp"].opt_prefix}",
                           "--with-libffi-prefix=#{libffi_prefix}",
-                          "--with-libgc-prefix=#{Formula["bdw-gc"].opt_prefix}"
+                          "--with-libgc-prefix=#{Formula["bdw-gc"].opt_prefix}",
+                          *std_configure_args
     system "make"
     system "make", "install"
   end
