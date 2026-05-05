@@ -1,8 +1,8 @@
 class OsrmBackend < Formula
   desc "High performance routing engine"
   homepage "https://project-osrm.org/"
-  url "https://github.com/Project-OSRM/osrm-backend/archive/refs/tags/v26.4.1.tar.gz"
-  sha256 "1b836eefc0233a65fa04e66073eabb1674cc41988a8b8862856d967cdd0fe17b"
+  url "https://github.com/Project-OSRM/osrm-backend/archive/refs/tags/v26.5.0.tar.gz"
+  sha256 "3e4f5ed09ac0c77158314ef99b5f8c9e336a80339b3f0e62da48abd06acafef9"
   license "BSD-2-Clause"
   head "https://github.com/Project-OSRM/osrm-backend.git", branch: "master"
 
@@ -21,20 +21,35 @@ class OsrmBackend < Formula
   end
 
   depends_on "cmake" => :build
+  depends_on "flatbuffers" => :build
+  depends_on "fmt" => :build
+  depends_on "libosmium" => :build
   depends_on "pkgconf" => :build
+  depends_on "protozero" => :build
+  depends_on "rapidjson" => :build
+  depends_on "sol2" => :build
+  depends_on "vtzero" => :build
 
   depends_on "boost"
+  depends_on "libarchive"
   depends_on "lua"
   depends_on "tbb"
 
   uses_from_macos "bzip2"
   uses_from_macos "expat"
 
+  on_macos do
+    depends_on "llvm" => :build if DevelopmentTools.clang_build_version <= 1600
+  end
+
   on_linux do
     depends_on "zlib-ng-compat"
   end
 
-  conflicts_with "flatbuffers", because: "both install flatbuffers headers"
+  fails_with :clang do
+    build 1600
+    cause "Requires C+++20 support for `std::atomic_ref`"
+  end
 
   fails_with :gcc do
     version "11"
