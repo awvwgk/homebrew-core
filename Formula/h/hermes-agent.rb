@@ -8,6 +8,15 @@ class HermesAgent < Formula
   license "MIT"
   head "https://github.com/NousResearch/hermes-agent.git", branch: "main"
 
+  bottle do
+    sha256 cellar: :any,                 arm64_tahoe:   "2d1028f46dba8188ced1e4b98f3f444f0370aff8479b34c55f5560430ff136c8"
+    sha256 cellar: :any,                 arm64_sequoia: "08d119f303511a638866fbc9143bea5daaeef5fe0cd4264723f065009e72640c"
+    sha256 cellar: :any,                 arm64_sonoma:  "35588420d1073ed16c391a8e26e3e54cbb3dc8abeb1605100de6a4b0f63e262c"
+    sha256 cellar: :any,                 sonoma:        "c57dc8dbe052525f6482a59ac30910e76eebc9295918c80e568f37259088bfac"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "479357ab9d1584bda509349b13b324ea295b570a6ce427238005c3e8ef245fe1"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "20f19b874bc7b0897702fc145cb4bdf4c7c742dbe231239ecf4d0ae7dc01f617"
+  end
+
   depends_on "pkgconf" => :build
   depends_on "rust" => :build
   depends_on "certifi" => :no_linkage
