@@ -12,12 +12,12 @@ class Pay < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "94c1cf5a384ed5e9e72c423b2dc1784c3c1cfd914ee2f0e89cd10fdfbaee51c8"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "3d8673fc7f314ea2a4b67710c6a29e854ed4ccf65e92265e4853181364fafdcb"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "5cde0d7cbd23c6abab09ce6ec09905eb275cde0eb08d9f3499d3e763699dfe7b"
-    sha256 cellar: :any_skip_relocation, sonoma:        "1a6782847fa15041faa98b98059b6302ebb388cd32d954e756092ae5bc6d4a29"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "5ecbaf9c6b0521f1517c75282b01afb808c3ba6b25539a3a809dab7c33676f1d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "6c61481281b50f15e191e86d7ef99d13d4bc7ae1c3eb75a65d04eca7da2e643f"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "3a50e8d10b835917a8cea6b59fc6413a989633b122698861f008b45dc09f14ae"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "9e06bf9bfcaa411920f7ed988e1cce8494b03bf2221ebbdbd1031ba671871804"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "e187d79871b9ed0cc3ba8914bb3702592877192f2889266297b863a2bc27c5fe"
+    sha256 cellar: :any_skip_relocation, sonoma:        "da0a1def936036738f0846d009991fdbbdda786b16212f015045d50a9af6298f"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "7829f52c6d47b97bf107df84d5d7c70384c42564a81fb2a72b75b8062a31cba3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "493cc2b330461fe91e702cbdeb0cb006eedabfa4507ed36eb0edc36e8a119fbc"
   end
 
   depends_on "just" => :build
