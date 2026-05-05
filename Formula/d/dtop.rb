@@ -7,12 +7,12 @@ class Dtop < Formula
   head "https://github.com/amir20/dtop.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "e2ae50f3325cb76dcb15a0cf414478b27c4785f017c1062d9faecfad2f9cd0d1"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "0304bca896b9ebefd2470b52854e33c7e5aa95fa92c96c078488d29e9d92ae98"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "6695d2e662179ae2c84a5c76de34cae531d6fe1082d4a96853c88ea84af96191"
-    sha256 cellar: :any_skip_relocation, sonoma:        "a198f36fd97674ad628863ae828592a1b4db88deb31e995225efb9c64e689d03"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "00758fe4943f0c3314bd04f3bf8888a594ea833ed60e1ed06c99b3665ae3f5be"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a2d0995b3ed177ba87899f836b1e7f71789f8871f71089139948db7e4aa6226c"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "64d72f7ace6c13b849a7be2c0aab635ba0e0a7fb5560cbe1469c3c685c49fdf0"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "3a69d8363a6ffd87817daec17c8bffb85357e94ab7503f01eca8e02846195a0a"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "b5395038eb468a6b3fbee81798d9625964972da8069141277af0518ec5770300"
+    sha256 cellar: :any_skip_relocation, sonoma:        "b7dfca99b5910b01d643ea794627e4060fd9f8f3a68ba72234481fde261c7fa8"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "587722bec1bcd86fd19a8dbc46d66edf42e80233dcdb281788197d6dfaa281e4"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "d5906c52c68244e8a81b49fb2a977442e18ffc2496bb757ea89754a510530b07"
   end
 
   depends_on "rust" => :build
