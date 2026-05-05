@@ -1,8 +1,8 @@
 class Fifechan < Formula
   desc "C++ GUI library designed for games"
   homepage "https://fifengine.github.io/fifechan/"
-  url "https://github.com/fifengine/fifechan/archive/refs/tags/0.1.5.tar.gz"
-  sha256 "29be5ff4b379e2fc4f88ef7d8bc172342130dd3e77a3061f64c8a75efe4eba73"
+  url "https://github.com/fifengine/fifechan/archive/refs/tags/v0.2.0.tar.gz"
+  sha256 "df3cba475716346fd27f963b9b027a02a92f697466596a3cc215a2b97d543c76"
   license "LGPL-2.1-or-later"
 
   livecheck do
@@ -21,22 +21,27 @@ class Fifechan < Formula
   end
 
   depends_on "cmake" => :build
-
+  depends_on "utf8cpp" => :build
   depends_on "allegro"
-  depends_on "sdl2"
-  depends_on "sdl2_image"
-  depends_on "sdl2_ttf"
+  depends_on "freetype"
+  depends_on "sdl3"
+  depends_on "sdl3_image"
+  depends_on "sdl3_ttf"
 
   on_linux do
     depends_on "mesa"
   end
 
   def install
-    system "cmake", "-S", ".", "-B", "build",
-                    "-DCMAKE_POLICY_VERSION_MINIMUM=3.5",
-                    "-DENABLE_SDL_CONTRIB=ON",
-                    "-DCMAKE_INSTALL_RPATH=#{rpath}",
-                    *std_cmake_args
+    args = %W[
+      -DCMAKE_POLICY_VERSION_MINIMUM=3.5
+      -DUSE_VCPKG=OFF
+      -DFIFEGUI_EXAMPLES=OFF
+      -DFIFEGUI_TESTS=OFF
+      -DCMAKE_INSTALL_RPATH=#{rpath}
+    ]
+
+    system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
   end
@@ -53,7 +58,7 @@ class Fifechan < Formula
       }
     CPP
 
-    system ENV.cxx, "fifechan_test.cpp", "-std=c++11", "-I#{include}", "-L#{lib}", "-lfifechan", "-o", "fifechan_test"
+    system ENV.cxx, "fifechan_test.cpp", "-std=c++20", "-I#{include}", "-L#{lib}", "-lfifechan", "-o", "fifechan_test"
     system "./fifechan_test"
   end
 end
