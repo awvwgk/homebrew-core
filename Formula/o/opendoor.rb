@@ -7,6 +7,10 @@ class Opendoor < Formula
   sha256 "3b6b57d3f528111433e1921a1157de3143e7b7bebc9145ff5a9bedbfb6b316ef"
   license "GPL-3.0-only"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "0eecb0fad237e0b14195d3c0afed6b468e7ed4e1eb6330cdd0eb9ba7120964f2"
+  end
+
   depends_on "python@3.14"
 
   resource "packaging" do
