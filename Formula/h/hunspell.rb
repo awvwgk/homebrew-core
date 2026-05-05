@@ -1,8 +1,8 @@
 class Hunspell < Formula
   desc "Spell checker and morphological analyzer"
   homepage "https://hunspell.github.io"
-  url "https://github.com/hunspell/hunspell/releases/download/v1.7.2/hunspell-1.7.2.tar.gz"
-  sha256 "11ddfa39afe28c28539fe65fc4f1592d410c1e9b6dd7d8a91ca25d85e9ec65b8"
+  url "https://github.com/hunspell/hunspell/releases/download/v1.7.3/hunspell-1.7.3.tar.gz"
+  sha256 "433274dac0619cb00c2e18b43a3dd3a9d50da5b5613fa9b5c21781e35dd76bc1"
   license any_of: ["MPL-1.1", "GPL-2.0-or-later", "LGPL-2.1-or-later"]
 
   bottle do
@@ -15,16 +15,13 @@ class Hunspell < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "42fdde6e88f4fec0bdf4c8fcb259bb2cff651aaeaca575faaa147d0f22a18239"
   end
 
-  depends_on "autoconf" => :build
-  depends_on "automake" => :build
   depends_on "gettext" => :build
-  depends_on "libtool" => :build
-
   depends_on "readline"
 
   uses_from_macos "ncurses"
 
   on_macos do
+    depends_on "coreutils" => :build # for timeout in gh646.test
     depends_on "gettext"
   end
 
@@ -32,17 +29,7 @@ class Hunspell < Formula
 
   skip_clean "share/hunspell"
 
-  # Backport support for searching hunspell dictionaries in pkgshare
-  patch do
-    url "https://github.com/hunspell/hunspell/commit/874abbbe65e228df525023afe176b42df34a7a4f.patch?full_index=1"
-    sha256 "b1b59cc11e720a047302b72ce1870712f29ca22f3023726c576ffd6f713d2841"
-  end
-
   def install
-    # Regenerate configure to use patch
-    odie "Remove autoreconf and build dependencies!" if version > "1.7.2"
-    system "autoreconf", "--force", "--install", "--verbose"
-
     system "./configure", "--disable-silent-rules",
                           "--with-ui",
                           "--with-readline",
