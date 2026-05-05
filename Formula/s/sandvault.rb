@@ -6,10 +6,10 @@ class Sandvault < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "fc91f02c8a01000c2a9bce901e1f17401d8501b90ce5f0ca09705a221875cde4"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "fc91f02c8a01000c2a9bce901e1f17401d8501b90ce5f0ca09705a221875cde4"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "fc91f02c8a01000c2a9bce901e1f17401d8501b90ce5f0ca09705a221875cde4"
-    sha256 cellar: :any_skip_relocation, sonoma:        "790bfcbf033449d8701b77c8d4f3fbbc87f546eb0cc4c8df6059a85e8e89a37a"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "d51c2e856a4a33732ca5d11c0f57abf39ed6fd68b8db5f6d798a3aaf9f417eb6"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "d51c2e856a4a33732ca5d11c0f57abf39ed6fd68b8db5f6d798a3aaf9f417eb6"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "d51c2e856a4a33732ca5d11c0f57abf39ed6fd68b8db5f6d798a3aaf9f417eb6"
+    sha256 cellar: :any_skip_relocation, sonoma:        "14c00bd0d218d96d9eeab2ee082c5b27b401ff64e1656264f291504a984dc4bb"
   end
 
   depends_on :macos
