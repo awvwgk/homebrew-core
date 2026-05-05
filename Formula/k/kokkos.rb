@@ -4,6 +4,7 @@ class Kokkos < Formula
   url "https://github.com/kokkos/kokkos/releases/download/5.1.1/kokkos-5.1.1.tar.gz"
   sha256 "8bdbee0f0ac383436743ad8a9e3e928705b34b31a25a92dc5179c52a3aa98519"
   license "Apache-2.0"
+  revision 1
   head "https://github.com/kokkos/kokkos.git", branch: "develop"
 
   livecheck do
@@ -27,11 +28,13 @@ class Kokkos < Formula
   end
 
   def install
-    args = %w[
+    args = %W[
       -DKokkos_ENABLE_OPENMP=ON
       -DKokkos_ENABLE_TESTS=OFF
       -DKokkos_ENABLE_EXAMPLES=OFF
       -DKokkos_ENABLE_BENCHMARKS=OFF
+      -DBUILD_SHARED_LIBS=ON
+      -DCMAKE_INSTALL_RPATH=#{rpath}
     ]
 
     system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
