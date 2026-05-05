@@ -6,7 +6,7 @@ class Ctx7 < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "f9996fe9dc31d1cde237dfbbc6a04f43c43097bcf1f568015dae0c9681845398"
+    sha256 cellar: :any_skip_relocation, all: "99a8c65c4abf40d11ab383b16decef26be15b9a28c6df7f3a9d0fcc0fdc3e7fe"
   end
 
   depends_on "node"
