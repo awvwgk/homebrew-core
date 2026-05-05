@@ -4,6 +4,7 @@ class Sandvault < Formula
   url "https://github.com/webcoyote/sandvault/archive/refs/tags/v1.18.0.tar.gz"
   sha256 "694e2cf6973c58756052d3176a7ecc90949642d27b81c4f2c5ea0cb5fbd39e4f"
   license "Apache-2.0"
+  revision 1
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_tahoe:   "d51c2e856a4a33732ca5d11c0f57abf39ed6fd68b8db5f6d798a3aaf9f417eb6"
@@ -17,8 +18,8 @@ class Sandvault < Formula
   conflicts_with "runit", because: "both install `sv` binaries"
 
   def install
-    libexec.install "guest", "helpers", "skills", "sv", "sv-clone"
-    bin.write_exec_script libexec/"sv", libexec/"sv-clone"
+    libexec.install "guest", "helpers", "skills", "sv", "sv-clone", "sv-agentsview-setup"
+    bin.write_exec_script libexec/"sv", libexec/"sv-clone", libexec/"sv-agentsview-setup"
   end
 
   test do
