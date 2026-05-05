@@ -1,12 +1,11 @@
 class FfmpegAT7 < Formula
   desc "Play, record, convert, and stream audio and video"
   homepage "https://ffmpeg.org/"
-  url "https://ffmpeg.org/releases/ffmpeg-7.1.3.tar.xz"
-  sha256 "f0bf043299db9e3caacb435a712fc541fbb07df613c4b893e8b77e67baf3adbe"
+  url "https://ffmpeg.org/releases/ffmpeg-7.1.4.tar.xz"
+  sha256 "71f4aac3573ed9060489cb62526a6c7dda815ae10993789611acd7be9fa9fbf4"
   # None of these parts are used by default, you have to explicitly pass `--enable-gpl`
   # to configure to activate them. In this case, FFmpeg's license changes to GPL v2+.
   license "GPL-2.0-or-later"
-  revision 3
 
   livecheck do
     url "https://ffmpeg.org/download.html"
@@ -84,12 +83,6 @@ class FfmpegAT7 < Formula
 
   on_intel do
     depends_on "nasm" => :build
-  end
-
-  # Backport support for svt-av1 4.x
-  patch do
-    url "https://git.ffmpeg.org/gitweb/ffmpeg.git/patch/a5d4c398b411a00ac09d8fe3b66117222323844c"
-    sha256 "1dbbc1a4cf9834b3902236abc27fefe982da03a14bcaa89fb90c7c8bd10a1664"
   end
 
   def install
