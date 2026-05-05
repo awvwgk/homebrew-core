@@ -1,8 +1,8 @@
 class Katana < Formula
   desc "Crawling and spidering framework"
   homepage "https://github.com/projectdiscovery/katana"
-  url "https://github.com/projectdiscovery/katana/archive/refs/tags/v1.6.0.tar.gz"
-  sha256 "c3518fabdc2a59e579e8286324d7be495972f71f7d672ff112f01239aa9f81ce"
+  url "https://github.com/projectdiscovery/katana/archive/refs/tags/v1.6.1.tar.gz"
+  sha256 "81ce8b6047e9463c37e9cf7dd3bdcd30d8a61e2da9cf6c960ccd409b99c896ee"
   license "MIT"
   head "https://github.com/projectdiscovery/katana.git", branch: "dev"
 
