@@ -1,8 +1,8 @@
 class Adapterremoval < Formula
   desc "Rapid adapter trimming, identification, and read merging"
   homepage "https://github.com/MikkelSchubert/adapterremoval"
-  url "https://github.com/MikkelSchubert/adapterremoval/archive/refs/tags/v2.3.4.tar.gz"
-  sha256 "a4433a45b73ead907aede22ed0c7ea6fbc080f6de6ed7bc00f52173dfb309aa1"
+  url "https://github.com/MikkelSchubert/adapterremoval/archive/refs/tags/v3.0.0.tar.gz"
+  sha256 "08145e38f27bfd94e9c95864365726bc63e9325a8b39b973b9ab6c87bd8c93aa"
   license "GPL-3.0-or-later"
 
   bottle do
@@ -15,26 +15,47 @@ class Adapterremoval < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "06fb66c36fde9bd21bd005089ff665eb257a5ed15751414fca394457b27c388c"
   end
 
-  uses_from_macos "bzip2"
+  depends_on "meson" => :build
+  depends_on "ninja" => :build
+  depends_on "pkgconf" => :build
+  depends_on "sphinx-doc" => :build
+  depends_on "isa-l"
+  depends_on "libdeflate"
+
+  uses_from_macos "python" => :build
 
   on_linux do
     depends_on "zlib-ng-compat"
   end
 
   def install
-    ENV.deparallelize
-    system "make", "install", "PREFIX=#{prefix}"
+    args = %w[
+      -Db_coverage=false
+      -Db_lto=false
+      -Db_lto_mode=thin
+      -Ddebug=false
+      -Dmanpage=enabled
+      -Ddocs=disabled
+      -Duv=auto
+      -Dharden=true
+      -Dmimalloc=disabled
+      -Dstatic=false
+    ]
+    system "meson", "setup", "build", *args, *std_meson_args
+    system "meson", "compile", "-C", "build", "--verbose"
+    system "meson", "install", "-C", "build"
+
+    pkgshare.install share/"adapterremoval3/examples"
   end
 
   test do
     examples = pkgshare/"examples"
     args = %W[
-      --bzip2
-      --file1 #{examples}/reads_1.fq
-      --file2 #{examples}/reads_2.fq
-      --basename #{testpath}/output
+      --in-file1 #{examples}/reads_1.fastq
+      --in-file2 #{examples}/reads_2.fastq
+      --out-prefix #{testpath}/output
     ].join(" ")
 
-    assert_match "Processed a total of 1,000 reads", shell_output("#{bin}/AdapterRemoval #{args} 2>&1")
+    assert_match "Processed 1,000 reads", shell_output("#{bin}/adapterremoval3 #{args} 2>&1")
   end
 end
