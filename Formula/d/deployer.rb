@@ -1,8 +1,8 @@
 class Deployer < Formula
   desc "Deployment tool written in PHP with support for popular frameworks"
   homepage "https://deployer.org/"
-  url "https://github.com/deployphp/deployer/releases/download/v8.0.2/deployer.phar"
-  sha256 "665f9fbbeaa9af58ebd87dfc6f66ef6436db99324baf486f1d28d27fcfcfadd0"
+  url "https://github.com/deployphp/deployer/releases/download/v8.0.3/deployer.phar"
+  sha256 "ef0e16542439cc0ad718f74dd76fc7d026ee2ed55594805d6cfd99188985a5a5"
   license "MIT"
 
   bottle do
