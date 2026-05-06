@@ -1,8 +1,8 @@
 class Allure < Formula
   desc "Flexible lightweight test report tool"
   homepage "https://github.com/allure-framework/allure2"
-  url "https://repo.maven.apache.org/maven2/io/qameta/allure/allure-commandline/2.39.0/allure-commandline-2.39.0.zip"
-  sha256 "af685fdd1655abcfbe1f2e48c6fe133b4842fbded3f1cc29f9232009d351ce1a"
+  url "https://repo.maven.apache.org/maven2/io/qameta/allure/allure-commandline/2.40.0/allure-commandline-2.40.0.zip"
+  sha256 "d6fec8ab637fc185d753f65c99f95aeaf0c22d5f03f35052980534bdc83b2edd"
   license "Apache-2.0"
 
   livecheck do
