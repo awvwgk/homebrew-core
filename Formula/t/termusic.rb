@@ -1,8 +1,8 @@
 class Termusic < Formula
   desc "Music Player TUI written in Rust"
   homepage "https://github.com/tramhao/termusic"
-  url "https://github.com/tramhao/termusic/archive/refs/tags/v0.12.1.tar.gz"
-  sha256 "686f66856d755f2d2056a9548f074b11ba9568ac8075fafd8903e332bf166227"
+  url "https://github.com/tramhao/termusic/archive/refs/tags/v0.13.2.tar.gz"
+  sha256 "661e1c39135f6eeb01cb6df199b8dcdd902ac456e96bd204ea4fda7ec6ae41ef"
   license all_of: ["MIT", "GPL-3.0-or-later"]
   head "https://github.com/tramhao/termusic.git", branch: "master"
 
