@@ -1,8 +1,8 @@
 class Htpdate < Formula
   desc "Synchronize time with remote web servers"
   homepage "https://www.vervest.org/htp/"
-  url "https://github.com/twekkel/htpdate/archive/refs/tags/v2.0.1.tar.gz"
-  sha256 "4c771fe3fc5c4ab5f9393dd501bdc51e4c067297cf304ad1e74e1965ac1c066f"
+  url "https://github.com/twekkel/htpdate/archive/refs/tags/v2.0.2.tar.gz"
+  sha256 "3f5effa9355db140ef8ace6d17800d48815d1afdcef9d1096510451839dd8de4"
   license "GPL-2.0-or-later"
 
   bottle do
