@@ -7,12 +7,12 @@ class Crd2pulumi < Formula
   head "https://github.com/pulumi/crd2pulumi.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "390736f4a83c23f407845ce7ce35757716472b769bee83dcde62f069ff00a46e"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "a1ed183c72738984c22e661317d46e0ecab3d42778cb7717e2416702c8cb4033"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "fbe06b9b4521bcaf695da2fb7be72a3fdbecb10c67cd1c51cd50bc3f4f0e40f9"
-    sha256 cellar: :any_skip_relocation, sonoma:        "b3e9a575ef13202f6cc87a9c294e97a6ed7a0f83ef44c23d10434930a8718b0b"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "0fa027064356ef61b917229eda5aad7f5de51d51057ca576f47fc2332d5e4530"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e818166ab902b8bd93fde2953476d23b153ccbb38211a5de2590287116e49cc2"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "b7da0ea7695ea0d758899ac82e4587fa4e1ad4833b6ccaec37fde8f2c33109b2"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "0b96823b4f6118f679cff33334e2265f8ebe47f9143ee8517b1f4150a5255ee5"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "2cd71efb02262c0a13c361877f7c7d72aaf29129ad3e950a8408d980867da47d"
+    sha256 cellar: :any_skip_relocation, sonoma:        "05d07c058146e1ab46573483cdffb215998bc5e45f09216cd87cc40c00298694"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "5bc849ec8c4e537395f8848c38b6efaa7596d8465195bee34fea13d2b08a2b15"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "79965c3032a6e4efb67fcc2222bac344808753bdc24e4c777d6c21683c20b5b9"
   end
 
   depends_on "go" => :build
