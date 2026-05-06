@@ -5,6 +5,15 @@ class GiteaRunner < Formula
   sha256 "6fd62bda86b7775048feab134eec4d6d4fea0f08141fbc2c9526f43402247f38"
   license "MIT"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "625a32c11bc143e8310228442d97a72dc760ebf80f369ca967d467cc8fc7d6e6"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "acc1b5d9811845797648017895ed4c93de0fe7f29122d1e6f81b1f84652d87e4"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "755c84d515ec590a3a359623183493a26966732ce3714001aee3d8d5a5842eae"
+    sha256 cellar: :any_skip_relocation, sonoma:        "048895e2767538197c14d0abbd3537a3ecd2d330ffc547deb7d2f40e22eff470"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "71473d79f5834abd17f897457366b89c0486ec4ce332f842f107d600fcbda436"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "04878457dbfd58ba76677963d7f5503a281585008793dc70cfd74e32f5250534"
+  end
+
   depends_on "go" => :build
 
   def install
