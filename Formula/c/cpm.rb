@@ -1,8 +1,8 @@
 class Cpm < Formula
   desc "Fast CPAN module installer"
   homepage "https://metacpan.org/pod/cpm"
-  url "https://cpan.metacpan.org/authors/id/S/SK/SKAJI/App-cpm-v1.0.3.tar.gz"
-  sha256 "4fc21e1ab196211cefb08be13f7e69816f597b3b3afb895a56409e0ca8596b81"
+  url "https://cpan.metacpan.org/authors/id/S/SK/SKAJI/App-cpm-v1.0.4.tar.gz"
+  sha256 "a23a66aaa83e59242cf484d720126b0923e9dfa5f3e858298e03ac8af959242a"
   license any_of: ["Artistic-1.0-Perl", "GPL-1.0-or-later"]
   head "https://github.com/skaji/cpm.git", branch: "main"
 
@@ -95,8 +95,8 @@ class Cpm < Formula
   end
 
   resource "HTTP::Tinyish" do
-    url "https://cpan.metacpan.org/authors/id/M/MI/MIYAGAWA/HTTP-Tinyish-0.19.tar.gz"
-    sha256 "e9ce94a9913f9275d312ded4ddb34f76baf011b6b8d6029ff2871d5bd7bae468"
+    url "https://cpan.metacpan.org/authors/id/M/MI/MIYAGAWA/HTTP-Tinyish-0.20.tar.gz"
+    sha256 "c60e714186f81c815690ca5d475f3e6eac8617c50b146ae668ae4dd5d86a5ed7"
   end
 
   resource "IPC::Run3" do
