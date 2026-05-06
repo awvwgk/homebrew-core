@@ -22,6 +22,8 @@ class CloudflareWrangler < Formula
 
     node_modules = libexec/"lib/node_modules/wrangler/node_modules"
     deuniversalize_machos node_modules/"fsevents/fsevents.node" if OS.mac?
+
+    generate_completions_from_executable(bin/"wrangler", "complete", shells: [:bash, :zsh, :fish, :pwsh])
   end
 
   test do
