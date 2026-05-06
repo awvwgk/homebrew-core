@@ -35,7 +35,14 @@ class Rustup < Formula
        rust-gdb rust-gdbgui rust-lldb rustc rustdoc rustfmt rustup].each do |name|
       bin.install_symlink bin/"rustup-init" => name
     end
-    generate_completions_from_executable(bin/"rustup", "completions")
+
+    (buildpath/"settings.toml").write <<~TOML
+      default_toolchain = "stable"
+    TOML
+    pkgetc.install "settings.toml"
+    bin.env_script_all_files libexec/"bin", RUSTUP_OVERRIDE_UNIX_FALLBACK_SETTINGS: pkgetc/"settings.toml"
+
+    generate_completions_from_executable(libexec/"bin/rustup", "completions")
   end
 
   def post_install
@@ -44,9 +51,6 @@ class Rustup < Formula
 
   def caveats
     <<~EOS
-      To initialize `rustup`, set a default toolchain:
-        rustup default stable
-
       If you have `rust` installed, ensure you have "$(brew --prefix rustup)/bin"
       before "$(brew --prefix)/bin" in your $PATH:
         #{Formatter.url("https://rust-lang.github.io/rustup/installation/already-installed-rust.html")}
@@ -58,14 +62,16 @@ class Rustup < Formula
     ENV["RUSTUP_HOME"] = testpath/".rustup"
     ENV.prepend_path "PATH", bin
 
-    assert_match "no default is configured", shell_output("#{bin}/rustc --version 2>&1", 1)
-    system bin/"rustup", "default", "stable"
+    assert_match "stable", shell_output("#{bin}/rustup default")
+    assert_match "stable", shell_output("#{bin}/rustc --version 2>&1")
 
-    system bin/"cargo", "init", "--bin"
-    system bin/"cargo", "fmt"
-    system bin/"rustc", "src/main.rs"
-    assert_equal "Hello, world!", shell_output("./main").chomp
-    assert_empty shell_output("#{bin}/cargo clippy")
+    system bin/"cargo", "new", "--bin", "./app"
+    cd "app" do
+      system bin/"cargo", "fmt"
+      system bin/"rustc", "src/main.rs"
+      assert_equal "Hello, world!", shell_output("./main").chomp
+      assert_empty shell_output("#{bin}/cargo clippy")
+    end
 
     # Check for stale symlinks
     system bin/"rustup-init", "-y"
