@@ -9,12 +9,12 @@ class CondaLock < Formula
   revision 4
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "3f7a75d1ebca7c06611a9e34250c613e06cd8b78f5eb7c57afba986b248e6b5c"
-    sha256 cellar: :any,                 arm64_sequoia: "4b7d36eec16e8c7aeadcb4f2cd8c7e02450440f74cdb24a5fc678000587e5481"
-    sha256 cellar: :any,                 arm64_sonoma:  "f43aaa92a72102b8a60c4d7994f072d282af6dde72ef124af81e974b7f432434"
-    sha256 cellar: :any,                 sonoma:        "d161a9ed99c0571af5d45b3b901163ba2584139b786f7d6da4c9a2c091c6b3cc"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "cdc5784fb48b0ece7d5b7f9a01e2425a5b6fafcc097b816f1b661ea9d8d15898"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "371b568881ada12c52fee5e2a48bd487dbe6f4aa39c5afbf2c8e3def04d6b857"
+    sha256 cellar: :any,                 arm64_tahoe:   "2b61d184f6eb3292ed63e8254a77a8759eee59d6c9326b29889cdd243b7e5d48"
+    sha256 cellar: :any,                 arm64_sequoia: "f0b0e04566d386f18e974e4e9415372d05d0fbe3608536ecc8c14460b9b54713"
+    sha256 cellar: :any,                 arm64_sonoma:  "0bc4396bdba44e0a08d19c715bcc5e1b6210a8e0f7ff09a85897949d3876e949"
+    sha256 cellar: :any,                 sonoma:        "11a7a61eea990635191cb495fc5e0d53ad2d588a2a67c8d0be762eb00f9355fa"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "4a1d7236b96ed15d204dadd4e0c71858894254869510f9ddaa3949b9ee684f82"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "8d65368d1855a1c5d6efe684fbf4e7555dfef5d7cb3da6cd7c88e79375f5ab61"
   end
 
   depends_on "rust" => :build # for cachecontrol, uv-backend
