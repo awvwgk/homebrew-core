@@ -1,18 +1,18 @@
 class Agg < Formula
   desc "Asciicast to GIF converter"
   homepage "https://github.com/asciinema/agg"
-  url "https://github.com/asciinema/agg/archive/refs/tags/v1.8.0.tar.gz"
-  sha256 "31e0d54b6abc2c7545464bef0b5b9603d851c186c4ecfcd52f08a30d7bfa2781"
+  url "https://github.com/asciinema/agg/archive/refs/tags/v1.8.1.tar.gz"
+  sha256 "9a2a7e6ca2748befb6a4c1c3eff437ae6029fde99ec882a951b3671aa30eacdb"
   license "GPL-3.0-or-later"
   head "https://github.com/asciinema/agg.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "c8fef5f5c8aaa512ef7e23e4b33088bf26cb0d9c07735290e3310c616c1e9620"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "3de2ac70d10c237f1a8beaa21d9f97a805d82403069ae7c62ca16bbc1a83163b"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "e55f7f1a9398d18e9634fe153e9a3ffe4e3844795651b96edbc2172d0964735b"
-    sha256 cellar: :any_skip_relocation, sonoma:        "f18b40c39ad6d0403b93e0165cb65475f9538c9b5cf260f862ebd2a035661b4e"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "a08a1101878e748c94279c8be5bce48f207b93dfe9f5654f2e855a9f5030d3af"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "494d2a62499dbea334598e2c0c309820af9aa5a3c6ae9d0f6d7c4ca8de18b212"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "84c24067c8f04b8377ae2e29dce6e818c24241d26a31a277977629418c571b31"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "e85a17a983a8ff5cc779c7e9e81f455b74261b4ec2ec54a393a96d5cb9a7a32b"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "0fb981ebea9391bf39c0afd10bf04d09df4c6246b0c81e9b011b570edcbbbdf7"
+    sha256 cellar: :any_skip_relocation, sonoma:        "35591970b6a79e46ae2fb6eb69bf0c0fdae498b3b989f740d26e3bebf07cfabf"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "567e32bc4493f562389d540c04da418c62aa545827ac61b685ec6cf3093b815b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "b54c17e64dea4c0cf93c4b7ca919498323da6a6a0a308c7b0b5242ade62f431c"
   end
 
   depends_on "rust" => :build
