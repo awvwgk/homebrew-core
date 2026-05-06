@@ -7,12 +7,12 @@ class Agg < Formula
   head "https://github.com/asciinema/agg.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "111de71cf579f444632552967e802a4d2d2231783980257cb2074b6ea6c665aa"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "a4e3d20e6feebfb8a7d3f6692b55fe9075a274e25371573506d1d0bd50b34854"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "a768f00a227e2a9dab8573d3092c5bb3b809ead87b2796ee585e96642ae32d2a"
-    sha256 cellar: :any_skip_relocation, sonoma:        "79ed3722522e61c4463f4a1635814d71c1a4d5549712abfe0684bc8ba8b7be63"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "e9d25a7264c451f75fe0183573f10c5419337eb81f86752c95e92c7cc9bc1d40"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "d6e1e1877a7a54519c6cd15626e091d7f58de72bb3fa8763b46e85ead83f9c7b"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "c8fef5f5c8aaa512ef7e23e4b33088bf26cb0d9c07735290e3310c616c1e9620"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "3de2ac70d10c237f1a8beaa21d9f97a805d82403069ae7c62ca16bbc1a83163b"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "e55f7f1a9398d18e9634fe153e9a3ffe4e3844795651b96edbc2172d0964735b"
+    sha256 cellar: :any_skip_relocation, sonoma:        "f18b40c39ad6d0403b93e0165cb65475f9538c9b5cf260f862ebd2a035661b4e"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "a08a1101878e748c94279c8be5bce48f207b93dfe9f5654f2e855a9f5030d3af"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "494d2a62499dbea334598e2c0c309820af9aa5a3c6ae9d0f6d7c4ca8de18b212"
   end
 
   depends_on "rust" => :build
