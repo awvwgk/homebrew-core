@@ -11,6 +11,15 @@ class Smlnj < Formula
     regex(%r{href=["']?[^"' >]*dist/working/v?(\d+(?:\.\d+)+)/(?:index\.html)?["' >]}i)
   end
 
+  bottle do
+    sha256 arm64_tahoe:   "93b1219027b0abcf80a71243e1607c50fc2a5849a734ae89190ce43d1168f5f6"
+    sha256 arm64_sequoia: "bb5a27da68e44310858f4df611cdc5f125c8da814d06c188191349ae0aafc113"
+    sha256 arm64_sonoma:  "13b5078c334318acab15ea2b2fd17ead939552f7a5e0c620d696f90feb42cf96"
+    sha256 sonoma:        "d6da8b8a343b1582f652980f6a08410d2f0f4e9ff0e6dd30ec32c2072347d3cc"
+    sha256 arm64_linux:   "141e547aa173e6a4c24667d29daa04547b2fefd2eaeeec702e3eb472036acb9a"
+    sha256 x86_64_linux:  "213f6ba81cdecb49d155373e72106177a625bb2310419df123e7292791dd06bf"
+  end
+
   depends_on "autoconf" => :build
   depends_on "cmake" => :build
   depends_on "python@3.14" => :build
