@@ -1,8 +1,8 @@
 class Pyrefly < Formula
   desc "Fast type checker and IDE for Python"
   homepage "https://pyrefly.org/"
-  url "https://github.com/facebook/pyrefly/archive/refs/tags/0.63.1.tar.gz"
-  sha256 "8812f78495ced3c28fcdcb9880c4b7abf6a4dae957af55896c158a91ce0e374a"
+  url "https://github.com/facebook/pyrefly/archive/refs/tags/0.64.0.tar.gz"
+  sha256 "f4d1dec27ac479d110ccd8c1cba91e4762a0290582318e42c7a85d6f7e8a2fef"
   license "MIT"
   head "https://github.com/facebook/pyrefly.git", branch: "main"
 
@@ -30,6 +30,7 @@ class Pyrefly < Formula
   end
 
   test do
+    system bin/"pyrefly", "init"
     (testpath/"test.py").write <<~PYTHON
       def hello(name: str) -> int:
           return f"Hello, {name}!"
