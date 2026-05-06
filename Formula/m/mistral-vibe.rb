@@ -3,8 +3,8 @@ class MistralVibe < Formula
 
   desc "Minimal CLI coding agent"
   homepage "https://github.com/mistralai/mistral-vibe"
-  url "https://files.pythonhosted.org/packages/5d/c4/bda8c6b1656079011127981de0dbce0dc0b0aad1f28fff3c6c8d778a4292/mistral_vibe-2.9.3.tar.gz"
-  sha256 "9c14e1c631337aa5b7aaf18e6c70c986d3cdcb3d0cd4609885020729688cddc9"
+  url "https://files.pythonhosted.org/packages/44/13/4c6c3fcfe4142964bf6364d4223a76e0b0c94e7a3de4d5f80ab46f9d60c3/mistral_vibe-2.9.4.tar.gz"
+  sha256 "0104f04543450a38b37432759108b460deff4f4366ecbe62be23da2129be848f"
   license "Apache-2.0"
   head "https://github.com/mistralai/mistral-vibe.git", branch: "main"
 
@@ -48,8 +48,8 @@ class MistralVibe < Formula
   end
 
   resource "cachetools" do
-    url "https://files.pythonhosted.org/packages/76/7b/1755ed2c6bfabd1d98b37ae73152f8dcf94aa40fee119d163c19ed484704/cachetools-7.0.6.tar.gz"
-    sha256 "e5d524d36d65703a87243a26ff08ad84f73352adbeafb1cde81e207b456aaf24"
+    url "https://files.pythonhosted.org/packages/ff/e2/85f227594656000ff4d8adadae91a21f536d4a84c6c716a86bd6685874be/cachetools-7.1.1.tar.gz"
+    sha256 "27bdf856d68fd3c71c26c01b5edc312124ed427524d1ddb31aa2b7746fe20d4b"
   end
 
   resource "charset-normalizer" do
@@ -83,8 +83,8 @@ class MistralVibe < Formula
   end
 
   resource "google-auth" do
-    url "https://files.pythonhosted.org/packages/c6/fc/e925290a1ad95c975c459e2df070fac2b90954e13a0370ac505dff78cb99/google_auth-2.49.2.tar.gz"
-    sha256 "c1ae38500e73065dcae57355adb6278cf8b5c8e391994ae9cbadbcb9631ab409"
+    url "https://files.pythonhosted.org/packages/5f/18/238d7021d151bdab868f23433817b027dd759135202f4dfce0670d1230ca/google_auth-2.50.0.tar.gz"
+    sha256 "f35eafb191195328e8ce10a7883970877e7aeb49c2bfaa54aa0e394316d353d0"
   end
 
   resource "googleapis-common-protos" do
@@ -203,8 +203,8 @@ class MistralVibe < Formula
   end
 
   resource "mistralai" do
-    url "https://files.pythonhosted.org/packages/5c/08/f8fed64eab35ad1ded82f92bf834160302db19f5bbda5a904df7d4dbf3c4/mistralai-2.3.2.tar.gz"
-    sha256 "a02c7e90ac165e8680c849551ff5fe9788e9fc10b7dbe71817443dc63cc5e9c9"
+    url "https://files.pythonhosted.org/packages/f0/f0/80dfabf224be4419c6c112f3950676f5af3dcde582d225c03ca0196a4b32/mistralai-2.4.4.tar.gz"
+    sha256 "cd8a27a230e5458b62237a6c4f7b52f5be86909fbc18694360ceb21dac932eda"
   end
 
   resource "more-itertools" do
