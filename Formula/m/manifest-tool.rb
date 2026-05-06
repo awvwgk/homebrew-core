@@ -1,8 +1,8 @@
 class ManifestTool < Formula
   desc "Command-line tool to create and query container image manifest list/indexes"
   homepage "https://github.com/estesp/manifest-tool/"
-  url "https://github.com/estesp/manifest-tool/archive/refs/tags/v2.2.1.tar.gz"
-  sha256 "99b47f6da69a82a75f9be7d0bc47e6b4a0e622628f2c208d58e817c834bb4492"
+  url "https://github.com/estesp/manifest-tool/archive/refs/tags/v2.2.2.tar.gz"
+  sha256 "97a9535830d6cd9d382c1d9ebae01a64dcbb400c540086a738e0e5297904ae3b"
   license "Apache-2.0"
   head "https://github.com/estesp/manifest-tool.git", branch: "main"
 
