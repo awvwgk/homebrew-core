@@ -7,12 +7,12 @@ class Qshell < Formula
   head "https://github.com/qiniu/qshell.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "3350f9a847eb72aa90f3b1d8d0413fb3c91eb8f2d5279d796cba2c58ac8ea393"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "3350f9a847eb72aa90f3b1d8d0413fb3c91eb8f2d5279d796cba2c58ac8ea393"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "3350f9a847eb72aa90f3b1d8d0413fb3c91eb8f2d5279d796cba2c58ac8ea393"
-    sha256 cellar: :any_skip_relocation, sonoma:        "0b7935bf2bac765c39cfc38b610bb0cd37a8f2b26a752eb47b964c4e6f0cf0b6"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "44b0cb8ad94c166dc571fddc3739c53696d0dfe9cfcdaa3632db95c92c977bc3"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "8e186ce6561300fa5ef2ac63051eba8b2964ed21cf4aa1b2c1060b4b25e70732"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "c0b2accf4f95abfa44bdd6cf5da5e447516e425f55da8a57b4cbdab02310db8e"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "c0b2accf4f95abfa44bdd6cf5da5e447516e425f55da8a57b4cbdab02310db8e"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "c0b2accf4f95abfa44bdd6cf5da5e447516e425f55da8a57b4cbdab02310db8e"
+    sha256 cellar: :any_skip_relocation, sonoma:        "e3dae632ee45c16f09d7213d7b20ff54dcc135bdb47fe639b37a874e6d9a6a41"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "28d9e4c0095965f4ba82a1280aa5fc1ae7c35620dc3279455438e2bd57b1cbf6"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "afdcde4c44431f5f0ad8a2c0a8f69e5ecff0b5deacc41fd5869edce992f3f222"
   end
 
   depends_on "go" => :build
