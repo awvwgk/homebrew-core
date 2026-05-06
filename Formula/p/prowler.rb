@@ -3,8 +3,8 @@ class Prowler < Formula
 
   desc "Tool for cloud security assessments, audits, incident response, and more"
   homepage "https://prowler.com/"
-  url "https://files.pythonhosted.org/packages/74/f8/6192855cfabae3f02daec1451cbc1e3b595a1e6e85c31145c695a81a7f90/prowler-5.25.1.tar.gz"
-  sha256 "bbae902da9beba2468010dba7cf676619e84e6786bba83ca907f5da9ca3ab5af"
+  url "https://files.pythonhosted.org/packages/47/02/37d6b402c74792b352f721d357179d7b08c4fa5aee70f45a18895959c986/prowler-5.25.2.tar.gz"
+  sha256 "371377d12617cc1006ee32d430e7d1e0d32e52ae6be33070aff9e8c5b4c7b2a9"
   license "Apache-2.0"
   head "https://github.com/prowler-cloud/prowler.git", branch: "master"
 
@@ -254,8 +254,8 @@ class Prowler < Formula
   end
 
   resource "azure-core" do
-    url "https://files.pythonhosted.org/packages/34/83/bbde3faa84ddcb8eb0eca4b3ffb3221252281db4ce351300fe248c5c70b1/azure_core-1.39.0.tar.gz"
-    sha256 "8a90a562998dd44ce84597590fff6249701b98c0e8797c95fcdd695b54c35d74"
+    url "https://files.pythonhosted.org/packages/ce/d9/6f5972b44761277394527a3a76af5ae2ef82fc5f20ce351abf0c826eca67/azure_core-1.40.0.tar.gz"
+    sha256 "ecf5b6ddf2564471fae9d576147b7e77a4da285958b2d9f4fd6c3af104f3e9d7"
   end
 
   resource "azure-identity" do
@@ -544,8 +544,8 @@ class Prowler < Formula
   end
 
   resource "google-auth" do
-    url "https://files.pythonhosted.org/packages/c6/fc/e925290a1ad95c975c459e2df070fac2b90954e13a0370ac505dff78cb99/google_auth-2.49.2.tar.gz"
-    sha256 "c1ae38500e73065dcae57355adb6278cf8b5c8e391994ae9cbadbcb9631ab409"
+    url "https://files.pythonhosted.org/packages/5f/18/238d7021d151bdab868f23433817b027dd759135202f4dfce0670d1230ca/google_auth-2.50.0.tar.gz"
+    sha256 "f35eafb191195328e8ce10a7883970877e7aeb49c2bfaa54aa0e394316d353d0"
   end
 
   resource "google-auth-httplib2" do
@@ -599,8 +599,8 @@ class Prowler < Formula
   end
 
   resource "iamdata" do
-    url "https://files.pythonhosted.org/packages/70/10/ab279a942fdb9953bdab3c981a738b4cce7cf8e39b8fe013086501ee0bb0/iamdata-0.1.202604291.tar.gz"
-    sha256 "0182c7e8662bbaeda0f217aecbd284115fd33ca0036d34732b72e6f019950ad2"
+    url "https://files.pythonhosted.org/packages/75/4d/ecdbd18d1b7bdaa8da0768f3f730b4082dd281cee5935c126f2a7613ef0a/iamdata-0.1.202605051.tar.gz"
+    sha256 "bcb4c251e79089732baaa7713bf8bd7661006f25eaad9e66f8438816ac6c2073"
   end
 
   resource "idna" do
@@ -900,8 +900,8 @@ class Prowler < Formula
   end
 
   resource "pyopenssl" do
-    url "https://files.pythonhosted.org/packages/8c/a8/26d36401e3ab8eed9030ad33f381da7856fcfad5691780fccd1b019718fc/pyopenssl-26.1.0.tar.gz"
-    sha256 "737f0a2275c5bc54f3b02137687e1a765931fb3949b9a92a825e4d33b9eec08b"
+    url "https://files.pythonhosted.org/packages/1a/51/27a5ad5f939d08f690a326ef9582cda7140555180db71695f6fb747d6a36/pyopenssl-26.2.0.tar.gz"
+    sha256 "8c6fcecd1183a7fc897548dfe388b0cdb7f37e018200d8409cf33959dbe35387"
   end
 
   resource "pyparsing" do
