@@ -3,8 +3,8 @@ class Beancount < Formula
 
   desc "Double-entry accounting tool that works on plain text files"
   homepage "https://beancount.github.io/"
-  url "https://files.pythonhosted.org/packages/f8/9d/aa97bb5d354cc853faca60d0b0bf0728af11300cd6276769314885b4b9a8/beancount-3.2.2.tar.gz"
-  sha256 "7f9a3919152232c262c826998fb2620046b47249624c665d79fa4b0a72f78bfc"
+  url "https://files.pythonhosted.org/packages/eb/21/ed48e671a5e474c620762a7ea9c6b7f402f847d74dd2b73ceb5d2dec79a3/beancount-3.2.3.tar.gz"
+  sha256 "f52c4d237bcb092cbf02a29373d3e59d95349c2828a91491818ae437ee220f74"
   license "GPL-2.0-only"
   head "https://github.com/beancount/beancount.git", branch: "master"
 
