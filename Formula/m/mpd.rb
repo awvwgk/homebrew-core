@@ -1,8 +1,8 @@
 class Mpd < Formula
   desc "Music Player Daemon"
   homepage "https://www.musicpd.org/"
-  url "https://github.com/MusicPlayerDaemon/MPD/archive/refs/tags/v0.24.9.tar.gz"
-  sha256 "8a3e7af8e203e561527e07be09aa98b94fb8f6befd7ec4c884e3bbac6bc8c744"
+  url "https://github.com/MusicPlayerDaemon/MPD/archive/refs/tags/v0.24.10.tar.gz"
+  sha256 "e1a82ed2a7308928360fed633424c8c8fe1ef40eb9051721491cb81725934abc"
   license "GPL-2.0-or-later"
   head "https://github.com/MusicPlayerDaemon/MPD.git", branch: "master"
 
@@ -64,6 +64,7 @@ class Mpd < Formula
     depends_on "alsa-lib"
     depends_on "dbus"
     depends_on "jack"
+    depends_on "pipewire"
     depends_on "pulseaudio"
     depends_on "systemd"
     depends_on "zlib-ng-compat"
