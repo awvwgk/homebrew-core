@@ -10,12 +10,12 @@ class Datasette < Formula
   head "https://github.com/simonw/datasette.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "0e696f2ba01d3b948e76adc777ecec65c5d95d76aadecfac5708027c5826c7c8"
-    sha256 cellar: :any,                 arm64_sequoia: "5d39165fe3472bdbcd0552aa4aa7747fa15177e1733133faaf0c72dd833cb9f9"
-    sha256 cellar: :any,                 arm64_sonoma:  "3b48ccc7ca1032eb6cb6518cd248020d1772f321e26368f9b6f5709d7ebc8889"
-    sha256 cellar: :any,                 sonoma:        "e0b5b0388c23932be1715f0c320cd8d925e40a23aee878475be992f1a73bffaa"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "d0c3d394070f3c77f90301a8066d3e0fc34d1aca9a74bb5f84672de56c9ca3ba"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "3a0d9e6f3eb1bd9b91c6c870bb84452bc9535129348f821cd4a51a9e8f99d607"
+    sha256 cellar: :any,                 arm64_tahoe:   "e30a0b27f9ad366cddaaf5048681e04a61d2fa97ca20676c89949c82d4ba0932"
+    sha256 cellar: :any,                 arm64_sequoia: "938a03f5cb768d640f937114b78d5f87e3aadc602b693ccbbcb9e687e4f65285"
+    sha256 cellar: :any,                 arm64_sonoma:  "987e4faaceeaa3b7e6135b0477d86ebcd2e720832db11776a25eb5c920178c9f"
+    sha256 cellar: :any,                 sonoma:        "e8e14ad897b3e0f7dec41b7a1ce29fd69d34665e7fa5559e9ebd8393c880ccc3"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "39aefc697b34c27b473333ad209fcc66af455a99d7895d107e547ba65f1ac668"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "d7700238801f541277c4acf591d54b20f8d8ad7aff815ecacb8f29cf9c779e32"
   end
 
   depends_on "certifi" => :no_linkage
