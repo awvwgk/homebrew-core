@@ -6,6 +6,15 @@ class Crit < Formula
   license "MIT"
   head "https://github.com/tomasz-tomczyk/crit.git", branch: "main"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "6d9def72da142df0a40250f2819a58d69b862c4f6808b1d4dbfe4aff23dc54e6"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "6d9def72da142df0a40250f2819a58d69b862c4f6808b1d4dbfe4aff23dc54e6"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "6d9def72da142df0a40250f2819a58d69b862c4f6808b1d4dbfe4aff23dc54e6"
+    sha256 cellar: :any_skip_relocation, sonoma:        "2266c09656c48aa2ebef9c343f5d868052a05b924a6b9c33292c692725247489"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "e1bc3964591e6dd1026bc60b43ec0f294e8e781379418844370f40488a23299e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "359720455e289b5efaa47121d0c490037fee8f157f1ded07136d2858a8194be0"
+  end
+
   depends_on "go" => :build
 
   def install
