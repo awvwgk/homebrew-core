@@ -3,8 +3,8 @@ class HermesAgent < Formula
 
   desc "Self-improving AI agent that creates skills from experience"
   homepage "https://hermes-agent.nousresearch.com"
-  url "https://github.com/NousResearch/hermes-agent/archive/refs/tags/v2026.4.30.tar.gz"
-  sha256 "3743db721cf6c93631f8446bdc8b77fd53e0c439ee8c42ec821ebfd6874c3949"
+  url "https://github.com/NousResearch/hermes-agent/archive/refs/tags/v2026.5.7.tar.gz"
+  sha256 "75b629e787a68164713b66d1dd163c65f853474c9c775cd6f206797a629aa2c0"
   license "MIT"
   head "https://github.com/NousResearch/hermes-agent.git", branch: "main"
 
@@ -43,8 +43,8 @@ class HermesAgent < Formula
   end
 
   resource "anthropic" do
-    url "https://files.pythonhosted.org/packages/14/93/f66ea8bfe39f2e6bb9da8e27fa5457ad2520e8f7612dfc547b17fad55c4d/anthropic-0.97.0.tar.gz"
-    sha256 "021e79fd8e21e90ad94dc5ba2bbbd8b1599f424f5b1fab6c06204009cab764be"
+    url "https://files.pythonhosted.org/packages/9c/2d/24caf0ff727cba2ed863925017c8f93463a2ea6224a0efe5626e672bc3d2/anthropic-0.100.0.tar.gz"
+    sha256 "650dee9e023afb16395939ee4104bbc21f966b380210119fb91122c12099c79a"
   end
 
   resource "anyio" do
@@ -98,8 +98,8 @@ class HermesAgent < Formula
   end
 
   resource "firecrawl-py" do
-    url "https://files.pythonhosted.org/packages/1e/2b/af58c7ae933fd12d873c4c971529dc1a4a5ac2b8f464ef90bbcefd97d975/firecrawl_py-4.24.0.tar.gz"
-    sha256 "f07dd31044a5750a73c672cb5def7b4b3550a275c260f7c688bad8237e5e5183"
+    url "https://files.pythonhosted.org/packages/55/35/a0502aa627fb980aded9c4a61d854acba930d06ff77f72d853582c130ec2/firecrawl_py-4.25.1.tar.gz"
+    sha256 "a3d324407ba9a091a20d7290595a365c4eff3d4d6d5d8fb8e28a892ff3af6921"
   end
 
   resource "frozenlist" do
@@ -143,8 +143,8 @@ class HermesAgent < Formula
   end
 
   resource "markdown-it-py" do
-    url "https://files.pythonhosted.org/packages/5b/f5/4ec618ed16cc4f8fb3b701563655a69816155e79e24a17b651541804721d/markdown_it_py-4.0.0.tar.gz"
-    sha256 "cb0a2b4aa34f932c007117b194e945bd74e0ec24133ceb5bac59009cda1cb9f3"
+    url "https://files.pythonhosted.org/packages/5c/5c/f3aedc83549aae71cd52b9e9687fe896e3dc6e966ba20eba04718605d198/markdown_it_py-4.1.0.tar.gz"
+    sha256 "760e3f87b2787c044c5138a5ba107b7c2be26c03b13cc7f8fe42756b65b1df6c"
   end
 
   resource "markupsafe" do
@@ -173,13 +173,13 @@ class HermesAgent < Formula
   end
 
   resource "openai" do
-    url "https://files.pythonhosted.org/packages/f0/ee/d056c82f63c05f06baac0cffb4a90952d8274f90c49dfe244f20497b9bbd/openai-2.33.0.tar.gz"
-    sha256 "f850c435e2a4685bba3295bd54912dd26315d9c1b7733068186134d6e0599f9a"
+    url "https://files.pythonhosted.org/packages/7d/4c/35a5216fe5f1cd4d7002b037ba47cff10b71cbd4bddcb601262c664d08de/openai-2.35.0.tar.gz"
+    sha256 "607f62257d6be167240c6b82db052fabf940e3c4d9ad3e8629364e837a601395"
   end
 
   resource "parallel-web" do
-    url "https://files.pythonhosted.org/packages/f0/35/55355e4d748959973bb921dc6547834cb16f732ab209fcc2bb1d69ec195f/parallel_web-0.5.1.tar.gz"
-    sha256 "e967f3bd1833c73db30ea11aa49f5b3248c10342af1fa768a4a290ff8f4301f6"
+    url "https://files.pythonhosted.org/packages/7f/81/101c961fe6665212df01fb39a70ebb379dc33529c7bc9210675c0f525139/parallel_web-0.6.0.tar.gz"
+    sha256 "f8aecd3f1958090090c4516881cefea4f55c40948ba3bb99217ca9a6d4263225"
   end
 
   resource "prompt-toolkit" do
