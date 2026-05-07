@@ -1,8 +1,8 @@
 class Gonzo < Formula
   desc "Log analysis TUI"
   homepage "https://gonzo.controltheory.com/"
-  url "https://github.com/control-theory/gonzo/archive/refs/tags/v0.3.2.tar.gz"
-  sha256 "64e8ab6c3ba36f79fb7174c7bd2fb976c32ef9da21e933aad6bf3a0a34904129"
+  url "https://github.com/control-theory/gonzo/archive/refs/tags/v0.4.1.tar.gz"
+  sha256 "822a723c7e8ac46a10a8a25762b76f98d3da76299dec19154d80db8a072afc31"
   license "MIT"
   head "https://github.com/control-theory/gonzo.git", branch: "main"
 
@@ -16,8 +16,12 @@ class Gonzo < Formula
   end
 
   depends_on "go" => :build
+  depends_on "node" => :build
 
   def install
+    # UI build
+    system "make", "web-build"
+
     ldflags = %W[
       -s -w
       -X main.version=#{version}
