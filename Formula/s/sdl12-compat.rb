@@ -27,7 +27,7 @@ class Sdl12Compat < Formula
   def install
     system "cmake", "-S", ".", "-B", "build",
                     "-DSDL2_PATH=#{Formula["sdl2"].opt_prefix}",
-                    "-DCMAKE_SHARED_LINKER_FLAGS=-Wl,-rpath,#{Formula["sdl2"].opt_lib}",
+                    "-DCMAKE_INSTALL_RPATH=#{rpath(target: Formula["sdl2"].opt_lib)}",
                     "-DSDL12DEVEL=ON",
                     "-DSDL12TESTS=OFF",
                     *std_cmake_args
