@@ -1,8 +1,8 @@
 class Dcm2niix < Formula
   desc "DICOM to NIfTI converter"
   homepage "https://www.nitrc.org/plugins/mwiki/index.php/dcm2nii:MainPage"
-  url "https://github.com/rordenlab/dcm2niix/archive/refs/tags/v1.0.20250506.tar.gz"
-  sha256 "1b24658678b6c24141e58760dbea9fe2786ffdd736bcc37a36d9cdabc731bafa"
+  url "https://github.com/rordenlab/dcm2niix/archive/refs/tags/v1.0.20260416.tar.gz"
+  sha256 "dc87a34b8284df2700a5aee433c4ba7ea56b999ac774fcf684962de5e898670d"
   license "BSD-3-Clause"
   version_scheme 1
   head "https://github.com/rordenlab/dcm2niix.git", branch: "master"
