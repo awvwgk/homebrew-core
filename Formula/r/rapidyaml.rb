@@ -6,12 +6,12 @@ class Rapidyaml < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "7944b08d8a867a5e7236344310d6c74d134e44b4fa926b1001dcf341d72a1a0a"
-    sha256 cellar: :any,                 arm64_sequoia: "e1e7319072c539bc68181756aacfff77eb70966fb43d93a612e0f6c1c65b4b0b"
-    sha256 cellar: :any,                 arm64_sonoma:  "c019747421bcb924973c8c21ae13de2a8f9c551a7a1879ddf158ff8b3591256f"
-    sha256 cellar: :any,                 sonoma:        "20d146efeeaec3db6e2d08075d3bf959222d6c27138979dd1f1df540b1fce90d"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "0db6a99b3522146cd3cb2f1e1663e6fa8bd2172d22e0a593743fe136153a93ea"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e2a4fbaf406c263ea1271de979d6111ae669d235af3f44bfc1eaed8b3fd2c9d9"
+    sha256 cellar: :any,                 arm64_tahoe:   "27c328feee0cf8d7335615093c0cafd158f5d362c4ea4d797811e639681c4882"
+    sha256 cellar: :any,                 arm64_sequoia: "6dd5d1cc3a4c5f690ca4d36f2aeeca42c0716a5e0cb17b64b735a99fd6201730"
+    sha256 cellar: :any,                 arm64_sonoma:  "ccb1d9bb612ab635f812785c88e0f48d741589f0daafa2bb78a01612245a542c"
+    sha256 cellar: :any,                 sonoma:        "7adad1b67964edd26bad65a7fccd95c7e09be7538ca9bfd23154c8c921772d60"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "d3e4be74dfaa82105f06e46f606742582c1d0cbbc9d061be07874f7297c0fb69"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "f9c01402a502115f08eb04efe48ef4db26cb0838a295f45ff7d3e5cb14c19af7"
   end
 
   depends_on "cmake" => :build
