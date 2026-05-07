@@ -1,10 +1,15 @@
 class Infracost < Formula
-  desc "Cost estimates for Terraform"
+  desc "Cost estimates for Terraform, Terragrunt, and CloudFormation"
   homepage "https://www.infracost.io/docs/"
-  url "https://github.com/infracost/infracost/archive/refs/tags/v0.10.44.tar.gz"
-  sha256 "638ac6155c15886bcdc1eda4f633ae54f64243f61b8b8676791e0003ddd836d7"
+  url "https://github.com/infracost/cli/archive/refs/tags/v2.0.0.tar.gz"
+  sha256 "649f124545c4b71332b093cc15b020315e1eb3372d7cfeca61e05dfceac5b2a6"
   license "Apache-2.0"
-  head "https://github.com/infracost/infracost.git", branch: "master"
+  head "https://github.com/infracost/cli.git", branch: "main"
+
+  livecheck do
+    url :stable
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
+  end
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_tahoe:   "12a68a6ec410dd1883c8cf5a63b594631678cead882d7af914f0a5a08d3df06f"
@@ -19,16 +24,17 @@ class Infracost < Formula
 
   def install
     ENV["CGO_ENABLED"] = "0"
-    ldflags = "-X github.com/infracost/infracost/internal/version.Version=v#{version}"
-    system "go", "build", *std_go_args(ldflags:), "./cmd/infracost"
+    ldflags = "-X github.com/infracost/cli/version.Version=v#{version}"
+    system "go", "build", *std_go_args(output: bin/"infracost", ldflags:), "main.go"
 
-    generate_completions_from_executable(bin/"infracost", "completion", "--shell")
+    generate_completions_from_executable(bin/"infracost", "completion")
   end
 
   test do
     assert_match "v#{version}", shell_output("#{bin}/infracost --version 2>&1")
 
-    output = shell_output("#{bin}/infracost breakdown --no-color 2>&1", 1)
-    assert_match "Error: INFRACOST_API_KEY is not set but is required", output
+    ENV["INFRACOST_CLI_AUTHENTICATION_TOKEN"] = "dummy"
+    output = shell_output("#{bin}/infracost setup --no-color 2>&1", 1)
+    assert_match "setup requires interactive login", output
   end
 end
