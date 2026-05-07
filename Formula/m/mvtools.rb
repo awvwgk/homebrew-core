@@ -1,8 +1,8 @@
 class Mvtools < Formula
   desc "Filters for motion estimation and compensation"
   homepage "https://github.com/dubhater/vapoursynth-mvtools"
-  url "https://github.com/dubhater/vapoursynth-mvtools/archive/refs/tags/v26.tar.gz"
-  sha256 "c39feedaf44e01c89264fa169a68318897b85bd445fb2a11c0125f9729103e54"
+  url "https://github.com/dubhater/vapoursynth-mvtools/archive/refs/tags/v27.tar.gz"
+  sha256 "b3b93ae7243d91d058a2b101ca725b949350b3edf20c080a8735ab76993c9df8"
   license "GPL-2.0-or-later"
   head "https://github.com/dubhater/vapoursynth-mvtools.git", branch: "master"
 
@@ -26,7 +26,8 @@ class Mvtools < Formula
   def install
     # Replace vendored path to homebrew formula path
     inreplace "meson.build" do |s|
-      s.gsub! "'vapoursynth/include'", "'#{Formula["vapoursynth"].opt_include}/vapoursynth'"
+      s.gsub!(/^incdir = include_directories\(.*?^\)/m,
+        "incdir = include_directories('#{Formula["vapoursynth"].opt_include}/vapoursynth')")
       s.gsub! "py.get_install_dir() / 'vapoursynth/plugins'", "'#{lib}'"
     end
 
