@@ -3,8 +3,8 @@ class Mypy < Formula
 
   desc "Experimental optional static type checker for Python"
   homepage "https://www.mypy-lang.org/"
-  url "https://files.pythonhosted.org/packages/04/af/e3d4b3e9ec91a0ff9aabfdb38692952acf49bbb899c2e4c29acb3a6da3ae/mypy-1.20.2.tar.gz"
-  sha256 "e8222c26daaafd9e8626dec58ae36029f82585890589576f769a650dd20fd665"
+  url "https://files.pythonhosted.org/packages/cf/dc/7e6d49f04fca40b9dd5c752a51a432ffe67fb45200702bc9eee0cb4bbb26/mypy-2.0.0.tar.gz"
+  sha256 "1a9e3900ac5c40f1fe813506c7739da6e6f0eab2729067ebd94bfb0bbba53532"
   license "MIT"
   head "https://github.com/python/mypy.git", branch: "master"
 
@@ -17,11 +17,17 @@ class Mypy < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "ed2c760acfb151eed290d854c0f3fbd3ac61b20ca0aab88f3e0d1289af4e1157"
   end
 
+  depends_on "rust" => :build # `ast-serialize`
   depends_on "python@3.14"
 
+  resource "ast-serialize" do
+    url "https://files.pythonhosted.org/packages/a9/9d/912fefab0e30aee6a3af8a62bbea4a81b29afa4ba2c973d31170620a26de/ast_serialize-0.3.0.tar.gz"
+    sha256 "1bc3ca09a63a021376527c4e938deedd11d11d675ce850e6f9c7487f5889992b"
+  end
+
   resource "librt" do
-    url "https://files.pythonhosted.org/packages/eb/6b/3d5c13fb3e3c4f43206c8f9dfed13778c2ed4f000bacaa0b7ce3c402a265/librt-0.9.0.tar.gz"
-    sha256 "a0951822531e7aee6e0dfb556b30d5ee36bbe234faf60c20a16c01be3530869d"
+    url "https://files.pythonhosted.org/packages/39/cb/c1945e506893b5b8577fb45a60c80e3ffe4a82092a04a6f29b0b951d9a24/librt-0.10.0.tar.gz"
+    sha256 "1aba1e8aa4e3307a7be68a74149545fde7451964dc0235a8bec5704a17bdda42"
   end
 
   resource "mypy-extensions" do
@@ -30,8 +36,8 @@ class Mypy < Formula
   end
 
   resource "pathspec" do
-    url "https://files.pythonhosted.org/packages/fa/36/e27608899f9b8d4dff0617b2d9ab17ca5608956ca44461ac14ac48b44015/pathspec-1.0.4.tar.gz"
-    sha256 "0210e2ae8a21a9137c0d470578cb0e595af87edaa6ebf12ff176f14a02e0e645"
+    url "https://files.pythonhosted.org/packages/5a/82/42f767fc1c1143d6fd36efb827202a2d997a375e160a71eb2888a925aac1/pathspec-1.1.1.tar.gz"
+    sha256 "17db5ecd524104a120e173814c90367a96a98d07c45b2e10c2f3919fff91bf5a"
   end
 
   resource "typing-extensions" do
