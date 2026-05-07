@@ -1,8 +1,8 @@
 class Apptainer < Formula
   desc "Application container and unprivileged sandbox platform for Linux"
   homepage "https://apptainer.org/"
-  url "https://github.com/apptainer/apptainer/releases/download/v1.4.5/apptainer-1.4.5.tar.gz"
-  sha256 "d323a8b9a0a9e5e131b396d0049fdaa99beceb83a3d7ffb80dd91d15331e3b9a"
+  url "https://github.com/apptainer/apptainer/releases/download/v1.5.0/apptainer-1.5.0.tar.gz"
+  sha256 "36d67d57ef959397fa4f59169cf7deb92220537160e761e0c1cff84624ad81e3"
   license "BSD-3-Clause"
   head "https://github.com/apptainer/apptainer.git", branch: "main"
 
@@ -29,7 +29,7 @@ class Apptainer < Formula
       --sysconfdir=#{etc}
       --localstatedir=#{var}
       --without-suid
-      -P release-stripped
+      -P release
       -v
     ]
     ENV.O0
