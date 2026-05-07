@@ -7,12 +7,12 @@ class Html2markdown < Formula
   head "https://github.com/JohannesKaufmann/html-to-markdown.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "5a979bd39a446e4ccdbe82ce8cba546a11428027d3085364d7bb76d0a631fb53"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "5a979bd39a446e4ccdbe82ce8cba546a11428027d3085364d7bb76d0a631fb53"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "5a979bd39a446e4ccdbe82ce8cba546a11428027d3085364d7bb76d0a631fb53"
-    sha256 cellar: :any_skip_relocation, sonoma:        "3896c1af68fd1b8620e07b56d1267b26131dc6394afd09ce9e327b00956256c4"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "8f57684eea0fb2d180cd906c028698e9914e63198c2f2bd0a6f6a6a648df686c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "89b58c38649b5226fc49de51bde36ebf59ccb258e63e6dc182aaea0f2d570516"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "4929bb9b66ced2e9b4ffdb0eb584c0debe2c37cd8f7a9a85ca401f4cb62dc181"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "4929bb9b66ced2e9b4ffdb0eb584c0debe2c37cd8f7a9a85ca401f4cb62dc181"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "4929bb9b66ced2e9b4ffdb0eb584c0debe2c37cd8f7a9a85ca401f4cb62dc181"
+    sha256 cellar: :any_skip_relocation, sonoma:        "a6f57bfb50954de53f8f28ebfeb200d77add29feba0cbac04d75420c7addaca9"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "413c808befb3fbc511af53c16ff19f4fa5aaae141dde68da70c5649addff9567"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "15802085a9c9844e61a7fcf77fcc581cf533647614413dc20198d3fdbb4730af"
   end
 
   depends_on "go" => :build
