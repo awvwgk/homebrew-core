@@ -1,11 +1,11 @@
 class Dnscontrol < Formula
   desc "Synchronize your DNS to multiple providers from a simple DSL"
   homepage "https://dnscontrol.org/"
-  url "https://github.com/StackExchange/dnscontrol/archive/refs/tags/v4.36.1.tar.gz"
-  sha256 "2584fe62ac4f6895a4780ac82c2abc3a516638d650f51f8376c801694a5c2b03"
+  url "https://github.com/DNSControl/dnscontrol/archive/refs/tags/v4.37.0.tar.gz"
+  sha256 "15e67649723ca1ff6f0eb7c3338f39b9090ebf806888ff9233ea807a47383346"
   license "MIT"
   version_scheme 1
-  head "https://github.com/StackExchange/dnscontrol.git", branch: "main"
+  head "https://github.com/DNSControl/dnscontrol.git", branch: "main"
 
   # Upstream appears to use GitHub releases to indicate that a version is
   # released and they sometimes re-tag versions before that point, so it's
@@ -29,7 +29,7 @@ class Dnscontrol < Formula
   def install
     ldflags = %W[
       -s -w
-      -X github.com/StackExchange/dnscontrol/v4/pkg/version.version=#{version}
+      -X github.com/DNSControl/dnscontrol/v#{version.major}/pkg/version.version=#{version}
     ]
     system "go", "build", *std_go_args(ldflags:)
 
