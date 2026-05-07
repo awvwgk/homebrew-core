@@ -1,9 +1,9 @@
 class Supermodel < Formula
   desc "Sega Model 3 arcade emulator"
   homepage "https://github.com/trzy/Supermodel"
-  url "https://github.com/trzy/Supermodel/archive/refs/tags/v0.3a-20260228-git-d6dec3d.tar.gz"
-  version "0.3a-20260228-git-d6dec3d"
-  sha256 "4b99ca451379436ad284d682c6849a925d8810daa229271be2e63d24c0cf340b"
+  url "https://github.com/trzy/Supermodel/archive/refs/tags/v0.3a-20260506-git-9c9e7b7.tar.gz"
+  version "0.3a-20260506-git-9c9e7b7"
+  sha256 "74a6310ebe080b1de08ae92bbe6b4f5ca73babb7ef184e90b23079700133b710"
   license "GPL-3.0-or-later"
   head "https://github.com/trzy/Supermodel.git", branch: "master"
 
@@ -17,6 +17,7 @@ class Supermodel < Formula
   end
 
   depends_on "sdl2"
+  depends_on "sdl2_net"
 
   on_linux do
     depends_on "mesa"
@@ -31,6 +32,7 @@ class Supermodel < Formula
     ENV.deparallelize
     # Set up SDL2 library correctly
     inreplace makefile_dir, "-framework SDL2", "`sdl2-config --libs`" if OS.mac?
+    inreplace "Src/OSD/SDL/SDLIncludes.h", "SDL_net.h", "SDL2/SDL_net.h" if OS.linux?
 
     system "make", "-f", makefile_dir
     bin.install "bin/supermodel"
