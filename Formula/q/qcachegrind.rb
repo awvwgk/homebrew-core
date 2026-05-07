@@ -14,12 +14,12 @@ class Qcachegrind < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "c1638af3ff165f105d12914ecf3476f863113dd15551f88722d33505d5c339ab"
-    sha256 cellar: :any,                 arm64_sequoia: "3cd03d10384e3f5a8cd1961e66eca8213a00d0070e5eda7cec09e967f2f8ec02"
-    sha256 cellar: :any,                 arm64_sonoma:  "06146e2f667bb471559fad88259eefce6e1fe84581c4568706aaeac62a4baaef"
-    sha256 cellar: :any,                 sonoma:        "b255d9e1ab05065b1a1a5828ee5c664c8c44694fd9bd1f50ab50d12631a54ec9"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "f54155c5997291a66e718d57a753503dc21d7d701ff9778b7476eff7fcdc44e2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "acf8d96d9b0c91d1eb99410682919361c240e4313a2b09357ce3d4bb218eef71"
+    sha256 cellar: :any,                 arm64_tahoe:   "007e70162056981802b17fac36d9aad6cea16f43fa999d01bbcabfe75a5797d2"
+    sha256 cellar: :any,                 arm64_sequoia: "5d591cefbbe42fdb4bb871aee67c6032f4862a0d1e5430424390e509c0cbf92f"
+    sha256 cellar: :any,                 arm64_sonoma:  "03de083c47aa416e71ee8160ca06abab96fcca1b15cfaddfba47115e32b3d98e"
+    sha256 cellar: :any,                 sonoma:        "28f3df167290de82bb95ebe6ec24888922d945b0e95aed689fd60e2534bc2114"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "2ee6ca74b538b7b0236dd4b16f77e7a2ec67956057e04e901b51830d38c2911f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a62885e1482763a911db6d7ccf504c29f41852ae366207153f06d289855955b7"
   end
 
   depends_on "graphviz"
