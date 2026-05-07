@@ -1,10 +1,10 @@
 class Nanobot < Formula
   desc "Build MCP Agents"
   homepage "https://www.nanobot.ai/"
-  url "https://github.com/nanobot-ai/nanobot/archive/refs/tags/v0.0.78.tar.gz"
-  sha256 "59e4b88b75bbf23a6e49e1d21d0da6097ff90c9766fb7e047baab6ba0be94a9a"
+  url "https://github.com/obot-platform/nanobot/archive/refs/tags/v0.0.80.tar.gz"
+  sha256 "33582ce0ae6b540f7a0e8c68547410955d8f2653b6790c8a7e4f52cbce72f4d5"
   license "Apache-2.0"
-  head "https://github.com/nanobot-ai/nanobot.git", branch: "main"
+  head "https://github.com/obot-platform/nanobot.git", branch: "main"
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_tahoe:   "25012fb9ddbd06c25e4e21d259088b5a99d3f7e52b0e7911ddae7f5befc6a241"
@@ -20,8 +20,8 @@ class Nanobot < Formula
   def install
     ldflags = %W[
       -s -w
-      -X github.com/nanobot-ai/nanobot/pkg/version.Tag=v#{version}
-      -X github.com/nanobot-ai/nanobot/pkg/version.BaseImage=ghcr.io/nanobot-ai/nanobot:v#{version}
+      -X github.com/obot-platform/nanobot/pkg/version.Tag=v#{version}
+      -X github.com/obot-platform/nanobot/pkg/version.BaseImage=ghcr.io/nanobot-ai/nanobot:v#{version}
     ]
     system "go", "build", *std_go_args(ldflags:)
 
