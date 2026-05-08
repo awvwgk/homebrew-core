@@ -16,12 +16,12 @@ class Ki18n < Formula
   end
 
   bottle do
-    sha256 arm64_tahoe:   "8fee77311478ab31279ce4263c70836e8dabb1e48cb7dc2b71879ebe589d4325"
-    sha256 arm64_sequoia: "26e383219bff8951282b421a2351594fe6bacdbc8d92f9a5e8f8ec062ef647bb"
-    sha256 arm64_sonoma:  "ae483e1b0272e6ae25e173edb753b2a70fcfb2b58a52119bdb39c0147257e1fb"
-    sha256 sonoma:        "34e4afad8dd33c5ccc147fa7efcf9a1be3066a80ca26f10b54a5992f593c0aea"
-    sha256 arm64_linux:   "25e3855d63a060cd16e2c19a321ac30b2578050d59e9c9ac264d6bc6c7985a11"
-    sha256 x86_64_linux:  "2152c09234c6e114d3873b59a46645f52eb1ccea964b1d0be58fe5831a157860"
+    sha256 arm64_tahoe:   "5f108ad0966eb23b7ca07118985d88658b94cece9a8c357e6f6284ba3d23450a"
+    sha256 arm64_sequoia: "d9b32198896fd8bedf0b01641d365f99bc6e07a42ff75daf1a40b4f68b60287c"
+    sha256 arm64_sonoma:  "94423fa819d4d8754f90f3d1b2319ddef766d91407ba8f5da2919451dad68a8d"
+    sha256 sonoma:        "7e3fa0679c1a2b13e39d57e7481dcd0598eb6ce745a6613a40438d2940fa52ef"
+    sha256 arm64_linux:   "818ae2474c94466ce0705168d55035b84938042cb201d3394d10970470ce8b01"
+    sha256 x86_64_linux:  "9b799eddb06d2e9c073e6d2b4c98e5e007d6d98d4e3b9abed07a7c14f3cd0e1a"
   end
 
   depends_on "cmake" => [:build, :test]
