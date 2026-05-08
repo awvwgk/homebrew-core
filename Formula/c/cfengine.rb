@@ -1,8 +1,8 @@
 class Cfengine < Formula
   desc "Help manage and understand IT infrastructure"
   homepage "https://cfengine.com/"
-  url "https://cfengine-package-repos.s3.amazonaws.com/tarballs/cfengine-community-3.27.0.tar.gz"
-  sha256 "d793e830b02e09843bf8ece1efd538cd65fa0428f249bbf7e371ca52d5f97b43"
+  url "https://cfengine-package-repos.s3.amazonaws.com/tarballs/cfengine-community-3.27.1.tar.gz"
+  sha256 "878e52c4a6cc3bd28048b527a920fba86ce4cd99c5760adc42417a811efa6e6b"
   license all_of: ["BSD-3-Clause", "GPL-2.0-or-later", "GPL-3.0-only", "LGPL-2.0-or-later"]
 
   livecheck do
@@ -38,8 +38,8 @@ class Cfengine < Formula
   end
 
   resource "masterfiles" do
-    url "https://cfengine-package-repos.s3.amazonaws.com/tarballs/cfengine-masterfiles-3.27.0.tar.gz"
-    sha256 "84803035168af3e43c1fb25ba5f90561dec33b151ef5d5359a108a06c4c7c61d"
+    url "https://cfengine-package-repos.s3.amazonaws.com/tarballs/cfengine-masterfiles-3.27.1.tar.gz"
+    sha256 "fd32c1255c0114d55929b496a15a6a6f48231f108be23f50ad3b8abc2e734ccf"
 
     livecheck do
       formula :parent
