@@ -1,8 +1,8 @@
 class CodexAcp < Formula
   desc "Use Codex from ACP-compatible clients such as Zed!"
   homepage "https://github.com/zed-industries/codex-acp"
-  url "https://github.com/zed-industries/codex-acp/archive/refs/tags/v0.13.0.tar.gz"
-  sha256 "7a8b8adf63969b33650988e70fa5802750fcf30155be11d5de8c53d35bbc79b2"
+  url "https://github.com/zed-industries/codex-acp/archive/refs/tags/v0.14.0.tar.gz"
+  sha256 "0813038f51360362221ea8a525c46b5de6272659bffa63853391d6e264f738d8"
   license "Apache-2.0"
   head "https://github.com/zed-industries/codex-acp.git", branch: "main"
 
