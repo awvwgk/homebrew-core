@@ -19,6 +19,7 @@ class Mockolo < Formula
   uses_from_macos "swift" => :build
 
   def install
+    inreplace "Sources/Mockolo/Version.swift", "development", version.to_s
     args = if OS.mac?
       ["--disable-sandbox"]
     else
