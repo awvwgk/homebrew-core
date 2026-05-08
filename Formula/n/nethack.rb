@@ -80,7 +80,7 @@ class Nethack < Formula
     end
 
     system "make", "fetch-lua"
-    system "make", "install"
+    system "make", "install", "WANT_WIN_CURSES=1", "WANT_WIN_TTY=1"
     bin.install_symlink libexec/"nethack"
     man6.install "doc/nethack.6"
   end
