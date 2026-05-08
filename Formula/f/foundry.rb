@@ -2,10 +2,10 @@ class Foundry < Formula
   desc "Blazing fast, portable and modular toolkit for Ethereum application development"
   homepage "https://github.com/foundry-rs/foundry"
   # `build.rs` in `common` crate requires `.git` repository
-  # https://github.com/foundry-rs/foundry/blob/f83bad912a9dba7bf0371def1e70bb1896048356/crates/common/build.rs#L9-L12
+  # https://github.com/foundry-rs/foundry/blob/4072e48705af9d93e3c0f6e29e93b5e9a40caed8/crates/common/build.rs#L9-L12
   url "https://github.com/foundry-rs/foundry.git",
-      tag:      "v1.7.0",
-      revision: "f83bad912a9dba7bf0371def1e70bb1896048356"
+      tag:      "v1.7.1",
+      revision: "4072e48705af9d93e3c0f6e29e93b5e9a40caed8"
   license any_of: ["MIT", "Apache-2.0"]
   head "https://github.com/foundry-rs/foundry.git", branch: "master"
 
