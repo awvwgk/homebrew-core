@@ -3,10 +3,9 @@ class Remarshal < Formula
 
   desc "Convert between TOML, YAML and JSON"
   homepage "https://github.com/remarshal-project/remarshal"
-  url "https://files.pythonhosted.org/packages/8a/60/3847a729b9502f176d85b0e7f81dbe27b8124cbb43e896f3c79cc74e5faa/remarshal-1.3.0.tar.gz"
-  sha256 "21778b0839d691c141cd3325ab70be8529f1ce1c5fcfac8b4673fd1b2dec2f85"
+  url "https://files.pythonhosted.org/packages/16/0b/ad91623d00c9b362604ad9c4244143f706c48db6e768e2cd26d1fe56dd79/remarshal-2.0.0.tar.gz"
+  sha256 "42669d5cf9efad98050ea6fcf5aa22780ef8dc2399e8ead34776397e7d01fd3d"
   license "MIT"
-  revision 2
   head "https://github.com/remarshal-project/remarshal.git", branch: "master"
 
   bottle do
@@ -35,8 +34,8 @@ class Remarshal < Formula
   end
 
   resource "markdown-it-py" do
-    url "https://files.pythonhosted.org/packages/5b/f5/4ec618ed16cc4f8fb3b701563655a69816155e79e24a17b651541804721d/markdown_it_py-4.0.0.tar.gz"
-    sha256 "cb0a2b4aa34f932c007117b194e945bd74e0ec24133ceb5bac59009cda1cb9f3"
+    url "https://files.pythonhosted.org/packages/06/ff/7841249c247aa650a76b9ee4bbaeae59370dc8bfd2f6c01f3630c35eb134/markdown_it_py-4.2.0.tar.gz"
+    sha256 "04a21681d6fbb623de53f6f364d352309d4094dd4194040a10fd51833e418d49"
   end
 
   resource "mdurl" do
@@ -50,18 +49,23 @@ class Remarshal < Formula
   end
 
   resource "rich" do
-    url "https://files.pythonhosted.org/packages/b3/c6/f3b320c27991c46f43ee9d856302c70dc2d0fb2dba4842ff739d5f46b393/rich-14.3.3.tar.gz"
-    sha256 "b8daa0b9e4eef54dd8cf7c86c03713f53241884e814f4e2f5fb342fe520f639b"
+    url "https://files.pythonhosted.org/packages/c0/8f/0722ca900cc807c13a6a0c696dacf35430f72e0ec571c4275d2371fca3e9/rich-15.0.0.tar.gz"
+    sha256 "edd07a4824c6b40189fb7ac9bc4c52536e9780fbbfbddf6f1e2502c31b068c36"
   end
 
   resource "rich-argparse" do
-    url "https://files.pythonhosted.org/packages/4c/f7/1c65e0245d4c7009a87ac92908294a66e7e7635eccf76a68550f40c6df80/rich_argparse-1.7.2.tar.gz"
-    sha256 "64fd2e948fc96e8a1a06e0e72c111c2ce7f3af74126d75c0f5f63926e7289cd1"
+    url "https://files.pythonhosted.org/packages/6a/e5/1064c43203a357d668cd42435f7a15fe6af51512d85b2104fecb937aa861/rich_argparse-1.8.0.tar.gz"
+    sha256 "679df3d832fa94ad6e4bdb07ded088cd7ea2dddc58ae9b2b46346a40b06cbc0c"
   end
 
   resource "ruamel-yaml" do
     url "https://files.pythonhosted.org/packages/c7/3b/ebda527b56beb90cb7652cb1c7e4f91f48649fbcd8d2eb2fb6e77cd3329b/ruamel_yaml-0.19.1.tar.gz"
     sha256 "53eb66cd27849eff968ebf8f0bf61f46cdac2da1d1f3576dd4ccee9b25c31993"
+  end
+
+  resource "starlark" do
+    url "https://files.pythonhosted.org/packages/39/5d/153396eecab3d698fbaece5be2e049607b7eb8eb5bdf8955d58751f3e18f/starlark-0.2.0.tar.gz"
+    sha256 "998e67a80a717344d601acb4e9de392f111b82e78c58e6a7bfeb0534c50f3f54"
   end
 
   resource "tomli" do
