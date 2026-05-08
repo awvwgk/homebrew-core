@@ -7,12 +7,12 @@ class Joker < Formula
   head "https://github.com/candid82/joker.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "1805aad8f4f7b6ab15f5c10de7101a9e1649e6d962f3fbcdabda182d0c207a47"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "1805aad8f4f7b6ab15f5c10de7101a9e1649e6d962f3fbcdabda182d0c207a47"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "1805aad8f4f7b6ab15f5c10de7101a9e1649e6d962f3fbcdabda182d0c207a47"
-    sha256 cellar: :any_skip_relocation, sonoma:        "74a8c7af4675c0407f6300ef51d585aca9be02e804bf7c45b5fd493a1de94753"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "f99d039123ed57a7f1503d6dbf363a2f3bf67f500f810c64f402ab3f036a32e8"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "16d2af5806fb3aea5cf33cb60251d76cb83248f1cdf56b692fb963c51b2a0971"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "70163d906fe29b259b2d45acd5d2aa4fe9c917b27f6dcaf94d3f246835f3960e"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "70163d906fe29b259b2d45acd5d2aa4fe9c917b27f6dcaf94d3f246835f3960e"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "70163d906fe29b259b2d45acd5d2aa4fe9c917b27f6dcaf94d3f246835f3960e"
+    sha256 cellar: :any_skip_relocation, sonoma:        "428acc9bb9b254aa39a368b96ea8d92da21d18f9340a0ddd5f40b417f6c5b7ce"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "48198971bd9d127d694a355f982b0d6c7b69af735ce1409ff1c7bacd187a72ef"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "fcc6774ce952aafbaee43a147f8099842291b584c8b59cb0f9fd324810aae3de"
   end
 
   depends_on "go" => :build
