@@ -7,13 +7,12 @@ class Sops < Formula
   head "https://github.com/getsops/sops.git", branch: "main"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "9b09a92006fe701494f378f8a58faf1c3dfae6932b1ab217725a1728542b8bd4"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "9b09a92006fe701494f378f8a58faf1c3dfae6932b1ab217725a1728542b8bd4"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "9b09a92006fe701494f378f8a58faf1c3dfae6932b1ab217725a1728542b8bd4"
-    sha256 cellar: :any_skip_relocation, sonoma:        "d86665bedc9eb0c2deac9d82c532b0c9155339aef946dbe99b2b210ea227a916"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "04c65a6452f9fe980b379c9aedb1db807c03050f17f492b52f1b4d28b68880dd"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "d076dd279b45587a24becd3b54a0b9974621ef89e3fa7ee880f253cc0994f0f9"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "c9d45dd5ff4eabd069310d5b9b3a89aa480f74caf9c4c568a65f32a6e41bbd90"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "c9d45dd5ff4eabd069310d5b9b3a89aa480f74caf9c4c568a65f32a6e41bbd90"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "c9d45dd5ff4eabd069310d5b9b3a89aa480f74caf9c4c568a65f32a6e41bbd90"
+    sha256 cellar: :any_skip_relocation, sonoma:        "f97c5a55ca21de8c35a24bb0ca50eedaa7832a3cb99145c9c52d660ae6001a7f"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "b0de3c76239a18b71bf5a3198f65856df9078ab894f83f4639a5bb2196820de6"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "9870849507698703fac19c63b80999761b505974a865d8e015defcb058f055f7"
   end
 
   depends_on "go" => :build
