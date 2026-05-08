@@ -3,8 +3,8 @@ class Ggshield < Formula
 
   desc "Scanner for secrets and sensitive data in code"
   homepage "https://www.gitguardian.com"
-  url "https://files.pythonhosted.org/packages/6f/85/7f4cb27e9b861a216d9e7af97f2ce1a066aac9a170320c437df1887d67f1/ggshield-1.50.3.tar.gz"
-  sha256 "62be2decbfed814fc2ba6e136ce6fb174e29d9e3173898bf34a8be0d8c9f2b9b"
+  url "https://files.pythonhosted.org/packages/1c/71/4d0ce13e8277a8de027e2ec510871a0f0cf4205bc7bf2f92a9cb6c31692d/ggshield-1.50.4.tar.gz"
+  sha256 "179b01c1f7e089359dde84cdf034734b8f03cc5fde1222d19988984c016c42d7"
   license "MIT"
   head "https://github.com/GitGuardian/ggshield.git", branch: "main"
 
@@ -90,8 +90,8 @@ class Ggshield < Formula
   end
 
   resource "markdown-it-py" do
-    url "https://files.pythonhosted.org/packages/5b/f5/4ec618ed16cc4f8fb3b701563655a69816155e79e24a17b651541804721d/markdown_it_py-4.0.0.tar.gz"
-    sha256 "cb0a2b4aa34f932c007117b194e945bd74e0ec24133ceb5bac59009cda1cb9f3"
+    url "https://files.pythonhosted.org/packages/06/ff/7841249c247aa650a76b9ee4bbaeae59370dc8bfd2f6c01f3630c35eb134/markdown_it_py-4.2.0.tar.gz"
+    sha256 "04a21681d6fbb623de53f6f364d352309d4094dd4194040a10fd51833e418d49"
   end
 
   resource "marshmallow" do
@@ -240,8 +240,8 @@ class Ggshield < Formula
   end
 
   resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/c7/24/5f1b3bdffd70275f6661c76461e25f024d5a38a46f04aaca912426a2b1d3/urllib3-2.6.3.tar.gz"
-    sha256 "1b62b6884944a57dbe321509ab94fd4d3b307075e0c2eae991ac71ee15ad38ed"
+    url "https://files.pythonhosted.org/packages/53/0c/06f8b233b8fd13b9e5ee11424ef85419ba0d8ba0b3138bf360be2ff56953/urllib3-2.7.0.tar.gz"
+    sha256 "231e0ec3b63ceb14667c67be60f2f2c40a518cb38b03af60abc813da26505f4c"
   end
 
   def install
