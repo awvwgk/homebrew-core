@@ -7,12 +7,12 @@ class McpGrafana < Formula
   head "https://github.com/grafana/mcp-grafana.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "1e5f76cd7fec6b4f880cb79ba0720cce1a52cd07f695c12347f48aac7e1142ad"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "f005dfc8a4abc4b37b743f47b4ac42b4394410484242a5567f07ec79f6cecd91"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "7bfd5ff6692a70d614301a18351599365d09a4532d367238b9afd5773c51ab7a"
-    sha256 cellar: :any_skip_relocation, sonoma:        "682701b4201f6d2ba05ef6bbb32639a82096fbb1b2bae9a2b053b321d9eeacaa"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "efca9ad27ad7df389431374a4637c68700b6e87974e509e09ed04c1fa80fc25f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "7a64346fdc5f52d3e08eb9e28a0dfb46dc9bd82983eec2b0c042bc3df7397e46"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "c5572730e75ed561f1cf368e1440a3e0781214ad997bb3f3ff249c325c37f801"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "a8384a3b116496171ba0e88ccd1b08ed09bd98787094dcee96d75049454cbab3"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "0b319b27464035c040b7cb3ee5261f08a08cd3a20298aaefe6628346ee731dc8"
+    sha256 cellar: :any_skip_relocation, sonoma:        "6066d2ffae2846b6e860b6dca17c19e1945aa2a3e36a0d7bf141dd88face55a4"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "0e0dd48d968947bbc6843ae338c61bd297fee3c90a205bb13ec57e2a4aba1b27"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "f83d416340e369d1862cb75ca4501652d1e93f73649339d9fe05481b0a1339f3"
   end
 
   depends_on "go" => :build
