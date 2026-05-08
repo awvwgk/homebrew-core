@@ -1,8 +1,8 @@
 class Ngt < Formula
   desc "Neighborhood graph and tree for indexing high-dimensional data"
-  homepage "https://github.com/yahoojapan/NGT"
-  url "https://github.com/yahoojapan/NGT/archive/refs/tags/v2.7.2.tar.gz"
-  sha256 "98b547a7149fbfffe959b2a51789b0ab51474c03a819d1cb03771e562f256a64"
+  homepage "https://github.com/NGT-labs/NGT"
+  url "https://github.com/NGT-labs/NGT/archive/refs/tags/v2.7.4.tar.gz"
+  sha256 "0faad6f5185e5c66868c8907c4dd91f8776782aa81ba1abaeefe3b0774d6e170"
   license "Apache-2.0"
 
   livecheck do
@@ -29,12 +29,18 @@ class Ngt < Formula
     depends_on "openblas"
   end
 
+  patch do
+    url "https://github.com/NGT-labs/NGT/commit/ddb97ff021bab08b3bae6144d5971a1616e1477c.patch?full_index=1"
+    sha256 "3d622749ca18e34c11bb3ef3ffe61e4b534231937e4c0a321b62dec6cf21a3a0"
+  end
+
   def install
     args = %W[
       -DCMAKE_INSTALL_RPATH=#{rpath}
-      -DCMAKE_POLICY_VERSION_MINIMUM=3.5
       -DNGT_BFLOAT_DISABLED=ON
+      -DNGT_MARCH_NATIVE_DISABLED=ON
     ]
+
     system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
