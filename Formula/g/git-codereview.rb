@@ -1,8 +1,8 @@
 class GitCodereview < Formula
   desc "Tool for working with Gerrit code reviews"
   homepage "https://pkg.go.dev/golang.org/x/review/git-codereview"
-  url "https://github.com/golang/review/archive/refs/tags/v1.19.0.tar.gz"
-  sha256 "f088137cd0b92b17975efcb42fceae6c6f1726d684524a9feca77cbde2f356a8"
+  url "https://github.com/golang/review/archive/refs/tags/v1.20.0.tar.gz"
+  sha256 "0361d7c03b773b64f03650948dec1643f0a755b77445e16b849f7bda290ba4e0"
   license "BSD-3-Clause"
   head "https://github.com/golang/review.git", branch: "master"
 
