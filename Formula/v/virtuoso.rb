@@ -6,13 +6,12 @@ class Virtuoso < Formula
   license "GPL-2.0-only" => { with: "openvpn-openssl-exception" }
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_tahoe:   "124db9abc6fb578c856559f376a79ef4c24935256fb8c64cd765b87123365f00"
-    sha256 cellar: :any,                 arm64_sequoia: "3bcc3cfdf19576a1890aa35ca987172d5e327c37c6e3f15f787e562e46c5aca4"
-    sha256 cellar: :any,                 arm64_sonoma:  "e20f3e3d0619edabc99bd4c345bb9f2638541c52621a661b4fa97acfc46c186e"
-    sha256 cellar: :any,                 sonoma:        "cb48dfa38804d73c29f23f6a07d022b11bebf62f55cf522f5ae8b7ba93f8ec7e"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "54033ce5c9971b061dc154ce4c6bfeaab5e55add60176420d61e9410e682a855"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "b252f86f5451180e49ed9329fa33723217618ff199260d8f71e50060cdcc18fe"
+    sha256 cellar: :any,                 arm64_tahoe:   "8710e5d0b65eaf9dc44253015f08bcae16225aad0f1dd4ee38cbe27d8da45428"
+    sha256 cellar: :any,                 arm64_sequoia: "34460ec8da9cdde5e97f8b6a22ffe3a012b5cbcac6b634311d334ae9dcc41028"
+    sha256 cellar: :any,                 arm64_sonoma:  "2bfd02d4134c88e5f6868edb3da655eab9b4a9b22d5497a80d2a6466cc863346"
+    sha256 cellar: :any,                 sonoma:        "6ec3a63dcfd8990dc011a9586a760a2c9edc6331e5b7866b4ddf6b932c99a860"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "885da47f3af531200f9cd16bc76fbd7c2aa5d3605bb1451478deac4f4c59b4f5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a6b4dd1d9625820b51ddb3212907de9bff810167d46fa3395bfd2b0d6fed06a3"
   end
 
   head do
