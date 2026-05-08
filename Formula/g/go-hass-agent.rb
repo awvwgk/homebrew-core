@@ -5,6 +5,11 @@ class GoHassAgent < Formula
   sha256 "cf84fd68642bfa0da584c7cf267cfe471dfe61c94534cf23e09ef09428110596"
   license "MIT"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_linux:  "8cfabff168b3c8be656a40eafa9bb1f4d804d1d1fe2b1c0daa9ed76cae2c3899"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "180a670afb55f2022c2b276a342b0e70c48ca5d4079c1135e3df34995cd1e692"
+  end
+
   depends_on "go" => :build
   depends_on "node" => :build
   depends_on :linux
