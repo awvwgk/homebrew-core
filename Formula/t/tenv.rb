@@ -12,12 +12,12 @@ class Tenv < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "741686931937574b25cdc2cdf11d343c26ddf39a371f2e980532697d7b410563"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "741686931937574b25cdc2cdf11d343c26ddf39a371f2e980532697d7b410563"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "741686931937574b25cdc2cdf11d343c26ddf39a371f2e980532697d7b410563"
-    sha256 cellar: :any_skip_relocation, sonoma:        "9427d5a9fa8a7a8b85a1dcef36da27ac9e483ccf075936f5138cfdb6772bb924"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "38da3f0b199e19bf8595c9da45a88cf1a0f4060b4079e58a480005ca65746ae1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "c885de8f51d0cfb905db56a94502cdb43e2637bcdfd033d7f4d4ecc8fc58becd"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "b713ee5113fbf6621dbc494b8aea2c5adca8fc9625733e07027af0659a4b88c2"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "b713ee5113fbf6621dbc494b8aea2c5adca8fc9625733e07027af0659a4b88c2"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "b713ee5113fbf6621dbc494b8aea2c5adca8fc9625733e07027af0659a4b88c2"
+    sha256 cellar: :any_skip_relocation, sonoma:        "997b7392776c086b0e1abb293a59afd5d0f62eda6dda4ad22d6ac7b92dd14c0b"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "77b53be4eaf7c2a4471e6675f0830d7f1cc11da7b69f2281f03efe40b77963fc"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "6ad748396d0784ece8574ae703c51516474bacaf75cb2509da550b2d78c233da"
   end
 
   depends_on "go" => :build
