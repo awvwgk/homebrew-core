@@ -14,7 +14,7 @@ class MarpCli < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "b04223816db0be200154326ab586378c9e4b24ac6c0a42ecb495631c694ec3c9"
   end
 
-  depends_on "node"
+  depends_on "node@24"
 
   def install
     system "npm", "install", *std_npm_args
