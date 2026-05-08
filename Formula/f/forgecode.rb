@@ -1,8 +1,8 @@
 class Forgecode < Formula
   desc "AI-enhanced terminal development environment"
   homepage "https://forgecode.dev/"
-  url "https://github.com/tailcallhq/forgecode/archive/refs/tags/v2.12.11.tar.gz"
-  sha256 "39f3c6be1fd24c5db7255714eccd67436ffbf4b95cdd400d3adc1cc987548729"
+  url "https://github.com/tailcallhq/forgecode/archive/refs/tags/v2.12.12.tar.gz"
+  sha256 "4c3e2d7d77c291bc869f3c5f2db34aff3d29e1b3ddef86902ce3fd74608cf938"
   license "Apache-2.0"
   head "https://github.com/tailcallhq/forgecode.git", branch: "main"
 
