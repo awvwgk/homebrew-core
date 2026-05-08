@@ -1,8 +1,8 @@
 class Tailwindcss < Formula
   desc "Utility-first CSS framework"
   homepage "https://tailwindcss.com"
-  url "https://registry.npmjs.org/@tailwindcss/cli/-/cli-4.2.4.tgz"
-  sha256 "193ee05c2b4165753405b7beed803d42a7692d64871432a6c8843746bd683d35"
+  url "https://registry.npmjs.org/@tailwindcss/cli/-/cli-4.3.0.tgz"
+  sha256 "4feba167e62643b6089c139b9eed765ca270e264b2690df689ef996f417de9de"
   license "MIT"
   head "https://github.com/tailwindlabs/tailwindcss.git", branch: "main"
 
@@ -43,10 +43,13 @@ class Tailwindcss < Formula
   end
 
   def install
-    resources.each do |r|
-      system "npm", "install", *std_npm_args(prefix: false), r.cached_download
-    end
     system "npm", "install", *std_npm_args
+
+    cli_libexec = libexec/"lib/node_modules/@tailwindcss/cli"
+    resources.each do |r|
+      system "npm", "install", "--prefix", cli_libexec, *std_npm_args(prefix: false), r.cached_download
+    end
+
     bin.install libexec.glob("bin/*")
     bin.env_script_all_files libexec/"bin", NODE_PATH: libexec/"lib/node_modules/@tailwindcss/cli/node_modules"
   end
