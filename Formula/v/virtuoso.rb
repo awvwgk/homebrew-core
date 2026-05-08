@@ -1,9 +1,8 @@
 class Virtuoso < Formula
   desc "High-performance object-relational SQL database"
   homepage "https://virtuoso.openlinksw.com"
-  url "https://github.com/openlink/virtuoso-opensource/releases/download/v7.2.16.1/virtuoso-opensource-7.2.16.tar.gz"
-  version "7.2.16.1"
-  sha256 "7e1d5842840f0b4d967c6c668187959a62414f39698e6ee53793c24594f7bbe7"
+  url "https://github.com/openlink/virtuoso-opensource/releases/download/v7.2.17/virtuoso-opensource-7.2.17.tar.gz"
+  sha256 "41e0afd6d37c1c41b993282ce11c5cf68f7bb7c0bd7887ef2ff558c452570216"
   license "GPL-2.0-only" => { with: "openvpn-openssl-exception" }
 
   bottle do
@@ -44,9 +43,6 @@ class Virtuoso < Formula
 
   skip_clean :la
 
-  # Support openssl 3.6, upstream pr ref, https://github.com/openlink/virtuoso-opensource/pull/1364
-  patch :DATA
-
   def install
     system "./autogen.sh" if build.head?
     system "./configure", "--disable-silent-rules",
@@ -66,20 +62,3 @@ class Virtuoso < Formula
     system bin/"virtuoso-t", "+checkpoint-only"
   end
 end
-
-__END__
-diff --git a/configure b/configure
-index 2953300..a4c8766 100755
---- a/configure
-+++ b/configure
-@@ -23182,8 +23182,8 @@ main (void)
- 	/* LibreSSL defines OPENSSL_VERSION_NUMBER 0x20000000L but uses a compatible API to OpenSSL v1.0.x */
- 	#elif OPENSSL_VERSION_NUMBER < 0x1020000fL
- 	/* OpenSSL versions 0.9.8e - 1.1.1 are supported */
--       #elif OPENSSL_VERSION_NUMBER < 0x30600000L
--       /* OpenSSL versions 3.0.x - 3.5.x are supported */
-+       #elif OPENSSL_VERSION_NUMBER < 0x30700000L
-+       /* OpenSSL versions 3.0.x - 3.6.x are supported */
- 	#else
- 	#error OpenSSL version too new
- 	#endif
