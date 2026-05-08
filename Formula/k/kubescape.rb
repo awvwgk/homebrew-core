@@ -3,8 +3,8 @@ class Kubescape < Formula
   homepage "https://kubescape.io"
   # Use GitHub repo URL because the version for the build will be automatically fetched from git.
   url "https://github.com/kubescape/kubescape.git",
-      tag:      "v4.0.6",
-      revision: "c36463cdcb4fbe2646e8ebc819059ef48eb752c1"
+      tag:      "v4.0.7",
+      revision: "3b9a22164e5165768d472b1761b061b3aa77f787"
   license "Apache-2.0"
   head "https://github.com/kubescape/kubescape.git", branch: "master"
 
