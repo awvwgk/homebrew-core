@@ -14,7 +14,7 @@ class Promptfoo < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "f92c2f58c40e046ad62d5a9ef880a20b61a93e9dc24eb3fe3d4c72b58b8e0328"
   end
 
-  depends_on "node"
+  depends_on "node@24"
 
   on_macos do
     depends_on "llvm" => :build if DevelopmentTools.clang_build_version < 1700
