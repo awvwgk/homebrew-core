@@ -14,14 +14,14 @@ class Pyenv < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "6e77680e28b12e13c37343c4ad508bc246613a6aaeaaa26150911d8de3650af7"
-    sha256 cellar: :any,                 arm64_sequoia: "1c275d639b4a32869d8416ec2c5f67252e4ab66e366227b14331f69bf7de95ba"
-    sha256 cellar: :any,                 arm64_sonoma:  "64de6e50f597cb34cd5c19b3da0ab04cb424c902139e5456d053caabef5e0071"
-    sha256 cellar: :any,                 tahoe:         "120a1d910e1afef220630b714e2ed75a21460385ecd78b8d668b8ec6f71707bb"
-    sha256 cellar: :any,                 sequoia:       "d60debda328ffdcd8f241e0817433cae7df62c6a51c6518ee7acc4120d11fb95"
-    sha256 cellar: :any,                 sonoma:        "d2d7b6306281cb699fa0c5b135dcc69899c0fa1ebe0642107818f00d368d6fc9"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "ab3aa96460f0cedefd78d5955d9e6926debb0003ca26b8f7a331f323018d685a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "fbc251e34bf11490c5cd69e736318ec6c7fb6ebb043073788ae1c6e153910e71"
+    sha256 cellar: :any,                 arm64_tahoe:   "a568468b1d3601217e8f1910afd61c0a27d7d7f9d1e2c8dbde0a04cf307c6a4c"
+    sha256 cellar: :any,                 arm64_sequoia: "c235a610a6033a48ef2cba5179abccf77a4209565c2cd713ae3748f78ef66a49"
+    sha256 cellar: :any,                 arm64_sonoma:  "3ccd8e71e0159c3658ed0bb15f0c0f35d36987c00eb4f6e337bbf8a3b3e27e42"
+    sha256 cellar: :any,                 tahoe:         "fbd2e2d39358e543e40f8ad3213f385dbe11c3e10345086e898da92c225dbd6f"
+    sha256 cellar: :any,                 sequoia:       "f2ed107f121f9fc2a7b59b384ad5bfd45af2740f2d3ec28a86b5ee0c40d9f3e3"
+    sha256 cellar: :any,                 sonoma:        "109af97a50b3027a3ae5b016191e148b250802de943bb992630c95621ea49da7"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "3da03f606bac1c971b139c1b5a6b7cef619ffac4dc777bed979a6255a293ba36"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "1b575a04e4d7ae25a8e9e05305753b6f21c04567b9ccde591ebe60ea193091cb"
   end
 
   depends_on "autoconf"
