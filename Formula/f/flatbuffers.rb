@@ -22,8 +22,6 @@ class Flatbuffers < Formula
 
   depends_on "cmake" => :build
 
-  conflicts_with "osrm-backend", because: "both install flatbuffers headers"
-
   def install
     system "cmake", "-S", ".", "-B", "build",
                     "-DFLATBUFFERS_BUILD_SHAREDLIB=ON",
