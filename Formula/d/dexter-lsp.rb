@@ -19,6 +19,8 @@ class DexterLsp < Formula
 
   uses_from_macos "sqlite" => :build
 
+  conflicts_with "dexter", because: "both install `dexter` binaries"
+
   def install
     ENV["CGO_ENABLED"] = "1" if OS.linux? && Hardware::CPU.arm?
     system "go", "build", "-buildvcs=false", *std_go_args(ldflags: "-s -w", output: bin/"dexter"), "./cmd"
