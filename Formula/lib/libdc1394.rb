@@ -20,7 +20,10 @@ class Libdc1394 < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "53fba90024fafc156e594ce967d376cb60f86ca1f0fed7f3416abbc7bb023bd1"
   end
 
-  depends_on "sdl12-compat"
+  on_linux do
+    depends_on "pkgconf" => :build
+    depends_on "libusb"
+  end
 
   # fix issue due to bug in OSX Firewire stack
   patch do
@@ -35,9 +38,35 @@ class Libdc1394 < Formula
   end
 
   def install
-    system "./configure", *std_configure_args,
-                          "--disable-examples",
-                          "--disable-sdltest"
+    system "./configure", "--disable-examples",
+                          "--disable-sdltest",
+                          *std_configure_args
     system "make", "install"
+  end
+
+  test do
+    (testpath/"test.c").write <<~C
+      #include <dc1394/dc1394.h>
+
+      int main(void) {
+        dc1394error_t err;
+        dc1394_t * d;
+        dc1394camera_list_t * list;
+
+        d = dc1394_new();
+        if(!d)
+          return 1;
+
+        err = dc1394_camera_enumerate(d, &list);
+        DC1394_ERR_RTN(err, "Failed to enumerate cameras");
+
+        dc1394_camera_free_list(list);
+        dc1394_free(d);
+        return 0;
+      }
+    C
+
+    system ENV.cc, "test.c", "-o", "test", "-L#{lib}", "-ldc1394"
+    system "./test"
   end
 end
