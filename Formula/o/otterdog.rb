@@ -3,8 +3,8 @@ class Otterdog < Formula
 
   desc "Manage GitHub organizations at scale using an infrastructure as code approach"
   homepage "https://otterdog.readthedocs.io/en/latest/"
-  url "https://files.pythonhosted.org/packages/5e/2c/1267ec048a9d45ce1c831b71ebbc6b6f1917d6ca3e80b52246eadc6525db/otterdog-1.3.2.tar.gz"
-  sha256 "9eb078fde59e05717604df0ac8d45db6f7dcd3f9ced053f07c6f5c1cc46f4e6d"
+  url "https://files.pythonhosted.org/packages/2f/b7/719e98d5c7df7e260fa0914eda32c0f7b824a64b9e4a9f963844b02ddeb4/otterdog-1.3.3.tar.gz"
+  sha256 "23c76f484d12279ab824faa0bd6abd0ee53baeb6f64995a4697223e3efa5df8f"
   license "EPL-2.0"
   head "https://github.com/eclipse-csi/otterdog.git", branch: "main"
 
