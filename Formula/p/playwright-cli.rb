@@ -6,12 +6,12 @@ class PlaywrightCli < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "4a5234d416dcf3f516bbcae4d10f0a76c42b46a99f8f05457c3741f65f4a3ea6"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "2e50f211acb0a77f6add8857a6fa5e9d6247c05fdd8dd489a79d5efd14ec4bff"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "2e50f211acb0a77f6add8857a6fa5e9d6247c05fdd8dd489a79d5efd14ec4bff"
-    sha256 cellar: :any_skip_relocation, sonoma:        "76568886338075dfc3419638ad5fb59a304ee0765cfb628b7afd90a627279ee4"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "9fee19a074bc711858e998af77d8c3dd26d6a400f0b213fc51547b8c35ddc84c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "9fee19a074bc711858e998af77d8c3dd26d6a400f0b213fc51547b8c35ddc84c"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "6b9426e0b584a75e510092165a17de92c1a0cb714e41186842f030378549522f"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "c0821ac0edce09cd930fd14cb33412da9689ad5610da06caee1c1728302423f7"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "c0821ac0edce09cd930fd14cb33412da9689ad5610da06caee1c1728302423f7"
+    sha256 cellar: :any_skip_relocation, sonoma:        "b058276679ac5ed79e58d9ef6b2edbe77d58e5b2cb23d97538cd1eda8e8fa493"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "bea5b6178f60bae7a7e3e3e5806a1dd5c03cd126dfab804e25d5d55e3126760e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "bea5b6178f60bae7a7e3e3e5806a1dd5c03cd126dfab804e25d5d55e3126760e"
   end
 
   depends_on "node"
