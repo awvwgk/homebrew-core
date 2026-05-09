@@ -44,8 +44,6 @@ class Rpm < Formula
   depends_on "libarchive"
   depends_on "libmagic"
   depends_on "lua"
-  # See https://github.com/rpm-software-management/rpm/issues/2222 for details.
-  depends_on macos: :ventura
   depends_on "openssl@3" # for rpm-sequoia
   depends_on "pkgconf"
   depends_on "popt"
@@ -59,6 +57,8 @@ class Rpm < Formula
   on_macos do
     depends_on "gettext"
     depends_on "libomp"
+    # See https://github.com/rpm-software-management/rpm/issues/2222 for details.
+    depends_on macos: :ventura
   end
 
   on_linux do
