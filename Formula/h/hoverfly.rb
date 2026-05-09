@@ -7,12 +7,12 @@ class Hoverfly < Formula
   head "https://github.com/SpectoLabs/hoverfly.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "f63507691497243fe99839780a3d39a2692d8ff3ac760e73832ec3aebddfcb9f"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "f63507691497243fe99839780a3d39a2692d8ff3ac760e73832ec3aebddfcb9f"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "f63507691497243fe99839780a3d39a2692d8ff3ac760e73832ec3aebddfcb9f"
-    sha256 cellar: :any_skip_relocation, sonoma:        "748f5d6d1b3237bd49a9fcc8d25a4f28acccb140ab5b27b290c92caba9dd3d47"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "eabd7b1a4ae286c0adb063207543db654abb43424004bd5383181d85e8cb8675"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "57286b3a496cc57ae5a89b7bbd0787ad7f8e675a3b2fb18b47cdce6dc695a3a2"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "bd5bc3e3c57f74d975f7548f4fc24b41e50be7da780d1f082c0dab4c7797b708"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "bd5bc3e3c57f74d975f7548f4fc24b41e50be7da780d1f082c0dab4c7797b708"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "bd5bc3e3c57f74d975f7548f4fc24b41e50be7da780d1f082c0dab4c7797b708"
+    sha256 cellar: :any_skip_relocation, sonoma:        "5f339637ba22d182fc4401889ba276f3d66919a9b01f2445cf35e48a598645e0"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "c9223cca1f187847b8da3785d33f82a57df78867a0e60b783f91911fa5bd2ccc"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "98432f2f7f1d1431c469124639018d303d0b9f91984968fb096842a2e213c458"
   end
 
   depends_on "go" => :build
