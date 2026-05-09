@@ -5,6 +5,15 @@ class Plutosvg < Formula
   sha256 "78561b571ac224030cdc450ca2986b4de915c2ba7616004a6d71a379bffd15f3"
   license "MIT"
 
+  bottle do
+    sha256 cellar: :any,                 arm64_tahoe:   "8bb298a75af6f0be2a1da9823aaa922e3f5bbe343b0add1816074d6a98140826"
+    sha256 cellar: :any,                 arm64_sequoia: "b176ded158160d08ccd061219db379d7c1d9a741d6d7fa16486b51ce6694cc22"
+    sha256 cellar: :any,                 arm64_sonoma:  "d8c82d8e2c4326ebfd1d2f64a80d2b88b121c6bfc74f7d39d6bb50bab2f8f5c5"
+    sha256 cellar: :any,                 sonoma:        "cbe8b14915e492dd15013f93714abd6089ff412a5d7510a9ec4705826fd4a1b3"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "09a1c1195783f379b4b7e43621a9b3a72cf3f443e603ae538d4eb7a023c1ab62"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "4764dfeaf0969f65d9d3f229a6a8a409c7aa385b8a204bf09c85d16ea8f80218"
+  end
+
   depends_on "cmake" => :build
   depends_on "pkgconf" => :test
   depends_on "freetype"
