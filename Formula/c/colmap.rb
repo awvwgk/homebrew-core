@@ -4,7 +4,7 @@ class Colmap < Formula
   url "https://github.com/colmap/colmap/archive/refs/tags/4.0.4.tar.gz"
   sha256 "200309abca2a3ee05970b1f8a48d545fc71f435dffe6764a8040f9f6f364da32"
   license "BSD-3-Clause"
-  revision 1
+  revision 2
 
   bottle do
     sha256                               arm64_tahoe:   "bd20d958cb4f60a42fd8b0ee259f8f640b6c158e16c62c531d5cb4b91b8c4ee2"
