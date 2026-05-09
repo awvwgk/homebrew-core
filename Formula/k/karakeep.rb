@@ -6,7 +6,7 @@ class Karakeep < Formula
   license "AGPL-3.0-only"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "b524abe2861d0382a75aacfa46276dcebc42971f5d564a49716bb07797f81a47"
+    sha256 cellar: :any_skip_relocation, all: "c69e5423809a1bbccb206e6e75b1d779a7993ccb28be39303c927f2fcad3ec44"
   end
 
   depends_on "node"
