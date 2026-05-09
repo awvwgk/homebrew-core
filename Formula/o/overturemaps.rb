@@ -42,11 +42,8 @@ class Overturemaps < Formula
   end
 
   resource "orjson" do
-    url "https://files.pythonhosted.org/packages/9d/1b/2024d06792d0779f9dbc51531b61c24f76c75b9f4ce05e6f3377a1814cea/orjson-3.11.8.tar.gz"
-    sha256 "96163d9cdc5a202703e9ad1b9ae757d5f0ca62f4fa0cc93d1f27b0e180cc404e"
-
-    # Remove nightly feature flag, Rust 1.95 is now stable
-    patch :DATA
+    url "https://files.pythonhosted.org/packages/7e/0c/964746fcafbd16f8ff53219ad9f6b412b34f345c75f384ad434ceaadb538/orjson-3.11.9.tar.gz"
+    sha256 "4fef17e1f8722c11587a6ef18e35902450221da0028e65dbaaa543619e68e48f"
   end
 
   resource "pyarrow" do
@@ -69,17 +66,8 @@ class Overturemaps < Formula
     sha256 "7d825f03f89244ef73f1d4ce193cb1774a8179fd96f31d7e1dcde62092b960bb"
   end
 
-  def python3
-    "python3.14"
-  end
-
   def install
-    # The sdist has reproducible-build timestamps from 2020-02-02, which causes
-    # Homebrew to set SOURCE_DATE_EPOCH to that date. This makes pip restrict
-    # package downloads to pre-2020, breaking all modern build backends.
-    # Reset to current time so the 24-hour safety window works as intended.
-    ENV["SOURCE_DATE_EPOCH"] = Time.now.utc.to_i.to_s
-
+    python3 = "python3.14"
     numpy_include = Formula["numpy"].opt_lib/Language::Python.site_packages(python3)/"numpy/_core/include"
     geos_include = Formula["geos"].opt_include
     geos_lib = Formula["geos"].opt_lib
@@ -96,15 +84,3 @@ class Overturemaps < Formula
     assert_match "Missing option", output
   end
 end
-
-__END__
---- a/src/lib.rs
-+++ b/src/lib.rs
-@@ -1,7 +1,6 @@
- // SPDX-License-Identifier: MPL-2.0
- // Copyright ijl (2018-2026)
-
--#![cfg_attr(feature = "cold_path", feature(cold_path))]
- #![cfg_attr(feature = "generic_simd", feature(portable_simd))]
- #![cfg_attr(feature = "optimize", feature(optimize_attribute))]
- #![allow(unused_features)] // portable_simd on universal2 cross-compile
