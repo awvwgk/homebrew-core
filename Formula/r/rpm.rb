@@ -55,6 +55,7 @@ class Rpm < Formula
   depends_on "xz"
   depends_on "zstd"
 
+  uses_from_macos "llvm" => :build
   uses_from_macos "bzip2"
 
   on_macos do
@@ -63,7 +64,6 @@ class Rpm < Formula
   end
 
   on_linux do
-    depends_on "llvm@21" => :build # LLVM 22 fails for nettle-sys
     depends_on "elfutils"
     depends_on "zlib-ng-compat"
   end
@@ -71,8 +71,8 @@ class Rpm < Formula
   conflicts_with "rpm2cpio", because: "both install `rpm2cpio` binaries"
 
   resource "rpm-sequoia" do
-    url "https://github.com/rpm-software-management/rpm-sequoia/archive/refs/tags/v1.8.0.tar.gz"
-    sha256 "a34de2923f07b2610de82baa42f664850a4caedc23c35b39df315d94cb5dc751"
+    url "https://github.com/rpm-software-management/rpm-sequoia/archive/refs/tags/v1.10.2.tar.gz"
+    sha256 "ba740c16657498bb1a5a2b04472728089992e93a83d3584f00854b112dfd45df"
 
     livecheck do
       url :url
