@@ -1,8 +1,8 @@
 class Martin < Formula
   desc "Blazing fast tile server, tile generation, and mbtiles tooling"
   homepage "https://martin.maplibre.org"
-  url "https://github.com/maplibre/martin/archive/refs/tags/martin-v1.6.0.tar.gz"
-  sha256 "242000c076906b5b1f82283f91182cb0b2b9a35db6b97c880282c980c43cd3e6"
+  url "https://github.com/maplibre/martin/archive/refs/tags/martin-v1.9.1.tar.gz"
+  sha256 "7a4056a6735b8f8019ae247060a0a1bef1e9f59fc192d802a6f538b3cc93f58f"
   license any_of: ["Apache-2.0", "MIT"]
 
   livecheck do
@@ -25,7 +25,9 @@ class Martin < Formula
   uses_from_macos "sqlite" => :test
 
   def install
-    system "cargo", "install", *std_cargo_args(path: "martin")
+    # Disable `rendering` feature to avoid building maplibre-native from source.
+    features = %w[fonts lambda mbtiles metrics pmtiles postgres sprites styles webui mlt]
+    system "cargo", "install", "--no-default-features", *std_cargo_args(path: "martin", features:)
     system "cargo", "install", *std_cargo_args(path: "mbtiles")
     pkgshare.install "tests/fixtures/mbtiles"
   end
