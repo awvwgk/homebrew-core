@@ -10,12 +10,12 @@ class Cruft < Formula
   head "https://github.com/cruft/cruft.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "782d92e64355a319d53588c910935d288e2fde0a1c44dae1a5c763b5b5709769"
-    sha256 cellar: :any,                 arm64_sequoia: "572a94d967d28ac4f535f68782a98e16d7b57b9ad8af59ff476233a3bde0661b"
-    sha256 cellar: :any,                 arm64_sonoma:  "c1786afa5ae5dc2a104431d3a8c36d423e35c7d830e774951c781499914556a2"
-    sha256 cellar: :any,                 sonoma:        "2cc7e79bc35f319f980ebf8255b77ed8084da4f03b67edf30500200b26fc57f6"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "100d8eb65e58c5d1a99d40f6266e62318b197e254013e3281885ee1d13d69c85"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "224f3cb48cb2d8ca82bae8023b726e689e148b9d8ab7d010be43ddfa4c2160bc"
+    sha256 cellar: :any,                 arm64_tahoe:   "3f22c3b858f4dde0ceab2b934ddd33b3cf0094c5eda79140324a4e269d28aef2"
+    sha256 cellar: :any,                 arm64_sequoia: "fc9ec63cc82b9e34fec6f9688b5679b4e32ed4ab32a15862acdb52a7e20d48e7"
+    sha256 cellar: :any,                 arm64_sonoma:  "089154b9e674ebbef638fae6079071aba5413ee954dfba6ff8440222d146e8a3"
+    sha256 cellar: :any,                 sonoma:        "9012c69327918734c4e5a2264560f7e4f975719c8e8ac4424e50042b753be463"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "44eea011b366de40b2e915051f46a8c1765b5bf9bc1a7b84b04c9412ce314822"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "07eb24ee28a01d5f7ee2bb2ab22e05d59d9a48931c222aef29d464cadfa4eb99"
   end
 
   depends_on "certifi" => :no_linkage
