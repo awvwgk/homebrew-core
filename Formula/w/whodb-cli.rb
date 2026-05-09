@@ -1,8 +1,8 @@
 class WhodbCli < Formula
   desc "Database management CLI with TUI interface, MCP server support, AI, and more"
   homepage "https://whodb.com/"
-  url "https://github.com/clidey/whodb/archive/refs/tags/0.107.0.tar.gz"
-  sha256 "cbfdf71c2be1fa049b869ae7484ed10b8081f11310ac8364d4504097812d2a4f"
+  url "https://github.com/clidey/whodb/archive/refs/tags/0.109.0.tar.gz"
+  sha256 "c11fc72d9715e64e1fd0badf132ecca877db7b55f16d280af59e0236fc8f75ee"
   license "Apache-2.0"
   head "https://github.com/clidey/whodb.git", branch: "main"
 
