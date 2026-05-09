@@ -1,8 +1,8 @@
 class Serve < Formula
   desc "Static http server anywhere you need one"
   homepage "https://github.com/syntaqx/serve"
-  url "https://github.com/syntaqx/serve/archive/refs/tags/v0.6.0.tar.gz"
-  sha256 "7797a24564d95038d9e0a44f0dafd1dacb7853ee94d21bc0587bdfba6faaa6cb"
+  url "https://github.com/syntaqx/serve/archive/refs/tags/v0.7.0.tar.gz"
+  sha256 "5616aa40a41105c94e8241883da8f1cfd44e70c4ec35e450533d6be0f4a14cf1"
   license "MIT"
   head "https://github.com/syntaqx/serve.git", branch: "main"
 
