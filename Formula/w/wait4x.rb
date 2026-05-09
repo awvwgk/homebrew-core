@@ -19,6 +19,7 @@ class Wait4x < Formula
   def install
     system "make", "build"
     bin.install "dist/wait4x"
+    generate_completions_from_executable(bin/"wait4x", shell_parameter_format: :cobra)
   end
 
   test do
