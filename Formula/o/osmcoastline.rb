@@ -4,6 +4,7 @@ class Osmcoastline < Formula
   url "https://github.com/osmcode/osmcoastline/archive/refs/tags/v2.5.0.tar.gz"
   sha256 "7980c77acbbf460d6de7df1d30b2f2d9da550db1512d0e828623851c687b238a"
   license "GPL-3.0-or-later"
+  revision 1
 
   bottle do
     rebuild 1
