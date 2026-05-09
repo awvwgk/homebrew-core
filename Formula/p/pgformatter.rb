@@ -6,7 +6,7 @@ class Pgformatter < Formula
   license "PostgreSQL"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "2b35cfff746239e90088c7b1b25de6e55c955638845072616e47c3b01ff7ab31"
+    sha256 cellar: :any_skip_relocation, all: "6636f9f819740a06287cf7fc104fb635a338282171be2750f38a7b9d7bab21cc"
   end
 
   def install
