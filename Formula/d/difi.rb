@@ -1,18 +1,18 @@
 class Difi < Formula
   desc "Pixel-perfect terminal diff viewer"
   homepage "https://github.com/oug-t/difi"
-  url "https://github.com/oug-t/difi/archive/refs/tags/v0.2.4.tar.gz"
-  sha256 "c7c044cfe43338c2e8ccb2cbc9e2ade7837a466abdba015b35ce685ad5a27bae"
+  url "https://github.com/oug-t/difi/archive/refs/tags/v0.2.6.tar.gz"
+  sha256 "166ffd7e30d14eecdbbef99f9bada441b6d397af2abd78089cef125961517398"
   license "MIT"
   head "https://github.com/oug-t/difi.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "75ab31ec7c7d4ceb4fd2ffcba5548c2bf6cdeda58e19158c875208eaae3dc5a4"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "75ab31ec7c7d4ceb4fd2ffcba5548c2bf6cdeda58e19158c875208eaae3dc5a4"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "75ab31ec7c7d4ceb4fd2ffcba5548c2bf6cdeda58e19158c875208eaae3dc5a4"
-    sha256 cellar: :any_skip_relocation, sonoma:        "b294f12c33ebc814698fa365e0c83108e3c044297b0622eaecad0fb4a268f43e"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "1be87cfef6f069cd222a6fa76c8f85e995a78b885d604fb3a438586ea40b3b2e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "2302d04d3af511ea64a2c16720fafec4f7d55c8a4c6f28e0a39ea3982e099e2e"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "ca45e4d005e391867b7be44e328ec9d8cbafb77b6fe45a466cb0ad786f606b67"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "ca45e4d005e391867b7be44e328ec9d8cbafb77b6fe45a466cb0ad786f606b67"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "ca45e4d005e391867b7be44e328ec9d8cbafb77b6fe45a466cb0ad786f606b67"
+    sha256 cellar: :any_skip_relocation, sonoma:        "31bd90f2447d50b9fbe8fff32f5c70d2296f8a9e1b4e345e9cab0751ca200b63"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "17e4c0ce23a3abfd555f49c443d8edbea15d0f6e9ea517dc10e016ec0c1e5a37"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "2402bbe7c108fe5ef10242b71cbe18e9ad84425469df65db0260d9f9f1b4df5b"
   end
 
   depends_on "go" => :build
