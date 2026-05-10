@@ -3,8 +3,8 @@ class Poetry < Formula
 
   desc "Python package management tool"
   homepage "https://python-poetry.org/"
-  url "https://files.pythonhosted.org/packages/9b/e4/dad98a8c44b2780f28c9585194b33ccdf01bbb991c6bc54fa0391a507754/poetry-2.4.0.tar.gz"
-  sha256 "5e343ed7e71cdf1c7b5b5a7c6194a8b85e1700d3ae905ef0d22f6d021b49f2bc"
+  url "https://files.pythonhosted.org/packages/c0/02/a309e58943f77f1947e4a658a9606933ab4a7b9f040025f4e25daf5fafbb/poetry-2.4.1.tar.gz"
+  sha256 "189399b80347ecf908244b2564a7b1d92b648fa1fe2a204888f94a472fec0cac"
   license "MIT"
   head "https://github.com/python-poetry/poetry.git", branch: "main"
 
@@ -19,7 +19,6 @@ class Poetry < Formula
 
   depends_on "cmake" => :build # for rapidfuzz
   depends_on "ninja" => :build # for rapidfuzz
-  depends_on "python-setuptools" => :build # for zstandard to bypass build isolation
   depends_on "rust" => :build # for cachecontrol
   depends_on "certifi" => :no_linkage
   depends_on "cffi"
@@ -156,8 +155,8 @@ class Poetry < Formula
   end
 
   resource "pbs-installer" do
-    url "https://files.pythonhosted.org/packages/b0/3b/a44eaea135e214d7095a0037c1fc43e71094e4946d63b4fd208f97f5e28c/pbs_installer-2026.4.7.tar.gz"
-    sha256 "0c0a7d44f125bac96de094b8208c76b891ee859c71accce1c0e9ec4d83828de8"
+    url "https://files.pythonhosted.org/packages/2a/96/916334df9b6cda485d3be7efb89739823159ec4d16fc199ff6e234bf7a54/pbs_installer-2026.5.8.tar.gz"
+    sha256 "a3b491b44ad2d25566de9347444bfc0d43522c80621922c3d876f1881a8e9c74"
   end
 
   resource "pkginfo" do
@@ -181,8 +180,8 @@ class Poetry < Formula
   end
 
   resource "python-discovery" do
-    url "https://files.pythonhosted.org/packages/de/ef/3bae0e537cfe91e8431efcba4434463d2c5a65f5a89edd47c6cf2f03c55f/python_discovery-1.2.2.tar.gz"
-    sha256 "876e9c57139eb757cb5878cbdd9ae5379e5d96266c99ef731119e04fffe533bb"
+    url "https://files.pythonhosted.org/packages/ae/e0/cc5a8653e9a24f6cf84768f05064aa8ed5a83dcefd5e2a043db14a1c5f44/python_discovery-1.3.0.tar.gz"
+    sha256 "d098f1e86be5d45fe4d14bf1029294aabbd332f4321179dec85e76cddce834b0"
   end
 
   resource "rapidfuzz" do
@@ -216,18 +215,18 @@ class Poetry < Formula
   end
 
   resource "trove-classifiers" do
-    url "https://files.pythonhosted.org/packages/04/af/88fdebf242bc7bc4957c96c5358a2b2b0f07e5001401906783a521ea9f54/trove_classifiers-2026.4.28.13.tar.gz"
-    sha256 "c85bb8a53c3de7330d1699b844ed9fb809a602a09ac15dc79ad6d1a509be0676"
+    url "https://files.pythonhosted.org/packages/35/68/175e7c07c5be13200387d5c0995b0da1e198e360047c08eb17d1002fcd92/trove_classifiers-2026.5.7.17.tar.gz"
+    sha256 "a04a48f8f0a787cb996514d3969ac7608aa3c60cb15d073c1e02801e60533e80"
   end
 
   resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/c7/24/5f1b3bdffd70275f6661c76461e25f024d5a38a46f04aaca912426a2b1d3/urllib3-2.6.3.tar.gz"
-    sha256 "1b62b6884944a57dbe321509ab94fd4d3b307075e0c2eae991ac71ee15ad38ed"
+    url "https://files.pythonhosted.org/packages/53/0c/06f8b233b8fd13b9e5ee11424ef85419ba0d8ba0b3138bf360be2ff56953/urllib3-2.7.0.tar.gz"
+    sha256 "231e0ec3b63ceb14667c67be60f2f2c40a518cb38b03af60abc813da26505f4c"
   end
 
   resource "virtualenv" do
-    url "https://files.pythonhosted.org/packages/3f/8b/6331f7a7fe70131c301106ec1e7cf23e2501bf7d4ca3636805801ca191bb/virtualenv-21.3.0.tar.gz"
-    sha256 "733750db978ec95c2d8eb4feadaa57091002bce404cb39ba69899cf7bd28944e"
+    url "https://files.pythonhosted.org/packages/ec/0d/915c02c94d207b85580eb09bffab54438a709e7288524094fe781da526c2/virtualenv-21.3.1.tar.gz"
+    sha256 "c2305bc1fddeec40699b8370d13f8d431b0701f00ce895061ce493aeded4426b"
   end
 
   resource "xattr" do
@@ -235,21 +234,9 @@ class Poetry < Formula
     sha256 "30439fabd7de0787b27e9a6e1d569c5959854cb322f64ce7380fedbfa5035036"
   end
 
-  resource "zstandard" do
-    url "https://files.pythonhosted.org/packages/fd/aa/3e0508d5a5dd96529cdc5a97011299056e14c6505b678fd58938792794b1/zstandard-0.25.0.tar.gz"
-    sha256 "7713e1179d162cf5c7906da876ec2ccb9c3a9dcbdffef0cc7f70c3667a205f0b"
-  end
-
   def install
-    without = ["zstandard"]
-    without += OS.mac? ? ["jeepney", "secretstorage"] : ["xattr"]
-    venv = virtualenv_install_with_resources(without:)
-
-    resource("zstandard").stage do
-      system_zstd = "--config-settings=--build-option=--system-zstd"
-      system venv.root/"bin/python", "-m", "pip", "install", system_zstd, *std_pip_args(prefix: false), "."
-    end
-
+    without = OS.mac? ? ["jeepney", "secretstorage"] : ["xattr"]
+    virtualenv_install_with_resources(without:)
     generate_completions_from_executable(bin/"poetry", "completions")
   end
 
