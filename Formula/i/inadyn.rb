@@ -23,18 +23,19 @@ class Inadyn < Formula
   end
 
   deprecate! date: "2025-10-25", because: :repo_archived
+  disable! date: "2026-10-25", because: :repo_archived
 
   depends_on "pkgconf" => :build
 
   depends_on "confuse"
-  depends_on "gnutls"
-  depends_on "nettle"
+  depends_on "openssl@4"
 
   def install
     mkdir_p buildpath/"inadyn/m4"
 
     system "autoreconf", "--force", "--install", "--verbose" if build.head?
     system "./configure", "--disable-silent-rules",
+                          "--enable-openssl",
                           "--sysconfdir=#{etc}",
                           "--localstatedir=#{var}",
                           *std_configure_args
