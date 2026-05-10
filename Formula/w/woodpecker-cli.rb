@@ -20,6 +20,11 @@ class WoodpeckerCli < Formula
   def install
     ldflags = "-s -w -X go.woodpecker-ci.org/woodpecker/v#{version.major}/version.Version=#{version}"
     system "go", "build", *std_go_args(ldflags:), "./cmd/cli"
+    generate_completions_from_executable(bin/"woodpecker-cli", "completion")
+    # woodpecker-cli expects "pwsh", not "powershell" so we use the custom shell_parameter_format
+    (pwsh_completion/"woodpecker-cli").write Utils.safe_popen_read(
+      { "SHELL" => "pwsh" }, bin/"woodpecker-cli", "completion", "pwsh"
+    )
   end
 
   test do
