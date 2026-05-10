@@ -1,8 +1,8 @@
 class Fastlane < Formula
   desc "Easiest way to build and release mobile apps"
   homepage "https://fastlane.tools"
-  url "https://github.com/fastlane/fastlane/archive/refs/tags/2.233.1.tar.gz"
-  sha256 "60422467d22cdf79cee1bd2d854f10ab452923a49ea5fd7f8cdd6d1ae64d7cfe"
+  url "https://github.com/fastlane/fastlane/archive/refs/tags/2.234.0.tar.gz"
+  sha256 "8112454f2c9f883e8e6677fbdfa37d6c92975f5d4982e12c2cf56628bc69af33"
   license "MIT"
   head "https://github.com/fastlane/fastlane.git", branch: "master"
 
