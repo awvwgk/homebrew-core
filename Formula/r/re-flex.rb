@@ -6,12 +6,12 @@ class ReFlex < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "5ac12f3cf19d3d09031811eea4c3b25c32ffa7405418e96523347f482b5873b2"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "d87444f0f6b45476774bcc95df3e5ca0815e32f0a902f4941d36d9f6e56749da"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "0e2b8cd885ac94545cde2f36aa699d7839ce5fc35b2232cbc8f34802daf5d12b"
-    sha256 cellar: :any_skip_relocation, sonoma:        "635ffa3ef8bc19e9e713cd363bbaacc26847e69104636c0e8b91ab1120ad341e"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "4cdadb5513a409c3e86b0b0413f582e628f00a4f23837b08147c6dbf84357e24"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "f3818545d3b3a081a4ec934fdc21bedb6a591e5e07e4d26a219ff17852b37983"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "34c63d8f5e01de9467097c3a4478140b4b3dc49cc74bb104544f31b7947f59a9"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "7b58c9152ce88118b88bf8dca773330983304fcf6cbad3fc77abec3d22819372"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "0e83b06eae401468b52234eb30559cbb45372681271b84d3a0fd7fd1c56c91e0"
+    sha256 cellar: :any_skip_relocation, sonoma:        "e8d86e97c11a15cef2045bf472c38f6edac89000c1e02cec87ca4d5aeee1578e"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "966112e8bb6e08a419acb1bb8771481fc2cb87dcebd330f33547174322f0d260"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "601aa3725d24e20816433957d9a2fa85f7d0c72941dfb7777e317192355dfdae"
   end
 
   depends_on "pcre2"
