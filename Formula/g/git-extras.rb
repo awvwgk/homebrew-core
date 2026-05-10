@@ -7,8 +7,7 @@ class GitExtras < Formula
   head "https://github.com/tj/git-extras.git", branch: "main"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, all: "68e0ef44b443f683c0f8d21f1a72162ff1063377582b60855a7fbace9ad3a5ab"
+    sha256 cellar: :any_skip_relocation, all: "eb00f8d931c119b51c32974c191d6b887f9bc1337e4b36681dacf0d3c65279e5"
   end
 
   on_linux do
