@@ -1,8 +1,8 @@
 class GitExtras < Formula
   desc "Small git utilities"
   homepage "https://github.com/tj/git-extras"
-  url "https://github.com/tj/git-extras/archive/refs/tags/7.4.0.tar.gz"
-  sha256 "aaab3bab18709ec6825a875961e18a00e0c7d8214c39d6e3a63aeb99fa11c56e"
+  url "https://github.com/tj/git-extras/archive/refs/tags/7.5.0.tar.gz"
+  sha256 "bcfe0eabdccc806e53a10130fed6fb02373720ddeb670eecc5cc84d041d79880"
   license "MIT"
   head "https://github.com/tj/git-extras.git", branch: "main"
 
