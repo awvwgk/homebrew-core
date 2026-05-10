@@ -1,9 +1,9 @@
 class Libmd < Formula
   desc "Message Digest functions from BSD systems"
   homepage "https://www.hadrons.org/software/libmd/"
-  url "https://archive.hadrons.org/software/libmd/libmd-1.1.0.tar.xz"
-  mirror "https://libbsd.freedesktop.org/releases/libmd-1.1.0.tar.xz"
-  sha256 "1bd6aa42275313af3141c7cf2e5b964e8b1fd488025caf2f971f43b00776b332"
+  url "https://archive.hadrons.org/software/libmd/libmd-1.2.0.tar.xz"
+  mirror "https://libbsd.freedesktop.org/releases/libmd-1.2.0.tar.xz"
+  sha256 "ac15ffb8430502fbaccdec66c5a82ee0eab0b0f36220df56710feadfeb13d0a0"
   license all_of: ["BSD-3-Clause", "BSD-2-Clause", "ISC", "Beerware", :public_domain]
 
   livecheck do
