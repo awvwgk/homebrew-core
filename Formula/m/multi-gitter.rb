@@ -7,12 +7,12 @@ class MultiGitter < Formula
   head "https://github.com/lindell/multi-gitter.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "1b3943b366e3301b5c34c16b77ea4db8189ef02ed5d5a8e4ea6ed474c32d30dc"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "1b3943b366e3301b5c34c16b77ea4db8189ef02ed5d5a8e4ea6ed474c32d30dc"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "1b3943b366e3301b5c34c16b77ea4db8189ef02ed5d5a8e4ea6ed474c32d30dc"
-    sha256 cellar: :any_skip_relocation, sonoma:        "2e5f043cd0899e24578bbe178d22ed789e8a39c3c0b212ab6295f9fdccc9d3dc"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "69a9160c4ad92626e13278cb06b0ff8f280c14cfd058cb5c99e03c6fb852b235"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "939974a2fedb75398b3cde45ff269e80746ca89e4094f17890b4595fc5648832"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "6cc05176fff40c5316f35fd8ebb64661efc2017bee9fe1fd7ff0cb8f0d9115e5"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "6cc05176fff40c5316f35fd8ebb64661efc2017bee9fe1fd7ff0cb8f0d9115e5"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "6cc05176fff40c5316f35fd8ebb64661efc2017bee9fe1fd7ff0cb8f0d9115e5"
+    sha256 cellar: :any_skip_relocation, sonoma:        "0b2257dca26a7435580255465f33009d0c3b8ad02bc9d54ca6683e38f4277bf5"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "a215c4672845425df984d04ca25bd11920d4bdad89a53a6a6b6ed204e9cff103"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "c008865158a8066123236886afeca1ef27ae78ff7900bc755b299465c113003d"
   end
 
   depends_on "go" => :build
