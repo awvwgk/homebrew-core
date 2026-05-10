@@ -3,8 +3,8 @@ class Schemathesis < Formula
 
   desc "Testing tool for web applications with specs"
   homepage "https://schemathesis.readthedocs.io/"
-  url "https://files.pythonhosted.org/packages/dd/8c/f2120c618dcc6f4d77d38b939320ac93236fff1de707d7abe6ce4853a0b9/schemathesis-4.18.0.tar.gz"
-  sha256 "b7083b9bd1b5757d679337a6a9d31e3ecb269146916d7ff4eca76cb40143cd4f"
+  url "https://files.pythonhosted.org/packages/4a/ce/f93962b7a140a17f7d913df202a90bcb9e570fa2c6580fea1ee8beda43cb/schemathesis-4.18.1.tar.gz"
+  sha256 "c2de0beec1d9c543a73f9d7e1423e020ea2d312f29c242803df0d83cb16d8fc7"
   license "MIT"
 
   bottle do
