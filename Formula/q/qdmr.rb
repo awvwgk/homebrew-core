@@ -1,8 +1,8 @@
 class Qdmr < Formula
   desc "Codeplug programming tool for DMR radios"
   homepage "https://dm3mat.darc.de/qdmr/"
-  url "https://github.com/hmatuschek/qdmr/archive/refs/tags/v0.14.1.tar.gz"
-  sha256 "cb584c500f98897a959d7242292261ae7d8deafc7d0f709fc53d811e40d27f11"
+  url "https://github.com/hmatuschek/qdmr/archive/refs/tags/v0.15.0.tar.gz"
+  sha256 "63fd6b2061ebcfee54fc1c6df77e21484a544e694723725b70b49ca4990138d3"
   license "GPL-3.0-or-later"
 
   bottle do
@@ -18,6 +18,7 @@ class Qdmr < Formula
   depends_on "librsvg"
   depends_on "libusb"
   depends_on "qtbase"
+  depends_on "qtmultimedia"
   depends_on "qtpositioning"
   depends_on "qtserialport"
   depends_on "qttools"
