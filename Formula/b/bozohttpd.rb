@@ -1,10 +1,9 @@
 class Bozohttpd < Formula
   desc "Small and secure http version 1.1 server"
   homepage "https://pkgsrc.se/www/bozohttpd"
-  url "https://cdn.netbsd.org/pub/pkgsrc/distfiles/LOCAL_PORTS/bozohttpd-20240126.tar.bz2"
-  sha256 "576267bc5681c52b650294c3f2a85b8c8d8c239e75e71aaba7973771f852b56d"
+  url "https://cdn.netbsd.org/pub/pkgsrc/distfiles/LOCAL_PORTS/bozohttpd-20260503.tar.bz2"
+  sha256 "2a2e6d62b68d219434973937a8febd17741f22e98c741f6c922b22f13f7523cd"
   license "BSD-2-Clause"
-  revision 1
 
   livecheck do
     url "https://cdn.netbsd.org/pub/pkgsrc/distfiles/"
