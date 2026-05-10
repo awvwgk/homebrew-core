@@ -1,9 +1,8 @@
 class Libsigrok < Formula
   desc "Drivers for logic analyzers and other supported devices"
   homepage "https://sigrok.org/"
-  # libserialport is LGPL3+
   # fw-fx2lafw is GPL-2.0-or-later and LGPL-2.1-or-later"
-  license all_of: ["GPL-3.0-or-later", "LGPL-3.0-or-later", "GPL-2.0-or-later", "LGPL-2.1-or-later"]
+  license all_of: ["GPL-3.0-or-later", "GPL-2.0-or-later", "LGPL-2.1-or-later"]
   revision 5
 
   stable do
@@ -16,27 +15,22 @@ class Libsigrok < Formula
       sha256 "247bfee9777a39d5dc454a999ce425a061cdc48f4956fdb0cc31ec67a8086ce0"
     end
 
-    resource "libserialport" do
-      url "https://sigrok.org/download/source/libserialport/libserialport-0.1.1.tar.gz"
-      sha256 "4a2af9d9c3ff488e92fb75b4ba38b35bcf9b8a66df04773eba2a7bbf1fa7529d"
-    end
-
     resource "fw-fx2lafw" do
       url "https://sigrok.org/download/source/sigrok-firmware-fx2lafw/sigrok-firmware-fx2lafw-0.1.7.tar.gz"
       sha256 "a3f440d6a852a46e2c5d199fc1c8e4dacd006bc04e0d5576298ee55d056ace3b"
 
       # Backport fixes to build with sdcc>=4.2.3. Remove in the next release of fw-fx2lafw.
       patch do
-        url "https://sigrok.org/gitweb/?p=sigrok-firmware-fx2lafw.git;a=commitdiff_plain;h=5aab87d358a4585a10ad89277bb88ad139077abd"
-        sha256 "9615c2f25eb03faeca73c8233353698236dc9f16c38e250f3cec4a7bb5d9f15d"
+        url "https://github.com/sigrokproject/sigrok-firmware-fx2lafw/commit/5aab87d358a4585a10ad89277bb88ad139077abd.patch?full_index=1"
+        sha256 "15a9ab04d19231aef165d62c669832638c688d33ebd52021100e60e965a5b4e7"
       end
       patch do
-        url "https://sigrok.org/gitweb/?p=sigrok-firmware-fx2lafw.git;a=commitdiff_plain;h=3e08500d22f87f69941b65cf8b8c1b85f9b41173"
-        sha256 "f9c93c9ac88802173cb37528766d95c231288f343ee5842a1d8bc9f617794c33"
+        url "https://github.com/sigrokproject/sigrok-firmware-fx2lafw/commit/3e08500d22f87f69941b65cf8b8c1b85f9b41173.patch?full_index=1"
+        sha256 "75c4a7770fe8f7d615e3be6c35fa336f8771fbd88145e7ce41afb0d8ad559571"
       end
       patch do
-        url "https://sigrok.org/gitweb/?p=sigrok-firmware-fx2lafw.git;a=commitdiff_plain;h=96b0b476522c3f93a47ff8f479ec08105ba6a2a5"
-        sha256 "1d5d9a7d2e8e7e1b99c57f15093bbffed87d5750caa13b797cd3199438d4c990"
+        url "https://github.com/sigrokproject/sigrok-firmware-fx2lafw/commit/96b0b476522c3f93a47ff8f479ec08105ba6a2a5.patch?full_index=1"
+        sha256 "a2de37d89144746f6370942faad4c358c6426f8e4e6737f117f05f05d8d44f6a"
       end
     end
   end
@@ -62,9 +56,7 @@ class Libsigrok < Formula
   head do
     url "git://sigrok.org/libsigrok", branch: "master"
 
-    resource "libserialport" do
-      url "git://sigrok.org/libserialport", branch: "master"
-    end
+    depends_on "nettle"
 
     resource "fw-fx2lafw" do
       url "git://sigrok.org/sigrok-firmware-fx2lafw", branch: "master"
@@ -81,13 +73,14 @@ class Libsigrok < Formula
   depends_on "python-setuptools" => :build
   depends_on "sdcc" => :build
   depends_on "swig" => :build
+
   depends_on "glib"
   depends_on "glibmm@2.66"
   depends_on "hidapi"
   depends_on "libftdi"
+  depends_on "libserialport"
   depends_on "libusb"
   depends_on "libzip"
-  depends_on "nettle"
   depends_on "numpy"
   depends_on "pygobject3"
   depends_on "python@3.14"
@@ -95,11 +88,6 @@ class Libsigrok < Formula
   on_macos do
     depends_on "gettext"
     depends_on "libsigc++@2"
-  end
-
-  resource "fw-fx2lafw" do
-    url "https://sigrok.org/download/binary/sigrok-firmware-fx2lafw/sigrok-firmware-fx2lafw-bin-0.1.7.tar.gz"
-    sha256 "c876fd075549e7783a6d5bfc8d99a695cfc583ddbcea0217d8e3f9351d1723af"
   end
 
   # Fix for swig 4.4 changing the return type of %init
@@ -111,24 +99,7 @@ class Libsigrok < Formula
 
   def install
     resource("fw-fx2lafw").stage do
-      if build.head?
-        system "./autogen.sh"
-      else
-        system "autoreconf", "--force", "--install", "--verbose"
-      end
-
-      mkdir "build" do
-        system "../configure", *std_configure_args
-        system "make", "install"
-      end
-    end
-
-    resource("libserialport").stage do
-      if build.head?
-        system "./autogen.sh"
-      else
-        system "autoreconf", "--force", "--install", "--verbose"
-      end
+      system "./autogen.sh" if build.head?
 
       mkdir "build" do
         system "../configure", *std_configure_args
@@ -156,7 +127,6 @@ class Libsigrok < Formula
 
     mkdir "build" do
       ENV["PYTHON"] = python3
-      ENV.prepend_path "PKG_CONFIG_PATH", lib/"pkgconfig"
       args = %w[
         --disable-java
         --disable-ruby
