@@ -2,10 +2,10 @@ class Rpm < Formula
   desc "Standard unix software packaging tool"
   homepage "https://rpm.org/"
   license all_of: [
-    "GPL-2.0-only",
+    "GPL-2.0-or-later",
     "LGPL-2.0-or-later", # rpm-sequoia
   ]
-  revision 1
+  revision 2
   version_scheme 1
   compatibility_version 1
   head "https://github.com/rpm-software-management/rpm.git", branch: "master"
@@ -42,13 +42,12 @@ class Rpm < Formula
   depends_on "python@3.14" => [:build, :test]
   depends_on "rust" => :build # for rpm-sequoia
 
-  depends_on "gmp"
   depends_on "libarchive"
   depends_on "libmagic"
   depends_on "lua"
   # See https://github.com/rpm-software-management/rpm/issues/2222 for details.
   depends_on macos: :ventura
-  depends_on "nettle" # for rpm-sequoia
+  depends_on "openssl@3" # for rpm-sequoia
   depends_on "pkgconf"
   depends_on "popt"
   depends_on "readline"
@@ -56,7 +55,6 @@ class Rpm < Formula
   depends_on "xz"
   depends_on "zstd"
 
-  uses_from_macos "llvm" => :build
   uses_from_macos "bzip2"
 
   on_macos do
@@ -94,14 +92,18 @@ class Rpm < Formula
   end
 
   def install
+    # Ensure that the `openssl` crate picks up the intended library.
+    ENV["OPENSSL_DIR"] = Formula["openssl@3"].opt_prefix
+
     resource("rpm-sequoia").stage do |r|
       with_env(PREFIX: prefix) do
-        build_args = ["build", "--release"] # there is no `cargo install`-able components
-        system "cargo", *build_args, *std_cargo_args.reject { |arg| arg["--root"] || arg["--path"] }
+        cargo_args = std_cargo_args(features: "crypto-openssl").reject { |arg| arg["--root"] || arg["--path"] }
+        system "cargo", "build", "--lib", "--no-default-features", "--release", *cargo_args
       end
       # Rename the library to match versioned soname
-      versioned_lib = shared_library("librpm_sequoia", OS.mac? ? r.version.to_s : r.version.major.to_s)
+      versioned_lib = shared_library("librpm_sequoia", r.version.to_s)
       lib.install "target/release/#{shared_library("librpm_sequoia")}" => versioned_lib
+      lib.install_symlink versioned_lib => shared_library("librpm_sequoia", r.version.major.to_s)
       lib.install_symlink versioned_lib => shared_library("librpm_sequoia")
       (lib/"pkgconfig").install "target/release/rpm-sequoia.pc"
       ENV.append_path "PKG_CONFIG_PATH", lib/"pkgconfig"
