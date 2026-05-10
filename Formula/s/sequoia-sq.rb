@@ -26,8 +26,6 @@ class SequoiaSq < Formula
   depends_on "pkgconf" => :build
   depends_on "rust" => :build
 
-  depends_on "gmp"
-  depends_on "nettle"
   depends_on "openssl@3"
 
   uses_from_macos "llvm" => :build
@@ -40,7 +38,7 @@ class SequoiaSq < Formula
     ENV["OPENSSL_DIR"] = Formula["openssl@3"].opt_prefix
     ENV["ASSET_OUT_DIR"] = buildpath
 
-    system "cargo", "install", *std_cargo_args
+    system "cargo", "install", "--no-default-features", *std_cargo_args(features: "crypto-openssl")
     man1.install Dir["man-pages/*.1"]
 
     bash_completion.install "shell-completions/sq.bash" => "sq"
