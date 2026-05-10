@@ -1,9 +1,9 @@
 class Gdb < Formula
   desc "GNU debugger"
   homepage "https://www.gnu.org/software/gdb/"
-  url "https://ftpmirror.gnu.org/gnu/gdb/gdb-17.1.tar.xz"
-  mirror "https://ftp.gnu.org/gnu/gdb/gdb-17.1.tar.xz"
-  sha256 "14996f5f74c9f68f5a543fdc45bca7800207f91f92aeea6c2e791822c7c6d876"
+  url "https://ftpmirror.gnu.org/gnu/gdb/gdb-17.2.tar.xz"
+  mirror "https://ftp.gnu.org/gnu/gdb/gdb-17.2.tar.xz"
+  sha256 "1c036c0d72e4b3d1fb5c94c88632add6f9d76f4d7c4d2ea793c12a9f19a3228c"
   license "GPL-3.0-or-later"
   compatibility_version 1
   head "https://sourceware.org/git/binutils-gdb.git", branch: "master"
