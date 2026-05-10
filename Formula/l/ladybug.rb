@@ -33,7 +33,10 @@ class Ladybug < Formula
 
     system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
     system "cmake", "--build", "build"
-    bin.install "build/tools/shell/lbug"
+    system "cmake", "--install", "build"
+
+    # Remove unwanted headers and libraries for `cppjieba`
+    rm_r Dir["{#{include},#{share}}/cppjieba/*"]
   end
 
   test do
