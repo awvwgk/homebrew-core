@@ -1,8 +1,8 @@
 class OhMyAgent < Formula
   desc "Portable multi-agent harness for .agents-based skills and workflows"
   homepage "https://github.com/first-fluke/oh-my-agent"
-  url "https://registry.npmjs.org/oh-my-agent/-/oh-my-agent-6.20.0.tgz"
-  sha256 "b017c920d539d0d90ed71040df7c2b847ac0a06a2468d9917db833739c7b9f20"
+  url "https://registry.npmjs.org/oh-my-agent/-/oh-my-agent-7.2.0.tgz"
+  sha256 "1228c7ee771f24c4631dbf5c9e25796ec58d2a54367321b14dbcef437c2ca965"
   license "MIT"
 
   bottle do
