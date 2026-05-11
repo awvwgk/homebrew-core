@@ -26,7 +26,7 @@ class Btpd < Formula
   depends_on "autoconf" => :build
   depends_on "automake" => :build
   depends_on "libtool" => :build
-  depends_on "openssl@3"
+  depends_on "openssl@4"
 
   conflicts_with "btcli", because: "both install `btcli` binaries"
 
