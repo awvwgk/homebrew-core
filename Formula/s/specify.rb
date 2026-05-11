@@ -3,8 +3,8 @@ class Specify < Formula
 
   desc "Toolkit to help you get started with Spec-Driven Development"
   homepage "https://github.com/github/spec-kit"
-  url "https://github.com/github/spec-kit/archive/refs/tags/v0.8.7.tar.gz"
-  sha256 "401df81dc721576e2e23ea150f94d9227341b7ac3556b7e4ae89c20d45437e8c"
+  url "https://github.com/github/spec-kit/archive/refs/tags/v0.8.8.tar.gz"
+  sha256 "8453b87ab052695d3ebe03d4c70d4374f8b46f0a51afd3a5f0b28269a2e5c45a"
   license "MIT"
 
   bottle do
@@ -38,8 +38,8 @@ class Specify < Formula
   end
 
   resource "markdown-it-py" do
-    url "https://files.pythonhosted.org/packages/5c/5c/f3aedc83549aae71cd52b9e9687fe896e3dc6e966ba20eba04718605d198/markdown_it_py-4.1.0.tar.gz"
-    sha256 "760e3f87b2787c044c5138a5ba107b7c2be26c03b13cc7f8fe42756b65b1df6c"
+    url "https://files.pythonhosted.org/packages/06/ff/7841249c247aa650a76b9ee4bbaeae59370dc8bfd2f6c01f3630c35eb134/markdown_it_py-4.2.0.tar.gz"
+    sha256 "04a21681d6fbb623de53f6f364d352309d4094dd4194040a10fd51833e418d49"
   end
 
   resource "mdurl" do
