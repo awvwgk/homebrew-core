@@ -9,12 +9,12 @@ class Jupytext < Formula
   head "https://github.com/mwouts/jupytext.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "3df1e08b257e02727f81f6661fe657cf2389775cdf95b300bf767155e7994c0f"
-    sha256 cellar: :any,                 arm64_sequoia: "b7bc2fff8105591520b0acc8d74e3fb740657b6fcac669e3f9073c49d0749246"
-    sha256 cellar: :any,                 arm64_sonoma:  "dc34145af98613877a760952cb3c845c50de95fd8ba642184d2441dfbd256c5e"
-    sha256 cellar: :any,                 sonoma:        "0c0192fd18d04e9c60f6f3d30abbc543d3138b722e286198be13a02b7e8e32ad"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "f4904e7890cc517fdc33c58e8c97dbfdbfbdf791256d30e2598bd0dea384380e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a14eb817bc0e457b9b693b6c1d5094eb4d6269b7fc60c0e649ffd33c678f1286"
+    sha256 cellar: :any,                 arm64_tahoe:   "24b313b10bb931bbc5783a1836cbcb838450ab5e6a5c35420b1e529999c7c182"
+    sha256 cellar: :any,                 arm64_sequoia: "90a7f98cd7646d544fa23f43e6d04932cc26619901657c9cacc80adadc62e2ec"
+    sha256 cellar: :any,                 arm64_sonoma:  "37ebfe218315c28dcce6791232f8002419adf42d3561a5a648ae79cb35390720"
+    sha256 cellar: :any,                 sonoma:        "c69b1f534f3d1a4a7d34f89dd02184e6dc2e2975897162f3ac917759ae03378b"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "4690f0697fb4d8b04bc4c89395af81a0f4c63ee243113ac1ccf3d12313776872"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "35373098a2dcd7fc72e80ef09d21c91b7c61a356b0ce615bb0f7ccc07c18f446"
   end
 
   depends_on "libyaml"
