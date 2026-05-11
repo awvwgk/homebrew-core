@@ -40,7 +40,7 @@ class Bitchx < Formula
     sha256 x86_64_linux:   "99bec310978096fc74fb480bd558108eb6f9a476ce0dc6721c84a5023f6913c4"
   end
 
-  depends_on "openssl@3"
+  depends_on "openssl@4"
 
   uses_from_macos "libxcrypt"
   uses_from_macos "ncurses"
