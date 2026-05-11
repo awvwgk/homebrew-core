@@ -4,6 +4,7 @@ class Libvncserver < Formula
   url "https://github.com/LibVNC/libvncserver/archive/refs/tags/LibVNCServer-0.9.15.tar.gz"
   sha256 "62352c7795e231dfce044beb96156065a05a05c974e5de9e023d688d8ff675d7"
   license "GPL-2.0-or-later"
+  revision 1
   head "https://github.com/LibVNC/libvncserver.git", branch: "master"
 
   livecheck do
@@ -23,9 +24,8 @@ class Libvncserver < Formula
 
   depends_on "cmake" => :build
   depends_on "jpeg-turbo"
-  depends_on "libgcrypt"
   depends_on "libpng"
-  depends_on "openssl@3"
+  depends_on "openssl@4"
 
   on_linux do
     depends_on "zlib-ng-compat"
@@ -35,11 +35,15 @@ class Libvncserver < Formula
     args = %W[
       -DJPEG_INCLUDE_DIR=#{Formula["jpeg-turbo"].opt_include}
       -DJPEG_LIBRARY=#{Formula["jpeg-turbo"].opt_lib/shared_library("libjpeg")}
-      -DOPENSSL_ROOT_DIR=#{Formula["openssl@3"].opt_prefix}
+      -DOPENSSL_ROOT_DIR=#{Formula["openssl@4"].opt_prefix}
       -DWITH_EXAMPLES=OFF
+      -DWITH_GCRYPT=OFF
+      -DWITH_GNUTLS=OFF
+      -DWITH_OPENSSL=ON
     ]
     # Workaround for CMake 4 compatibility
     args << "-DCMAKE_POLICY_VERSION_MINIMUM=3.5"
+
     system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
     system "cmake", "--build", "build"
     system "ctest", "--test-dir", "build", "--verbose"
