@@ -14,12 +14,12 @@ class KosliCli < Formula
   no_autobump! because: :bumped_by_upstream
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "945a6122f07b3501aa13a91a1f331635c552fa13cbcd247782d026b8ccb7bb8d"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "963d18bbde2cb853f636900e069d8b8a52e477cbb92720ec65fb6623c94146c7"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "7ae923a4703f19e294dd6ac02067bd8894cc92fcb2b0fc77a2b3d1715ad86478"
-    sha256 cellar: :any_skip_relocation, sonoma:        "458bc6de99fe7613142b7e6f1f9b33bac6bef31d461450ffe42eb0d5e1a4e5fd"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "bd6c582958274b2ed6a448914896213385f71f867223478a78193968b0ccb195"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "96dbca74133edbcff66d365b947c2bbc3129bf418aec57ef76263654410816d0"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "2c87e675dafc9ada5f15d40b822deeea09729b5e5b070e00caa5123c64b70534"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "394bd35d517a359b1974403f59f57e35888b693d38bacd6ea804a21c7b0cba7e"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "9da63943c65a0f585a3560a0980f2fd6de0a043b69f3f1dc17f09ea15eded85e"
+    sha256 cellar: :any_skip_relocation, sonoma:        "4b67d9c48b878eab2a1c038c7e944dd6f2a7b33432078e496f4e97c64f47ee98"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "8a2bc800679c0ea99a621e20791df70930da44bd06503cd8fa32dbac8038eb90"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "26f0002f682d6ab002fceeb757f9afff3d68e938e2ff9ec44644ef1aa10176a9"
   end
 
   depends_on "go" => :build
