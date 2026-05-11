@@ -27,7 +27,7 @@ class Xaric < Formula
     sha256 x86_64_linux:   "633be739d85e31a8d4e7af822a11a8c07f30c0491035fb76cd68f3b81145940b"
   end
 
-  depends_on "openssl@3"
+  depends_on "openssl@4"
 
   uses_from_macos "ncurses"
 
@@ -47,7 +47,7 @@ class Xaric < Formula
     # Workaround for newer Clang
     ENV.append_to_cflags "-Wno-implicit-int" if DevelopmentTools.clang_build_version >= 1403
 
-    system "./configure", "--with-openssl=#{Formula["openssl@3"].opt_prefix}",
+    system "./configure", "--with-openssl=#{Formula["openssl@4"].opt_prefix}",
                           *std_configure_args
     system "make", "install"
   end
