@@ -12,12 +12,12 @@ class Lego < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "afd414187a9bb43afe9ced193d367d8bb1ca67279056aed5d1702461e5763ccd"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "afd414187a9bb43afe9ced193d367d8bb1ca67279056aed5d1702461e5763ccd"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "afd414187a9bb43afe9ced193d367d8bb1ca67279056aed5d1702461e5763ccd"
-    sha256 cellar: :any_skip_relocation, sonoma:        "f12c88d53f8098b305d89dddff8dd5d35bd51b4acbb1faacb7f03a41ec3c2d09"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "de64fe18c2ffad63023bcf5673ad84c08d2c9e7ec3b24b87d65a4c6cdbf7728e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "49ebada5b08bdcf4c24f51795837b2b38e6bc44e57d85d18f2d91910d50a96eb"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "e47e9bc7be0cff0c0f210c98b00f50e34ce31f8e409184355935ac7eaeab6e35"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "e47e9bc7be0cff0c0f210c98b00f50e34ce31f8e409184355935ac7eaeab6e35"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "e47e9bc7be0cff0c0f210c98b00f50e34ce31f8e409184355935ac7eaeab6e35"
+    sha256 cellar: :any_skip_relocation, sonoma:        "91b0a6ecdcb224524915fd25198d48cb622cd3ad000ee10807e463dbd7319947"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "77294fe2f976e244deba69e7b7d203481fc7dc8ced4645a12f00a0c51b2cde61"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "c01ade80a2e560e8d848dd3846d5dbf36c59bbdd87ee107ce02f47305359d806"
   end
 
   depends_on "go" => :build
