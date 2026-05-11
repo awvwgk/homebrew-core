@@ -3,8 +3,8 @@ class Ratarmount < Formula
 
   desc "Mount and efficiently access archives as filesystems"
   homepage "https://github.com/mxmlnkn/ratarmount"
-  url "https://files.pythonhosted.org/packages/66/e1/c9e2d07762a85c8968ef40cca050723f8164b89a5ccb26a0b31f0b1e5b37/ratarmount-1.2.3.tar.gz"
-  sha256 "4e529430f38d6a64ec13feab080ff19a1709d131a54c370bb2ee5f14531dc80e"
+  url "https://files.pythonhosted.org/packages/a5/80/f7f628af7652a89b7f400b23fea17395dd6b27949ae8a45b6e81d69bd810/ratarmount-1.3.0.tar.gz"
+  sha256 "9e96f0f887db67a3ea68c4ecc625c05a3636cd8f29d80491eb170d934d3caa00"
   license "MIT"
   head "https://github.com/mxmlnkn/ratarmount.git", branch: "master"
 
@@ -100,8 +100,8 @@ class Ratarmount < Formula
   end
 
   resource "ratarmountcore" do
-    url "https://files.pythonhosted.org/packages/44/92/8b79074b1f98154c41ac72670386728ce78124f9eb4e11021660fb952ef3/ratarmountcore-0.10.4.tar.gz"
-    sha256 "9bda3eda5d7d98599740ee453d35892dd7000d825e9cf333e93c62990bf09696"
+    url "https://files.pythonhosted.org/packages/20/b1/67924bdf4a2a8648261bacf2e71a48f7c1183eb6c901e36859835076ff7e/ratarmountcore-0.11.0.tar.gz"
+    sha256 "adb920ce602ca86d37ba7e44e46cf0ad49422075351e12c5b2ca436d108a1809"
   end
 
   resource "texttable" do
