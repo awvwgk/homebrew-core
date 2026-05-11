@@ -32,7 +32,7 @@ class Stuntman < Formula
 
   # on macOS, stuntman uses CommonCrypt
   on_linux do
-    depends_on "openssl@3"
+    depends_on "openssl@4"
   end
 
   def install
