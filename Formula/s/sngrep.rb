@@ -3,7 +3,8 @@ class Sngrep < Formula
   homepage "https://github.com/irontec/sngrep"
   url "https://github.com/irontec/sngrep/releases/download/v1.8.3/sngrep-1.8.3.tar.gz"
   sha256 "794224f4cd08978a6115a767e9945f756fdf7cbc7c1a34eabca293e0293b21b8"
-  license "GPL-3.0-or-later" => { with: "openvpn-openssl-exception" }
+  license "GPL-3.0-or-later" => { with: "cryptsetup-OpenSSL-exception" }
+  revision 1
 
   bottle do
     sha256 cellar: :any,                 arm64_tahoe:   "061db6e59e8b46db369feba26f33ad4d50082baf87580affeff0bdfbcb42f566"
@@ -19,18 +20,17 @@ class Sngrep < Formula
   depends_on "pkgconf" => :build
 
   depends_on "ncurses"
-  depends_on "openssl@3"
+  depends_on "openssl@4"
 
   uses_from_macos "libpcap"
 
-  on_linux do
-    depends_on "libgcrypt"
+  # Backport fix for build
+  patch do
+    url "https://github.com/irontec/sngrep/commit/b84f0663e47de6f238d9f81eed67612a9ab616ef.patch?full_index=1"
+    sha256 "5212687f15f3e3e8f364634b18981e49ee022d612620079ed75c08d2a32a2f10"
   end
 
   def install
-    # Fix compile with newer Clang
-    ENV.append_to_cflags "-Wno-implicit-function-declaration" if DevelopmentTools.clang_build_version >= 1403
-
     ENV.append_to_cflags "-I#{Formula["ncurses"].opt_include}/ncursesw" if OS.linux?
 
     system "./bootstrap.sh"
