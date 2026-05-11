@@ -6,6 +6,15 @@ class Osdctl < Formula
   license "Apache-2.0"
   head "https://github.com/openshift/osdctl.git", branch: "master"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "fd7dd46f8504b3c0f3882aa2a5bd057c82e99582acf62495b71f7e191aa6db22"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "fd7dd46f8504b3c0f3882aa2a5bd057c82e99582acf62495b71f7e191aa6db22"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "fd7dd46f8504b3c0f3882aa2a5bd057c82e99582acf62495b71f7e191aa6db22"
+    sha256 cellar: :any_skip_relocation, sonoma:        "e7727e363f2a5f7bf369cbfc7ada0316b3f706f251b3fbcdb9e4b6302b80672d"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "34776732d5e333a9314953ef1c38e0ac1f42ed9a4505a16b5a3bd699aa033abe"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "c6b29d7ff4f256ab1cd3449bdff104b4fd939d6b1cff03b1bb18601954f7506b"
+  end
+
   depends_on "go" => :build
 
   def install
