@@ -1,8 +1,8 @@
 class TclTkAT8 < Formula
   desc "Tool Command Language"
   homepage "https://www.tcl-lang.org"
-  url "https://downloads.sourceforge.net/project/tcl/Tcl/8.6.17/tcl8.6.17-src.tar.gz"
-  sha256 "a3903371efcce8a405c5c245d029e9f6850258a60fa3761c4d58995610949b31"
+  url "https://downloads.sourceforge.net/project/tcl/Tcl/8.6.18/tcl8.6.18-src.tar.gz"
+  sha256 "14f9af32b1767ff718477a8f974ad03c34341097e6b43f4ce54644ee974e268e"
   license "TCL"
   compatibility_version 1
 
@@ -49,8 +49,8 @@ class TclTkAT8 < Formula
   end
 
   resource "tk" do
-    url "https://downloads.sourceforge.net/project/tcl/Tcl/8.6.17/tk8.6.17-src.tar.gz"
-    sha256 "e4982df6f969c08bf9dd858a6891059b4a3f50dc6c87c10abadbbe2fc4838946"
+    url "https://downloads.sourceforge.net/project/tcl/Tcl/8.6.18/tk8.6.18-src.tar.gz"
+    sha256 "95cd528a80f5e4bdb557af9b14a7197d6860793a3894e25e7c9fad2ed05d4c3c"
 
     livecheck do
       formula :parent
