@@ -21,7 +21,15 @@ class Nacl < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux: "01602518b18033cb7a49ca9716072b02a9115f469b15b85661459f948707fb5a"
   end
 
-  depends_on arch: :x86_64
+  depends_on "libcpucycles"
+
+  # Apply Debian patches to fix build as upstream doesn't seem to be maintained
+  patch do
+    url "https://deb.debian.org/debian/pool/main/n/nacl/nacl_20110221-15.debian.tar.xz"
+    sha256 "d45ad0681434e2f6bc83df0016aa03f3a49ef4c20fe5009b775df53824080ee3"
+    apply "patches/0002-fix-ftbfs.patch",
+          "patches/0100-cpucycles-disable-build.patch"
+  end
 
   def install
     # Print the build to stdout rather than the default logfile.
@@ -34,6 +42,11 @@ class Nacl < Formula
       s.gsub!(/^shorthostname=`.*$/, "shorthostname=brew")
     end
 
+    # Avoid unwanted compiler flags
+    rm(["okcompilers/c", "okcompilers/cpp"])
+    (buildpath/"okcompilers/c").write "#{ENV.cc}\n"
+    (buildpath/"okcompilers/cpp").write "#{ENV.cxx}\n"
+
     system "./do" # This takes a while since it builds *everything*
 
     # NaCL has an odd compilation model and installs the resulting
@@ -43,7 +56,7 @@ class Nacl < Formula
     #
     # It also builds both x86 and x86_64 copies if your compiler can
     # handle it, but we install only one.
-    archstr = "amd64"
+    archstr = Hardware::CPU.intel? ? "amd64" : "default"
 
     # Don't include cpucycles.h
     include.install Dir["build/brew/include/#{archstr}/crypto_*.h"]
@@ -55,5 +68,30 @@ class Nacl < Formula
     nacl_libdir = "build/brew/lib/#{archstr}"
     system "ar", "-r", "#{nacl_libdir}/libnacl.a", "#{nacl_libdir}/randombytes.o"
     lib.install "#{nacl_libdir}/libnacl.a"
+  end
+
+  test do
+    # Based on tests/hash.c
+    (testpath/"test.c").write <<~'C'
+      #include <stdio.h>
+      #include <crypto_hash.h>
+
+      int main(void) {
+        int i;
+        unsigned char x[8] = "testing\n";
+        unsigned char h[crypto_hash_BYTES];
+
+        crypto_hash(h, x, sizeof(x));
+        for (i = 0; i < crypto_hash_BYTES; ++i)
+          printf("%02x", (unsigned int) h[i]);
+        return 0;
+      }
+    C
+
+    expected = "24f950aac7b9ea9b3cb728228a0c82b67c39e96b4b344798870d5daee93e3ae5" \
+               "931baae8c7cacfea4b629452c38026a81d138bc7aad1af3ef7bfd5ec646d6c28"
+
+    system ENV.cc, "test.c", "-o", "test", "-L#{lib}", "-lnacl"
+    assert_equal expected, shell_output("./test")
   end
 end
