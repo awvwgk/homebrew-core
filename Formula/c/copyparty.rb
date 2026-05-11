@@ -6,6 +6,7 @@ class Copyparty < Formula
   url "https://files.pythonhosted.org/packages/4f/0e/81965fdccef8dbd6d0ab22c421df3bc50e0bb27a5b8eaa79f046f208a4e1/copyparty-1.20.14.tar.gz"
   sha256 "a662935f75eb67232b16624621886325b26afeb0b860af506ad6f3ff2af161c6"
   license "MIT"
+  revision 1
 
   bottle do
     sha256 cellar: :any,                 arm64_tahoe:   "bb8bfce531f634c9b3249169fb619193069732fb380a7bfadd8c094a81c1fed4"
@@ -67,8 +68,8 @@ class Copyparty < Formula
   end
 
   resource "paramiko" do
-    url "https://files.pythonhosted.org/packages/1f/e7/81fdcbc7f190cdb058cffc9431587eb289833bdd633e2002455ca9bb13d4/paramiko-4.0.0.tar.gz"
-    sha256 "6a25f07b380cc9c9a88d2b920ad37167ac4667f8d9886ccebd8f90f654b5d69f"
+    url "https://files.pythonhosted.org/packages/62/93/dcc25d52f49022ae6175d15e6bd751f1acc99b98bc61fc55e5155a7be2e7/paramiko-5.0.0.tar.gz"
+    sha256 "36763b5b95c2a0dcfdf1abc48e48156ee425b21efe2f0e787c2dd5a95c0e5e79"
   end
 
   resource "partftpy" do
@@ -97,8 +98,8 @@ class Copyparty < Formula
   end
 
   resource "pyopenssl" do
-    url "https://files.pythonhosted.org/packages/8c/a8/26d36401e3ab8eed9030ad33f381da7856fcfad5691780fccd1b019718fc/pyopenssl-26.1.0.tar.gz"
-    sha256 "737f0a2275c5bc54f3b02137687e1a765931fb3949b9a92a825e4d33b9eec08b"
+    url "https://files.pythonhosted.org/packages/1a/51/27a5ad5f939d08f690a326ef9582cda7140555180db71695f6fb747d6a36/pyopenssl-26.2.0.tar.gz"
+    sha256 "8c6fcecd1183a7fc897548dfe388b0cdb7f37e018200d8409cf33959dbe35387"
   end
 
   resource "pyzmq" do
