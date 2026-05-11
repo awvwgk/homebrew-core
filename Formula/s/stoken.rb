@@ -3,8 +3,8 @@ class Stoken < Formula
   homepage "https://github.com/stoken-dev/stoken"
   url "https://github.com/stoken-dev/stoken/archive/refs/tags/v0.93.tar.gz"
   sha256 "102e2d112b275efcdc20ef438670e4f24f08870b9072a81fda316efcc38aef9c"
-  license "LGPL-2.1-only"
-  revision 1
+  license "LGPL-2.1-or-later"
+  revision 2
 
   bottle do
     sha256 cellar: :any,                 arm64_tahoe:   "120ccd4eea9a910df80ea95e8041919027ef03d74fa87f982e25da2dea11bd72"
@@ -19,8 +19,7 @@ class Stoken < Formula
   depends_on "automake" => :build
   depends_on "libtool" => :build
   depends_on "pkgconf" => :build
-  depends_on "gmp"
-  depends_on "nettle"
+  depends_on "libtomcrypt"
 
   uses_from_macos "libxml2"
 
