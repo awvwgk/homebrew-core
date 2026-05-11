@@ -1,8 +1,8 @@
 class VulsioGost < Formula
   desc "Local CVE tracker & notification system"
   homepage "https://github.com/vulsio/gost"
-  url "https://github.com/vulsio/gost/archive/refs/tags/v0.7.3.tar.gz"
-  sha256 "a404f1c0b94cedf657f1cb240787f162ec3c88a3a78aafd659135c0ccc150bd8"
+  url "https://github.com/vulsio/gost/archive/refs/tags/v0.7.4.tar.gz"
+  sha256 "94d43fe61c111c8e54bb92ee1c3f49b70df335cc82b42f94d5552f4fb1f78294"
   license "MIT"
 
   bottle do
