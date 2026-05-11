@@ -1,8 +1,8 @@
 class Arkade < Formula
   desc "Open Source Kubernetes Marketplace"
   homepage "https://blog.alexellis.io/kubernetes-marketplace-two-year-update/"
-  url "https://github.com/alexellis/arkade/archive/refs/tags/0.11.93.tar.gz"
-  sha256 "609e0001c6d832d2efd48783861f5bfe0c0b01d45d261c2629b939139d800d96"
+  url "https://github.com/alexellis/arkade/archive/refs/tags/0.11.95.tar.gz"
+  sha256 "2d3ffc8b727016bdfd4aafa792f9ff79594dd4494fa6c52ae7c007763e692b2d"
   license "MIT"
   head "https://github.com/alexellis/arkade.git", branch: "master"
 
