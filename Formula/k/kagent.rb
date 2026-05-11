@@ -23,7 +23,7 @@ class Kagent < Formula
       ldflags = %W[
         -X github.com/kagent-dev/kagent/go/core/internal/version.Version=#{version}
         -X github.com/kagent-dev/kagent/go/core/internal/version.GitCommit=#{tap.user}
-        -X github.com/kagent-dev/kagent/go/core/internal/version.BuildDate=#{Time.now.strftime("%Y-%m-%d")}
+        -X github.com/kagent-dev/kagent/go/core/internal/version.BuildDate=#{time.strftime("%Y-%m-%d")}
       ]
       system "go", "build", *std_go_args(ldflags:), "./core/cli/cmd/kagent"
     end
