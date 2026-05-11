@@ -6,8 +6,7 @@ class Fileicon < Formula
   license "MIT"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, all: "aa252af1391dd8a1b287c031744dbf034fa98dd1f1961c4200e38813b1fee9dd"
+    sha256 cellar: :any_skip_relocation, all: "f949b99b0a677468c315be200854ef1480a72e225a3f3cef028504030389a62e"
   end
 
   depends_on :macos
