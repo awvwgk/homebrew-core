@@ -1,8 +1,8 @@
 class Canfigger < Formula
   desc "Simple configuration file parser library"
   homepage "https://github.com/andy5995/canfigger/"
-  url "https://github.com/andy5995/canfigger/releases/download/v0.3.1/canfigger-0.3.1.tar.xz"
-  sha256 "8ecb23692b2fdfd8f2f8f22bacf07ab7976915fd157692920c28400caa6aa1bf"
+  url "https://github.com/andy5995/canfigger/releases/download/v0.3.2/canfigger-0.3.2.tar.xz"
+  sha256 "f128a62cec50cce16e1e8c87012f8564d972b663316b27358d1d7f6b4486bec8"
   license "MIT"
   head "https://github.com/andy5995/canfigger.git", branch: "trunk"
 
@@ -30,7 +30,7 @@ class Canfigger < Formula
     EOS
 
     (testpath/"test.c").write <<~C
-      #include <canfigger.h>
+      #include <canfigger/canfigger.h>
       #include <stdio.h>
 
       int main()
