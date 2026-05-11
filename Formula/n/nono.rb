@@ -8,12 +8,12 @@ class Nono < Formula
   no_autobump! because: :bumped_by_upstream
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "4c69c084c67257c1ac48d0d20f89b511b3c6ae948c821d1d70b8ca592bb4bcda"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "62b82c2efe1139d75aadaeefd458a9f6e6b73fa593daee0052905533f8ff9f60"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "d3143344a7bcac6d72152e13e7cea1aca8bbd9aa4e2bfd3aa459ef0733504eda"
-    sha256 cellar: :any_skip_relocation, sonoma:        "b50b0174123087ee1f66ca9287de627f759c2c62e9d1452fe7a00160048ddf58"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "a83a58a07ae78ab7e06c99980d4f966371c8dda9a41709b83fa29e971ddcfdf9"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a91b29f80bb7ff3bb23d99a25a48e4df73757652f29b26f7ba7f8d08dba8affc"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "380f0feb4c517f8a129eca0956ecd6a4a87f1eda154e902e26623116e00535fe"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "1c8494db7fa0d677587faa33ca674ce527445acf3ca0c0e31dab1c0d2118b601"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "b71e524a662b7e92e38e79243fa757f38bb30e5e1af8f716de2c76b137c332d9"
+    sha256 cellar: :any_skip_relocation, sonoma:        "b3cd67385c4f1fd0ff8969f912fcf9ebd9d31ca8f0f1356ae4cbdd1cb4f546d4"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "28fa823c7d26085f65ddcde71bdc58e2e7c21775c083be6957ae38d01ace89a2"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "43cf11448fcb26690a7cb07342aa8f30ce467f9748c0b9d161391eec7603d199"
   end
 
   depends_on "pkgconf" => :build
