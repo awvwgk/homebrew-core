@@ -1,8 +1,8 @@
 class Models < Formula
   desc "Fast TUI and CLI for browsing AI models, benchmarks, and coding agents"
   homepage "https://github.com/arimxyer/models"
-  url "https://github.com/arimxyer/models/archive/refs/tags/v0.11.4.tar.gz"
-  sha256 "c113821eba94b82d1e98f5590c8be1cb4aa39ecdf26bf9721a5ccbb704b433da"
+  url "https://github.com/arimxyer/models/archive/refs/tags/v0.11.51.tar.gz"
+  sha256 "0746fa3bff4bb731b3bfec7a768779659f3ae4033a3c862a31568062440244e9"
   license "MIT"
   head "https://github.com/arimxyer/models.git", branch: "main"
 
