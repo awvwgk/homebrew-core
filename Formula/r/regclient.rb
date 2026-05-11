@@ -7,12 +7,12 @@ class Regclient < Formula
   head "https://github.com/regclient/regclient.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "8dc623e0d8b965a773fa77531f0daeb06266243fca2e580cf54835f22525b3e5"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "8dc623e0d8b965a773fa77531f0daeb06266243fca2e580cf54835f22525b3e5"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "8dc623e0d8b965a773fa77531f0daeb06266243fca2e580cf54835f22525b3e5"
-    sha256 cellar: :any_skip_relocation, sonoma:        "e3354f01847660af903a2b918dbca97c569c5d4284d7bce815c6175c8ae3b3ab"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "db4eac9c60a922d26dde0acaef1b0564f9942080e7e981224ad99619807787af"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "dff60c6aada583ffdcf62f4139b51ddf8f1a70d8aec5479497a49cedce04d523"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "18b919f74e339ccda75764879abe44617eda60f3d8e4be65d7d3bb9599406b6a"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "18b919f74e339ccda75764879abe44617eda60f3d8e4be65d7d3bb9599406b6a"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "18b919f74e339ccda75764879abe44617eda60f3d8e4be65d7d3bb9599406b6a"
+    sha256 cellar: :any_skip_relocation, sonoma:        "ff3d2c57d23d5177fdfab3ca6cd65a1e51d9959899b6c29de28009cf24e2c430"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "431023fb5399f0f827b4fb876878eef0e1d352c138d8ae050f0e12144adcee13"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "1b92d0abe21c04569d2b97adfe6de83d185a614c2d9fae932e0cac3ce1a899ce"
   end
 
   depends_on "go" => :build
