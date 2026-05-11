@@ -24,7 +24,6 @@ class Swtpm < Formula
   depends_on "socat" => :build
   depends_on "glib"
   depends_on "gmp"
-  depends_on "gnutls"
   depends_on "json-glib"
   depends_on "libtasn1"
   depends_on "libtpms"
@@ -39,6 +38,12 @@ class Swtpm < Formula
   on_linux do
     depends_on "libseccomp"
     depends_on "net-tools"
+  end
+
+  # Backport changes to drop GnuTLS
+  patch do
+    url "https://github.com/stefanberger/swtpm/commit/86c6046cbe0e913e884683d20acec3949a4a1220.patch?full_index=1"
+    sha256 "8f0c469d178004128c97645f4bb849355473ad0181d6063c6dc5ba1565b716a0"
   end
 
   def install
