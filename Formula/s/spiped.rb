@@ -21,7 +21,7 @@ class Spiped < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "667cc6e283e75c64c91638c8b2c667b4239ae12bcb1957cdb0e14c4dd45a1ed9"
   end
 
-  depends_on "openssl@3"
+  depends_on "openssl@4"
 
   def install
     system "make", "BINDIR_DEFAULT=#{bin}", "MAN1DIR=#{man1}", "install"
