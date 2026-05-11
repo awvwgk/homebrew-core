@@ -1,8 +1,8 @@
 class Libkiwix < Formula
   desc "Common code base for all Kiwix ports"
   homepage "https://github.com/kiwix/libkiwix"
-  url "https://github.com/kiwix/libkiwix/archive/refs/tags/14.2.0.tar.gz"
-  sha256 "244b69120d132de3079774ee439f9adfb7b556e88b9ef6ce5300f37dfc3737bc"
+  url "https://github.com/kiwix/libkiwix/archive/refs/tags/14.2.1.tar.gz"
+  sha256 "cff1eb06d62ab42e1720a49f473b7d9364f02ee77a8a455c9adb26db419e0fff"
   license "GPL-3.0-or-later"
 
   bottle do
