@@ -15,10 +15,13 @@ class Nacl < Formula
   end
 
   bottle do
-    rebuild 3
-    sha256 cellar: :any_skip_relocation, sonoma:       "2bc9b50523f178e04e9241b85554bf361f1c1e4fb70105be8b8897db0d8622ca"
-    sha256 cellar: :any_skip_relocation, ventura:      "e79dfbf0f21c155f30ffd7f61b012ca4ff2092fbad508e59a44de5ff2894c307"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "01602518b18033cb7a49ca9716072b02a9115f469b15b85661459f948707fb5a"
+    rebuild 4
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "c9e39e851dc41943d39fafb01f3040d14d11d4dba1cccdb9693bc0f2fed67297"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "a885034a1e0e2c2a021508bee8ee850bb7b0db0bf6c185b3f884293d39b7796c"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "b62b27bd435d9a76504a88b02a457780e48e7948401cc27a5320d583fec1a3ef"
+    sha256 cellar: :any_skip_relocation, sonoma:        "7992b33222396efd6755e4253b8b1ae70907e2196c2c204765957c1d6afdfc23"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "41db87747bf6e0eea1fa8d48c14a24f58879ab7b397cfe03df118f841108e2af"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "7bf782f00a46dfd9e8afef68c75d977504de8a5410a4d044ebd54f428245deb5"
   end
 
   depends_on "libcpucycles"
