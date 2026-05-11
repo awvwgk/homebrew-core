@@ -28,7 +28,7 @@ class Sq < Formula
       -s -w
       -X #{pkg}.Version=v#{version}
       -X #{pkg}.Commit=RELEASE
-      -X #{pkg}.Timestamp=#{Time.now.utc.strftime("%Y-%m-%dT%H:%M:%SZ")}
+      -X #{pkg}.Timestamp=#{time.iso8601}
     ]
     tags = %w[
       netgo sqlite_vtable sqlite_stat4 sqlite_fts5 sqlite_introspect
