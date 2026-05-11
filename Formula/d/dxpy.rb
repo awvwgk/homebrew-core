@@ -16,32 +16,23 @@ class Dxpy < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "bfc7cf9b4ac97b9ebd81cd7355eb044d03e7244b121e47171370ba60470d00e9"
   end
 
-  depends_on "cmake" => :build # for awscrt
   depends_on "aws-c-auth"
   depends_on "aws-c-cal"
   depends_on "aws-c-common"
-  depends_on "aws-c-compression"
   depends_on "aws-c-event-stream"
   depends_on "aws-c-http"
   depends_on "aws-c-io"
   depends_on "aws-c-mqtt"
   depends_on "aws-c-s3"
-  depends_on "aws-c-sdkutils"
   depends_on "aws-checksums"
   depends_on "certifi" => :no_linkage
   depends_on "cryptography" => :no_linkage
-  depends_on "openssl@3"
   depends_on "python@3.14"
 
-  uses_from_macos "libffi"
-
   on_macos do
-    depends_on "readline" => :no_linkage
-  end
-
-  on_linux do
-    depends_on "aws-lc"
-    depends_on "s2n"
+    depends_on "aws-c-compression"
+    depends_on "aws-c-sdkutils"
+    depends_on "openssl@3"
   end
 
   conflicts_with "deno", because: "both install `dx` binaries"
