@@ -4,6 +4,7 @@ class X11vnc < Formula
   url "https://github.com/LibVNC/x11vnc/archive/refs/tags/0.9.17.tar.gz"
   sha256 "3ab47c042bc1c33f00c7e9273ab674665b85ab10592a8e0425589fe7f3eb1a69"
   license "GPL-2.0-or-later" => { with: "x11vnc-openssl-exception" }
+  revision 1
   head "https://github.com/LibVNC/x11vnc.git", branch: "master"
 
   bottle do
@@ -21,7 +22,7 @@ class X11vnc < Formula
   depends_on "automake" => :build
   depends_on "pkgconf" => :build
   depends_on "libvncserver"
-  depends_on "openssl@3"
+  depends_on "openssl@4"
 
   uses_from_macos "libxcrypt"
 
@@ -29,6 +30,7 @@ class X11vnc < Formula
     # Fix compile with newer Clang
     ENV.append_to_cflags "-Wno-implicit-function-declaration" if DevelopmentTools.clang_build_version >= 1403
     ENV.append_to_cflags "-Wno-int-conversion" if DevelopmentTools.clang_build_version >= 1500
+    ENV.append "CFLAGS", "-std=gnu17" if DevelopmentTools.clang_build_version >= 1700
 
     system "./autogen.sh", "--disable-silent-rules",
                            "--mandir=#{man}",
