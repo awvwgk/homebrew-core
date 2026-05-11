@@ -1,19 +1,19 @@
 class Nono < Formula
   desc "Capability-based sandbox shell for AI agents with OS-enforced isolation"
   homepage "https://github.com/always-further/nono"
-  url "https://github.com/always-further/nono/archive/refs/tags/v0.52.2.tar.gz"
-  sha256 "b5bd496c697fff5d71a4c494fe90ab974a89272d64890d1f4ca95a4b2ae0e1a4"
+  url "https://github.com/always-further/nono/archive/refs/tags/v0.53.0.tar.gz"
+  sha256 "1f506aa02222a1dc627e9ae576bca1387079f5e558deb940ac93e5ffd906e8f5"
   license "Apache-2.0"
 
   no_autobump! because: :bumped_by_upstream
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "120ce92563f525f3a20ac815c896175ce4071fbec1d62c92d59cc50be3c10963"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "0a8c8d5d59bcf0e429efa69d349ac10e3704f1aceb2d4193749d6b72ce8af1ce"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "6a094c56dd4d4075ff0ff3bf955215ae6c96b22af6927aab4c0c356eef1ee75c"
-    sha256 cellar: :any_skip_relocation, sonoma:        "4e9cd653ca1ee5e2561e1d3c46e1e104977b2ae117acc6de9b869600b60233b0"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "a814d7da969ece785e19756b99c88ea9c032f7084050607110eae8a20759f5fe"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "20d7855719873650bfa164def852ca22784b82b2caccb1dd9ede96ada99be698"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "94d29b6720ea92f439a7313c448de0e8e10196c90cdd424385794562a4a8cf25"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "bf3cd6f98c0b6d269c901a8967126d0458284a43a97d8f4a3af59d7e846aaf72"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "d1cddb2ff591ec6c607b10f4326c06f3c69c7d308da566ba08a13383f652949f"
+    sha256 cellar: :any_skip_relocation, sonoma:        "0887d9b834e1a56a863f01a8c8e0d3301bed3e9cc73182da706c2fc697b39666"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "4cb64a47d14f82fdb3cf681e16ddcff1fe6190f5c14620ca50b3d07d54d6ea29"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "3ddae53d0c15346e57d2fae10e8158ecb714fc075b1b9782189059683d3879d9"
   end
 
   depends_on "pkgconf" => :build
