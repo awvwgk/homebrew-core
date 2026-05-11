@@ -1,8 +1,8 @@
 class Ddcutil < Formula
   desc "Control monitor settings using DDC/CI and USB"
   homepage "https://www.ddcutil.com"
-  url "https://www.ddcutil.com/tarballs/ddcutil-2.2.6.tar.gz"
-  sha256 "e4b69191c0b450aea23a34a592cf3c58f027fe1462020179070cc92d5ecaed88"
+  url "https://www.ddcutil.com/tarballs/ddcutil-2.2.7.tar.gz"
+  sha256 "19ac6604cf1177ba56666f8a682581e71e8973bd06c7c8dcf033674e4aaaa648"
   license "GPL-2.0-or-later"
 
   livecheck do
@@ -16,6 +16,8 @@ class Ddcutil < Formula
   end
 
   depends_on "pkgconf" => :build
+  depends_on "acl"
+  depends_on "dbus"
   depends_on "glib"
   depends_on "i2c-tools"
   depends_on "jansson"
