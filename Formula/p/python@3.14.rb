@@ -12,14 +12,14 @@ class PythonAT314 < Formula
   end
 
   bottle do
-    sha256 arm64_tahoe:   "a107c4174b66f21ae5d9fcb82c7ea0cd466b1bb65fffffc818ef8108c6669a7b"
-    sha256 arm64_sequoia: "345dc7908e33f7eb3c3b87a6c51229c642006eb8ffd5f85c4c8b88d0808d3197"
-    sha256 arm64_sonoma:  "7acc6c0e9d194c9a7eb69a5af34809f7617f83d9a9c0eaef77dac1d5dd04566e"
-    sha256 tahoe:         "e52e51da5fedadacd4e326a45f352c91f732ebf397f3f0860d8ed35cb98112ba"
-    sha256 sequoia:       "acbc6d22346021cd428f6cb472936b8f6b9c09a57c0d8b4bc01160f1f9abae25"
-    sha256 sonoma:        "c029e2586f67781ab49936e715067b3381d2fdd54e901fc8928764d251f72405"
-    sha256 arm64_linux:   "f50d2d5e41ef4e8424584213d786b7b3c483a16699f717b0344e2afa7ae98774"
-    sha256 x86_64_linux:  "4a3104b65b9dbf5e34240b70e0155babfd2ef902fc404964b82c0315a9a39b04"
+    sha256 arm64_tahoe:   "fbdf4ab07fa7cf3acd10aa15f59198f8a156660c7456108ad142bbea02f6404a"
+    sha256 arm64_sequoia: "f35b53b5191334456d8e28bccde0762d3c9f212325d0014a5351eace83ff21fe"
+    sha256 arm64_sonoma:  "7c837e923154cd311ea1ca49e79508f00ef2cc8f554deb111d594c297493e2dc"
+    sha256 tahoe:         "42f56660bdfc64b7b00d3fbd751efd2cfe748d5a27d908997312ba598dc5d46a"
+    sha256 sequoia:       "598e9450029cca8630774cd67cfd598e94d7d2dea01224da8250fbc5afc4f346"
+    sha256 sonoma:        "def3965c68e321b5d5cd8754bbdfb5ffa8647d722fe1d42676b99611c51c8638"
+    sha256 arm64_linux:   "fb78ff7e4f774ce10db10273ec5f3f68ab0d6c6307e22701329cf9ad101734ed"
+    sha256 x86_64_linux:  "414894dbed9e3caee6c6819a8174161b370d9199f06a8b8b10d9cc4fd3980940"
   end
 
   depends_on "pkgconf" => :build
