@@ -20,7 +20,7 @@ class Siege < Formula
     sha256 x86_64_linux:  "6f02cca62e76799c557d000eb640f5772d666572241bc2b9a5c05e23aa32b76b"
   end
 
-  depends_on "openssl@3"
+  depends_on "openssl@4"
 
   on_linux do
     depends_on "zlib-ng-compat"
@@ -34,16 +34,14 @@ class Siege < Formula
     # To avoid unnecessary warning due to hardcoded path, create the folder first
     (prefix/"etc").mkdir
 
-    args = [
-      "--disable-dependency-tracking",
-      "--prefix=#{prefix}",
-      "--mandir=#{man}",
-      "--localstatedir=#{var}",
-      "--with-ssl=#{Formula["openssl@3"].opt_prefix}",
+    zlib = OS.mac? ? "#{MacOS.sdk_path}/usr" : Formula["zlib-ng-compat"].opt_prefix
+    args = %W[
+      --localstatedir=#{var}
+      --with-ssl=#{Formula["openssl@4"].opt_prefix}
+      --with-zlib=#{zlib}
     ]
-    args << "--with-zlib=#{MacOS.sdk_path_if_needed}/usr" if OS.mac?
 
-    system "./configure", *args
+    system "./configure", *args, *std_configure_args
     system "make", "install"
   end
 
