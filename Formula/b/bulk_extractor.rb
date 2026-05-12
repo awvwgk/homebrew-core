@@ -37,7 +37,7 @@ class BulkExtractor < Formula
   uses_from_macos "ncurses"
 
   on_linux do
-    depends_on "openssl@3" # uses CommonCrypto on macOS
+    depends_on "openssl@4" # uses CommonCrypto on macOS
     depends_on "zlib-ng-compat"
   end
 
