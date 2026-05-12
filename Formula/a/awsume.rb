@@ -16,12 +16,12 @@ class Awsume < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "976bf1db3acba0316e4b91cb969a43f91ee6d97d59fd4b80e2678dde6a3f1b94"
-    sha256 cellar: :any,                 arm64_sequoia: "9e2c00c7eb4ed65385a540db0a602839b9671d84b70b80f2c3b03f62c54858fc"
-    sha256 cellar: :any,                 arm64_sonoma:  "5529de9a81df8487da268896213867e7cf9a7c38d3f1569035ec3c02fd2dbdb9"
-    sha256 cellar: :any,                 sonoma:        "b3e6d65c0cb235b6c26ca9e18db41cd8d327868540d9afa69f33ac7482a3de27"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "5764c35d4ca67bebd15db99ad96b47f0258913edf35fb27deff7b7bf8aac2c72"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "9f8fdaa0cab57c9d58823ac01c345c4e2d4703c7ebafb0abed215c3202d8b09b"
+    sha256 cellar: :any,                 arm64_tahoe:   "912c294f4270cad32ba129a55ad7de6f297a22fcc7af22a62eddeacf4b6e2d46"
+    sha256 cellar: :any,                 arm64_sequoia: "85513d3816f52eb95a95979227e54763f8f8c977c29910155f41d80169481dcc"
+    sha256 cellar: :any,                 arm64_sonoma:  "06bb905c74719049654e9a9c8c68cd6ff3d284baa2274049b9a48377826ed9d5"
+    sha256 cellar: :any,                 sonoma:        "b154b5ef67b65108428650e7b3d644a25b84d3c2cc448faa877599468cb5be47"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "a750c88a9b764ab55a9ad12c108a422846955f417332ed9c95b4032755938a66"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "35d320dcce1421dab098f6a23f083b3d740a82d67a992db3242778fa48cccf60"
   end
 
   depends_on "libyaml"
