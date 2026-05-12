@@ -7,12 +7,12 @@ class Sqlcipher < Formula
   head "https://github.com/sqlcipher/sqlcipher.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "91a94f9cadd4d8606fdb52535e59af11bd96a4b3e0108d9101622fae854dac51"
-    sha256 cellar: :any,                 arm64_sequoia: "3e7a59bca8cce9934af8dd0fe8a7a69cca36b18d36859449738ce64136073509"
-    sha256 cellar: :any,                 arm64_sonoma:  "c9f84ddb061adf54d9309c882f43e605630b88922919cf1988b2bfcd660e61e7"
-    sha256 cellar: :any,                 sonoma:        "e867296dd064a0ea1c335ba8095c5bb652133e4d957dfbf7c81214930372f123"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "76a0686c0beb8d1e13ac247f814f9b18146d533989c1cc245515feda4c105d2c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "cbcc555f60ff4face131443236f0419cdd21faad2afdf3765ee1246d40bab68d"
+    sha256 cellar: :any,                 arm64_tahoe:   "0dfa7eb3417cb03acda749e4f221e876a9891392d22718f93952560061b80471"
+    sha256 cellar: :any,                 arm64_sequoia: "b85ade42ad09b8710c70163ee4ff68cce00c91dbe93ee599ade9f7d7d053f3ec"
+    sha256 cellar: :any,                 arm64_sonoma:  "81ba8fb6747cba40f1e49c890c2d13d8e8537c56195cf0d0415b690eab1ef586"
+    sha256 cellar: :any,                 sonoma:        "4ae78c99dfdefe0f2855c5a006b61ceb50ee77f6e8311390cc5dcbe009e1f09d"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "73757192b155a5ab5da4eb2c5398f70d81707fc719fb3cf7cff94ec6060cef6d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "0a73022003fb3497f55624b9395a0102fa69ef4b051b8b36b5355f5ef439437c"
   end
 
   depends_on "openssl@4"
