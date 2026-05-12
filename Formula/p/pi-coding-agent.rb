@@ -1,8 +1,8 @@
 class PiCodingAgent < Formula
   desc "AI agent toolkit"
   homepage "https://pi.dev/"
-  url "https://registry.npmjs.org/@mariozechner/pi-coding-agent/-/pi-coding-agent-0.73.1.tgz"
-  sha256 "7bf5d492670c04fd7c599dee7e6eaabff964084affd216766107e6741df7a2e1"
+  url "https://registry.npmjs.org/@earendil-works/pi-coding-agent/-/pi-coding-agent-0.74.0.tgz"
+  sha256 "974a73b96195bd7d630e115869ecb5e0dd7a5c3a38ee4926dc99448663d4a344"
   license "MIT"
 
   bottle do
@@ -20,7 +20,7 @@ class PiCodingAgent < Formula
     system "npm", "install", *std_npm_args
     bin.install_symlink libexec.glob("bin/*")
 
-    node_modules = libexec/"lib/node_modules/@mariozechner/pi-coding-agent/node_modules/"
+    node_modules = libexec/"lib/node_modules/@earendil-works/pi-coding-agent/node_modules/"
     deuniversalize_machos node_modules/"@mariozechner/clipboard-darwin-universal/clipboard.darwin-universal.node"
 
     arch = Hardware::CPU.arm? ? "arm64" : "x64"
