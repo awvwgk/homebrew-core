@@ -8,12 +8,12 @@ class Fbthrift < Formula
   head "https://github.com/facebook/fbthrift.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "2836b502b23eccdaea1eb518f3a9cf3fa6238a36c89ddd5079feeabc744ed89f"
-    sha256 cellar: :any,                 arm64_sequoia: "0dd027af3a54545c5d5cb62ea616b5014af249dd5da2054f3a3cd6444df1ea9c"
-    sha256 cellar: :any,                 arm64_sonoma:  "73dbb11ec0c0e45fab8bc25ef5accefbeb7f6cd052853d78fccfe6775f1f2215"
-    sha256 cellar: :any,                 sonoma:        "800b200b0d99d617cb61e1ba5e94dbe710e3df6c32326de602a4b6e0736c0d6e"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "2f6bc0f6b3a526ea1342e484fdfaaeeb6d01ff313112d8995f48aec55c0c1d99"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "1eace2eff0199b2e271caf44846b11a32c7abbfc79b65bec96534e4b6d589599"
+    sha256 cellar: :any,                 arm64_tahoe:   "0490df5302cd4d8fceb954bccbc3883e1a6c896cdf2e6fcc37137d69d66adb03"
+    sha256 cellar: :any,                 arm64_sequoia: "1f38961293b0011abe594352ea803d3d0f1c9fc1fe0f790d21b8416e9bfad32b"
+    sha256 cellar: :any,                 arm64_sonoma:  "1273c3fa6b6729a0592ec80b1f00842b8019df19315afef4188f4b026f7394b2"
+    sha256 cellar: :any,                 sonoma:        "da812b8c58f2c15c0c3fa00d4e7d1ca81817e4629c25bf6a0ebc0611aa998a03"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "0043f2e826027c001589fbafd24c379b86245915e5056c12f7e603916ca5c416"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "249a290edd9bd327f14e7434b9384d2e2576b5169def8caf5f50fbc7da700171"
   end
 
   depends_on "bison" => :build # Needs Bison 3.1+
