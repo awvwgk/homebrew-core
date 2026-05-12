@@ -1,24 +1,11 @@
 class OpenalSoft < Formula
   desc "Implementation of the OpenAL 3D audio API"
   homepage "https://openal-soft.org/"
+  url "https://openal-soft.org/openal-releases/openal-soft-1.25.2.tar.bz2"
+  sha256 "1dbaac44e7579d5bc8847ca8db4b2e8b9fd3961041f35ee20def4958301e1089"
   license "LGPL-2.0-or-later"
   compatibility_version 1
   head "https://github.com/kcat/openal-soft.git", branch: "master"
-
-  stable do
-    url "https://openal-soft.org/openal-releases/openal-soft-1.25.1.tar.bz2"
-    sha256 "4c2aff6f81975f46ecc5148d092c4948c71dbfb76e4b9ba4bf1fce287f47d4b5"
-
-    # Backport support for GCC <= 12
-    patch do
-      url "https://github.com/kcat/openal-soft/commit/abd510d0aa7a27afc48af25c24ee6d6b544053cb.patch?full_index=1"
-      sha256 "4b172d4e0765978562e16ab9cc8226f45b33521f6e4935ff3cc8ef570e57c268"
-    end
-    patch do
-      url "https://github.com/kcat/openal-soft/commit/b8c3593740630cdb3577fcb381e092898759064a.patch?full_index=1"
-      sha256 "77d73ff7cf500a46940e2392e2348ca3357f491628abe06a0f36ad4391630ccb"
-    end
-  end
 
   livecheck do
     url :homepage
