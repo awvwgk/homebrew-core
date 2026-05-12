@@ -1,8 +1,8 @@
 class Diamond < Formula
   desc "Accelerated BLAST compatible local sequence aligner"
   homepage "https://github.com/bbuchfink/diamond"
-  url "https://github.com/bbuchfink/diamond/archive/refs/tags/v2.1.25.tar.gz"
-  sha256 "4d65c2cc796c158f3a315af14f2a1cfe0a0917326bc2bf394da235bb7159f9d4"
+  url "https://github.com/bbuchfink/diamond/archive/refs/tags/v2.2.0.tar.gz"
+  sha256 "d06d26cfa474e17132a9ea4c0a2a7ce4ec7e2ce937606173b401883d62eff730"
   license "GPL-3.0-or-later"
 
   bottle do
@@ -20,13 +20,6 @@ class Diamond < Formula
 
   on_linux do
     depends_on "zlib-ng-compat"
-  end
-
-  # Fix build failure due to missing `<algorithm>`, upstream PR:
-  # https://github.com/bbuchfink/diamond/pull/953
-  patch do
-    url "https://github.com/bbuchfink/diamond/commit/7b994bd0ef33c968c2f3ad20c039b68f61495ea1.patch?full_index=1"
-    sha256 "1f30d68661493e52d72eac7115c0dc7b39afc828f39f7cb24a3142fe5df7f9d5"
   end
 
   def install
