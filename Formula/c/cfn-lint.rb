@@ -9,12 +9,12 @@ class CfnLint < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "38e3d0f28d86b2c8666eac930ef74120e4894c67c72420d8d92010fc72a3eb42"
-    sha256 cellar: :any,                 arm64_sequoia: "c7fa97ca961067695cfc2407580ce72670bf3600479f14d23f17c9e08462696c"
-    sha256 cellar: :any,                 arm64_sonoma:  "4dbcf28774f37c93725b4d656283ce628c6eaae1b6ac0c5fd3b349578c4d0844"
-    sha256 cellar: :any,                 sonoma:        "bb994a8c23479b3d6c5e099a4b5c916ad928dc7befb89e0ee1b61b9d3fb1c94e"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "081dd6c5f4e90ddccd339357486705cf82813bf2c6618621053a6b080568bef8"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "039e33236a2b4af697e8a690775baa5ab805ba747d43d8081b41e11f559aa75e"
+    sha256 cellar: :any,                 arm64_tahoe:   "45d7a94212f8a5399cbf9a0345a7968370bb565a2a11f83cfcf067154755493b"
+    sha256 cellar: :any,                 arm64_sequoia: "c142c82b04911afedd31f341e628f721d5a016291552b61d7097a5e7418e2787"
+    sha256 cellar: :any,                 arm64_sonoma:  "820c3bd21d1cb9f2cd6f78129a30bd66212f1bbb742d12a59be8c2ea99905b3c"
+    sha256 cellar: :any,                 sonoma:        "ef4fe6f697d15b1c6acab57f7ae2b19e80a3ecca8a9f1c47c1c202d6875a0993"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "28d3fc82ee72dac5064bd9c93ce50913a3c7b8747c62610077cae3688b4e18f5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "84c79860dbdb3702c8a4d85eba7d4e5daca06097f21a4795f3991ca8285a441b"
   end
 
   depends_on "libyaml"
