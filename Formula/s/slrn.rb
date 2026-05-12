@@ -28,7 +28,7 @@ class Slrn < Formula
     sha256 x86_64_linux:   "5bf9ff614629b46445541310dd089e4893dbfa2e463944aff5596cb14476f812"
   end
 
-  depends_on "openssl@3"
+  depends_on "openssl@4"
   depends_on "s-lang"
 
   def install
@@ -40,7 +40,7 @@ class Slrn < Formula
     ENV.append_to_cflags "-Wno-implicit-function-declaration" if DevelopmentTools.clang_build_version >= 1200
 
     system "./configure", *std_configure_args,
-                          "--with-ssl=#{Formula["openssl@3"].opt_prefix}",
+                          "--with-ssl=#{Formula["openssl@4"].opt_prefix}",
                           "--with-slrnpull=#{var}/spool/news/slrnpull",
                           "--with-slang=#{HOMEBREW_PREFIX}"
     ENV.deparallelize
