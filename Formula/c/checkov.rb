@@ -18,12 +18,12 @@ class Checkov < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "71cc61cfcf76f5f70bb3bcbf886f27e68e1a237c126bb9c96e3a4307b3dea51a"
-    sha256 cellar: :any,                 arm64_sequoia: "2c24ab15fe1ed0578b425adfb7517b73bd4919ec59145de91eacceab6d24baa3"
-    sha256 cellar: :any,                 arm64_sonoma:  "44ad4b6980be81cf3ba12e501810e07c8c39a37cb3d8e31d11fb03b333e1a249"
-    sha256 cellar: :any,                 sonoma:        "c928451a174fa1b71f70a27759452b5f48385e7acc995579835b31a7c5df1763"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "a3b5dc64146a172442537eee7efcf28875f2036c210f296ab1360860cf588041"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "8588d8a4d37bc7bbca5a60a951d50e0b6e5fb0d608cb40a6ef5507e590c21db8"
+    sha256 cellar: :any,                 arm64_tahoe:   "a16a0d594ad07cd32d58fc15e3a463b3a265e06efab70a7608722e0f9a69a395"
+    sha256 cellar: :any,                 arm64_sequoia: "a734b0ce8fee043c49ad037e4525306e409119c8cb98013bfd05942f7a519eaf"
+    sha256 cellar: :any,                 arm64_sonoma:  "ffd2384566a25337407561905e9232422422f0259b1d618d7734795ab61a101e"
+    sha256 cellar: :any,                 sonoma:        "407cac58f96a95a9b4761a51885f5b73e34a2f41e881aff5bca30d19d598aed2"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "a91addf19dac836757017b79c92491f545838b48f500aecf0e349614f5e400b2"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "ea2acddf7a3971858696951797030b5b8e25e8e3626c1883a8a6741a84d77d9e"
   end
 
   depends_on "cmake" => :build # for igraph
