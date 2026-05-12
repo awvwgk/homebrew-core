@@ -21,7 +21,7 @@ class Urweb < Formula
   depends_on "mlton" => :build
   depends_on "gmp"
   depends_on "icu4c@78"
-  depends_on "openssl@3"
+  depends_on "openssl@4"
 
   # Patch to fix build for icu4c 68.2
   patch do
@@ -40,7 +40,7 @@ class Urweb < Formula
                 .to_formula
     system "./configure", *std_configure_args,
                           "--disable-silent-rules",
-                          "--with-openssl=#{Formula["openssl@3"].opt_prefix}",
+                          "--with-openssl=#{Formula["openssl@4"].opt_prefix}",
                           "SITELISP=$prefix/share/emacs/site-lisp/urweb",
                           "ICU_INCLUDES=-I#{icu4c.opt_include}",
                           "ICU_LIBS=-L#{icu4c.opt_lib}"
