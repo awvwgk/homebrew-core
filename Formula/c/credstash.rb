@@ -9,6 +9,15 @@ class Credstash < Formula
   revision 15
   head "https://github.com/fugue/credstash.git", branch: "master"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "5b734f4e5b83059c899d5aa46b394addda63d0478a1372197a8b8f992c7e9fd6"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "5b734f4e5b83059c899d5aa46b394addda63d0478a1372197a8b8f992c7e9fd6"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "5b734f4e5b83059c899d5aa46b394addda63d0478a1372197a8b8f992c7e9fd6"
+    sha256 cellar: :any_skip_relocation, sonoma:        "5b734f4e5b83059c899d5aa46b394addda63d0478a1372197a8b8f992c7e9fd6"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "1ae708a36bd879d0993fb5fc88f3b4de384022618ef58686fed363e26056411f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "5b734f4e5b83059c899d5aa46b394addda63d0478a1372197a8b8f992c7e9fd6"
+  end
+
   depends_on "cryptography" => :no_linkage
   depends_on "python@3.14"
 
