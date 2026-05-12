@@ -1,10 +1,10 @@
 class Chezscheme < Formula
   desc "Implementation of the Chez Scheme language"
   homepage "https://cisco.github.io/ChezScheme/"
-  url "https://github.com/cisco/ChezScheme/releases/download/v10.4.0/csv10.4.0.tar.gz"
-  sha256 "54d0d19e4cd51878f88fb4b7ddb44079be6ca12bcf14163f8ea53cbcb4633385"
+  url "https://github.com/cisco/ChezScheme/releases/download/v10.4.1/csv10.4.1.tar.gz"
+  sha256 "2e74952db7bc177f0c3602e2217a341ba677d733eec4cd7726418c3a4e1ef308"
   license "Apache-2.0"
-  compatibility_version 1
+  compatibility_version 2
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_tahoe:   "c66451fe4748a16134e91c9a61eb20b62b713f46ac09e1fc99f7209b1b3527fe"
