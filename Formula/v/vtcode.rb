@@ -24,11 +24,11 @@ class Vtcode < Formula
   depends_on "ripgrep"
 
   on_linux do
-    depends_on "openssl@3"
-    depends_on "zlib-ng-compat"
+    depends_on "openssl@4" => :build
   end
 
   def install
+    ENV["OPENSSL_DIR"] = Formula["openssl@4"].opt_prefix if OS.linux?
     system "cargo", "install", *std_cargo_args
   end
 
