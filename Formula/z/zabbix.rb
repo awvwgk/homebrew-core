@@ -21,7 +21,7 @@ class Zabbix < Formula
   end
 
   depends_on "pkgconf" => :build
-  depends_on "openssl@3"
+  depends_on "openssl@4"
   depends_on "pcre2"
 
   def install
@@ -30,7 +30,7 @@ class Zabbix < Formula
       --enable-ipv6
       --with-libpcre2
       --sysconfdir=#{pkgetc}
-      --with-openssl=#{Formula["openssl@3"].opt_prefix}
+      --with-openssl=#{Formula["openssl@4"].opt_prefix}
     ]
 
     if OS.mac?
