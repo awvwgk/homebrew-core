@@ -3,8 +3,8 @@ class Mypy < Formula
 
   desc "Experimental optional static type checker for Python"
   homepage "https://www.mypy-lang.org/"
-  url "https://files.pythonhosted.org/packages/cf/dc/7e6d49f04fca40b9dd5c752a51a432ffe67fb45200702bc9eee0cb4bbb26/mypy-2.0.0.tar.gz"
-  sha256 "1a9e3900ac5c40f1fe813506c7739da6e6f0eab2729067ebd94bfb0bbba53532"
+  url "https://files.pythonhosted.org/packages/82/15/cca9d88503549ed6fedeaa1d448cdddd542ee8a490232d732e278036fbf2/mypy-2.1.0.tar.gz"
+  sha256 "81e76ad12c2d804512e9b13240d1588316531bfba07558286078bfbce9613633"
   license "MIT"
   head "https://github.com/python/mypy.git", branch: "master"
 
@@ -26,8 +26,8 @@ class Mypy < Formula
   end
 
   resource "librt" do
-    url "https://files.pythonhosted.org/packages/39/cb/c1945e506893b5b8577fb45a60c80e3ffe4a82092a04a6f29b0b951d9a24/librt-0.10.0.tar.gz"
-    sha256 "1aba1e8aa4e3307a7be68a74149545fde7451964dc0235a8bec5704a17bdda42"
+    url "https://files.pythonhosted.org/packages/40/08/9e7f6b5d2b5bed6ad055cdd5925f192bb403a51280f86b56554d9d0699a2/librt-0.11.0.tar.gz"
+    sha256 "075dc3ef4458a278e0195cbf6ac9d38808d9b906c5a6c7f7f79c3888276a3fb1"
   end
 
   resource "mypy-extensions" do
