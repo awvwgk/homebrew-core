@@ -10,12 +10,12 @@ class Awscurl < Formula
   head "https://github.com/okigan/awscurl.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "26033cf08b0ff62c8059fd8629c75f1a67cd7ed76bae9ddd2f291842b6296246"
-    sha256 cellar: :any,                 arm64_sequoia: "30ec0625abeec8ae1b799ea475949d9779f09a89455d51d567b976f311c491eb"
-    sha256 cellar: :any,                 arm64_sonoma:  "00eb0ce6b2b08a3e7bd1ef30857f75fddd6a6305a6cace23485afcba32a8e343"
-    sha256 cellar: :any,                 sonoma:        "79380b8a7eefa52942e4ac2afca9e5bdf4ae9690aead96695963eb341f2cb32e"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "54a80ebce549e36a6c3a5d02bdeb8931c8e4d5e4dcd08fabbd101a1f76cd3bc4"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "c3a45899d8fb9fc3b53043c237c54d00d18a83beb830833bf2d084a12f7f504a"
+    sha256 cellar: :any,                 arm64_tahoe:   "cb44bc6f506dbf4f5d9a814e4bce672192d87e4d0935c615df6a11d85c4a2dc3"
+    sha256 cellar: :any,                 arm64_sequoia: "86ef9ec524767dbdde7161f54615c45224bbf9c221b750512392718dd4b8a95e"
+    sha256 cellar: :any,                 arm64_sonoma:  "0a7391f37e53adeddb41f1c92209b32e8c0777b4e3cb1a4e19c4e2301fd15151"
+    sha256 cellar: :any,                 sonoma:        "9dfea527dd9d38251e717fb3555c2dd176d975a8c29eb174f98b14c2d15f74ec"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "0bb3f84f5a3efdde0f3f65f6593e77c998367abe9f12c0e60d6a713669faadcb"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "f75b7c77e05697ef1e183cd1d8a7cb062af417c42535391fc7f627ea6fb66d10"
   end
 
   depends_on "cmake" => :build # for `awscrt`
