@@ -17,7 +17,7 @@ class Readpe < Formula
     sha256 x86_64_linux:  "50faef2834685643cdf64ddd6a6f3e87e3f70fdb7f813de2a0c88aaddb84a253"
   end
 
-  depends_on "openssl@3"
+  depends_on "openssl@4"
 
   def install
     ENV.deparallelize
