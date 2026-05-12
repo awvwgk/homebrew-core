@@ -23,7 +23,7 @@ class Wuppiefuzz < Formula
   uses_from_macos "sqlite"
 
   on_linux do
-    depends_on "openssl@3"
+    depends_on "openssl@4" => :build
   end
 
   def install
