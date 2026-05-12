@@ -1,8 +1,8 @@
 class Trdsql < Formula
   desc "CLI tool that can execute SQL queries on CSV, LTSV, JSON, YAML and TBLN"
   homepage "https://github.com/noborus/trdsql"
-  url "https://github.com/noborus/trdsql/archive/refs/tags/v1.1.0.tar.gz"
-  sha256 "e3b8bef57330648d3f4b279bd4c652eaeba19aa4fae3fe05cfa596a2b3f4bc51"
+  url "https://github.com/noborus/trdsql/archive/refs/tags/v1.2.1.tar.gz"
+  sha256 "58a4b5987e80ed313bf878b070b4d94768fae658f2cf56f353284d762937a84a"
   license "MIT"
   head "https://github.com/noborus/trdsql.git", branch: "master"
 
