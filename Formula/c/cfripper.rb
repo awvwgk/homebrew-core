@@ -9,12 +9,12 @@ class Cfripper < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "07613958b87b5a601cec34d010ecf6bf5eabd41705cefdba45a785f5aba65437"
-    sha256 cellar: :any,                 arm64_sequoia: "8fdf2ef202480e2c84b86966b71bcb40323681ed88dfafb48ab7e5fbc56c18c8"
-    sha256 cellar: :any,                 arm64_sonoma:  "44eae722418898023beda985cf042b15039b9683f5c3926b9ab2d6be94307f5b"
-    sha256 cellar: :any,                 sonoma:        "0d320f2acdec2f305a6ec65c73147cb5aa506c7ae500e4732fbb7a6d49c63958"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "25027b0a0f2b84b5cc1899e1d3c6377786c9fce16e1e0dd0093b6571ecc0166e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "952b01573866452db292c3fc614197901dce8a54c43b497a709e564643ccd00e"
+    sha256 cellar: :any,                 arm64_tahoe:   "e55af1033c5567bb07806ee971d3e20599278d8b61c74486a3f638a22a92e177"
+    sha256 cellar: :any,                 arm64_sequoia: "8e5124b4254767b28564ecaaf8cdce3c48f125e8bb4d6d5f0cf6a7fda99bc360"
+    sha256 cellar: :any,                 arm64_sonoma:  "ebb259133ed941fc7ecec10b8fd8f68bb0f11e177523318ee1f8f0036bcb5bfc"
+    sha256 cellar: :any,                 sonoma:        "4f4ce5903797d72dc94c815bc70cd862384b716168db0719d821c43277c8acd6"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "77454e686bc7d5def7bfae52d00c19a1d05b12a7ae825e5bf576de05731726aa"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "3a59cf9e91b316f9922ceb706299a88126318be2e089b40b5a4ba99ec58ee1a4"
   end
 
   depends_on "libyaml"
