@@ -19,7 +19,7 @@ class Snobol4 < Formula
     sha256 x86_64_linux:  "bae8485b664f3c999e1eee9ec0c87cae6283e414b2606fb172b516284176311f"
   end
 
-  depends_on "openssl@3"
+  depends_on "openssl@4"
 
   uses_from_macos "m4" => :build
   uses_from_macos "libffi"
@@ -33,7 +33,7 @@ class Snobol4 < Formula
   conflicts_with "sdb", because: "both install `sdb` binaries"
 
   def install
-    ENV.append_to_cflags "-I#{MacOS.sdk_path_if_needed}/usr/include/ffi" if OS.mac?
+    ENV.append_to_cflags "-I#{MacOS.sdk_path}/usr/include/ffi" if OS.mac?
     system "./configure", "--prefix=#{prefix}", "--mandir=#{man}"
     ENV.deparallelize
     # avoid running benchmark:
