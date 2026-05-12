@@ -1,8 +1,8 @@
 class Teleport < Formula
   desc "Modern SSH server for teams managing distributed infrastructure"
   homepage "https://goteleport.com/"
-  url "https://github.com/gravitational/teleport/archive/refs/tags/v18.7.6.tar.gz"
-  sha256 "30fb59382ba7e52f799c4ac3f950b3d7a4fbdfba2a826c8789c4ec4ac8e08f8c"
+  url "https://github.com/gravitational/teleport/archive/refs/tags/v18.8.0.tar.gz"
+  sha256 "13a09c342f2dccdc615471ff0f9be86149f96883662ac3bd685cb2115243068c"
   license all_of: ["AGPL-3.0-or-later", "Apache-2.0"]
   head "https://github.com/gravitational/teleport.git", branch: "master"
 
@@ -18,12 +18,12 @@ class Teleport < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "b4b9df4c5ba17babe93352cf25e73aced6e4ed0d86f4a393672ee473ea63ff5b"
-    sha256 cellar: :any,                 arm64_sequoia: "efc941f612d387b46bba9a408f2c11facbb15b58a6cd336174e4a3f417a96c6c"
-    sha256 cellar: :any,                 arm64_sonoma:  "e8ac1dad84b0763b80df169c435634eb926b081884bd53c919c55deb29c966c0"
-    sha256 cellar: :any,                 sonoma:        "fc5c40b3bdbf1124e7da9575daf43f58365a8d66a8334f0a0ad80d20bebab97a"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "55c40800f2b336d8f99aa0f09b1a7d6c3b817e33f2ae0178b74f24263f81bfa6"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "ee0c21b593b301bb8a88f92cb097970d2380ff2d6a8dc62cb13ef482ed74bf30"
+    sha256 cellar: :any,                 arm64_tahoe:   "f9748ed0d188e32e9329256a434266a89ec993b9f3c19b155815e13261701bd5"
+    sha256 cellar: :any,                 arm64_sequoia: "df4c38d34a915de5b955a567b5cd8308bc9bd0313f731102d98b7b24986d6c11"
+    sha256 cellar: :any,                 arm64_sonoma:  "7f39eed56893019b2ddcfb02bbd7acfdc44ff7b48de4066149dc33f1f44a91df"
+    sha256 cellar: :any,                 sonoma:        "24af4fbf4e20ec53cc48184ba06f05b8e3e0fe9bbab04316af8773cd1b648273"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "c67421ec8b392de8dc43f341996372e523824938faed2f59527aefc71ccf753d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "3769db5d1fc52e077f6deacb2adf7eb50ef2856d78abb4da4205521e748f0116"
   end
 
   depends_on "binaryen" => :build
