@@ -16,11 +16,12 @@ class Tabiew < Formula
 
   depends_on "pkgconf" => :build
   depends_on "rust" => :build
-  depends_on "openssl@3"
+  depends_on "openssl@4"
 
   conflicts_with "watcher", because: "both install `tw` binaries"
 
   def install
+    ENV["OPENSSL_DIR"] = Formula["openssl@4"].opt_prefix
     system "cargo", "install", *std_cargo_args
 
     man1.install "target/manual/tabiew.1" => "tw.1"
