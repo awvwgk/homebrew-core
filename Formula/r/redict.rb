@@ -15,7 +15,7 @@ class Redict < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "708796b8af5a02da1959552fb065bd81218b0f2ebfb649d345e0ae86b3db363f"
   end
 
-  depends_on "openssl@3"
+  depends_on "openssl@4"
 
   def install
     system "make", "install", "PREFIX=#{prefix}", "CC=#{ENV.cc}", "BUILD_TLS=yes"
