@@ -21,10 +21,11 @@ class Reshape < Formula
   uses_from_macos "llvm" => :build # for libclang to build pg_query
 
   on_linux do
-    depends_on "openssl@3"
+    depends_on "openssl@4"
   end
 
   def install
+    ENV["OPENSSL_DIR"] = Formula["openssl@4"].opt_prefix if OS.linux?
     system "cargo", "install", *std_cargo_args
   end
 
