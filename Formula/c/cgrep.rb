@@ -7,12 +7,12 @@ class Cgrep < Formula
   head "https://github.com/awgn/cgrep.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "cc287175e8bc20a925028e3b4d0939feb5e693116a0a0514f4bf3a6e2ff2d45a"
-    sha256 cellar: :any,                 arm64_sequoia: "0f9922f03e5efb62189cc6b64320f52bb244fc7c593f48190c4246d78192e243"
-    sha256 cellar: :any,                 arm64_sonoma:  "e131a6adb643d51cdefe5d20f2253e73eba15818d23f07a384ff85f50760aac9"
-    sha256 cellar: :any,                 sonoma:        "9d22c8855ab9676864f30fc331a8e2ab1ce2b6e848338a400d31937761722778"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "a642dfd4b6e712012bb882ed1db8c3122ec3d886f496949bf7ae01d2a5501b0a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "4303cda845989c5979466ad0a79666b2cbcdda682927f697e8deaa1b8a8379a6"
+    sha256 cellar: :any,                 arm64_tahoe:   "795110cada7d19070299e6b5211926ee56f93cd99a0ea953f864b2d38e5d1baf"
+    sha256 cellar: :any,                 arm64_sequoia: "39c2a15d072a5f0bc7626cb4c1b8a3d0df93e1c35e2758cdb132ccdf6f1ef333"
+    sha256 cellar: :any,                 arm64_sonoma:  "3a1e32e1ee9f3731d9f5d841c8a0287640786c289e9cbf08883789caf504bf6a"
+    sha256 cellar: :any,                 sonoma:        "6da4b0ad3a258ea6984ff2c61be7b073c860a61bf7ee60f0273ae09437989e70"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "70df4bf4927855676cf1040e68307563dd3efaf345333d26f95ff4231b813580"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "527d18ecbc4a1958b384edaeae5592d076b982912a045a77cfe7d704eb3e31a9"
   end
 
   depends_on "cabal-install" => :build
