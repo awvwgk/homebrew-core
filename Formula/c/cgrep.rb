@@ -1,18 +1,18 @@
 class Cgrep < Formula
   desc "Context-aware grep for source code"
   homepage "https://awgn.github.io/cgrep/"
-  url "https://hackage.haskell.org/package/cgrep-9.2.2/cgrep-9.2.2.tar.gz"
-  sha256 "2b56d6254147d530befa78164b426b26bacbfa9b69966d70229f1124afda7b6a"
+  url "https://hackage.haskell.org/package/cgrep-9.2.3/cgrep-9.2.3.tar.gz"
+  sha256 "80119410ad24c668e4668773e21ac50439051bdf12d61668995a7cf652304691"
   license "GPL-2.0-or-later"
   head "https://github.com/awgn/cgrep.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "795110cada7d19070299e6b5211926ee56f93cd99a0ea953f864b2d38e5d1baf"
-    sha256 cellar: :any,                 arm64_sequoia: "39c2a15d072a5f0bc7626cb4c1b8a3d0df93e1c35e2758cdb132ccdf6f1ef333"
-    sha256 cellar: :any,                 arm64_sonoma:  "3a1e32e1ee9f3731d9f5d841c8a0287640786c289e9cbf08883789caf504bf6a"
-    sha256 cellar: :any,                 sonoma:        "6da4b0ad3a258ea6984ff2c61be7b073c860a61bf7ee60f0273ae09437989e70"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "70df4bf4927855676cf1040e68307563dd3efaf345333d26f95ff4231b813580"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "527d18ecbc4a1958b384edaeae5592d076b982912a045a77cfe7d704eb3e31a9"
+    sha256 cellar: :any,                 arm64_tahoe:   "2121aff4aa6b64a0d2572441c258f462adbd5bbe950af077038397d4585ea71d"
+    sha256 cellar: :any,                 arm64_sequoia: "74fc6cbccf7d7537d1d2c263d451e90a701902940cddac7144cc9179a6df4d54"
+    sha256 cellar: :any,                 arm64_sonoma:  "454f895083187092030e61d915bdc956259438f81f2acddbdf9ebeef15c3b8c3"
+    sha256 cellar: :any,                 sonoma:        "aec1d36a206a6467cbae25f5270aee6c4465c7ed7a58d7b1905ab5f1cfbbc46e"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "91f91c22162403e2f54a8db84af60afd62d9603cdaef6935241fb47659db2615"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "b6850439dc85753748788cbfb76565b78266222b4063b93d50c2b300104ae72e"
   end
 
   depends_on "cabal-install" => :build
@@ -25,11 +25,8 @@ class Cgrep < Formula
   conflicts_with "aerleon", because: "both install `cgrep` binaries"
 
   def install
-    # Workaround to build aeson with GHC 9.14, https://github.com/haskell/aeson/issues/1155
-    args = ["--allow-newer=base,containers,template-haskell"]
-
     system "cabal", "v2-update"
-    system "cabal", "v2-install", *args, *std_cabal_v2_args
+    system "cabal", "v2-install", *std_cabal_v2_args
   end
 
   test do
