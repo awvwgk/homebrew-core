@@ -4,6 +4,7 @@ class Teleport < Formula
   url "https://github.com/gravitational/teleport/archive/refs/tags/v18.8.0.tar.gz"
   sha256 "13a09c342f2dccdc615471ff0f9be86149f96883662ac3bd685cb2115243068c"
   license all_of: ["AGPL-3.0-or-later", "Apache-2.0"]
+  revision 1
   head "https://github.com/gravitational/teleport.git", branch: "master"
 
   # As of writing, two major versions of `teleport` are being maintained
@@ -35,9 +36,6 @@ class Teleport < Formula
   # TODO: try to remove rustup dependancy, see https://github.com/Homebrew/homebrew-core/pull/191633#discussion_r1774378671
   depends_on "rustup" => :build
   depends_on "libfido2"
-  depends_on "openssl@3"
-
-  uses_from_macos "zip"
 
   conflicts_with "etsh", because: "both install `tsh` binaries"
   conflicts_with "tctl", because: "both install `tctl` binaries"
@@ -55,9 +53,6 @@ class Teleport < Formula
       regex(/name\s*=\s*"wasm-bindgen".*?version\s*=\s*["'](\d+(?:\.\d+)+)["']/im)
     end
   end
-
-  # disable `wasm-opt` for ironrdp pkg release build, upstream pr ref, https://github.com/gravitational/teleport/pull/50178
-  patch :DATA
 
   def install
     # Workaround to avoid patchelf corruption when cgo is required
@@ -78,9 +73,10 @@ class Teleport < Formula
     resource("wasm-bindgen").stage do
       system "cargo", "install", *std_cargo_args(path: "crates/cli", root: buildpath)
     end
+    ENV.prepend_path "PATH", buildpath/"bin"
 
-    # Replace wasm-bindgen binary call to the built one
-    inreplace "Makefile", "wasm-bindgen target", buildpath/"bin/wasm-bindgen target"
+    # Reduce overlinking with OpenSSL
+    ENV.append "CGO_LDFLAGS", "-Wl,-dead_strip_dylibs" if OS.mac?
 
     # Workaround for error: The CPU Jitter random number generator must not be compiled with optimizations.
     # Issue ref: https://github.com/aws/aws-lc-rs/issues/1097
@@ -115,18 +111,3 @@ class Teleport < Formula
     assert_match(/Version:\s*#{version}/, status)
   end
 end
-
-__END__
-diff --git a/web/packages/shared/libs/ironrdp/Cargo.toml b/web/packages/shared/libs/ironrdp/Cargo.toml
-index ddcc4db..913691f 100644
---- a/web/packages/shared/libs/ironrdp/Cargo.toml
-+++ b/web/packages/shared/libs/ironrdp/Cargo.toml
-@@ -7,6 +7,9 @@ publish.workspace = true
- 
- # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
- 
-+[package.metadata.wasm-pack.profile.release]
-+wasm-opt = false
-+
- [lib]
- crate-type = ["cdylib"]
