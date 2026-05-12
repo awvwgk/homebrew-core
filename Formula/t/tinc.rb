@@ -21,7 +21,7 @@ class Tinc < Formula
   end
 
   depends_on "lzo"
-  depends_on "openssl@3"
+  depends_on "openssl@4"
 
   on_linux do
     depends_on "zlib-ng-compat"
@@ -32,7 +32,7 @@ class Tinc < Formula
 
   def install
     system "./configure", "--sysconfdir=#{etc}",
-                          "--with-openssl=#{Formula["openssl@3"].opt_prefix}",
+                          "--with-openssl=#{Formula["openssl@4"].opt_prefix}",
                           *std_configure_args
     system "make", "install"
 
