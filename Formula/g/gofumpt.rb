@@ -4,6 +4,7 @@ class Gofumpt < Formula
   url "https://github.com/mvdan/gofumpt/archive/refs/tags/v0.10.0.tar.gz"
   sha256 "5f3158f665d1d49a19f3ed48981366c892b68904b2b34cb893c6fe3ff8346929"
   license "BSD-3-Clause"
+  revision 1
   head "https://github.com/mvdan/gofumpt.git", branch: "master"
 
   bottle do
@@ -18,11 +19,13 @@ class Gofumpt < Formula
   depends_on "go"
 
   def install
-    ldflags = "-s -w -X mvdan.cc/gofumpt/internal/version.version=#{version}"
+    ldflags = "-s -w -X main.version=#{version}"
     system "go", "build", *std_go_args(ldflags:)
   end
 
   test do
+    assert_match version.to_s, shell_output("#{bin}/gofumpt -version").split.first
+
     (testpath/"test.go").write <<~GO
       package foo
 
