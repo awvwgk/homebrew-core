@@ -1,8 +1,8 @@
 class Cgrep < Formula
   desc "Context-aware grep for source code"
   homepage "https://awgn.github.io/cgrep/"
-  url "https://hackage.haskell.org/package/cgrep-9.2.2/cgrep-9.2.2.tar.gz"
-  sha256 "2b56d6254147d530befa78164b426b26bacbfa9b69966d70229f1124afda7b6a"
+  url "https://hackage.haskell.org/package/cgrep-9.2.3/cgrep-9.2.3.tar.gz"
+  sha256 "80119410ad24c668e4668773e21ac50439051bdf12d61668995a7cf652304691"
   license "GPL-2.0-or-later"
   head "https://github.com/awgn/cgrep.git", branch: "master"
 
@@ -25,11 +25,8 @@ class Cgrep < Formula
   conflicts_with "aerleon", because: "both install `cgrep` binaries"
 
   def install
-    # Workaround to build aeson with GHC 9.14, https://github.com/haskell/aeson/issues/1155
-    args = ["--allow-newer=base,containers,template-haskell"]
-
     system "cabal", "v2-update"
-    system "cabal", "v2-install", *args, *std_cabal_v2_args
+    system "cabal", "v2-install", *std_cabal_v2_args
   end
 
   test do
