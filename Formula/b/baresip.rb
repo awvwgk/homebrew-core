@@ -4,6 +4,7 @@ class Baresip < Formula
   url "https://github.com/baresip/baresip/archive/refs/tags/v4.8.0.tar.gz"
   sha256 "91f113be2bf8385ae5c42979fd36619f93473bfe0c763e952c236dbac63dd9c0"
   license "BSD-3-Clause"
+  revision 1
 
   bottle do
     sha256 arm64_tahoe:   "c142e2d50d897435e4a2ba88ebb37768ef89a220fb73350ee97909fadd268644"
@@ -18,15 +19,13 @@ class Baresip < Formula
   depends_on "pkgconf" => :build
   depends_on "libre"
 
-  on_macos do
-    depends_on "openssl@3"
-  end
-
   def install
     args = %W[
       -DCMAKE_INSTALL_RPATH=#{rpath}
       -DRE_INCLUDE_DIR=#{Formula["libre"].opt_include}/re
     ]
+    args += %w[EXE SHARED].map { |type| "-DCMAKE_#{type}_LINKER_FLAGS=-Wl,-dead_strip_dylibs" } if OS.mac?
+
     system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
