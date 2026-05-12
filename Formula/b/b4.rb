@@ -9,12 +9,12 @@ class B4 < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "b610c19404ca0994ab1be3e72ab9000bb2869de053c14d2d088eed4c0be2338a"
-    sha256 cellar: :any,                 arm64_sequoia: "017f7d91e7fe9ec2c66e5e372798995427db73d62b64a4ac0944c99769548c9d"
-    sha256 cellar: :any,                 arm64_sonoma:  "e238e797e0048b3d03904926b650b814656fa5d1889656b2a9fa494c7b1f4529"
-    sha256 cellar: :any,                 sonoma:        "4aeb3d3cb753fb6778e767eaedad8077ef4ca9ea9f3d85c0c3eba788e63445b3"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "73c7cf518dbe6dd659b0f5e5e2d7e532b367191edb14a2bd2d76e542b8475730"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "47a2fa4fc144c67ef0a50fbd7d440895afd29ec7c4d9c19a2992a374c77fe454"
+    sha256 cellar: :any,                 arm64_tahoe:   "3bd9cc0c6fede5ca4be8907aa5a17235a6b187c7eaeb84e0125079aaf51c010a"
+    sha256 cellar: :any,                 arm64_sequoia: "20962f0ef5aa06911bff6a7654a02a8a80f99cfdcdeb2824896f2bcd044c40f2"
+    sha256 cellar: :any,                 arm64_sonoma:  "ba403738d4b5dfb8d561fa923feead3f3f4b1036b9faa53f743e56a2f26842c9"
+    sha256 cellar: :any,                 sonoma:        "40f893414c159448a6e553063ecf209982ff7f80cbcd92872d2d26a65d5b3f4c"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "43026d818ed1977ccd6347be81f53bb9af5bc82e2111c28bb782b22210075c68"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "6b3baae3e5c1ff852675633d51fe3332df0470ee12d814180f716786900c56c2"
   end
 
   depends_on "certifi" => :no_linkage
