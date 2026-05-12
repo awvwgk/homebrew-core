@@ -29,7 +29,7 @@ class Dynomite < Formula
   depends_on "autoconf" => :build
   depends_on "automake" => :build
   depends_on "libtool" => :build
-  depends_on "openssl@3"
+  depends_on "openssl@4"
 
   # Apply fix for -fno-common from gcc-10 branch
   # Ref: https://github.com/Netflix/dynomite/issues/802
@@ -46,10 +46,11 @@ class Dynomite < Formula
     if DevelopmentTools.clang_build_version >= 1500
       ENV.append_to_cflags "-Wno-implicit-function-declaration -Wno-int-conversion"
     end
+    ENV.append "CFLAGS", "-std=gnu17" if DevelopmentTools.clang_build_version >= 1700
 
     args = ["--disable-silent-rules", "--sysconfdir=#{pkgetc}"]
     # Help old config script for bundled libyaml identify arm64 linux
-    args << "--build=aarch64-unknown-linux-gnu" if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+    args << "--build=aarch64-unknown-linux-gnu" if OS.linux? && Hardware::CPU.arm64?
 
     system "autoreconf", "--force", "--install", "--verbose"
     system "./configure", *args, *std_configure_args
