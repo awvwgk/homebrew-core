@@ -9,12 +9,12 @@ class Backgroundremover < Formula
   revision 3
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "a761e09f1be69f5d364c5297a9f6993c9049a163d1acf61695608a1fbbf00ac2"
-    sha256 cellar: :any,                 arm64_sequoia: "2f62fc21beb3bd7e4408db90be022c5dffa0289db2151774852b95153e0c260b"
-    sha256 cellar: :any,                 arm64_sonoma:  "b2ba9fb665b1772e6259ace7d32cefe19f8678eed9cbedc3a2f4063503e33627"
-    sha256 cellar: :any,                 sonoma:        "d7f971ade0013aa57e6c5cd00d8f2bfa025bbc4c6ecefc282358e9fe0ef7b21f"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "29f24fcf6b249d041e416df92ae9aae168eea546facac9301a70d357a8bf72c7"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a7a1e77eb40f64b346dcc8e7f37fad75af4ad795bedb61aa857d5bd0bff0f55a"
+    sha256 cellar: :any,                 arm64_tahoe:   "baabb43835d21dd7d0768649cdace14ec7f2818b4a12787e19c475b4e6e00ef9"
+    sha256 cellar: :any,                 arm64_sequoia: "45a9af94d76cae8af675f399c925f513851641ab04702beecac2512edadaba41"
+    sha256 cellar: :any,                 arm64_sonoma:  "30ba7552a1da03903d24717b3939dd33dbac9a79f6b0a3331284fc26cb13784c"
+    sha256 cellar: :any,                 sonoma:        "9f0deb9ce77b6fea6256c3f4fa2ee8d3d150b878831cbc67bef92ff5d1e0f7ee"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "2b5bcf773e696a4b5a08499e917c7e1934869444160181875dd2b36567560fd8"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "ff6dfb1772f35284bf8f4a0a7d5583db4d68d3b756b06a02a39c2c493df54e4f"
   end
 
   depends_on "cmake" => :build
