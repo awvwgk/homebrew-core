@@ -578,7 +578,7 @@ jobs:
 
       - name: Log in to GitHub Packages
         if: fromJson(steps.update-db.outputs.updated)
-        run: echo "${{secrets.GITHUB_TOKEN}}" | oras login ghcr.io --username brewtestbot --password-stdin
+        run: echo "${{secrets.HOMEBREW_CORE_GITHUB_PACKAGES_TOKEN}}" | oras login ghcr.io --username brewtestbot --password-stdin
 
       - name: Push to GitHub Packages
         if: fromJson(steps.update-db.outputs.updated)
@@ -594,18 +594,3 @@ jobs:
           rm -f executables.txt
           oras pull ghcr.io/homebrew/command-not-found/executables:latest
           shasum --algorithm=256 --check executables.txt.sha256
-
-  delete-old-command-not-found-db-versions:
-    needs: update-command-not-found-db
-    runs-on: ubuntu-slim
-    if: needs.update-command-not-found-db.outputs.updated == 'true'
-    permissions:
-      packages: write
-    steps:
-      - name: Delete old versions from GitHub Packages
-        uses: actions/delete-package-versions@e5bc658cc4c965c472efe991f8beea3981499c55 # v5.0.0
-        with:
-          package-name: command-not-found/executables
-          package-type: container
-          min-versions-to-keep: 0
-          delete-only-untagged-versions: true
