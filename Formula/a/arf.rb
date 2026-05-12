@@ -5,6 +5,15 @@ class Arf < Formula
   sha256 "5b44176ebd75523ff26f932ea1fd8a1a75e51007f5d156473fbaa503ff5af94e"
   license "MIT"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "0ec10e5e212aa6624d8bb06a0b2e84bc3f2977e4c2ea9da8f170a0aaa517a729"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "55dda9c780b0a7e48404c592625e5262886c16a05e5680d6b14239562c1047b6"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "6314dbd565192f62debac33789231a4f686ea1033e07416ed49168d3c5da6aef"
+    sha256 cellar: :any_skip_relocation, sonoma:        "64e7766f728d7ee486802355aa57878102db2ac27caa601e8b4cad3dd173786d"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "c3fa0da846afebd297e43382891a9ff325ec027003e0cb71a13889a7d8d2301c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e3d88919ca6899fb45dab2812b71704676e088df0341771fa7ebb5286ed76351"
+  end
+
   depends_on "rust" => :build
 
   def install
