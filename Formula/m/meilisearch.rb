@@ -1,8 +1,8 @@
 class Meilisearch < Formula
   desc "Ultra relevant, instant and typo-tolerant full-text search API"
   homepage "https://docs.meilisearch.com/"
-  url "https://github.com/meilisearch/meilisearch/archive/refs/tags/v1.43.0.tar.gz"
-  sha256 "041440d734931014c43243d10bbc42861b54b7603565c663746b73fb419ed124"
+  url "https://github.com/meilisearch/meilisearch/archive/refs/tags/v1.43.1.tar.gz"
+  sha256 "513b736ebbcdbba42ae71758f7511a6079e3abd8e3c2bb379593f5fe00b099c7"
   license "MIT"
 
   # There can be a notable gap between when a version is tagged and a
