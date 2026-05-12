@@ -1,8 +1,8 @@
 class Errcheck < Formula
   desc "Finds silently ignored errors in Go code"
   homepage "https://github.com/kisielk/errcheck"
-  url "https://github.com/kisielk/errcheck/archive/refs/tags/v1.10.0.tar.gz"
-  sha256 "703cb23f19976fc71dbbbd599da1788f686db6719bd07e71bc76476b705c09de"
+  url "https://github.com/kisielk/errcheck/archive/refs/tags/v1.20.0.tar.gz"
+  sha256 "d16b7757bf57dea5bbcfce42badd1bbfadd4c112b2da90b4ccaeb81c6c438c1e"
   license "MIT"
 
   bottle do
