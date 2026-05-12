@@ -31,7 +31,7 @@ class Burp < Formula
   depends_on "pkgconf" => :build
   depends_on "uthash" => :build
   depends_on "librsync"
-  depends_on "openssl@3"
+  depends_on "openssl@4"
 
   uses_from_macos "libxcrypt"
   uses_from_macos "ncurses"
