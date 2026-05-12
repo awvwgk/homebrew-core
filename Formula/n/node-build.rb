@@ -15,7 +15,7 @@ class NodeBuild < Formula
   no_autobump! because: :bumped_by_upstream
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "9e0c0e498346d923c03796add1b07aa8462e7a27f46d5e59be81d4957e42e3b1"
+    sha256 cellar: :any_skip_relocation, all: "1d404e0aff0353749eb33b395630f155867116f1f8ada4c2e2dcea67c63efba0"
   end
 
   depends_on "autoconf"
