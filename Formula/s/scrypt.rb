@@ -23,7 +23,7 @@ class Scrypt < Formula
     depends_on "automake" => :build
   end
 
-  depends_on "openssl@3"
+  depends_on "openssl@4"
 
   def install
     system "autoreconf", "--force", "--install", "--verbose" if build.head?
