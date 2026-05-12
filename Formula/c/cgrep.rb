@@ -1,8 +1,8 @@
 class Cgrep < Formula
   desc "Context-aware grep for source code"
   homepage "https://awgn.github.io/cgrep/"
-  url "https://hackage.haskell.org/package/cgrep-9.2.1/cgrep-9.2.1.tar.gz"
-  sha256 "066379b1d742595aad680e32acf1b950443c1891a05e0e64336f448044eefa57"
+  url "https://hackage.haskell.org/package/cgrep-9.2.2/cgrep-9.2.2.tar.gz"
+  sha256 "2b56d6254147d530befa78164b426b26bacbfa9b69966d70229f1124afda7b6a"
   license "GPL-2.0-or-later"
   head "https://github.com/awgn/cgrep.git", branch: "master"
 
