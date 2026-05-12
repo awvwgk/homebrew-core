@@ -7,7 +7,7 @@ class Buku < Formula
   url "https://github.com/jarun/buku/archive/refs/tags/v5.1.tar.gz"
   sha256 "0f1a3e15f882fe9a0f8e550abae7388d3cb81d4718a1b4309dcf4363633cb7b1"
   license "GPL-3.0-or-later"
-  revision 4
+  revision 5
   head "https://github.com/jarun/buku.git", branch: "master"
 
   livecheck do
@@ -73,8 +73,8 @@ class Buku < Formula
   end
 
   resource "flask-admin" do
-    url "https://files.pythonhosted.org/packages/eb/0a/da941c07fd938d1d1d3026e0f01fd6b89a1ad3e69fefd45fc97a3589a8f9/flask_admin-2.1.0.tar.gz"
-    sha256 "d88c26de71f548b589dd956996844eb348212dda4e8a9b7178ae1f6fdf387459"
+    url "https://files.pythonhosted.org/packages/61/08/63770603ea3184782d6996455dcf9520893db58e9bd9f3e346b52d91fcea/flask_admin-2.2.0.tar.gz"
+    sha256 "4a5b844789c10076da89320563600a7addf781e73ab315ae800521b3ec018509"
   end
 
   resource "flask-paginate" do
@@ -170,8 +170,8 @@ class Buku < Formula
   end
 
   resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/c7/24/5f1b3bdffd70275f6661c76461e25f024d5a38a46f04aaca912426a2b1d3/urllib3-2.6.3.tar.gz"
-    sha256 "1b62b6884944a57dbe321509ab94fd4d3b307075e0c2eae991ac71ee15ad38ed"
+    url "https://files.pythonhosted.org/packages/53/0c/06f8b233b8fd13b9e5ee11424ef85419ba0d8ba0b3138bf360be2ff56953/urllib3-2.7.0.tar.gz"
+    sha256 "231e0ec3b63ceb14667c67be60f2f2c40a518cb38b03af60abc813da26505f4c"
   end
 
   resource "webencodings" do
