@@ -1,18 +1,18 @@
 class Tinyice < Formula
   desc "Modern, all-in-one Icecast-compatible audio/video streaming server"
   homepage "https://github.com/DatanoiseTV/tinyice"
-  url "https://github.com/DatanoiseTV/tinyice/archive/refs/tags/v2.1.0.tar.gz"
-  sha256 "e89de5581f9d57b9fc05d4f49872fb5cf1c1cb95ef40b0e07f82ed3ff2b38bac"
+  url "https://github.com/DatanoiseTV/tinyice/archive/refs/tags/v2.5.0.tar.gz"
+  sha256 "65faf312975b6f7bcb4e929bc00ee6826cae9d54088a99b63ffa9268a730b54a"
   license "Apache-2.0"
   head "https://github.com/DatanoiseTV/tinyice.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "2305d0b7cad8fd9b8aebab97b1c27a7eb0e971756fe73bd3244e4e74fda5e896"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "2305d0b7cad8fd9b8aebab97b1c27a7eb0e971756fe73bd3244e4e74fda5e896"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "2305d0b7cad8fd9b8aebab97b1c27a7eb0e971756fe73bd3244e4e74fda5e896"
-    sha256 cellar: :any_skip_relocation, sonoma:        "a676e0d4ea0ac68c580d842646c61d9124ba5b9940bbdbfcb171dd5267479a52"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "78bb1a46750874db0682c5dfb946b3454ba6457b6b2e916a82dcd31ea05e3548"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "4da58ee00729ea67deddea2a89af67c1dbe4fab2b1cfa27b60746acdca2d71ef"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "ed82fafac45f77a63c64c9caa4f9e85cc1c05eed43c75f3604480d3c5d9c5bd4"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "ed82fafac45f77a63c64c9caa4f9e85cc1c05eed43c75f3604480d3c5d9c5bd4"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "ed82fafac45f77a63c64c9caa4f9e85cc1c05eed43c75f3604480d3c5d9c5bd4"
+    sha256 cellar: :any_skip_relocation, sonoma:        "9aba594ba129f61484f10b27107778e33e1516a718206cf16946e8adcbb3331a"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "c4d77931138516d9b0d922daff9ab2745ed6dab9db3b4eb4f90de85dd20a5262"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "16ff330eeaa0d230f0a6242e88533324ba5435545d4cde4f405b2314c86f6393"
   end
 
   depends_on "go" => :build
