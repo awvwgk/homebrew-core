@@ -7,12 +7,12 @@ class Algolia < Formula
   head "https://github.com/algolia/cli.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "aaba30a3098f59a267f81e5aaa5ad4968ee8cb728dd0ab4f454bba4aee433293"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "aaba30a3098f59a267f81e5aaa5ad4968ee8cb728dd0ab4f454bba4aee433293"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "aaba30a3098f59a267f81e5aaa5ad4968ee8cb728dd0ab4f454bba4aee433293"
-    sha256 cellar: :any_skip_relocation, sonoma:        "36d636373e422836119046851b658718435e66a7742227fab7d8c2ed9fb0b9dd"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "354c761cfcad40bc39d82e075a161c02d24695f086bedf3d2cc628ceb8d045b5"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a0ee48c7d47c573ce1c78c3eccb1cdc70c6b8f5b677882be089a69cf1f811ca4"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "8eb4f3aa9138008a9e9b48871e05998cf132c8294f5ed05c2eb4d3040313e1a9"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "8eb4f3aa9138008a9e9b48871e05998cf132c8294f5ed05c2eb4d3040313e1a9"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "8eb4f3aa9138008a9e9b48871e05998cf132c8294f5ed05c2eb4d3040313e1a9"
+    sha256 cellar: :any_skip_relocation, sonoma:        "c441039cee6eba5412ee890b1ae98a819664da5ac4d34459a2945a5575b1ce9f"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "7d58b228c8902843456bd29920b33b72923de1ff8f1db2d92a683700efcd0d7d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "b2200ccc55b088dea2ab0aa39e9b2408098ce32ffecb72f767b611521fa57f61"
   end
 
   depends_on "go" => :build
