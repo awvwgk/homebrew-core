@@ -20,7 +20,7 @@ class Scamper < Formula
   end
 
   depends_on "pkgconf" => :build
-  depends_on "openssl@3"
+  depends_on "openssl@4"
   depends_on "xz" # for LZMA
 
   on_linux do
