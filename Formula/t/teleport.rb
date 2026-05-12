@@ -4,6 +4,7 @@ class Teleport < Formula
   url "https://github.com/gravitational/teleport/archive/refs/tags/v18.8.0.tar.gz"
   sha256 "13a09c342f2dccdc615471ff0f9be86149f96883662ac3bd685cb2115243068c"
   license all_of: ["AGPL-3.0-or-later", "Apache-2.0"]
+  revision 1
   head "https://github.com/gravitational/teleport.git", branch: "master"
 
   # As of writing, two major versions of `teleport` are being maintained
@@ -18,12 +19,12 @@ class Teleport < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "f9748ed0d188e32e9329256a434266a89ec993b9f3c19b155815e13261701bd5"
-    sha256 cellar: :any,                 arm64_sequoia: "df4c38d34a915de5b955a567b5cd8308bc9bd0313f731102d98b7b24986d6c11"
-    sha256 cellar: :any,                 arm64_sonoma:  "7f39eed56893019b2ddcfb02bbd7acfdc44ff7b48de4066149dc33f1f44a91df"
-    sha256 cellar: :any,                 sonoma:        "24af4fbf4e20ec53cc48184ba06f05b8e3e0fe9bbab04316af8773cd1b648273"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "c67421ec8b392de8dc43f341996372e523824938faed2f59527aefc71ccf753d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "3769db5d1fc52e077f6deacb2adf7eb50ef2856d78abb4da4205521e748f0116"
+    sha256 cellar: :any,                 arm64_tahoe:   "dbcb033d375cb02ee7bb3495dec409c965aa64ee758f90b987b6c67b63b395a8"
+    sha256 cellar: :any,                 arm64_sequoia: "0d51cf2421068405ef5d397f83b8b8af4865fa81c790fbabb953f2a9d8dafbcc"
+    sha256 cellar: :any,                 arm64_sonoma:  "359737a39b768f305056d21f3c3965ea3006e384c25754a794a7c864c289acac"
+    sha256 cellar: :any,                 sonoma:        "73fdf52371a91e42e42dcff0ec583b77edae08790457ca972b20e443acb382ba"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "031bf110e351fb89affd094fb0a0e2c8f6765436a74e1aceb20f6b0ba555fa1b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "07220b321a0faf8c54c3d1c91f37b4b76893cf4c151730c947a2b13d970b0c2b"
   end
 
   depends_on "binaryen" => :build
@@ -35,9 +36,6 @@ class Teleport < Formula
   # TODO: try to remove rustup dependancy, see https://github.com/Homebrew/homebrew-core/pull/191633#discussion_r1774378671
   depends_on "rustup" => :build
   depends_on "libfido2"
-  depends_on "openssl@3"
-
-  uses_from_macos "zip"
 
   conflicts_with "etsh", because: "both install `tsh` binaries"
   conflicts_with "tctl", because: "both install `tctl` binaries"
@@ -55,9 +53,6 @@ class Teleport < Formula
       regex(/name\s*=\s*"wasm-bindgen".*?version\s*=\s*["'](\d+(?:\.\d+)+)["']/im)
     end
   end
-
-  # disable `wasm-opt` for ironrdp pkg release build, upstream pr ref, https://github.com/gravitational/teleport/pull/50178
-  patch :DATA
 
   def install
     # Workaround to avoid patchelf corruption when cgo is required
@@ -78,9 +73,10 @@ class Teleport < Formula
     resource("wasm-bindgen").stage do
       system "cargo", "install", *std_cargo_args(path: "crates/cli", root: buildpath)
     end
+    ENV.prepend_path "PATH", buildpath/"bin"
 
-    # Replace wasm-bindgen binary call to the built one
-    inreplace "Makefile", "wasm-bindgen target", buildpath/"bin/wasm-bindgen target"
+    # Reduce overlinking with OpenSSL
+    ENV.append "CGO_LDFLAGS", "-Wl,-dead_strip_dylibs" if OS.mac?
 
     # Workaround for error: The CPU Jitter random number generator must not be compiled with optimizations.
     # Issue ref: https://github.com/aws/aws-lc-rs/issues/1097
@@ -115,18 +111,3 @@ class Teleport < Formula
     assert_match(/Version:\s*#{version}/, status)
   end
 end
-
-__END__
-diff --git a/web/packages/shared/libs/ironrdp/Cargo.toml b/web/packages/shared/libs/ironrdp/Cargo.toml
-index ddcc4db..913691f 100644
---- a/web/packages/shared/libs/ironrdp/Cargo.toml
-+++ b/web/packages/shared/libs/ironrdp/Cargo.toml
-@@ -7,6 +7,9 @@ publish.workspace = true
- 
- # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
- 
-+[package.metadata.wasm-pack.profile.release]
-+wasm-opt = false
-+
- [lib]
- crate-type = ["cdylib"]
