@@ -1,8 +1,8 @@
 class Proto < Formula
   desc "Pluggable multi-language version manager"
   homepage "https://moonrepo.dev/proto"
-  url "https://github.com/moonrepo/proto/archive/refs/tags/v0.56.4.tar.gz"
-  sha256 "e88f952f54bd14b9aec54d68a818e2206fbf52925dd1daf65302532b1c619585"
+  url "https://github.com/moonrepo/proto/archive/refs/tags/v0.57.0.tar.gz"
+  sha256 "61009f6da360159eea4757c828f5615000ec7cb3f551bb59935b3c4dfc0a697a"
   license "MIT"
   head "https://github.com/moonrepo/proto.git", branch: "master"
 
@@ -55,13 +55,14 @@ class Proto < Formula
   end
 
   test do
-    system bin/"proto", "install", "node", "19.0.1"
+    node_version = "24.15.0"
+    system bin/"proto", "install", "node", node_version
     node = shell_output("#{bin}/proto bin node").chomp
-    assert_match "19.0.1", shell_output("#{node} --version")
+    assert_match node_version, shell_output("#{node} --version")
 
-    path = testpath/"test.js"
-    path.write "console.log('hello');"
-    output = shell_output("#{testpath}/.proto/shims/node #{path}").strip
-    assert_equal "hello", output
+    (testpath/"test.js").write <<~JS
+      console.log('hello');
+    JS
+    assert_equal "hello", shell_output("#{node} #{testpath}/test.js").chomp
   end
 end
