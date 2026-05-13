@@ -1,8 +1,8 @@
 class CloudflareSpeedCli < Formula
   desc "Cloudflare-based speed test with optional TUI"
   homepage "https://github.com/kavehtehrani/cloudflare-speed-cli"
-  url "https://github.com/kavehtehrani/cloudflare-speed-cli/archive/refs/tags/v0.6.8.tar.gz"
-  sha256 "a4aec800e6fb9991b2e69b20c06d6703e3706b4fcf6ce60e9fa1e4ed64c815ed"
+  url "https://github.com/kavehtehrani/cloudflare-speed-cli/archive/refs/tags/v0.6.10.tar.gz"
+  sha256 "c961c5731f5ea56815d7d264a61b3b84a01aecc691c4b21f25344f6f131ad10f"
   license "GPL-3.0-only"
   head "https://github.com/kavehtehrani/cloudflare-speed-cli.git", branch: "main"
 
