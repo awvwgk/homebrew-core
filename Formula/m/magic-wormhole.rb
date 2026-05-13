@@ -6,6 +6,7 @@ class MagicWormhole < Formula
   url "https://files.pythonhosted.org/packages/d7/8c/964308aeed7b828ca726da4bbfcc8f2bc89713b39ba768e24ce6331b30f3/magic_wormhole-0.24.0.tar.gz"
   sha256 "c01b4815878e5fbcad7a22cfa190c529349bf271164189a0ad955a34a8d4cde0"
   license "MIT"
+  revision 1
   head "https://github.com/magic-wormhole/magic-wormhole.git", branch: "master"
 
   bottle do
@@ -67,8 +68,8 @@ class MagicWormhole < Formula
   end
 
   resource "idna" do
-    url "https://files.pythonhosted.org/packages/ce/cc/762dfb036166873f0059f3b7de4565e1b5bc3d6f28a414c13da27e442f99/idna-3.13.tar.gz"
-    sha256 "585ea8fe5d69b9181ec1afba340451fba6ba764af97026f92a91d4eef164a242"
+    url "https://files.pythonhosted.org/packages/05/b1/efac073e0c297ecf2fb33c346989a529d4e19164f1759102dee5953ee17e/idna-3.14.tar.gz"
+    sha256 "466d810d7a2cc1022bea9b037c39728d51ae7dad40d480fc9b7d7ecf98ba8ee3"
   end
 
   resource "incremental" do
@@ -137,8 +138,8 @@ class MagicWormhole < Formula
   end
 
   resource "twisted" do
-    url "https://files.pythonhosted.org/packages/13/0f/82716ed849bf7ea4984c21385597c949944f0f9b428b5710f79d0afc084d/twisted-25.5.0.tar.gz"
-    sha256 "1deb272358cb6be1e3e8fc6f9c8b36f78eb0fa7c2233d2dbe11ec6fee04ea316"
+    url "https://files.pythonhosted.org/packages/db/97/6e9beb1e78247ae6dc34114f27d538cf2cb183c4afcd3609dfdf2b0439c8/twisted-26.4.0.tar.gz"
+    sha256 "dbfd0fe1ee409d0243fdd7a6a6ff14f4948cec1fd78e0376291f805e1501fae9"
   end
 
   resource "txaio" do
@@ -157,8 +158,8 @@ class MagicWormhole < Formula
   end
 
   resource "ujson" do
-    url "https://files.pythonhosted.org/packages/cb/3e/c35530c5ffc25b71c59ae0cd7b8f99df37313daa162ce1e2f7925f7c2877/ujson-5.12.0.tar.gz"
-    sha256 "14b2e1eb528d77bc0f4c5bd1a7ebc05e02b5b41beefb7e8567c9675b8b13bcf4"
+    url "https://files.pythonhosted.org/packages/bc/78/937198ea8708182dd1edbf0237bf255a96feab3f511691ad08b84da98e5d/ujson-5.12.1.tar.gz"
+    sha256 "5b7e96406c301a1366534479a7352ec40ec68bb327c0c119091635acd5925e35"
   end
 
   resource "zipstream-ng" do
