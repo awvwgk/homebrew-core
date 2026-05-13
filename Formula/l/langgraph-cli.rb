@@ -3,8 +3,8 @@ class LanggraphCli < Formula
 
   desc "Command-line interface for deploying apps to the LangGraph platform"
   homepage "https://www.github.com/langchain-ai/langgraph"
-  url "https://files.pythonhosted.org/packages/f8/b7/e8d1d52b757ef60acd50d5d042ca1c2e257e682d811ef863a03bf6d7e65e/langgraph_cli-0.4.25.tar.gz"
-  sha256 "58c8d642fda58426bbb3dc97bc267b292d020ba83415e9cbbfd1ab0288155351"
+  url "https://files.pythonhosted.org/packages/5d/94/6864c94fcc998d7b72f60a4166222f003483426446a10979c0215220dd65/langgraph_cli-0.4.26.tar.gz"
+  sha256 "d81867e45bc198f4c61a4064e8f347aba9e6ffa256db387d8daae594c59bf0f6"
   license "MIT"
 
   bottle do
@@ -49,8 +49,8 @@ class LanggraphCli < Formula
   end
 
   resource "idna" do
-    url "https://files.pythonhosted.org/packages/ce/cc/762dfb036166873f0059f3b7de4565e1b5bc3d6f28a414c13da27e442f99/idna-3.13.tar.gz"
-    sha256 "585ea8fe5d69b9181ec1afba340451fba6ba764af97026f92a91d4eef164a242"
+    url "https://files.pythonhosted.org/packages/05/b1/efac073e0c297ecf2fb33c346989a529d4e19164f1759102dee5953ee17e/idna-3.14.tar.gz"
+    sha256 "466d810d7a2cc1022bea9b037c39728d51ae7dad40d480fc9b7d7ecf98ba8ee3"
   end
 
   resource "langgraph-sdk" do
