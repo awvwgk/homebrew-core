@@ -3,8 +3,8 @@ class SnowflakeCli < Formula
 
   desc "CLI for snowflake"
   homepage "https://docs.snowflake.com/developer-guide/snowflake-cli/index"
-  url "https://files.pythonhosted.org/packages/ee/f3/9a7a01955d44a93672af4ba0f7ec87f397229155c008b0be0fab4ef386a1/snowflake_cli-3.17.0.tar.gz"
-  sha256 "1a078c061dfcaa29f484a5bf8675f6e7e73a4ed4453b718c422253f0b6212b19"
+  url "https://files.pythonhosted.org/packages/43/cd/29c582105d11a3014cd74bf5856bb8a100aadb6b5fd9e0224f1a061ba532/snowflake_cli-3.17.1.tar.gz"
+  sha256 "48db42dc176b20ce0c9c26ec636a03e7ab39f1770431558b4c88fc4fc1d31f9a"
   license "Apache-2.0"
   head "https://github.com/snowflakedb/snowflake-cli.git", branch: "main"
 
@@ -80,8 +80,8 @@ class SnowflakeCli < Formula
   end
 
   resource "idna" do
-    url "https://files.pythonhosted.org/packages/05/b1/efac073e0c297ecf2fb33c346989a529d4e19164f1759102dee5953ee17e/idna-3.14.tar.gz"
-    sha256 "466d810d7a2cc1022bea9b037c39728d51ae7dad40d480fc9b7d7ecf98ba8ee3"
+    url "https://files.pythonhosted.org/packages/82/77/7b3966d0b9d1d31a36ddf1746926a11dface89a83409bf1483f0237aa758/idna-3.15.tar.gz"
+    sha256 "ca962446ea538f7092a95e057da437618e886f4d349216d2b1e294abfdb65fdc"
   end
 
   resource "jaraco-classes" do
