@@ -9,12 +9,12 @@ class Dnstwist < Formula
   revision 9
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "549bcb232718dd856e74031dce803c3112fded744134666c529dfa42b738d723"
-    sha256 cellar: :any,                 arm64_sequoia: "b24f4296a0fb585b8a2d83195f9a5a74194baad3cf9522682917e2f842d8fc16"
-    sha256 cellar: :any,                 arm64_sonoma:  "0eee18eef5783fa0472406fd362aba680fb92a1e176da2155da0b309759584b8"
-    sha256 cellar: :any,                 sonoma:        "4009f982ab84ee59eda8fa833e212cb6891b853fbd7469bb3490f2111a230986"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "62f4ccdb88c0965c672a3053fe222e6d875785de251ef6ebc7ee4f88c4f6c755"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "df4d10a7d40c7507198779cfffd1effa6a98e34a061949f39b0af20f55f8e922"
+    sha256 cellar: :any,                 arm64_tahoe:   "f53b21a0b13a7619f79a5937e72952ad82e8dc9780444083a69e5c63a17fa341"
+    sha256 cellar: :any,                 arm64_sequoia: "04a4a288bd1b3aed8c774de3cc1403908828241c04b2366b918ec033df4ce01c"
+    sha256 cellar: :any,                 arm64_sonoma:  "abd93f6db4d34ad0d8e022fe4650c9bb5fdcf35e5652da2257ebd69f49dbdacf"
+    sha256 cellar: :any,                 sonoma:        "ecd2b6b3428e24cedf5704e07cd71c5a887a2553e21a60ade22837847e238687"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "ebcc89dff82e796aff51cf69d2aae723a1b3e4f77d3caa09ccaed2f467c86e6e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "70c1fa47798ba71ecf8783d5529cc8549a8a6cde0cdcc77c9871417cd9a21163"
   end
 
   depends_on "rust" => :build # for geoip2, uv-backend
