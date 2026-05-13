@@ -1,10 +1,19 @@
 class Pkgx < Formula
   desc "Standalone binary that can run anything"
   homepage "https://pkgx.sh"
-  url "https://github.com/pkgxdev/pkgx/archive/refs/tags/v2.10.3.tar.gz"
-  sha256 "6df90a10139006a9ab36102b1e4394a2a6741120b197d1e84da7ec3b9f211b95"
   license "Apache-2.0"
   head "https://github.com/pkgxdev/pkgx.git", branch: "main"
+
+  stable do
+    url "https://github.com/pkgxdev/pkgx/archive/refs/tags/v2.10.3.tar.gz"
+    sha256 "6df90a10139006a9ab36102b1e4394a2a6741120b197d1e84da7ec3b9f211b95"
+
+    # Backport openssl-sys update needed to build with OpenSSL 4
+    patch do
+      url "https://github.com/pkgxdev/pkgx/commit/ec8315d84a89b4130c83171e6405c6e8d6694ab9.patch?full_index=1"
+      sha256 "aeb26601c94ac781e4d943d31e2dd8785afcd3d84ae203f791c1d0636c83d1c7"
+    end
+  end
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_tahoe:   "6f1ad62d8baef97a5719648f8474d104c766b5a302dd851d2c60fcd4a617d006"
@@ -15,12 +24,19 @@ class Pkgx < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "ec9e6613fb9d4197d862897c369189597579a1845358f57a0728a98d83ad6601"
   end
 
+  depends_on "pkgconf" => :build
   depends_on "rust" => :build
-  depends_on "openssl@3"
+
+  uses_from_macos "sqlite"
+
+  on_linux do
+    depends_on "openssl@4" => :build
+  end
 
   def install
+    ENV["LIBSQLITE3_SYS_USE_PKG_CONFIG"] = "1"
     # Ensure that the `openssl` crate picks up the intended library.
-    ENV["OPENSSL_DIR"] = Formula["openssl@3"].opt_prefix
+    ENV["OPENSSL_DIR"] = Formula["openssl@4"].opt_prefix if OS.linux?
 
     system "cargo", "install", *std_cargo_args(path: "crates/cli")
   end
