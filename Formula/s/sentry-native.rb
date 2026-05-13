@@ -1,8 +1,8 @@
 class SentryNative < Formula
   desc "Sentry SDK for C, C++ and native applications"
   homepage "https://docs.sentry.io/platforms/native/"
-  url "https://github.com/getsentry/sentry-native/archive/refs/tags/0.14.0.tar.gz"
-  sha256 "e5989a48c0d6e447899c0b42984b8a08ffad4c8e4dbd5eda30d8d79ae6f33cdf"
+  url "https://github.com/getsentry/sentry-native/archive/refs/tags/0.14.1.tar.gz"
+  sha256 "71dabc4d0d5985fecedd64eeb808a77d4c67bd48926b6e9b65efdf9038000bcc"
   license "MIT"
 
   bottle do
@@ -30,8 +30,8 @@ class SentryNative < Formula
 
   # No recent tagged releases, use the latest commit
   resource "crashpad" do
-    url "https://github.com/getsentry/crashpad/archive/17b7aca1634f1a91018f1bba13f7941a2892e864.tar.gz"
-    sha256 "721d952b20da8d79a0306f7db9ac4166d34db4b028bcda665ab19b8582ec4b1b"
+    url "https://github.com/getsentry/crashpad/archive/ff141a8c0cc852f9c3d42e13bd9ada551351bc21.tar.gz"
+    sha256 "007b7d57e8dbb8665ddc524350f1c50ea646dcdc55b6278bb6a1a18e206754db"
   end
 
   resource "crashpad/third_party/mini_chromium/mini_chromium" do
