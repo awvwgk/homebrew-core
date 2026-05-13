@@ -6,12 +6,12 @@ class Libre < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "c4849b9398137a10a5ba3ffab29c7a1a6223b84c62defb5443cf2a308082abe9"
-    sha256 cellar: :any,                 arm64_sequoia: "44e0e7858b06c671ce7cf7efbb1c73cea6aaf0dff14a370ba444bf74d6505de7"
-    sha256 cellar: :any,                 arm64_sonoma:  "e21769e6c8a9d9b692ddca7e38dcfaf0400817fa5cb37ee12a558d818be53c6f"
-    sha256 cellar: :any,                 sonoma:        "4220322ee8a3a529a3087ea818db393a3ea0e164a02b6848f998a10fea1a0271"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "07efd22a55d3ab0502375dec2d1e4c634d71b45a09e154a0015e1419111ddac7"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "dbb565a5be6533757165374d5172aa8cdc168a7a6bfbd31464dafe5117700432"
+    sha256 cellar: :any,                 arm64_tahoe:   "4995dbd7a5b947718256e2cb4584f0416bd39bb9ef1ec61c59c482c0eeddf971"
+    sha256 cellar: :any,                 arm64_sequoia: "e99828155842f00e960a97fd61b6097ac14d7de1ca10b9b1ee1b89341cc9a4f1"
+    sha256 cellar: :any,                 arm64_sonoma:  "04e15dfadb2245e9965a878fb363146ab0389b9c1651047c3124d69b221d017e"
+    sha256 cellar: :any,                 sonoma:        "fe0c09a2e38e486459ac3e0ca361aff367149b63a29e9c4ae271499e360e7634"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "0e7379ab08c492a08f86fa4bd1ed24badfc7ea5f4d6c5add523eda72e1e11371"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "c4d480bc6a607a48b9dbfca3208b13bd8726f05e531027f02d2616e54d3dca32"
   end
 
   depends_on "cmake" => :build
