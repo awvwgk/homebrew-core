@@ -1,8 +1,8 @@
 class Xk6 < Formula
   desc "Build k6 with extensions"
   homepage "https://k6.io"
-  url "https://github.com/grafana/xk6/archive/refs/tags/v1.4.1.tar.gz"
-  sha256 "b5a2f550c8b97623c567a46ad04728f379db4b7d0b00763cbf0ec7b4cade388e"
+  url "https://github.com/grafana/xk6/archive/refs/tags/v1.4.2.tar.gz"
+  sha256 "ec027726aa6859a138402d76ae4270a54eaec76f76fb4c3c44a3c83111957339"
   license "Apache-2.0"
   head "https://github.com/grafana/xk6.git", branch: "master"
 
