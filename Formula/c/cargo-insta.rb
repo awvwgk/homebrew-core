@@ -5,6 +5,15 @@ class CargoInsta < Formula
   sha256 "487c7348fc8865fd3218c4252f2603238af1b6ae3501fe51577fb5abd4fe5323"
   license "Apache-2.0"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "f011c92e70e9f1f7517c67ae3476b57afa3d95571462868eb61e863092299380"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "703b943e5a9c46aa55e47b406a31d2b3962f1b2c9ab5ba4dd329e0a724d74165"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "83cedafd07e5d36b24f2691913c6fe41985e60202440033fb9e2c07b5979b3e0"
+    sha256 cellar: :any_skip_relocation, sonoma:        "8a6664d076b94b6ae0f21949db218e377c8bf2872b4f5a516d705cf07bcf3118"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "69d6002f03be6c565732ad355c2eda8348212e72a7f7f1931d4834a7fadf1486"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "06d76b025860494437510db2d2e51b37b626bbc3858fffc325c4b55bad468d22"
+  end
+
   depends_on "rust" => :build
   depends_on "rustup" => :test
 
