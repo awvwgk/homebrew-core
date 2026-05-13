@@ -7,20 +7,13 @@ class Pulledpork < Formula
   head "https://github.com/shirkdog/pulledpork.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:    "6cc19983e6d8418de919dfefbd48de58655b16751cbf82a0a37814d819072d62"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:  "521630afa230a7c06cec0e42ff50663ceb86232c24780d3f26b414a05ce539ea"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "73420470b3baa100fcd93013911028bf923cb110e9ef7a76d5aa3bce5700dd60"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "c426bbb74ebe2d71cdcc359b5b627d3cee771138be816e22aafcf9bacab773e2"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "c426bbb74ebe2d71cdcc359b5b627d3cee771138be816e22aafcf9bacab773e2"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "9d356a368ba34f3ebabf869b9edf2038d962b7cdd661be3317e3b3b68b825c03"
-    sha256 cellar: :any_skip_relocation, sonoma:         "ca02edd3b3c9f8520ffb30a7cfec1f73e07dc18c7a85fa769534ce304afb9979"
-    sha256 cellar: :any_skip_relocation, ventura:        "9ac992cb245188689c716615660393ff8904ed48b56ddf5d5b36df147274480c"
-    sha256 cellar: :any_skip_relocation, monterey:       "9ac992cb245188689c716615660393ff8904ed48b56ddf5d5b36df147274480c"
-    sha256 cellar: :any_skip_relocation, big_sur:        "ef9c66506c6ac34967fbc3c9bf48ecfc2946814a2dccb3e1fb53f1212e7a3bb1"
-    sha256 cellar: :any_skip_relocation, catalina:       "deaaf558752aa6c864008dbf4cd058850d4206f5e97b50bc6e1f5b2706694fa5"
-    sha256 cellar: :any_skip_relocation, arm64_linux:    "4e4bc594fcded62faba1a9dbc1003b161d8eca7007a19245833d888010d17026"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f925daf30d6bdfa68a3d8ebf2e2d0fef9a069aa14cd6d45c2b1e41b72665acdd"
+    rebuild 2
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "c9b5ab56a40129359db878c82837e328f538a1ef9f6db6d7269a1b279bdccb47"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "c9b5ab56a40129359db878c82837e328f538a1ef9f6db6d7269a1b279bdccb47"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "c9b5ab56a40129359db878c82837e328f538a1ef9f6db6d7269a1b279bdccb47"
+    sha256 cellar: :any_skip_relocation, sonoma:        "23655c1d44460a5b377d2162d7d5516bced7de1ebf83e61cfa9d1bfdc2a79fa8"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "df56b23016f75b71f8b064e0cf205087c6ce4b9c8dbcba306a02253ba873ed81"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "1dc454931a54f5f68d256b1f2aea3cac1fe5fba3ed46661ff71a8184ff684a72"
   end
 
   uses_from_macos "perl"
