@@ -1,8 +1,8 @@
 class Roll < Formula
   desc "CLI program for rolling a dice sequence"
   homepage "https://matteocorti.github.io/roll/"
-  url "https://github.com/matteocorti/roll/releases/download/v2.6.1/roll-2.6.1.tar.gz"
-  sha256 "399bd4958d92f82fb75ff308decb2d482c9a8db80234014f6d42f6513b144179"
+  url "https://github.com/matteocorti/roll/releases/download/v2.7.0/roll-2.7.0.tar.gz"
+  sha256 "9e116501aaa0c8f954d31a86e8cf6dee5d98ee35a5e8e5b025646c4bee741533"
   license "GPL-2.0-or-later"
 
   bottle do
@@ -25,6 +25,10 @@ class Roll < Formula
     url "https://github.com/matteocorti/roll.git", branch: "master"
     depends_on "autoconf" => :build
     depends_on "automake" => :build
+  end
+
+  on_macos do
+    depends_on "pkgconf" => :build
   end
 
   def install
