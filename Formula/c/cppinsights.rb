@@ -1,10 +1,9 @@
 class Cppinsights < Formula
   desc "See your source code with the eyes of a compiler"
   homepage "https://cppinsights.io/"
-  url "https://github.com/andreasfertig/cppinsights/archive/refs/tags/v_20.1.tar.gz"
-  sha256 "672ecc237bc0231510025c9662c0f4880feebb076af46d16840adfb16e8fc4e8"
+  url "https://github.com/andreasfertig/cppinsights/archive/refs/tags/v_21.1.tar.gz"
+  sha256 "205361d9a19e78a7bfe62b673fc1f86e41af6f6bae37a427c2be2e2444171ff2"
   license "MIT"
-  revision 1
 
   bottle do
     sha256 cellar: :any,                 arm64_tahoe:   "d5c9c97206cb629ff2c8cf50b1887e49ef2e0e8609e26be97303e9b207059c4b"
@@ -18,26 +17,16 @@ class Cppinsights < Formula
   end
 
   depends_on "cmake" => :build
-  depends_on "llvm@20"
+  depends_on "llvm@21"
 
-  # TODO: Restore compiler selection when using unversioned `llvm`
-  # fails_with :clang do
-  #   build 1500
-  #   cause "Requires Clang > 15.0"
-  # end
+  fails_with :clang do
+    build 1500
+    cause "Requires Clang > 15.0"
+  end
 
   def install
-    llvm = Formula["llvm@20"]
-
-    # TODO: Remove following when using unversioned `llvm`
-    if OS.mac? && DevelopmentTools.clang_build_version <= 1500
-      ENV["CC"] = llvm.opt_bin/"clang"
-      ENV["CXX"] = llvm.opt_bin/"clang++"
-      inreplace "CMakeLists.txt", "add_definitions(-Werror)", ""
-    end
-
     args = %W[
-      -DINSIGHTS_LLVM_CONFIG=#{llvm.opt_bin}/llvm-config
+      -DINSIGHTS_LLVM_CONFIG=#{Formula["llvm@21"].opt_bin}/llvm-config
       -DINSIGHTS_USE_SYSTEM_INCLUDES=OFF
     ]
 
