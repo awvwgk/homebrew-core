@@ -3,10 +3,12 @@ class DvrScan < Formula
 
   desc "Extract scenes with motion from videos"
   homepage "https://www.dvr-scan.com/"
-  url "https://files.pythonhosted.org/packages/36/a0/ebc12a29cbc069d7b7ac2144372f6f219d659854b2d04e06576597ccbeff/dvr_scan-1.8.2.tar.gz"
-  sha256 "ec571e154ae845eeab9769d5c80e8b1ef007ef512a472a5269a02b6233ac2a72"
+  url "https://files.pythonhosted.org/packages/47/84/a3256473a827f0c17e3e724c409a33146a26d6515f87df38c3a649547b7d/dvr_scan-1.8.2.1.tar.gz"
+  sha256 "e424eaa8f2502a773588c97722bfe163f1317129e6e7073c25c4282bcf5f8e40"
   license "BSD-2-Clause"
   head "https://github.com/Breakthrough/DVR-Scan.git", branch: "main"
+
+  no_autobump! because: "macOS resources cannot be updated on linux CI"
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_tahoe:   "464bddf177aeb6c154631675e314162fc3e1462bc9deb38ae99ac8018a103429"
@@ -22,7 +24,7 @@ class DvrScan < Formula
   depends_on "ffmpeg"
   depends_on "numpy"
   depends_on "opencv"
-  depends_on "pillow"
+  depends_on "pillow" => :no_linkage
   depends_on "python@3.14"
 
   on_macos do
@@ -48,8 +50,8 @@ class DvrScan < Formula
   end
 
   resource "platformdirs" do
-    url "https://files.pythonhosted.org/packages/cf/86/0248f086a84f01b37aaec0fa567b397df1a119f73c16f6c7a9aac73ea309/platformdirs-4.5.1.tar.gz"
-    sha256 "61d5cdcc6065745cdd94f0f878977f8de9437be93de97c1c12f853c9c0cdcbda"
+    url "https://files.pythonhosted.org/packages/9f/4a/0883b8e3802965322523f0b200ecf33d31f10991d0401162f4b23c698b42/platformdirs-4.9.6.tar.gz"
+    sha256 "3bfa75b0ad0db84096ae777218481852c0ebc6c727b3168c1b9e0118e458cf0a"
   end
 
   resource "pyobjc-core" do
@@ -73,8 +75,8 @@ class DvrScan < Formula
   end
 
   resource "tqdm" do
-    url "https://files.pythonhosted.org/packages/a8/4b/29b4ef32e036bb34e4ab51796dd745cdba7ed47ad142a9f4a1eb8e0c744d/tqdm-4.67.1.tar.gz"
-    sha256 "f8aef9c52c08c13a65f30ea34f4e5aac3fd1a34959879d7e59e63027286627f2"
+    url "https://files.pythonhosted.org/packages/09/a9/6ba95a270c6f1fbcd8dac228323f2777d886cb206987444e4bce66338dd4/tqdm-4.67.3.tar.gz"
+    sha256 "7d825f03f89244ef73f1d4ce193cb1774a8179fd96f31d7e1dcde62092b960bb"
   end
 
   def install
