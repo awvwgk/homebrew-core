@@ -1,8 +1,8 @@
 class Cline < Formula
   desc "AI-powered coding agent for complex work"
   homepage "https://cline.bot"
-  url "https://registry.npmjs.org/cline/-/cline-2.18.0.tgz"
-  sha256 "36648f3eac29670858ed0d230d3f45dc74743c020e6d08fdfbce168a78afd99a"
+  url "https://registry.npmjs.org/cline/-/cline-3.0.0.tgz"
+  sha256 "3fc5758453a3c7d7647b08984e92676349f88708cd593232728694b349ab8dee"
   license "Apache-2.0"
 
   bottle do
@@ -19,14 +19,9 @@ class Cline < Formula
   def install
     system "npm", "install", *std_npm_args
     bin.install_symlink libexec.glob("bin/*")
-
-    # https://docs.brew.sh/Acceptable-Formulae#we-dont-like-binary-formulae
-    app_path = libexec / "lib/node_modules/cline/node_modules/app-path"
-    deuniversalize_machos(app_path / "main") if OS.mac?
   end
 
   test do
-    expected = "Not authenticated. Please run 'cline auth' first to configure your API credentials."
-    assert_match expected, shell_output("#{bin}/cline task --json --plan 'Hello World!'", 1)
+    assert_match "Unauthorized", shell_output("#{bin}/cline task --json --plan 'Hello World!'", 1)
   end
 end
