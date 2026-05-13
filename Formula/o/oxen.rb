@@ -25,18 +25,13 @@ class Oxen < Formula
   end
 
   depends_on "cmake" => :build # for libz-ng-sys
-  depends_on "pkgconf" => :build
   depends_on "rust" => :build
-  depends_on "xz"
+  depends_on "rocksdb"
 
-  uses_from_macos "bzip2"
-  uses_from_macos "llvm" # for libclang
-
-  on_linux do
-    depends_on "openssl@3"
-  end
+  uses_from_macos "llvm" => :build # for libclang
 
   def install
+    ENV["ROCKSDB_LIB_DIR"] = Formula["rocksdb"].opt_lib
     system "cargo", "install", *std_cargo_args(path: "crates/cli")
   end
 
