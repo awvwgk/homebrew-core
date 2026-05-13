@@ -1,10 +1,19 @@
 class PixiPack < Formula
   desc "Pack and unpack conda environments created with pixi"
   homepage "https://pixi.sh/latest/advanced/production_deployment/#pixi-pack"
-  url "https://github.com/quantco/pixi-pack/archive/refs/tags/v0.7.6.tar.gz"
-  sha256 "33d9c3fd58bb50c631825d18328c2eac070d1db4486fdf85f0e347b16904a944"
   license "BSD-3-Clause"
   head "https://github.com/quantco/pixi-pack.git", branch: "main"
+
+  stable do
+    url "https://github.com/quantco/pixi-pack/archive/refs/tags/v0.7.6.tar.gz"
+    sha256 "33d9c3fd58bb50c631825d18328c2eac070d1db4486fdf85f0e347b16904a944"
+
+    # Backport openssl-sys update to support OpenSSL 4
+    patch do
+      url "https://github.com/Quantco/pixi-pack/commit/531711a35df83d569ef3a76acafb27e01d12d917.patch?full_index=1"
+      sha256 "405c888e69e7eff2946cec0e425fff5d184736878a0effc61b8d9ddda8383260"
+    end
+  end
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_tahoe:   "41065e402d34bb40a6683aea5bf9a58aa534993ba0b99905d126ec7ebe9c1068"
@@ -22,10 +31,11 @@ class PixiPack < Formula
   uses_from_macos "bzip2"
 
   on_linux do
-    depends_on "openssl@3"
+    depends_on "openssl@4"
   end
 
   def install
+    ENV["OPENSSL_DIR"] = Formula["openssl@4"].opt_prefix if OS.linux?
     system "cargo", "install", *std_cargo_args
 
     generate_completions_from_executable(bin/"pixi-pack", "completion", "-s")
