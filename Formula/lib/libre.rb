@@ -4,25 +4,26 @@ class Libre < Formula
   url "https://github.com/baresip/re/archive/refs/tags/v4.8.0.tar.gz"
   sha256 "34a6061bbfbcc70f9af7e9732fd5588e4b1288a9d04ce1369c49dece46502e38"
   license "BSD-3-Clause"
+  revision 1
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "4995dbd7a5b947718256e2cb4584f0416bd39bb9ef1ec61c59c482c0eeddf971"
-    sha256 cellar: :any,                 arm64_sequoia: "e99828155842f00e960a97fd61b6097ac14d7de1ca10b9b1ee1b89341cc9a4f1"
-    sha256 cellar: :any,                 arm64_sonoma:  "04e15dfadb2245e9965a878fb363146ab0389b9c1651047c3124d69b221d017e"
-    sha256 cellar: :any,                 sonoma:        "fe0c09a2e38e486459ac3e0ca361aff367149b63a29e9c4ae271499e360e7634"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "0e7379ab08c492a08f86fa4bd1ed24badfc7ea5f4d6c5add523eda72e1e11371"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "c4d480bc6a607a48b9dbfca3208b13bd8726f05e531027f02d2616e54d3dca32"
+    sha256 cellar: :any,                 arm64_tahoe:   "16d4d005c638f6cbb34f4481c8e4d952fe868e6633465d915265cca126a481be"
+    sha256 cellar: :any,                 arm64_sequoia: "71953001f6328485ee71e6ae9fd0ff2da5307cff2392d7e477854e08e08ecd2c"
+    sha256 cellar: :any,                 arm64_sonoma:  "55a88b72ae863c98a292da62c2ed2ed6458047b3f5f8ed2bc348fd7afb1c2b7a"
+    sha256 cellar: :any,                 sonoma:        "cd2dd2c9a91e7a974818ba0ab5e59d05b0beca3a326bdd32b6c3e0c987672684"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "cc15c0506ad2a6a909acfcb00a859f880312d7af20700845bf7ec778609e9959"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "ee605805e7a8bc175adcb3015ce521c371f2a6023d75dc0fbf4669e3c2e269a9"
   end
 
   depends_on "cmake" => :build
-  depends_on "openssl@3"
+  depends_on "openssl@4"
 
   on_linux do
     depends_on "zlib-ng-compat"
   end
 
   def install
-    system "cmake", "-B", "build", *std_cmake_args
+    system "cmake", "-S", ".", "-B", "build", *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
   end
@@ -35,6 +36,7 @@ class Libre < Formula
         return libre_init();
       }
     C
-    system ENV.cc, "-I#{include}", "-I#{include}/re", "test.c", "-L#{lib}", "-lre"
+    system ENV.cc, "test.c", "-o", "test", "-I#{include}", "-I#{include}/re", "-L#{lib}", "-lre"
+    system "./test"
   end
 end
