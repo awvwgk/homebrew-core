@@ -17,14 +17,17 @@ class CodexAcp < Formula
 
   depends_on "pkgconf" => :build
   depends_on "rust" => :build
-  depends_on "openssl@3"
+
+  uses_from_macos "bzip2"
 
   on_linux do
-    depends_on "libcap"
+    depends_on "libcap" => :build
+    depends_on "openssl@4"
     depends_on "zlib-ng-compat"
   end
 
   def install
+    ENV["OPENSSL_DIR"] = Formula["openssl@4"].opt_prefix if OS.linux?
     system "cargo", "install", *std_cargo_args
   end
 
