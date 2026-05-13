@@ -27,6 +27,8 @@ class Zrepl < Formula
     (var/"log/zrepl").mkpath
     (var/"run/zrepl").mkpath
     (etc/"zrepl").mkpath
+
+    generate_completions_from_executable(bin/"zrepl", shell_parameter_format: :cobra)
   end
 
   service do
