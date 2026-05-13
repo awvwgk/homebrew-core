@@ -1,10 +1,9 @@
 class LibxmlxxAT3 < Formula
   desc "C++ wrapper for libxml"
   homepage "https://libxmlplusplus.github.io/libxmlplusplus/"
-  url "https://github.com/libxmlplusplus/libxmlplusplus/releases/download/3.2.5/libxml++-3.2.5.tar.xz"
-  sha256 "0c9b381b5a83d6b3ab4b0b865d7256dab27d575981b63be2f859edcb94da59c7"
+  url "https://github.com/libxmlplusplus/libxmlplusplus/releases/download/3.2.6/libxml++-3.2.6.tar.xz"
+  sha256 "376608a97e80e2b0ec171c2445f979d7d45c14036a74878adea98554928d4f79"
   license "LGPL-2.1-or-later"
-  revision 1
 
   livecheck do
     url :stable
@@ -26,10 +25,6 @@ class LibxmlxxAT3 < Formula
   depends_on "glibmm@2.66"
 
   uses_from_macos "libxml2"
-
-  # Fix naming clash with libxml macro.
-  # Backport of: https://github.com/libxmlplusplus/libxmlplusplus/pull/74
-  patch :DATA
 
   def install
     system "meson", "setup", "build", *std_meson_args
@@ -55,36 +50,3 @@ class LibxmlxxAT3 < Formula
     system "./test"
   end
 end
-
-__END__
-diff --git a/libxml++/parsers/textreader.cc b/libxml++/parsers/textreader.cc
-index 75a2c68..65dec5f 100644
---- a/libxml++/parsers/textreader.cc
-+++ b/libxml++/parsers/textreader.cc
-@@ -19,7 +19,7 @@ public:
-   int Int(int value);
-   bool Bool(int value);
-   char Char(int value);
--  Glib::ustring String(xmlChar* value, bool free = false);
-+  Glib::ustring String(xmlChar* value, bool should_free = false);
-   Glib::ustring String(xmlChar const* value);
- 
-   TextReader & owner_;
-@@ -403,7 +403,7 @@ char TextReader::PropertyReader::Char(int value)
-   return value;
- }
- 
--Glib::ustring TextReader::PropertyReader::String(xmlChar* value, bool free)
-+Glib::ustring TextReader::PropertyReader::String(xmlChar* value, bool should_free)
- {
-   owner_.check_for_exceptions();
- 
-@@ -412,7 +412,7 @@ Glib::ustring TextReader::PropertyReader::String(xmlChar* value, bool free)
- 
-   const Glib::ustring result = (char *)value;
- 
--  if(free)
-+  if(should_free)
-     xmlFree(value);
- 
-   return result;
