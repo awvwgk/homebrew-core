@@ -1,8 +1,8 @@
 class Gmic < Formula
   desc "Full-Featured Open-Source Framework for Image Processing"
   homepage "https://gmic.eu/"
-  url "https://gmic.eu/files/source/gmic_3.7.5.tar.gz"
-  sha256 "159d15a5b6fcd6cf1da676ef971a3fd4ebeadc8d1c009c0f9275c2af4034e5e4"
+  url "https://gmic.eu/files/source/gmic_3.7.6.tar.gz"
+  sha256 "949cf0e434bc93ab1e6e42c9a0bd5fe39684bba28a910e253048e54d68342656"
   license "CECILL-2.1"
   head "https://github.com/GreycLab/gmic.git", branch: "master"
 
@@ -42,8 +42,6 @@ class Gmic < Formula
   end
 
   def install
-    rm "src/CImg.h" if build.stable?
-
     args = %W[
       -DCMAKE_EXE_LINKER_FLAGS=-Wl,-rpath,#{rpath}
       -DENABLE_DYNAMIC_LINKING=ON
@@ -51,10 +49,7 @@ class Gmic < Formula
       -DENABLE_GRAPHICSMAGICK=OFF
       -DUSE_SYSTEM_CIMG=ON
     ]
-    if OS.mac?
-      args << "-DENABLE_X=OFF"
-      inreplace "CMakeLists.txt", "COMMAND LD_LIBRARY_PATH", "COMMAND DYLD_LIBRARY_PATH"
-    end
+    args << "-DENABLE_X=OFF" if OS.mac?
 
     system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
     system "cmake", "--build", "build"
