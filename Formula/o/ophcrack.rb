@@ -24,19 +24,19 @@ class Ophcrack < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "18e7c06d3f04cebc060e100f2b1a8c5825736fbd13047e6f1732a7e2d006235e"
   end
 
-  depends_on "openssl@3"
+  depends_on "openssl@4"
 
   uses_from_macos "expat"
 
   def install
     args = %W[
       --disable-gui
-      --with-libssl=#{Formula["openssl@3"].opt_prefix}
+      --with-libssl=#{Formula["openssl@4"].opt_prefix}
     ]
     args << "--with-libexpat=#{Formula["expat"].opt_prefix}" if OS.linux?
 
     # Help old config scripts identify arm64 linux
-    args << "--build=aarch64-unknown-linux-gnu" if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+    args << "--build=aarch64-unknown-linux-gnu" if OS.linux? && Hardware::CPU.arm64?
 
     system "./configure", *args, *std_configure_args
     system "make", "install"
