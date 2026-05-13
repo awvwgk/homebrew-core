@@ -4,6 +4,7 @@ class Libre < Formula
   url "https://github.com/baresip/re/archive/refs/tags/v4.8.0.tar.gz"
   sha256 "34a6061bbfbcc70f9af7e9732fd5588e4b1288a9d04ce1369c49dece46502e38"
   license "BSD-3-Clause"
+  revision 1
 
   bottle do
     sha256 cellar: :any,                 arm64_tahoe:   "4995dbd7a5b947718256e2cb4584f0416bd39bb9ef1ec61c59c482c0eeddf971"
@@ -15,14 +16,14 @@ class Libre < Formula
   end
 
   depends_on "cmake" => :build
-  depends_on "openssl@3"
+  depends_on "openssl@4"
 
   on_linux do
     depends_on "zlib-ng-compat"
   end
 
   def install
-    system "cmake", "-B", "build", *std_cmake_args
+    system "cmake", "-S", ".", "-B", "build", *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
   end
@@ -35,6 +36,7 @@ class Libre < Formula
         return libre_init();
       }
     C
-    system ENV.cc, "-I#{include}", "-I#{include}/re", "test.c", "-L#{lib}", "-lre"
+    system ENV.cc, "test.c", "-o", "test", "-I#{include}", "-I#{include}/re", "-L#{lib}", "-lre"
+    system "./test"
   end
 end
