@@ -1,8 +1,8 @@
 class Commitlint < Formula
   desc "Lint commit messages according to a commit convention"
   homepage "https://commitlint.js.org/#/"
-  url "https://registry.npmjs.org/commitlint/-/commitlint-21.0.0.tgz"
-  sha256 "24b8facdc853db137d2b1c4932e5db5255f09a00e93571c9363d87fda45a5b23"
+  url "https://registry.npmjs.org/commitlint/-/commitlint-21.0.1.tgz"
+  sha256 "cce5f4377da76f5b2e1608dfb8561473b7980a07f21f734d4f78b942047483d4"
   license "MIT"
 
   bottle do
