@@ -9,7 +9,7 @@ class DockerSquash < Formula
   revision 6
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "dfdbdc5187c10cdb4dff17f4012f2f97d80e6114f520dec8c0224b32f7d743bd"
+    sha256 cellar: :any_skip_relocation, all: "fa8d7cc9c909c0e657ba78be9289bf8077bc5e571e9801265b1db9e6d245b841"
   end
 
   depends_on "certifi"
