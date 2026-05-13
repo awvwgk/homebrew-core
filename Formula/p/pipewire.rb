@@ -19,8 +19,8 @@ class Pipewire < Formula
   end
 
   bottle do
-    sha256 arm64_linux:  "c8333bf08a47df846d0932074582cf4d6eed7b573b2d98964195916ed16e7d64"
-    sha256 x86_64_linux: "74e14a094619eb99c1876113c099e68105a0bf68e87501115e6124d7bb93cc77"
+    sha256 arm64_linux:  "e44d5f4c37424d3a4b6a4059c906cd88346c6d2f300168ac100ab60966556024"
+    sha256 x86_64_linux: "94ba9499dd46ba0759e7d1a98ebc4ee5371cce837e08994682e70ae73d9f6bcb"
   end
 
   depends_on "meson" => :build
