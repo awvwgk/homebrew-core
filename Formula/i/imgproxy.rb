@@ -1,9 +1,9 @@
 class Imgproxy < Formula
   desc "Fast and secure server for resizing and converting remote images"
   homepage "https://imgproxy.net"
-  url "https://github.com/imgproxy/imgproxy/archive/refs/tags/v3.31.3.tar.gz"
-  sha256 "bd01ae3f0c800ef6c7f6bcf879d919e14d98a65439c54972d8bc30c9bccce6aa"
-  license "MIT"
+  url "https://github.com/imgproxy/imgproxy/archive/refs/tags/v4.0.0.tar.gz"
+  sha256 "02190571e68cfef01d7c0714654df1042e36b5bffcfa6ce28562bdd2a2e7dc62"
+  license "Apache-2.0"
   head "https://github.com/imgproxy/imgproxy.git", branch: "master"
 
   bottle do
@@ -35,7 +35,7 @@ class Imgproxy < Formula
       ENV.append "GOFLAGS", "-buildmode=pie"
     end
 
-    system "go", "build", *std_go_args(ldflags: "-s -w")
+    system "go", "build", *std_go_args(ldflags: "-s -w"), "./cli"
   end
 
   test do
