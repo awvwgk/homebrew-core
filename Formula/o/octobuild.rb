@@ -21,7 +21,7 @@ class Octobuild < Formula
   depends_on "rust" => :build
 
   on_linux do
-    depends_on "openssl@3"
+    depends_on "openssl@4"
   end
 
   resource "ipc-rs" do
@@ -47,6 +47,7 @@ class Octobuild < Formula
         ipc = { path = "./ipc-rs" }
       TOML
     end
+    ENV["OPENSSL_DIR"] = Formula["openssl@4"].opt_prefix if OS.linux?
     system "cargo", "install", *std_cargo_args
   end
 
