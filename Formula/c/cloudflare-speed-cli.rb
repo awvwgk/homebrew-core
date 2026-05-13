@@ -7,12 +7,12 @@ class CloudflareSpeedCli < Formula
   head "https://github.com/kavehtehrani/cloudflare-speed-cli.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "4510244acbe270a868282660e24bb059c8fa25e17b131f029d3a79f2c3cf23d1"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "692b078e54920e2a7ba165d27e38e4e5b8a8833c86c179a8276e4d9cdf062f61"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "9f7d5987ed34a6ac0c899087dcd7b15b40a4884086d5702abad373c2cf0550f4"
-    sha256 cellar: :any_skip_relocation, sonoma:        "42ffe09c913ed4e836ec2ffb1bc2823f1c26989b68e9b753a29cc36b72b02044"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "9eb3fc0b8420ef2d11b79618b064ce69801921d325e43481cededf87cf876469"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "6cc3815b0dac06b95ba8ddb67b8c1cac78f35b7138341bc78a2afab8007c62dc"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "39bb4d66c3eeae8dd70f08ec2b39dcc04333d066db2b338ce498f070dd83a46a"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "d14a0a51aec30ef20de4a47780b9bf70a385c60e612907b8cd1d9eb53279a933"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "c44e17ce4703e6e7a04b697e9ba5a1ef22ed06f902c7cd0160cbbd0fa79e7526"
+    sha256 cellar: :any_skip_relocation, sonoma:        "d1d5baa724d449619a5b19533e2688a4285f92ddfe71df3f365babf5fb519b9b"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "ac6fd7838f9e8aa472ddf5cc0e43667c67129ec4be3418b7158d4e5f14a10f10"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a721277490a288fd0fa6e85a62a843bb585b0102895421b57bf79113461184b4"
   end
 
   depends_on "rust" => :build
