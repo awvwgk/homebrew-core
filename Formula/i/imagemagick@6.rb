@@ -13,12 +13,13 @@ class ImagemagickAT6 < Formula
   end
 
   bottle do
-    sha256 arm64_tahoe:   "9aae7cf7cefb2203b97508dc070a1a35bbdd88e6b73a67e97913d4cb2ced2439"
-    sha256 arm64_sequoia: "27eebbe2368d596d0cc43cdcbdbfd88ca16354f6772ebed78c431570c214cd25"
-    sha256 arm64_sonoma:  "8e18458fd9c76cd9fac668c988f060524fe043154b2b617db5fd2a2f39333421"
-    sha256 sonoma:        "86e1c4b51ffb0f79dfb105dac7e2b9f3ede2c7ee7501dffaf7887e7bcb258060"
-    sha256 arm64_linux:   "681eaedf857f5e81b449334535a684e084d7f25cd70340b7d85046455fdca24c"
-    sha256 x86_64_linux:  "721a607b02b6dba9fe2f784a8323bbd7e4d14ac74d0b7da739ce7dba92ca312e"
+    rebuild 1
+    sha256 arm64_tahoe:   "a9b0ad7c71b87a527c39d16b6c42036dc831e913ba38f5efd9f812197134e48d"
+    sha256 arm64_sequoia: "e4b73242a83a344638ae38838bc1b65177d40776666b2797f8a65b3a6df36b79"
+    sha256 arm64_sonoma:  "72a9fa7db21ae183e2e608bdd6961ee3ab7133199945576230cfeeff9e35a20b"
+    sha256 sonoma:        "772697855d127f5851d8a8e124c10f54227e39f55fd4e2e0faf98977a92fd013"
+    sha256 arm64_linux:   "c3459f212276d8317a1a55652bbf7fb56bdce41ff476c8637c03fdb4fe83af78"
+    sha256 x86_64_linux:  "290f76bcc7df07d7a374afaa4d881a9cd36e1eaa03f094cbb3a6c50ece37f153"
   end
 
   keg_only :versioned_formula
