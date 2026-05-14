@@ -1,9 +1,9 @@
 class Netmask < Formula
   desc "IP address netmask generation utility"
-  homepage "https://github.com/tlby/netmask/blob/master/README"
+  homepage "https://github.com/tlby/netmask"
   url "https://github.com/tlby/netmask/archive/refs/tags/v2.5.0.tar.gz"
   sha256 "f352d8117a4f9377a15919d9ad4989cfba8816958718a914abf1414242a9f636"
-  license "GPL-2.0-only"
+  license "GPL-2.0-or-later"
 
   bottle do
     sha256 cellar: :any,                 arm64_tahoe:   "526dfd6c8b4bf73f066e2f8d7e2d6dd377daf7709dfc11ba4697ed81d75ac619"
@@ -29,9 +29,8 @@ class Netmask < Formula
 
   def install
     system "./bootstrap"
-    system "./configure"
-    system "make"
-    bin.install "netmask"
+    system "./configure", *std_configure_args
+    system "make", "install"
   end
 
   test do
