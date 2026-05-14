@@ -16,7 +16,7 @@ class IcannRdap < Formula
 
   depends_on "pkgconf" => :build
   depends_on "rust" => :build
-  depends_on "openssl@3"
+  depends_on "openssl@4"
 
   conflicts_with "rdap", because: "rdap also ships a rdap binary"
 
