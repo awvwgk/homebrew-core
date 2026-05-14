@@ -1,8 +1,8 @@
 class Circumflex < Formula
   desc "Hacker News in your terminal"
   homepage "https://github.com/bensadeh/circumflex"
-  url "https://github.com/bensadeh/circumflex/archive/refs/tags/4.0.tar.gz"
-  sha256 "48799d929afb0b4d0b2bca57ce7919eebd5ff11227f49fd851adf20a1689113a"
+  url "https://github.com/bensadeh/circumflex/archive/refs/tags/4.1.tar.gz"
+  sha256 "1377fc2a2da84794496244cffb77ae50ed1a12a43fa51f6335f72aae3b6ba89b"
   license "MIT"
   head "https://github.com/bensadeh/circumflex.git", branch: "main"
 
@@ -25,11 +25,7 @@ class Circumflex < Formula
 
   test do
     ENV["XDG_CONFIG_HOME"] = testpath/".config"
-    config_home = if OS.mac?
-      testpath/"Library/Application Support"
-    else
-      testpath/".config"
-    end
+    config_home = testpath/".config"
 
     assert_match "Item added to favorites", shell_output("#{bin}/clx add 1")
     assert_path_exists config_home/"circumflex/favorites.json"
