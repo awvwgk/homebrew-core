@@ -42,6 +42,8 @@ class Zrok < Formula
       -X github.com/openziti/zrok/build.Hash=#{tap.user}
     ]
     system "go", "build", *std_go_args(ldflags:), "./cmd/zrok"
+
+    generate_completions_from_executable(bin/"zrok", shell_parameter_format: :cobra)
   end
 
   test do
