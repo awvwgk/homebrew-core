@@ -7,12 +7,12 @@ class Tfclean < Formula
   head "https://github.com/takaishi/tfclean.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "ec0704ff6e4ec265d53e6815f8185ac1f0816836e37cc1690459738b234a4c45"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "ec0704ff6e4ec265d53e6815f8185ac1f0816836e37cc1690459738b234a4c45"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "ec0704ff6e4ec265d53e6815f8185ac1f0816836e37cc1690459738b234a4c45"
-    sha256 cellar: :any_skip_relocation, sonoma:        "4a2bf3a96b0a1ff87f12d52ed5644156af745ccefcea140cf08eebaf67c4a286"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "2147ef1f95a07035c68d19f3d0ac7fa71e4b04dcfd16a9e01257891cbfd8d65e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "36cb744e17a7434c7c84a31c8c6ba05fe5833a3ca0eb62dcde01eb66c51133d9"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "a2b090816f35818d84b90572f83d1194887d0810659dbbd1bb1fd927c72ae2c8"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "a2b090816f35818d84b90572f83d1194887d0810659dbbd1bb1fd927c72ae2c8"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "a2b090816f35818d84b90572f83d1194887d0810659dbbd1bb1fd927c72ae2c8"
+    sha256 cellar: :any_skip_relocation, sonoma:        "009f46117f78fc2ef5aba5d2ef04567329188e5128ae965db103ebb0c968d0c7"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "f749a5dbcf34185fadccaed25725ab22e53d577e32b938eac6f76a1b0866123a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "02e5e7bb7a06ca35ab87da7f3bc2ed7daed00b99ecea4255205148e588e8c386"
   end
 
   depends_on "go" => :build
