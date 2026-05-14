@@ -6,16 +6,12 @@ class Eatmemory < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:    "f8816bc9f7b336f38099833e0160b4d10d7745b5ce01fb00c808f48d24851e77"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:  "2e7bd76b7716d888a22230bc74357a62fd3c4b2a8e4cfe2846dba3bec52e856a"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "9c83f4e8d97be2623b0294a9fca3c163f47690b3609475e76056c672b7ef6cca"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "1c1eee494ca8c2e811b6335cb63b4764c9cdcd37996e2d0a64fa2b158fbad0ed"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "4f42ceeec17165fd44a8ef7469a9255cdab561e9530b05e588ee751fbfcf6037"
-    sha256 cellar: :any_skip_relocation, sonoma:         "6bb8add10952008d5593e4c2d9e4903c4f4f65cbe3514afb94a761187944c734"
-    sha256 cellar: :any_skip_relocation, ventura:        "346eb2b0e8ac45cabed60c56b0509bdac73a882f1d7325ad8fd25a74c728a043"
-    sha256 cellar: :any_skip_relocation, monterey:       "0311b2f66c15c17ad0734b5854a5a917ad0da06f7d20cc4f98d8ddfe205d0916"
-    sha256 cellar: :any_skip_relocation, arm64_linux:    "ed53f21c996fdf536866743894c9e1ee7836b0464137560e463e38bb95f5080f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "aba9a1f17ead302e4ab2d261c51ab0efc87ad1365ae68da4cead1ccd2361e030"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "c8cc9da4c3299c442a37a524d9a26ddd49d5d9186af2699bdf672682713e914d"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "0f23c031cd7cfe38611e5ea29acb66a9e744ca48c39469af5bd6c4786015c4db"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "d73a9cc3aa13cb4044ddf95ecccb802ddbaa2aeb0e102e964644b0de3dcfcb8b"
+    sha256 cellar: :any_skip_relocation, sonoma:        "2fa28eec23bd72543ab4fd2f4f4bf5215a5ec5bd9b294e53c4c175c8f098f179"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "ab4f27c6a212fb78333d616168bd586c7da08144aeb1db5ae3d8209e19feb17e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "1de7750bf1eecedb50d212d6e43319cf4fe8a0ff4406b9136c12c3c9422fc73f"
   end
 
   def install
