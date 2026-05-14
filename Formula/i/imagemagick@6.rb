@@ -1,14 +1,15 @@
 class ImagemagickAT6 < Formula
   desc "Tools and libraries to manipulate images in many formats"
   homepage "https://legacy.imagemagick.org/"
-  url "https://imagemagick.org/archive/releases/ImageMagick-6.9.13-47.tar.xz"
-  sha256 "cf02f99a263f2ab7cb1a67ab09c9d02506f30065d908daafadae2d8f06120d37"
+  url "https://github.com/ImageMagick/ImageMagick6/releases/download/6.9.13-47/ImageMagick-6.9.13-47.7z"
+  sha256 "de5d065d86ef962d113a8251d609d59e16479375c49c79143cb456526d32d699"
   license "ImageMagick"
   head "https://github.com/imagemagick/imagemagick6.git", branch: "main"
 
   livecheck do
-    url "https://imagemagick.org/archive/"
-    regex(/href=.*?ImageMagick[._-]v?(6(?:[.-]\d+)+)\.t/i)
+    url :stable
+    regex(/^v?(\d+(?:\.\d+)+-\d+)$/i)
+    strategy :github_releases
   end
 
   bottle do
