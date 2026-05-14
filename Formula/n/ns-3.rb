@@ -1,6 +1,4 @@
 class Ns3 < Formula
-  include Language::Python::Virtualenv
-
   desc "Discrete-event network simulator"
   homepage "https://www.nsnam.org/"
   url "https://gitlab.com/nsnam/ns-3-dev/-/archive/ns-3.47/ns-3-dev-ns-3.47.tar.gz"
@@ -18,7 +16,6 @@ class Ns3 < Formula
 
   depends_on "boost" => :build
   depends_on "cmake" => :build
-  depends_on "gsl"
   depends_on "open-mpi"
 
   uses_from_macos "python" => :build
@@ -26,14 +23,14 @@ class Ns3 < Formula
   uses_from_macos "sqlite"
 
   def install
-    # Fix to error: no matching function for call to ‘find...’
-    # Issue ref: https://gitlab.com/nsnam/ns-3-dev/-/issues/1264
-    inreplace "src/core/model/test.cc", "#include <vector>", "#include <vector>\n#include <algorithm>"
-
     # Fix binding's rpath
     linker_flags = ["-Wl,-rpath,#{loader_path}"]
 
+    # NOTE: Do not enable GSL support as it is GPL-3.0-or-later which is
+    # incompatible with GPL-2.0-only resulting in non-distributable binaries.
+    # See https://www.gnu.org/licenses/gpl-faq.html#AllCompatibility
     args = %W[
+      -DNS3_GSL=OFF
       -DNS3_GTK3=OFF
       -DNS3_PYTHON_BINDINGS=OFF
       -DNS3_MPI=ON
