@@ -6,12 +6,12 @@ class SentryNative < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "e4b810b8b1692c6b2b88533616fd4dce4399be385b559fda97b779e622cd6956"
-    sha256 cellar: :any,                 arm64_sequoia: "daf82c87aeeb923b054a48f361df094313ed43447a74e81639fecfafb3b7943d"
-    sha256 cellar: :any,                 arm64_sonoma:  "1476d4bb05f3a5924d4e56e86b316da9efbca2b85e340557defb06fb7e190725"
-    sha256 cellar: :any,                 sonoma:        "25d670a9c706170db3a7a147d2075ee42deb9f0aedb80f29f0c76addd8bd6b67"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "b5d30c1e2d30d7ce500837a46bec4553b5e50642958a677dce97b220d285155b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "eeec2b0a86dfc599cb6bedad2bcc7f93cfd4dd2bac9a5ef88140f29dd2ee56e4"
+    sha256 cellar: :any,                 arm64_tahoe:   "8460aebdc78b85017e66ee3cc3776a2aee6054ee1a3bf1731452bd59fbdfa80e"
+    sha256 cellar: :any,                 arm64_sequoia: "54833fabb138b8930e2cdf8064586a7d6d21842d73d46efb1c7f9bbb876a6887"
+    sha256 cellar: :any,                 arm64_sonoma:  "6f3ef1ee4f26c3eab88331c459af9e2f68ed16108fe6d186b14b0b9d14d0ef34"
+    sha256 cellar: :any,                 sonoma:        "21f72a3be08ffd8bf08433c41d19cdae5acb8f2f06c89ace777e4785b7859b32"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "137eeac226c9ca016eef10f7eefba62ca4d748af66f8d5b5352d024f98570a86"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "38f33f1efa67c45a3b7891ed749538b2803985dfd9f718f7b416dfbdc175cc89"
   end
 
   depends_on "cmake" => :build
