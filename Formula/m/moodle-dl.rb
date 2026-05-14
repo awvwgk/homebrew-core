@@ -9,12 +9,12 @@ class MoodleDl < Formula
   revision 9
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "bd9b28bf2034258f3045a7af18ad7906c590a1efd1710c696bd0e548e0b6192c"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "07b9a88e504b2e75827a810bc15c586318d630f923773a0a77e97839ecd0f057"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "f6b8f024452eecf241a087708ec540a2fea96c4c96713287d03900b0e6e0e6fe"
-    sha256 cellar: :any_skip_relocation, sonoma:        "ac3dd55c907dc68a70d0036ef092171f391917730b932088c2d8e9915ad5039a"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "d54db73caac159144072ed3e16eb76e9cb2b2131d8b208b16fb5a1d6cb24d8ce"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "1ce166fc3a285335ec4e0fa973d74cbd5f676ebeaa10ae90c3052ae2fcfee2aa"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "a53e87aa65bdc45a4278ea925bfbbce2dde719b28f0e6397895077875b1e5090"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "faa4869bb03e04fe401b35433a82557bfd0db7259a6b2805107dbfce528b2328"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "cdf5537298a208262edf1eaba8b69c129cbaf08afcf4b1f6f4de9610765985ef"
+    sha256 cellar: :any_skip_relocation, sonoma:        "8171177f3e25568c82f5a41faa9e1250d594a275d258a4dc3032a1ccdc0c99ed"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "8d98bd84a96d7949c9ea0ef9dd967e74952a226ffb29b9a429aae62306fb625b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "fd9bfe1bb856b63a4f50e0655a1ca045ffa854ee4caf4b6deb065b30407dabf7"
   end
 
   depends_on "cmake" => :build # for pycares
