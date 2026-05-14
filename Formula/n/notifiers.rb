@@ -9,7 +9,7 @@ class Notifiers < Formula
   revision 6
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "694168848f27b68adcc32df0480a2216607c8e3f0a863b0e7ff4b5e6039f1d0f"
+    sha256 cellar: :any_skip_relocation, all: "fae1d880819943fa982ae25f74473af554522aafcc4c85edf7b2b875086cab75"
   end
 
   depends_on "certifi" => :no_linkage
