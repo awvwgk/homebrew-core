@@ -1,18 +1,18 @@
 class Circumflex < Formula
   desc "Hacker News in your terminal"
   homepage "https://github.com/bensadeh/circumflex"
-  url "https://github.com/bensadeh/circumflex/archive/refs/tags/4.0.tar.gz"
-  sha256 "48799d929afb0b4d0b2bca57ce7919eebd5ff11227f49fd851adf20a1689113a"
+  url "https://github.com/bensadeh/circumflex/archive/refs/tags/4.1.tar.gz"
+  sha256 "1377fc2a2da84794496244cffb77ae50ed1a12a43fa51f6335f72aae3b6ba89b"
   license "MIT"
   head "https://github.com/bensadeh/circumflex.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "f221aab5645f12b7d8187a21881906aabfdaa7e11c13e6facd5baea0c804b889"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "f221aab5645f12b7d8187a21881906aabfdaa7e11c13e6facd5baea0c804b889"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "f221aab5645f12b7d8187a21881906aabfdaa7e11c13e6facd5baea0c804b889"
-    sha256 cellar: :any_skip_relocation, sonoma:        "98082abc7cbc19c8a3de2069320459d7ca20c9004fb29ad3f986d02c3ff450ce"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "47da3ca485277ef48e64a67b4cdd45e657e2d44f4b84943a39b9f07027ed7d3f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "78f6ce73a62d0763a860bd1530dd8e590e6b2405892444fc338278711fd47891"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "9fe95d11fac0ad5b703add2372bca7d04ab16355788c02f2ad1c96e2cb565184"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "9fe95d11fac0ad5b703add2372bca7d04ab16355788c02f2ad1c96e2cb565184"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "9fe95d11fac0ad5b703add2372bca7d04ab16355788c02f2ad1c96e2cb565184"
+    sha256 cellar: :any_skip_relocation, sonoma:        "30b51319f6a2fbbe9b4d4a0046d16bb53dbd033b0d13b920a1f4c29fc4312c63"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "f0d37e7ff5744115e8761e00919540432f55eb8124583cbc2a07c01d130fedca"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "2c9724c5d4e8d78dbdf2a4e67582d23d08067dba40898eeda52b30a5e8f09aa7"
   end
 
   depends_on "go" => :build
@@ -25,11 +25,7 @@ class Circumflex < Formula
 
   test do
     ENV["XDG_CONFIG_HOME"] = testpath/".config"
-    config_home = if OS.mac?
-      testpath/"Library/Application Support"
-    else
-      testpath/".config"
-    end
+    config_home = testpath/".config"
 
     assert_match "Item added to favorites", shell_output("#{bin}/clx add 1")
     assert_path_exists config_home/"circumflex/favorites.json"
