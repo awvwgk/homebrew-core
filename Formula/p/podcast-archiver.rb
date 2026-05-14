@@ -9,12 +9,12 @@ class PodcastArchiver < Formula
   revision 5
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "1f6c139a0708af2709a5211bc576c64e3a2a35fd4cd7ab1c914d431de4e23ae0"
-    sha256 cellar: :any,                 arm64_sequoia: "8b1e9586a7845ffe4f8b2b09d10415abe7f12fb4c8c0ed70128da78abd97f03b"
-    sha256 cellar: :any,                 arm64_sonoma:  "6f64e21e3bbae62067e8f129d8f51af89b876f3994eaad37fbfeabf3c8f85be8"
-    sha256 cellar: :any,                 sonoma:        "73666040bb74c2dfe0bd423c612d34406299e5ee19b0b24e7aa2dc5a0de17443"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "50d451f58006ca91154c1be106455274b7183c75002ef51656b87fdd2ad919c4"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "83119bf960eadc4f4c306841842904960cb07da3da260e4a7da4c9bf5ecc871b"
+    sha256 cellar: :any,                 arm64_tahoe:   "47918840fd3f482a73db9358f6e3b225af082e4c00d63cbd9c60bb551884b884"
+    sha256 cellar: :any,                 arm64_sequoia: "a60887671b3b8c723c0b364293958565d782f90532824afb64c6091329d0357e"
+    sha256 cellar: :any,                 arm64_sonoma:  "49e079216780c357e52520c7b7249d52f7d7a1e8523934194e7531a4081a767a"
+    sha256 cellar: :any,                 sonoma:        "a01aae210d46a1ae742ef87b7d712ef35a31ee920dd37f0e0f5043c5aa89ca30"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "f592f7a6141fc1ef49ee903c6a0bf34c69b00f3a134e650d4dcee4244725ce6c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "07777da291c7c8a910353c4d397473f059c5d2134ed1e1ab4ebad2260a763557"
   end
 
   depends_on "certifi" => :no_linkage
