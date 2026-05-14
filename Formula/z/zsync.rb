@@ -1,8 +1,8 @@
 class Zsync < Formula
   desc "File transfer program"
   homepage "https://zsync.moria.org.uk/"
-  url "https://zsync.moria.org.uk/download/zsync-0.6.3.tar.bz2"
-  sha256 "293b6191821641d3ed6248206f8f9df0bf46e6ee2cf8b4dd97cfd1d5909edb9a"
+  url "https://zsync.moria.org.uk/download/zsync-0.6.4.tar.bz2"
+  sha256 "f1d6d3e8e79933e9e03dd9f342673f31274686a29d295e7cb34558755d224670"
   license all_of: [
     "Artistic-2.0",
     "Zlib", # zlib/
@@ -38,6 +38,9 @@ class Zsync < Formula
     end
     # Fix compile with newer Clang
     ENV.append_to_cflags "-Wno-implicit-function-declaration" if DevelopmentTools.clang_build_version >= 1403
+
+    # Limit C to the latest standard that supports K&R function definitions
+    ENV.append_to_cflags "-std=gnu17"
 
     args = []
     # Help old config scripts identify arm64 linux
