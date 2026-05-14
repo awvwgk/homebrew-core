@@ -10,12 +10,12 @@ class SigmaCli < Formula
   head "https://github.com/SigmaHQ/sigma-cli.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "e605f8cebb1a21a857dbbd4be7b6cf6db4310f4d53c0dee01d1e3e18a2f9b6ea"
-    sha256 cellar: :any,                 arm64_sequoia: "b2b15380870e3fa164e56ff219a821966acfcae1e8a2cf9a3f3e741d2ff11cd7"
-    sha256 cellar: :any,                 arm64_sonoma:  "47fc1c0dc4898eb85c65383d755447e1fb5543b2eb6892ef44841179eb0b0676"
-    sha256 cellar: :any,                 sonoma:        "cd7c891e1594269ea18863212111cb2cf62256bb78824fb004239489a78daca7"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "acd05735eb7b6f64327cac0b26a57a0785ae0d7aa2b8e6252026df404294b362"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "7a1c6b3f4aa9223b9e778a2f0f0c2db673ff4aeb824aa697bc2731b6c311e60f"
+    sha256 cellar: :any,                 arm64_tahoe:   "9c5d00b462998866ed1605c3a37eab871f1feac49180cd74991a5ab9ec69aa1f"
+    sha256 cellar: :any,                 arm64_sequoia: "f0efbfc69f820382c5164b0fb53bcfb5ccc3194ab3973d0857daf58c9b66a7a6"
+    sha256 cellar: :any,                 arm64_sonoma:  "3c2c8ec2ba076e8f86e61e63a9481cbe20c00ff64addaee2bdceb5b31ee40282"
+    sha256 cellar: :any,                 sonoma:        "444f2313dfdf1f3b3668a21ec4121242404afafbccc849c794f419644dc9220b"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "a3c01186b0620a8dad279711770f9686c4960d73b55b720f91deacb1574df9e7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "14e4194ca35b0ac3201b70cb3a07c6f0a012acbe9a02fd268d272d9e6f62b0b9"
   end
 
   depends_on "certifi" => :no_linkage
