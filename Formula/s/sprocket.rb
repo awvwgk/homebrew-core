@@ -1,8 +1,8 @@
 class Sprocket < Formula
   desc "Bioinformatics workflow engine built on the Workflow Description Language (WDL)"
   homepage "https://sprocket.bio"
-  url "https://github.com/stjude-rust-labs/sprocket/archive/refs/tags/v0.24.0.tar.gz"
-  sha256 "621fa4554afb69c917831184cb7162b634827edd03393c2c97ac5385e85d5515"
+  url "https://github.com/stjude-rust-labs/sprocket/archive/refs/tags/v0.25.0.tar.gz"
+  sha256 "ef579ecf75a09012ff0c8724c2028c5da33c2825cec62064cb7b0afffc1dfbb3"
   license any_of: ["Apache-2.0", "MIT"]
   head "https://github.com/stjude-rust-labs/sprocket.git", branch: "main"
 
