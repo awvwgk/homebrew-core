@@ -4,6 +4,7 @@ class Wget2 < Formula
   url "https://ftpmirror.gnu.org/gnu/wget/wget2-2.2.1.tar.gz"
   sha256 "d7544b13e37f18e601244fce5f5f40688ac1d6ab9541e0fbb01a32ee1fb447b4"
   license "GPL-3.0-or-later"
+  revision 1
 
   livecheck do
     url :stable
@@ -65,9 +66,13 @@ class Wget2 < Formula
 
     system "./configure", *args, *std_configure_args
     system "make", "install"
+
+    # Remove `wget2_noinstall` binary, which is only for testing
+    # https://gitlab.com/gnuwget/wget2/-/work_items/565#note_699151912
+    rm bin/"wget2_noinstall"
   end
 
   test do
-    assert_match version.to_s, shell_output("#{bin}/wget2 --version")
+    system bin/"wget2", "-O", File::NULL, "https://google.com"
   end
 end
