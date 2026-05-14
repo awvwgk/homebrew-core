@@ -10,7 +10,7 @@ class SearchThatHash < Formula
   head "https://github.com/bee-san/Search-That-Hash.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "bd3835deec11af714dd433e9ec60a41bc1037ba41119a5b88266cfc61b2a121d"
+    sha256 cellar: :any_skip_relocation, all: "42e0c7eb93061ad01c4644c50bce1039d5561830e92cbc12e7a8507e0e3f5360"
   end
 
   depends_on "certifi" => :no_linkage
