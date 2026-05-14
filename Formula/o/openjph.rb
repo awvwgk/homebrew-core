@@ -8,12 +8,12 @@ class Openjph < Formula
   head "https://github.com/aous72/OpenJPH.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "1c30cd1c02de44bf931a13c18dd978586c0a0ed5e0672d9bf2e9de125a2c17b1"
-    sha256 cellar: :any,                 arm64_sequoia: "4ce3e8bc06b3250ef1c9d32b5a21475ce44877f7f27d6b5d2a9cf79a33a8121e"
-    sha256 cellar: :any,                 arm64_sonoma:  "4d47348e6fdc046e04e34c2d41c38ba4bb39db25edd94f9fc23da2ec639db19e"
-    sha256 cellar: :any,                 sonoma:        "cbc215a1a2a49a3fa0926112930e4c131aa13eae0c0684b6ff064487ff36844d"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "f49690ca98f8a41cb431cc5b0340365c945d5b36827087975ba35102f00537b2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e6527ac2f6bb6d1f9de6d0520c1f403106d8120a7e894175e661d927ea8cc289"
+    sha256 cellar: :any,                 arm64_tahoe:   "1017ceff9efe338afe41d3457605873b38a4f64051a67e79dc129d6178b4b5b9"
+    sha256 cellar: :any,                 arm64_sequoia: "ed56deb929a1d39ececb4f471e89c7043ea9a7f0f1e0aef8622f5217c559eae5"
+    sha256 cellar: :any,                 arm64_sonoma:  "88271d81447d931c1b6150fe372b8787e7524fd16e965b64658db8468ef638ec"
+    sha256 cellar: :any,                 sonoma:        "70728b71d49d15add086d75bfdcf0802dc39817bbfbb4e09501dd94476fe4c49"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "bdf747bdc76a1151087b1c7efe1db18e1fd7e938e078333d23a52280fc6d992e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "6b9fa791196bd379fa3a8d0d1ee9c852096073895d57d2f10d05968ddd2f47cf"
   end
 
   depends_on "cmake" => :build
