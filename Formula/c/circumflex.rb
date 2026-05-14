@@ -7,12 +7,12 @@ class Circumflex < Formula
   head "https://github.com/bensadeh/circumflex.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "9fe95d11fac0ad5b703add2372bca7d04ab16355788c02f2ad1c96e2cb565184"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "9fe95d11fac0ad5b703add2372bca7d04ab16355788c02f2ad1c96e2cb565184"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "9fe95d11fac0ad5b703add2372bca7d04ab16355788c02f2ad1c96e2cb565184"
-    sha256 cellar: :any_skip_relocation, sonoma:        "30b51319f6a2fbbe9b4d4a0046d16bb53dbd033b0d13b920a1f4c29fc4312c63"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "f0d37e7ff5744115e8761e00919540432f55eb8124583cbc2a07c01d130fedca"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "2c9724c5d4e8d78dbdf2a4e67582d23d08067dba40898eeda52b30a5e8f09aa7"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "82a4d31a5eb00cf571a421d8ad04afe3bba3a61a3d2488e37ab6ce165dcf7777"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "82a4d31a5eb00cf571a421d8ad04afe3bba3a61a3d2488e37ab6ce165dcf7777"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "82a4d31a5eb00cf571a421d8ad04afe3bba3a61a3d2488e37ab6ce165dcf7777"
+    sha256 cellar: :any_skip_relocation, sonoma:        "7acb0988fa0e0e38e9b99eaf036e3027126bff2830981330ef33ea503272936f"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "f7a0c4809eb6ae9f352745078e68639baaf561635b4df4519497beec0d377710"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "266a0692420b33841d22f764b43f2b1eb28a9b6ec9adfe72a4b5178c1a82f6b4"
   end
 
   depends_on "go" => :build
