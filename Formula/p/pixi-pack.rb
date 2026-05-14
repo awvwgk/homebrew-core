@@ -1,19 +1,10 @@
 class PixiPack < Formula
   desc "Pack and unpack conda environments created with pixi"
   homepage "https://pixi.sh/latest/advanced/production_deployment/#pixi-pack"
+  url "https://github.com/quantco/pixi-pack/archive/refs/tags/v0.7.7.tar.gz"
+  sha256 "8ee25c37aa37c54a0d8f2b3d1f1e98d4ea683d1ea7a9dcc8452ef7c7c9b8f781"
   license "BSD-3-Clause"
   head "https://github.com/quantco/pixi-pack.git", branch: "main"
-
-  stable do
-    url "https://github.com/quantco/pixi-pack/archive/refs/tags/v0.7.6.tar.gz"
-    sha256 "33d9c3fd58bb50c631825d18328c2eac070d1db4486fdf85f0e347b16904a944"
-
-    # Backport openssl-sys update to support OpenSSL 4
-    patch do
-      url "https://github.com/Quantco/pixi-pack/commit/531711a35df83d569ef3a76acafb27e01d12d917.patch?full_index=1"
-      sha256 "405c888e69e7eff2946cec0e425fff5d184736878a0effc61b8d9ddda8383260"
-    end
-  end
 
   bottle do
     rebuild 1
