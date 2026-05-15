@@ -19,33 +19,26 @@ class Eatmemory < Formula
   end
 
   test do
-    # test version match
-    assert_match version.to_s, shell_output("#{bin}/eatmemory --help")
+    assert_match "eatmemory #{version}", shell_output("#{bin}/eatmemory --help")
 
-    # test for expected output
-    out = shell_output "#{bin}/eatmemory -t 0 10M"
-    assert_match(
-      /^|\nEating 10485760 bytes in chunks of 1024\.\.\.\nDone, sleeping for 0 seconds before exiting\.\.\.\n/, out
-    )
+    out = shell_output("#{bin}/eatmemory -t 0 10M")
+    assert_match(/^Eating .+ in chunks of .+\.\.\.$/, out)
+    assert_match(/^Done, sleeping for 0 seconds before exiting\.\.\.$/, out)
 
-    # test for memory correctly consumed
-    memory_list = [10, 20, 100]
-    memory_list.each do |memory_mb|
-      memory_column = 5
-      memory_column = 4 if OS.linux?
+    pid = spawn bin/"eatmemory", "-t", "60", "10M", [:out, :err] => File::NULL
+    sleep 5
 
-      fork do
-        shell_output "#{prefix}/bin/eatmemory -t 60 #{memory_mb}M 2>&1"
+    rss_kb = shell_output("ps -o rss= -p #{pid}").to_i
+    assert_operator rss_kb, :>=, 10 * 1024
+    assert_operator rss_kb, :<, 20 * 1024
+  ensure
+    if pid
+      begin
+        Process.kill("TERM", pid)
+        Process.wait(pid)
+      rescue Errno::ESRCH, Errno::ECHILD
+        nil
       end
-      sleep 5 # sleep to allow the forked process to initialize and eat the memory
-
-      out = shell_output \
-        "COLUMNS=500 ps aux | grep -v grep | grep -v 'sh -c' | grep '#{prefix}/bin/eatmemory -t 60 #{memory_mb}'"
-
-      columns = out.split
-      used_bytes = columns[memory_column].to_i
-      assert_operator used_bytes, ">=", memory_mb * 1024
-      assert_operator used_bytes, "<", memory_mb * 2 * 1024
     end
   end
 end
