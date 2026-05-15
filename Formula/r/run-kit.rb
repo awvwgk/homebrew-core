@@ -1,8 +1,8 @@
 class RunKit < Formula
   desc "Universal multi-language runner and smart REPL"
   homepage "https://github.com/Esubaalew/run"
-  url "https://github.com/Esubaalew/run/archive/refs/tags/v0.8.0.tar.gz"
-  sha256 "853545b84145a34926b12d6526e517ba96f371a9f759652a50da7996ffdab781"
+  url "https://github.com/Esubaalew/run/archive/refs/tags/v0.9.0.tar.gz"
+  sha256 "dedb97026e4a7f1121994f659a32896500f5521626bf19a55283a0d948510a14"
   license "Apache-2.0"
   head "https://github.com/Esubaalew/run.git", branch: "master"
 
