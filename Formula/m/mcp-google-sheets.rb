@@ -3,18 +3,17 @@ class McpGoogleSheets < Formula
 
   desc "MCP server integrates with your Google Drive and Google Sheets"
   homepage "https://github.com/xing5/mcp-google-sheets"
-  url "https://files.pythonhosted.org/packages/1c/d1/2fc5b72d125ac1fa3a305c6df5111ccd3b0fcc0958fd3b40c8f91069fd5a/mcp_google_sheets-0.6.1.tar.gz"
-  sha256 "4a1b0c81b2bee94743696f4afb95c9a680b6b3b5c5e27f5e8328e7b15dc3851d"
+  url "https://files.pythonhosted.org/packages/ac/be/fc5b8083b97cedfe17188d4eca8bff78db070105cd58a25347d1d7b09385/mcp_google_sheets-0.6.2.tar.gz"
+  sha256 "89d5bf81554747f491b27c3df1c84d646fe04a23bf10468ce428132d8238e423"
   license "MIT"
-  revision 5
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "60a066c47c688411f7f135f69f3337f403a8ab1064a9e06dc4efdc2cdbc867a3"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "2c23c93c684291cfcdfc08ed8d7b4c2c1c814e0d96d42c6e8a35cf1f9f5fddd2"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "b700ae116496ab42c81541e912ad3004ac0836b3522be5b4c4417c8e54736505"
-    sha256 cellar: :any_skip_relocation, sonoma:        "f77413fd5f0614e8bdc93378adbe53f6a164288cc71c8dc63ed1969edcd5d000"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "216716aa0b37791250d4b9db844f8c80e6c507cbdf466f5480fc156c7e708b5a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "92319c9c45c8ff63f6b738a4aeee2eaaf31fbce21b54ac2a1f94d2732f0a94f5"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "144d6cc09348ff21dd48172adb91a44050d80146215a02e1008d8f4d78cac23f"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "da22116b420a99529dc76d28d125222bd7db59cbe4fc4b16fcc1b1ccaa2c06a4"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "8db702ea20d03da9510d6778461203189dfba73ce081934ec338fdcab3b9be0c"
+    sha256 cellar: :any_skip_relocation, sonoma:        "e27c15e4e9e7ac17a1b9b5d831107013609c05d944c1408d15783b600bbbd920"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "7bae1e1ef55dd6e9971db4ab39728fb343056713d763e97f2f43703bced1229f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "3d32bf516733a37af974aa94151e65194ffcaa7fed1a62ed6a8bae902e566bee"
   end
 
   depends_on "certifi" => :no_linkage
@@ -101,8 +100,8 @@ class McpGoogleSheets < Formula
   end
 
   resource "idna" do
-    url "https://files.pythonhosted.org/packages/05/b1/efac073e0c297ecf2fb33c346989a529d4e19164f1759102dee5953ee17e/idna-3.14.tar.gz"
-    sha256 "466d810d7a2cc1022bea9b037c39728d51ae7dad40d480fc9b7d7ecf98ba8ee3"
+    url "https://files.pythonhosted.org/packages/82/77/7b3966d0b9d1d31a36ddf1746926a11dface89a83409bf1483f0237aa758/idna-3.15.tar.gz"
+    sha256 "ca962446ea538f7092a95e057da437618e886f4d349216d2b1e294abfdb65fdc"
   end
 
   resource "jsonschema" do
@@ -176,8 +175,8 @@ class McpGoogleSheets < Formula
   end
 
   resource "requests" do
-    url "https://files.pythonhosted.org/packages/43/b8/7a707d60fea4c49094e40262cc0e2ca6c768cca21587e34d3f705afec47e/requests-2.34.0.tar.gz"
-    sha256 "7d62fe92f50eb82c529b0916bb445afa1531a566fc8f35ffdc64446e771b856a"
+    url "https://files.pythonhosted.org/packages/ac/c3/e2a2b89f2d3e2179abd6d00ebd70bff6273f37fb3e0cc209f48b39d00cbf/requests-2.34.2.tar.gz"
+    sha256 "f288924cae4e29463698d6d60bc6a4da69c89185ad1e0bcc4104f584e960b9ed"
   end
 
   resource "requests-oauthlib" do
@@ -186,8 +185,8 @@ class McpGoogleSheets < Formula
   end
 
   resource "sse-starlette" do
-    url "https://files.pythonhosted.org/packages/64/13/3cafb96bceb02949f265bbdf1cbcea2810271ae709e4aa35e980f90c07fd/sse_starlette-3.4.3.tar.gz"
-    sha256 "a7f6d87cf482cf38b911c31075811c7f8b4efbada8ac9d5199a8e239fed513c9"
+    url "https://files.pythonhosted.org/packages/f7/2b/58abc2d1fd397e7dde08e947e05c884d8ef2f78d5e2588c17a12d42d6994/sse_starlette-3.4.4.tar.gz"
+    sha256 "07e0fa0460138baf25cdd5fb28683472c3995dc1642225191b3832d62526bcb0"
   end
 
   resource "starlette" do
@@ -206,8 +205,8 @@ class McpGoogleSheets < Formula
   end
 
   resource "uvicorn" do
-    url "https://files.pythonhosted.org/packages/1f/93/041fca8274050e40e6791f267d82e0e2e27dd165627bd640d3e0e378d877/uvicorn-0.46.0.tar.gz"
-    sha256 "fb9da0926999cc6cb22dc7cd71a94a632f078e6ae47ff683c5c420750fb7413d"
+    url "https://files.pythonhosted.org/packages/f6/b1/8e7077a8641086aea449e1b5752a570f1b5906c64e0a33cd6d93b63a066b/uvicorn-0.47.0.tar.gz"
+    sha256 "7c9a0ea1a9414106bbab7324609c162d8fa0cdcdcb703060987269d77c7bb533"
   end
 
   def install
