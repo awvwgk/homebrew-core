@@ -12,12 +12,12 @@ class Remind < Formula
   end
 
   bottle do
-    sha256 arm64_tahoe:   "879c816769dd9c0e6aaaf3f81a97a080dbb569071868b32b85894a4e37e3ba96"
-    sha256 arm64_sequoia: "2ac3bbacf404b75bb51bdd84aa11072cb5b2dd8dae9ad446a2dc27df8831f66c"
-    sha256 arm64_sonoma:  "b1e0cffbe1ef85c0906c669c191dc27fb999a069921ed1b5a6c6a53ee82efa15"
-    sha256 sonoma:        "57aff04f19b77f3dff05cb7461c2dde8666978487c790acd6bdc86b5ee61ca8b"
-    sha256 arm64_linux:   "12e530f6f29438a989021783db69941febb789d630911eb8967897f9088d1986"
-    sha256 x86_64_linux:  "7cbe9fbc9850ff11ebb9d955f718d502aeadf6f1c1561d1d1b9898e6fe946de1"
+    sha256 arm64_tahoe:   "b67a5b6a3fbabc7c0585417f29398dd59489e558c48871b028d52e5da5344734"
+    sha256 arm64_sequoia: "709b596c3ea68d4e4ba3c1cf2b551849349f4326be6e7fdab002127ab36050fd"
+    sha256 arm64_sonoma:  "f3edaf643ac95953e077e670a926e0594cf88ab4c151b707e65e013f4d7b0e31"
+    sha256 sonoma:        "ae4e333ce6d5ce085672d7143f52362575c1087cdda2a0ca1c47c72f33a8c63d"
+    sha256 arm64_linux:   "5df87361724958a4e2ebf848d288094c7c5c9f595ebb6530ff7a4cb5eaa65117"
+    sha256 x86_64_linux:  "56585de7b7ebd3baa46eb332a1004eba6f1d0d79735720b58b596d62906eee37"
   end
 
   conflicts_with "rem", because: "both install `rem` binaries"
