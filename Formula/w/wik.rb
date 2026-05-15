@@ -10,7 +10,7 @@ class Wik < Formula
   head "https://github.com/yashsinghcodes/wik.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "89d53c78c63729c81c8fe40d74064e8c340a63403e6f57d2aecc0959ce26dc67"
+    sha256 cellar: :any_skip_relocation, all: "ea17fb6fc93076490adaf60329fecd3845a4e46d6ee30c9eefbeddfabd5352e9"
   end
 
   depends_on "certifi" => :no_linkage
