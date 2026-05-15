@@ -1,8 +1,8 @@
 class Ggc < Formula
   desc "Modern Git CLI"
   homepage "https://github.com/bmf-san/ggc"
-  url "https://github.com/bmf-san/ggc/archive/refs/tags/v8.4.1.tar.gz"
-  sha256 "d25f219aa1778511e897a1649d38fa50b0d12f690ccd5056792735477ac614bd"
+  url "https://github.com/bmf-san/ggc/archive/refs/tags/v8.5.0.tar.gz"
+  sha256 "1d4a57cddd7b0e47300312246ce53b440494b4a43bb1937d5f133b8b4c97fd1a"
   license "MIT"
   head "https://github.com/bmf-san/ggc.git", branch: "main"
 
