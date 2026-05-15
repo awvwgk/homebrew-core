@@ -10,15 +10,14 @@ class Trailscraper < Formula
   head "https://github.com/flosell/trailscraper.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "b75034356da3260458e0567a725a63309954f0337ee1927d35de360453b10d8b"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "87a9085f43f21c523491b6271ba9772f2b089cefd42cd46fe5f422b7915d80ca"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "0b46e16c3a059728420b958b4c6594266ed27a4b3be396ae055b97a9e3edba1b"
-    sha256 cellar: :any_skip_relocation, tahoe:         "a21f0e01d22553e0687f6d8616097d51fb27fbe96a6c6aa166f77769bac07cae"
-    sha256 cellar: :any_skip_relocation, sequoia:       "afa9f5353979dc54d490a1ee097278b5a9e79049eacaaec638e7beab17791434"
-    sha256 cellar: :any_skip_relocation, sonoma:        "0ef34a8c4ffb180b4f5291f6e3cf15aa473a24a5ad8b7523c37ff8b2e7fc907b"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "f46250b5a745a5bd00c317c3a655904309dfbd7893400c3a6898e7e171822855"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "0aaf0c7a03725b4eb6621b4189e4965a6f5450379ad1d6a65fae1b9abe29b527"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "c4590ee12fb56b39ca4ab0a1c8794d44c3e169ef982ff336f783e67906bdafb8"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "0511b14386c89f606f2068ee0999712f16c30c395e2cc60eaec209d8da1e6dc0"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "2ea45e87f3f69ad712391990a724736804a931558ed65be19b9cb7f37cf01718"
+    sha256 cellar: :any_skip_relocation, tahoe:         "09d7e2aa57417f3dce773c2fb46c7272c0d0b54a4e95bdaab74e1bfc324ddf06"
+    sha256 cellar: :any_skip_relocation, sequoia:       "e5d420b15578b0a7caf69a8bed841478b0e071ffaf2b2496577e7522509aa989"
+    sha256 cellar: :any_skip_relocation, sonoma:        "145f1e931b976f9ee9ef99e1baceb1f39f850b29b1faffbc6f0d67c1848a4687"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "581e4b2502e3d53f251a436530c58ce6edf78f475efe8a34de8de9f908006d3b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "537e15e89e07216eb4b76e52a14010b3cb8b58d951fb5f242014ce871eec6851"
   end
 
   depends_on "python@3.14"
