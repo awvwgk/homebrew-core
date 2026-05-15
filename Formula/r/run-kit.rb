@@ -7,12 +7,12 @@ class RunKit < Formula
   head "https://github.com/Esubaalew/run.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "a7afffb66ec5c3695889fc2e1f269384210242e05436545213d4c78c21e3998c"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "efc894a3a4936a08a977d7f30554b665c2300e4a4e22874308ee2cb809b7194e"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "061595ae2ab7e5c21c760536c2e251d161ae05b9ee919019e58e5811b37a7bf3"
-    sha256 cellar: :any_skip_relocation, sonoma:        "43fb717c8d77178f0c157a81fd27395011b4ba68dab0115343a291b2f36be7b5"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "b70dd320fe66d6d4330026007fd039b36f0500491cefc4f1a39e763358e08947"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "9adc315afb6765cf19a8ffa56a0d0ca3c074c752186be08f4a6d5ef53a369093"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "9104ed02ddf561bf06bf75c5db9b7cfb97b4a383af0190e17c9d11fa47ad0910"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "47cc94c954b1e6720545f6d8c9e9031071c3b1055d6aff16f84659f4d2d07b15"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "0436fe0f7ac43a1d21ac673be88458103235854c01fa6ec270fd64fe0ddc8746"
+    sha256 cellar: :any_skip_relocation, sonoma:        "ae79c6e82780675707f7c206faa2ef0d7dd4b17ba9a3a81197ed3351e599ca71"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "d5493fca2cb6ceebcc6855f2bffaa5daa03c3f502083c5f7ae6a871e95ed7458"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "d6c0ce83f8a22619f4ea16cf882080b47b494234655c04a8b5ba07d124d844a6"
   end
 
   depends_on "rust" => :build
