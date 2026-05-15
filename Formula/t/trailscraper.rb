@@ -6,7 +6,7 @@ class Trailscraper < Formula
   url "https://files.pythonhosted.org/packages/43/82/74344dd629ac17dc4b3906eb07a53a731c3ccc80913abdbbe378c658498f/trailscraper-0.10.0.tar.gz"
   sha256 "805994a27ebd3ecd9353cd85b54139822e73980b1da93f63fa0e5d42c8b67ec1"
   license "Apache-2.0"
-  revision 1
+  revision 2
   head "https://github.com/flosell/trailscraper.git", branch: "master"
 
   bottle do
@@ -59,8 +59,8 @@ class Trailscraper < Formula
   end
 
   resource "regex" do
-    url "https://files.pythonhosted.org/packages/0b/86/07d5056945f9ec4590b518171c4254a5925832eb727b56d3c38a7476f316/regex-2026.1.15.tar.gz"
-    sha256 "164759aa25575cbc0651bef59a0b18353e54300d79ace8084c818ad8ac72b7d5"
+    url "https://files.pythonhosted.org/packages/dc/0e/49aee608ad09480e7fd276898c99ec6192985fa331abe4eb3a986094490b/regex-2026.5.9.tar.gz"
+    sha256 "a8234aa23ec39894bfe4a3f1b85616a7032481964a13ac6fc9f10de4f6fca270"
   end
 
   resource "ruamel-yaml" do
@@ -89,8 +89,8 @@ class Trailscraper < Formula
   end
 
   resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/c7/24/5f1b3bdffd70275f6661c76461e25f024d5a38a46f04aaca912426a2b1d3/urllib3-2.6.3.tar.gz"
-    sha256 "1b62b6884944a57dbe321509ab94fd4d3b307075e0c2eae991ac71ee15ad38ed"
+    url "https://files.pythonhosted.org/packages/53/0c/06f8b233b8fd13b9e5ee11424ef85419ba0d8ba0b3138bf360be2ff56953/urllib3-2.7.0.tar.gz"
+    sha256 "231e0ec3b63ceb14667c67be60f2f2c40a518cb38b03af60abc813da26505f4c"
   end
 
   def install
