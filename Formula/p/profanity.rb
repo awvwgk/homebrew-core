@@ -1,8 +1,8 @@
 class Profanity < Formula
   desc "Console based XMPP client"
   homepage "https://profanity-im.github.io"
-  url "https://profanity-im.github.io/tarballs/profanity-0.18.0.tar.xz"
-  sha256 "a1ad441bf92ba0327e0740a15dfe7885cb14415a934c850b8b98ac2f728d7cf8"
+  url "https://profanity-im.github.io/tarballs/profanity-0.18.1.tar.xz"
+  sha256 "9077e82dcc45ec38fa907cbfc7d63bd3f1344086cbd855f2d432658b06dee30a"
   license "GPL-3.0-or-later"
   head "https://github.com/profanity-im/profanity.git", branch: "master"
 
