@@ -56,8 +56,11 @@ class Carrot2 < Formula
 
   test do
     port = free_port
-    spawn bin/"carrot2", "--port", port.to_s
+    pid = spawn bin/"carrot2", "--port", port.to_s
     sleep 20
     assert_match "Lingo", shell_output("curl -s localhost:#{port}/service/list")
+  ensure
+    Process.kill("TERM", pid)
+    Process.wait(pid)
   end
 end
