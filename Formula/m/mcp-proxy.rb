@@ -8,7 +8,7 @@ class McpProxy < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "0ad15044374d26853ce7995b3b91d89f87e602ddcd473ecc5aee420001130238"
+    sha256 cellar: :any_skip_relocation, all: "d16f283ea8b0e94bfc397abfb0bf8feac4aa99d40606aaaefb10382ed2bf3a40"
   end
 
   depends_on "certifi" => :no_linkage
