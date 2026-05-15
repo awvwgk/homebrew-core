@@ -4,8 +4,8 @@ class SwiftProtobuf < Formula
   # We use a git checkout as swift needs to find submodule files specified
   # in Package.swift even though they aren't built for `protoc-gen-swift`
   url "https://github.com/apple/swift-protobuf.git",
-      tag:      "1.37.0",
-      revision: "81558271e243f8f47dfe8e9fdd55f3c2b5413f68"
+      tag:      "1.38.0",
+      revision: "f6506eaa86ed2e01cb0ae14a75035b7fdbf0918f"
   license "Apache-2.0"
   compatibility_version 1
   head "https://github.com/apple/swift-protobuf.git", branch: "main"
@@ -27,7 +27,7 @@ class SwiftProtobuf < Formula
   depends_on xcode: ["15.3", :build]
   depends_on "protobuf"
 
-  uses_from_macos "swift" => :build
+  uses_from_macos "swift" => :build, since: :tahoe # swift 6.2+
 
   def install
     args = if OS.mac?
