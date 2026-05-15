@@ -1,8 +1,8 @@
 class HelixDb < Formula
   desc "Open-source graph-vector database built from scratch in Rust"
   homepage "https://helix-db.com"
-  url "https://github.com/HelixDB/helix-db/archive/refs/tags/v2.3.5.tar.gz"
-  sha256 "79d5a19efacdc1ee20f74eacdf26e738e1e8a5191de4e86fad0444857ce3d2d0"
+  url "https://github.com/HelixDB/helix-db/archive/refs/tags/v3.0.0.tar.gz"
+  sha256 "bf738c4cdf2c0511f65e848b0802a8fc93a4906e411ead35478c554b1984e812"
   license "AGPL-3.0-only"
 
   bottle do
@@ -29,14 +29,10 @@ class HelixDb < Formula
     assert_match "Initialized '#{project}' successfully", shell_output("#{bin}/helix init")
 
     assert_path_exists testpath/"helix.toml"
-    assert_path_exists testpath/"db"
-    assert_path_exists testpath/"db/queries.hx"
-    assert_path_exists testpath/"db/schema.hx"
 
-    assert_match "Added '#{project}' successfully", shell_output("#{bin}/helix add local 2>&1")
-    assert_match "already exists in helix.toml", shell_output("#{bin}/helix add local 2>&1", 1)
+    assert_match "Added 'test' successfully", shell_output("#{bin}/helix add local --name test 2>&1")
+    assert_match "already exists in helix.toml", shell_output("#{bin}/helix add local --name test 2>&1", 1)
 
-    (testpath/"db/schema.hx ").write "N::User { name: String }"
-    assert_match "error: helix.toml already exists in #{testpath}", shell_output("#{bin}/helix init 2>&1", 1)
+    assert_match "helix.toml already exists in #{testpath}", shell_output("#{bin}/helix init 2>&1", 1)
   end
 end
