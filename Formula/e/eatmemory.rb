@@ -1,8 +1,8 @@
 class Eatmemory < Formula
   desc "Simple program to allocate memory from the command-line"
   homepage "https://github.com/julman99/eatmemory"
-  url "https://github.com/julman99/eatmemory/archive/refs/tags/v1.0.0.tar.gz"
-  sha256 "02ca26cb30813563075618e1a86f2a63b0f6f3c258e5cd6f287e10ef6468e64f"
+  url "https://github.com/julman99/eatmemory/archive/refs/tags/v1.1.0.tar.gz"
+  sha256 "1cbd585adcf014beaecd442454f15eeac8364eab12dde39593acc0a503b41223"
   license "MIT"
 
   bottle do
