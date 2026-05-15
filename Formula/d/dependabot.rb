@@ -7,12 +7,12 @@ class Dependabot < Formula
   head "https://github.com/dependabot/cli.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "9c9364b5feeaa488e180b566c286e24d50cae51c7a1786994c55c141efbc884b"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "9c9364b5feeaa488e180b566c286e24d50cae51c7a1786994c55c141efbc884b"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "9c9364b5feeaa488e180b566c286e24d50cae51c7a1786994c55c141efbc884b"
-    sha256 cellar: :any_skip_relocation, sonoma:        "eefee78629692bdbe6f102df19f63e51fd40f5393e69299e8f6a956ad20e7f62"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "fb934486266772ff9c8ed455458cdf4cf4fcab02fcbcc882442f4d0e36e9a98e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "bcd8d577fffae755e529c147f0764458362a644880fd7b76992add6046545d33"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "663a677cf7506b99c8d5d6851cb76d2cfb47c5451b7ad7acee6c2e3c13b704cb"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "663a677cf7506b99c8d5d6851cb76d2cfb47c5451b7ad7acee6c2e3c13b704cb"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "663a677cf7506b99c8d5d6851cb76d2cfb47c5451b7ad7acee6c2e3c13b704cb"
+    sha256 cellar: :any_skip_relocation, sonoma:        "9cb635e7a53f678436c9f7cd7f9567122363727ec35556bf0640fa6bbd170e1a"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "d097149060286fa36164af968353cf3871318a06ec63c5e18a9046d053e2e6cb"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "3ca46a06f8a7ddc09da431086282f482542ac2a56d7e34b4fef1cf2dfc3c20a8"
   end
 
   depends_on "go" => :build
