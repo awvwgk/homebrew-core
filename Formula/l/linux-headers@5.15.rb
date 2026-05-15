@@ -3,7 +3,7 @@ class LinuxHeadersAT515 < Formula
   homepage "https://kernel.org/"
   url "https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.15.206.tar.gz"
   sha256 "125d430ae3f469c6feeb46d5aabf449e83ff93d2cbe98a456049fe74e7d438a5"
-  license "GPL-2.0-only"
+  license "GPL-2.0-only" => { with: "Linux-syscall-note" }
   compatibility_version 1
 
   livecheck do
