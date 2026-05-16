@@ -1,8 +1,8 @@
 class Nmail < Formula
   desc "Terminal-based email client for Linux and macOS"
   homepage "https://github.com/d99kris/nmail"
-  url "https://github.com/d99kris/nmail/archive/refs/tags/v5.11.4.tar.gz"
-  sha256 "452922112dd19770b06cee61c8bd6fc34899c5b3727a275f8d7c1de6b372fd74"
+  url "https://github.com/d99kris/nmail/archive/refs/tags/v5.12.6.tar.gz"
+  sha256 "d68dc58ad6eacaeb4e357021ef84365101436bc2f77af50b620a75f5aa02ce2f"
   license "MIT"
   head "https://github.com/d99kris/nmail.git", branch: "master"
 
@@ -32,9 +32,6 @@ class Nmail < Formula
   end
 
   def install
-    # Workaround for xapian >= 2.0.0 which needs C++17
-    inreplace "CMakeLists.txt", "set(CMAKE_CXX_STANDARD 14)", "set(CMAKE_CXX_STANDARD 17)"
-
     args = []
     # Workaround to use uuid from Xcode CLT
     args << "-DLIBUUID_LIBRARIES=System" if OS.mac?
