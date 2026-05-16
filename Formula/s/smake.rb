@@ -3,7 +3,7 @@ class Smake < Formula
   homepage "https://codeberg.org/schilytools/schilytools"
   url "https://codeberg.org/schilytools/schilytools/archive/2024-03-21.tar.gz"
   sha256 "4d66bf35a5bc2927248fac82266b56514fde07c1acda66f25b9c42ccff560a02"
-  license "GPL-2.0-only"
+  license "CDDL-1.0"
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_tahoe:    "935c37ae0dc9258ccd97c8cf55851d91dd4c0ac1399fd138f61edec5dabf4306"
@@ -38,6 +38,7 @@ class Smake < Formula
     bin.install Dir.glob("smake/OBJ/*/smake")
     man1.install Dir.glob("smake/OBJ/*/*/*.1")
     man5.install Dir.glob("man/man5/OBJ/*/*/*.5")
+    prefix.install "CDDL.Schily.txt"
   end
 
   test do
