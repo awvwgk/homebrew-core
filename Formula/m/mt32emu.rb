@@ -1,8 +1,8 @@
 class Mt32emu < Formula
   desc "Multi-platform software synthesiser"
   homepage "https://github.com/munt/munt"
-  url "https://github.com/munt/munt/archive/refs/tags/libmt32emu_2_7_3.tar.gz"
-  sha256 "e51f3475771c9d07116e6cb5ae2e095ef3b11b3107d92c01d3a1dc03be13ff98"
+  url "https://github.com/munt/munt/archive/refs/tags/libmt32emu_2_8_0.tar.gz"
+  sha256 "56f9dfde9fcea9c729848d028dfca05e916ba89867c9afe8eacc8325c5aac336"
   license "LGPL-2.1-or-later"
   head "https://github.com/munt/munt.git", branch: "master"
 
@@ -26,12 +26,6 @@ class Mt32emu < Formula
   depends_on "cmake" => :build
   depends_on "libsamplerate"
   depends_on "libsoxr"
-
-  # Version fix patch, remove in next release
-  patch do
-    url "https://github.com/munt/munt/commit/e1d0fb426865ca75e0069c39bbd1b329dee1cb29.patch?full_index=1"
-    sha256 "222b22104fb1c7b232a2725dfb7cfa1d107ca831a7d5feac0dff597c7ae8fa49"
-  end
 
   def install
     system "cmake", "-S", "mt32emu", "-B", "build", *std_cmake_args
