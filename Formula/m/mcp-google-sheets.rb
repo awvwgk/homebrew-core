@@ -3,17 +3,17 @@ class McpGoogleSheets < Formula
 
   desc "MCP server integrates with your Google Drive and Google Sheets"
   homepage "https://github.com/xing5/mcp-google-sheets"
-  url "https://files.pythonhosted.org/packages/ac/be/fc5b8083b97cedfe17188d4eca8bff78db070105cd58a25347d1d7b09385/mcp_google_sheets-0.6.2.tar.gz"
-  sha256 "89d5bf81554747f491b27c3df1c84d646fe04a23bf10468ce428132d8238e423"
+  url "https://files.pythonhosted.org/packages/b2/29/7f4c35619a25f39d27e133e39d0642fb9c9c44a419a9acc6fc2993b7a21d/mcp_google_sheets-0.6.3.tar.gz"
+  sha256 "d41ca5b5367af1426a7db860010473d5c1a7f3df02e4f8db30f75f9c66030e18"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "144d6cc09348ff21dd48172adb91a44050d80146215a02e1008d8f4d78cac23f"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "da22116b420a99529dc76d28d125222bd7db59cbe4fc4b16fcc1b1ccaa2c06a4"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "8db702ea20d03da9510d6778461203189dfba73ce081934ec338fdcab3b9be0c"
-    sha256 cellar: :any_skip_relocation, sonoma:        "e27c15e4e9e7ac17a1b9b5d831107013609c05d944c1408d15783b600bbbd920"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "7bae1e1ef55dd6e9971db4ab39728fb343056713d763e97f2f43703bced1229f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "3d32bf516733a37af974aa94151e65194ffcaa7fed1a62ed6a8bae902e566bee"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "26460eae73b80c8e67f52cdbd360d0924aa9ede8f6501ae6a6463cd76b2bf6d7"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "17b6736c04058f641817ea4a95157bacc37fe9028e496878570a91b41aff3ca9"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "ce6f0986878d0b02f54d8ec62bc6d314448142e442433ae89b3309d8569c8857"
+    sha256 cellar: :any_skip_relocation, sonoma:        "a3bc32e93975882e9ca722f0983b126ad8aedeeec4ad5b035e1ac7d4bb2d4f26"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "922de745770ada082dcc5ded36d7cb3cd5e4a8cdb3f9ea86f1ae905c6bd80bab"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "8e67559bef4c0ccec003b15a91ccb7c98dccfb88ac27c3cff12efe8e2d895824"
   end
 
   depends_on "certifi" => :no_linkage
