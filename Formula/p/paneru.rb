@@ -7,10 +7,10 @@ class Paneru < Formula
   head "https://github.com/karinushka/paneru.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "9ec097880650768675be9d89a161cf4258cefd690a8dfa031d8f48374a915d98"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "455a2361f1c79f8947c11778444b28dbe1430a9d5531b2b534d9722b98c38161"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "8d8e7cd29ef14b352960205cf5cc5ed3112368efb42ee2abdfee702597f31a6d"
-    sha256 cellar: :any_skip_relocation, sonoma:        "c566ad8d89425e01eacfeaa572be5eabb1224d00f417017b27f240e54a3e8612"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "afabd5e4c82b36b832882ef6b459217a6a983a32daac943fdb1e76420db962d4"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "73994ecae3c8b9fd40cdd805cbbbabef84a6b9083cc8e941c127d502efed4ce5"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "76d99ff866220019cdbe58dc073500965080213173972067ffdcc6b2955ccbae"
+    sha256 cellar: :any_skip_relocation, sonoma:        "1b8d94a8707b08914823cff7c532f89a8c383c3131e1c86d788e16aa831e7462"
   end
 
   depends_on "rust" => :build
