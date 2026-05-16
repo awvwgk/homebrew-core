@@ -3,7 +3,7 @@ class PopplerQt5 < Formula
   homepage "https://poppler.freedesktop.org/"
   url "https://poppler.freedesktop.org/poppler-26.04.0.tar.xz"
   sha256 "b0955163114af96bc0106f68cb24daf973a629462453d8b82775f81b0d4e0693"
-  license "GPL-2.0-only"
+  license any_of: ["GPL-2.0-only", "GPL-3.0-only"] # see README-XPDF
   compatibility_version 1
   head "https://gitlab.freedesktop.org/poppler/poppler.git", branch: "master"
 
@@ -49,7 +49,6 @@ class PopplerQt5 < Formula
   on_macos do
     depends_on "gettext"
     depends_on "gpgme"
-    depends_on "libassuan"
   end
 
   on_linux do
@@ -70,7 +69,6 @@ class PopplerQt5 < Formula
     args = std_cmake_args + %W[
       -DBUILD_GTK_TESTS=OFF
       -DENABLE_BOOST=OFF
-      -DENABLE_CMS=lcms2
       -DENABLE_GLIB=ON
       -DENABLE_QT5=ON
       -DENABLE_QT6=OFF
@@ -88,6 +86,9 @@ class PopplerQt5 < Formula
     lib.install "build_static/libpoppler.a"
     lib.install "build_static/cpp/libpoppler-cpp.a"
     lib.install "build_static/glib/libpoppler-glib.a"
+
+    # Add extra metafiles for licensing information
+    prefix.install "COPYING3", "README-XPDF"
 
     resource("font-data").stage do
       system "make", "install", "prefix=#{prefix}"
