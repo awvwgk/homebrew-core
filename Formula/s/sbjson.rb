@@ -1,8 +1,8 @@
 class Sbjson < Formula
   desc "JSON CLI parser & reformatter based on SBJson v5"
   homepage "https://github.com/SBJson/SBJson"
-  url "https://github.com/SBJson/SBJson/archive/refs/tags/v5.0.3.tar.gz"
-  sha256 "9a03f6643b42a82300f4aefcfb6baf46cc2c519f1bb7db3028f338d6d1c56f1b"
+  url "https://github.com/SBJson/SBJson/archive/refs/tags/v5.0.4.tar.gz"
+  sha256 "a0048240551a426131c54585bac7486047820ccc33ca843fc049dfff2d7e0a68"
   license "BSD-3-Clause"
   head "https://github.com/SBJson/SBJson.git", branch: "trunk"
 
