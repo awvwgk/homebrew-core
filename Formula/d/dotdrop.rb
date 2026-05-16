@@ -4,10 +4,9 @@ class Dotdrop < Formula
   desc "Save your dotfiles once, deploy them everywhere"
   homepage "https://github.com/deadc0de6/dotdrop"
   # TODO: check if source is available on pypi distribution: https://pypi.org/project/dotdrop/#files
-  url "https://github.com/deadc0de6/dotdrop/archive/refs/tags/v1.16.1.tar.gz"
-  sha256 "6c898b55839fba9632d85e15b501697e0dfe9718f3c2a02fdc11dec4f5f6a261"
+  url "https://github.com/deadc0de6/dotdrop/archive/refs/tags/v1.16.2.tar.gz"
+  sha256 "d70376b06a84166db533dfdfa7657cece10560f8370eb1bb2ba8a27a21c5457a"
   license "GPL-3.0-or-later"
-  revision 1
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_tahoe:   "2718d630dc74e158ea06622b0742241fd5b59bd4c3c1e59b96efcda6a9ca54f1"
