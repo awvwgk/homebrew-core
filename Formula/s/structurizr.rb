@@ -1,8 +1,8 @@
 class Structurizr < Formula
   desc "Software architecture models as code"
   homepage "https://structurizr.com/"
-  url "https://github.com/structurizr/structurizr/archive/refs/tags/v2026.04.19.tar.gz"
-  sha256 "f757f53fa418a285248ba44bd2b3b0869a202ead295421e5f65a7013cc68ce94"
+  url "https://github.com/structurizr/structurizr/archive/refs/tags/v2026.05.16.tar.gz"
+  sha256 "c7230db428187fb0f1c55c33aa6ed09f686657c2bcd33fa51d75c637ec57da33"
   license "Apache-2.0"
 
   bottle do
