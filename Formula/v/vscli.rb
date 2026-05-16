@@ -1,8 +1,8 @@
 class Vscli < Formula
   desc "CLI/TUI that launches VSCode projects, with a focus on dev containers"
   homepage "https://github.com/michidk/vscli"
-  url "https://github.com/michidk/vscli/archive/refs/tags/v1.3.0.tar.gz"
-  sha256 "91384db69cf5b32af96178df79634d5707eaffaf3517a567e965d3c5a32f81fb"
+  url "https://github.com/michidk/vscli/archive/refs/tags/v1.3.1.tar.gz"
+  sha256 "af089ab9ccf80b24399575d1cea3014974d04ab73a4688259c53a2525da11d0d"
   license "MIT"
   head "https://github.com/michidk/vscli.git", branch: "main"
 
