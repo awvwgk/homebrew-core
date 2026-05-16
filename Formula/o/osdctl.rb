@@ -1,18 +1,18 @@
 class Osdctl < Formula
   desc "CLI tool for managed OpenShift clusters"
   homepage "https://github.com/openshift/osdctl"
-  url "https://github.com/openshift/osdctl/archive/refs/tags/v0.58.0.tar.gz"
-  sha256 "44a2e11b05d5474e9fc3b1c20c49613f4200a7539bd0d05d8484ac74a7a51b48"
+  url "https://github.com/openshift/osdctl/archive/refs/tags/v0.58.1.tar.gz"
+  sha256 "6b2ee744e82d4256f9fdeb1ad9c9ad83f838ea58a7ec333aafc6c3dbba084ba8"
   license "Apache-2.0"
   head "https://github.com/openshift/osdctl.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "6d2ab426fc25c0d69ad469fe8485567d6d41cfcbcf73e3a0c2401b57bcb3e5b2"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "6d2ab426fc25c0d69ad469fe8485567d6d41cfcbcf73e3a0c2401b57bcb3e5b2"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "6d2ab426fc25c0d69ad469fe8485567d6d41cfcbcf73e3a0c2401b57bcb3e5b2"
-    sha256 cellar: :any_skip_relocation, sonoma:        "4f4c2c818a59ed0276462864310b178326270859a5fa4c7e775e63eeb51f19c3"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "0e5a6b6d9c51c37b6c9aebcce69f289e09d279231b5f9cf93d9925ffa5f3a065"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "c6ed5817d8f29bbe34a824f6f71417de46c9e517848e48f7e28b52141a99dbf7"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "4c91c8b1583e03c4fd168cf1c9f583c20919d618680d135deb208be5ca0aa4a3"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "4c91c8b1583e03c4fd168cf1c9f583c20919d618680d135deb208be5ca0aa4a3"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "4c91c8b1583e03c4fd168cf1c9f583c20919d618680d135deb208be5ca0aa4a3"
+    sha256 cellar: :any_skip_relocation, sonoma:        "c7c81999365d2a9adad0be8d91d4526fae18afd89f982b673885b8900f012bdc"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "676f2de7f57ab5b630cb812522d611831c26e7cdf44bfce8684e1f3f6a5cabe3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "1e4aec17dab50b5e49c7a1a5d556d021bd38eb5a79674b725ce56d10290aa59c"
   end
 
   depends_on "go" => :build
