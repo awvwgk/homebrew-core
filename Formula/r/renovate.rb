@@ -24,7 +24,7 @@ class Renovate < Formula
 
   depends_on "node@24"
 
-  uses_from_macos "git", since: :monterey
+  uses_from_macos "git", since: :monterey # needs git >= 2.33.0 (Apple Git-136)
 
   def install
     # TODO: switch back to `system "npm", "install", *std_npm_args` when using npm registry URL
