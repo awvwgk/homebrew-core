@@ -1,8 +1,8 @@
 class Cek < Formula
   desc "Explore the (overlay) filesystem and layers of OCI container images"
   homepage "https://github.com/bschaatsbergen/cek"
-  url "https://github.com/bschaatsbergen/cek/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "5a8f7633682dfe87ed77b5b88698de11a5b1a10b019e274e98b1ce4e803b466f"
+  url "https://github.com/bschaatsbergen/cek/archive/refs/tags/v0.2.0.tar.gz"
+  sha256 "df9c569279cccd4edd8d99fe334568ce141331dc4ab1aa77bffa3ae0d849bf94"
   license "MIT"
   head "https://github.com/bschaatsbergen/cek.git", branch: "main"
 
