@@ -7,11 +7,11 @@ class Dprint < Formula
   head "https://github.com/dprint/dprint.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "f1d68a39700319d3a70bac15f7f65fd556f1481330a2f70019bb8b8bf1f4b0f8"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "207a3393f88cef3ec06a202a0dca781a3580e9471d892506b8d616b6fc08adfb"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "71a0497e0e8b3376e83530b2d3c0b702b5cb36939a125491f31f6e41776e7304"
-    sha256 cellar: :any,                 arm64_linux:   "d2c8a94291992bd52db1730a0392cb773ff244b302a4ecaa6b3b216498777ede"
-    sha256 cellar: :any,                 x86_64_linux:  "d940685ba5525c93d9285f664505fd5fa16b5f649f56d5538013af1792bf094b"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "1862d7ff96cdac8acd98545c231ec0641832db3b99a5ccb21f29dfede3a4d935"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "4a3358b662b5a3c30c46641503913211b455f91f305c5c14ed824215bd8e8c8d"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "54ccc2ef7b4de0e81591ff1f8768a1d66513058bab95d73cf81580562376e480"
+    sha256 cellar: :any,                 arm64_linux:   "32cadc8e401771f0577705d702365387abaa0943ba15eb4bc954ba8ad48691e4"
+    sha256 cellar: :any,                 x86_64_linux:  "009966bc35a5d752614ae6b79457e723603aec80ac191cdb42a6e9f91313443c"
   end
 
   depends_on "pkgconf" => :build
